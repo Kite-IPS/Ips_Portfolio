@@ -10,6 +10,7 @@ import ProjectCard from '../Components/ProjectCard'
 import section from '../assets/section.png'
 import ServiceBox from '../Components/ServiceBox'
 import { useNavigate } from 'react-router-dom'
+<link rel="stylesheet" href="index.css"></link>
 const LandingPage = () => {
     
     const navigate = useNavigate();
@@ -112,6 +113,14 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+        <section class="showcase-section">
+        <h2>Ready to Showcase Your Project?</h2>
+        <p>Join our community and share your technical innovations with the world</p>
+        <button class="submit-btn">
+            <i class="fas fa-bullhorn"></i> 🚀 Submit Your Project
+        </button>
+        </section>
             <section id="contact" className="h-screen border border-yellow-500"></section>
             
         </>
