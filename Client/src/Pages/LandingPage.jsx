@@ -100,12 +100,17 @@ const LandingPage = () => {
                         <p className='font-light text-base text-gray-500 mt-2'>Professional services to help you achieve your tech goals</p>
                     </div>
                     <div className='mt-20 w-[80%] mx-auto flex items-center justify-between'>
-                        <ServiceBox></ServiceBox>
+                        <ServiceBox>Web Development</ServiceBox>
+                        <ServiceBox>Mobile Apps</ServiceBox>
+                        <ServiceBox>Cloud Solutions</ServiceBox>
+                        <ServiceBox>AI Services</ServiceBox>
                     </div>
                 </div>
             </section>
             <section id="contact" className="h-screen border border-yellow-500"></section>
+            
         </>
+        
     )
 }
 
