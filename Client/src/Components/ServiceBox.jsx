@@ -20,7 +20,7 @@ const ServiceBox = ({ children }) => {
 
   return (
     <div className="flex flex-col items-center text-center w-48">
-      <img src={service.image} alt={children} className="w-12 h-12 mb-2" />
+      <img src={service.image} alt={children} className=" h-8 mb-2" />
       <h2 className="text-lg font-semibold">{children}</h2>
       <p className="text-gray-600 text-sm">{service.description}</p>
     </div>

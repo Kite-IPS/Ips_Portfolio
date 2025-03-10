@@ -94,6 +94,11 @@ const LandingPage = () => {
                         <img src={section} alt="Image" className='mx-auto' />
                     </Link>
                 </div>
+                <section width="1440px" height="284px" className="flex items-center justify-center">
+                    <div width="1120" height="164">Our Partners
+
+                    </div>
+                </section>
                 <div className="mt-20">
                     <div className='w-[80%] mx-auto flex flex-col items-center justify-center'>
                         <h1 className='font-bold text-4xl'>Our Services</h1>
