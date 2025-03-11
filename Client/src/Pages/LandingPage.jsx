@@ -27,7 +27,7 @@ const LandingPage = () => {
         <>
             <Header handleButtonClick={handleButtonClick} />
 
-            <section id='home' className='w-full h-[90vh] flex items-center justify-center font-primary'>
+            <section id='home' className='w-full h-screen mt-10 flex items-center justify-center font-primary'>
                 <div className='w-[80%] flex'>
                     <div className='w-1/2 flex flex-col items-start justify-center'>
                         <h1 className='font-bold text-6xl'>
@@ -116,7 +116,7 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            <section class="showcase-section">
+            <section id="contact" class="showcase-section">
                 <h2>Ready to Showcase Your Project?</h2>
                 <p>Join our community and share your technical innovations with the world</p>
                 <button class="submit-btn" onClick={projectButtonClick}>
