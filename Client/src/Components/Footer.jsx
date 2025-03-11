@@ -1,8 +1,8 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
           <ul className="space-y-3">
             <li><a href="https://github.com/Kite-IPS" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaGithub /> GitHub</a></li>
             <li><a href="https://lnkd.in/gZdPmjSB" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaLinkedin />LinkedIn</a></li>
-            {/* <li><a href="#" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaTwitter />Twitter</a></li> */}
+            <li><a href="#" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><BiLogoGmail />Gmail</a></li>
             <li><a href="#" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaDiscord />Discord</a></li>
           </ul>
         </div>
