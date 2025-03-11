@@ -71,7 +71,7 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
-            <section id="projects" className="border border-green-500 font-primary">
+            <section id="projects" className="font-primary">
                 <div className='w-[80%] mx-auto flex items-center justify-around'>
                     <div className='flex flex-col items-center'>
                         <h1 className='font-bold text-4xl text-blue-500'>20+</h1>
