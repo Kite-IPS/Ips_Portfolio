@@ -15,14 +15,17 @@ import { FaRocket } from "react-icons/fa";
 
 <link rel="stylesheet" href="index.css"></link>
 const LandingPage = () => {
-    
+
     const navigate = useNavigate();
     const handleButtonClick = () => {
         navigate('/join-community');
     }
+    const projectButtonClick = () => {
+        navigate('/project-submission');
+    }
     return (
         <>
-            <Header handleButtonClick={handleButtonClick}/>
+            <Header handleButtonClick={handleButtonClick} />
 
             <section id='home' className='w-full h-[90vh] flex items-center justify-center font-primary'>
                 <div className='w-[80%] flex'>
@@ -98,7 +101,7 @@ const LandingPage = () => {
                         <img src={section} alt="Image" className='mx-auto' />
                     </Link>
                 </div>
-               
+
                 <div className="mt-20">
                     <div className='w-[80%] mx-auto flex flex-col items-center justify-center'>
                         <h1 className='font-bold text-4xl'>Our Services</h1>
@@ -113,18 +116,18 @@ const LandingPage = () => {
                 </div>
             </section>
 
-        <section class="showcase-section">
-        <h2>Ready to Showcase Your Project?</h2>
-        <p>Join our community and share your technical innovations with the world</p>
-        <button class="submit-btn">
-            <i class="fas fa-bullhorn"></i> <FaRocket/> Submit Your Project
-        </button>
-        </section>
-        <Footer></Footer>
-           
-            
+            <section class="showcase-section">
+                <h2>Ready to Showcase Your Project?</h2>
+                <p>Join our community and share your technical innovations with the world</p>
+                <button class="submit-btn" onClick={projectButtonClick}>
+                    <i class="fas fa-bullhorn"></i> <FaRocket /> Submit Your Project
+                </button>
+            </section>
+            <Footer></Footer>
+
+
         </>
-        
+
     )
 }
 
