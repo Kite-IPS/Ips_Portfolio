@@ -1,31 +1,27 @@
 import React from 'react'
 import Ips_Logo from '../assets/IPS WHITE batch 1.png'
 import { Link } from 'react-scroll';
+
 const Header = ({ handleClickButton }) => {
     return (
-        <div className='w-full h-[80px] flex px-10 justify-between items-center font-primary'>
+        <div className='w-full h-[80px] flex px-10 justify-between items-center font-primary bg-white shadow-md fixed top-0 left-0 right-0 z-50 opacity-85'>
             <div className='flex items-center gap-5'>
                 <img src={Ips_Logo} alt="Logo" className='w-[70px] h-[70px]' />
-                <h1 className='font-semibold text-2xl'>IPS Tech</h1>
+                <h1 className='font-semibold text-2xl'>IPS Tech Community</h1>
             </div>
             <ul className='flex items-center gap-10'>
-                <Link to='home' smooth={true} duration={1000}>
-                    <li className='font-semibold cursor-pointer'>Home</li>
-                </Link>
-                <Link to='about' smooth={true} duration={1000}>
-                    <li className='font-semibold cursor-pointer'>About</li>
-                </Link>
-                <Link to='projects' smooth={true} duration={1000}>
-                    <li className='font-semibold cursor-pointer'>Projects</li>
-                </Link>
-                <Link to='contact' smooth={true} duration={1000}>
-                    <li className='font-semibold cursor-pointer'>Contact</li>
-                </Link>
+                {['home', 'about', 'projects', 'contact'].map((section) => (
+                    <Link key={section} to={section} smooth={true} duration={1000}>
+                        <li className='text-1.5xl font-semibold cursor-pointer px-7 py-2 rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white'>
+                            {section.charAt(0).toUpperCase() + section.slice(1)}
+                        </li>
+                    </Link>
+                ))}
             </ul>
             <div>
                 <button 
-                className='text-white px-5 py-2 rounded-lg bg-blue-600 font-medium cursor-pointer'
-                onClick={handleClickButton}
+                    className='text-white px-5 py-2 rounded-lg bg-blue-600 font-medium cursor-pointer transition-all duration-300 hover:bg-blue-700'
+                    onClick={handleClickButton}
                 >
                     Join Community
                 </button>
