@@ -33,7 +33,7 @@ const LandingPage = () => {
                         <p className='font-light text-base my-10 w-[80%]'>
                             Empowering developers and tech enthusiasts through collaboration, learning, and innovation.
                         </p>
-                        <div className='flex items-center gap-5'>
+                        <div className='font-semibold flex items-center gap-10'>
                             <Button onclick={handleButtonClick} type={'filled'} color={'blue-600'}>Join Community</Button>
                             <Link to='projects' smooth={true} duration={1000}>
                                 <Button type={'outlined'} color={'blue-600'}>View projects</Button>
