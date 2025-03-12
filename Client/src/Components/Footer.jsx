@@ -1,7 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 
 const Footer = () => {
@@ -18,7 +16,6 @@ const Footer = () => {
           </p>
         </div>
 
-        
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-3">
@@ -29,19 +26,32 @@ const Footer = () => {
           </ul>
         </div>
 
-        
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h3 className="text-lg font-semibold mb-3">Connect</h3>
           <ul className="space-y-3">
-            <li><a href="https://github.com/Kite-IPS" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaGithub /> GitHub</a></li>
-            <li><a href="https://lnkd.in/gZdPmjSB" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaLinkedin />LinkedIn</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><BiLogoGmail />Gmail</a></li>
-            <li><a href="#" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaDiscord />Discord</a></li>
+            <li>
+              <a href="https://github.com/Kite-IPS" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
+                <FaGithub /> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://lnkd.in/gZdPmjSB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
+                <FaLinkedin /> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="mailto:your-email@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
+                <BiLogoGmail /> Gmail
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.com/invite/your-invite-link" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
+                <FaDiscord /> Discord
+              </a>
+            </li>
           </ul>
         </div>
 
-        
-        
       </div>
     </footer>
   );
