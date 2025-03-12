@@ -90,7 +90,7 @@ const JoinCommunity = () => {
         />
         <h2 className="text-2xl font-bold text-center mb-4">Join IPS Tech Community</h2>
         {submitted ? (
-          <p className="text-green-600 text-center">Thank you for joining! We'll reach out soon.</p>
+          <p className="text-2xl text-green-600 font-bold text-center">Thank you for joining! We'll reach out soon.</p>
         ) : (
           <form onSubmit={handleSubmit} ref={form} className="space-y-4">
             {['name', 'email', 'department', 'year', 'skill'].map((field) => (
