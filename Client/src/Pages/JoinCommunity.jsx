@@ -45,12 +45,12 @@ const JoinCommunity = () => {
   
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
+      <div className="p-10 rounded-lg shadow-md w-96 relative z-10 backdrop-blur-md bg-opacity-150">
       <img
         src={aboutImg}
         alt="IPS Tech Community"
-        className="absolute w-100 -inset-2 ml-140 mt-45 opacity-175 rounded-lg"
+        className="absolute w-100 -inset-2 ml-1 mt-33 -z-50 opacity-45 rounded-lg"
       />
-      <div className="p-10 rounded-lg shadow-md w-96 relative z-10 backdrop-blur-md bg-opacity-150">
         <h2 className="text-2xl font-bold text-center mb-4">Join IPS Tech Community</h2>
         {submitted ? (
           <p className="text-green-600 text-center">Thank you for joining! We'll reach out soon.</p>
