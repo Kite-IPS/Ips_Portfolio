@@ -1,8 +1,15 @@
-import React from 'react'
-import Ips_Logo from '../assets/IPS WHITE batch 1.png'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';  
+import Ips_Logo from '../assets/IPS WHITE batch 1.png';
 import { Link } from 'react-scroll';
 
-const Header = ({ handleClickButton }) => {
+const Header = () => {
+    const navigate = useNavigate(); 
+
+    const handleJoinCommunity = () => {
+        navigate('/join-community');  
+    };
+
     return (
         <div className='w-full h-[80px] flex px-10 justify-between items-center font-primary bg-white shadow-md fixed top-0 left-0 right-0 z-50 opacity-85'>
             <div className='flex items-center gap-5'>
@@ -21,13 +28,13 @@ const Header = ({ handleClickButton }) => {
             <div>
                 <button 
                     className='text-white px-5 py-2 rounded-lg bg-blue-600 font-medium cursor-pointer transition-all duration-300 hover:bg-blue-700'
-                    onClick={handleClickButton}
+                    onClick={handleJoinCommunity}  
                 >
                     Join Community
                 </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

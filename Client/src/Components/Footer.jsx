@@ -39,6 +39,9 @@ const Footer = () => {
             <li><a href="#" className="text-gray-400 hover:text-blue-400 flex items-center gap-2"><FaDiscord />Discord</a></li>
           </ul>
         </div>
+
+        
+        
       </div>
     </footer>
   );
