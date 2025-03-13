@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Components/Header'
-import HeroImg from '../assets/img.png'
+import HeroImg from '../assets/community2.png'
 import Button from '../Components/Button'
 import { Link } from 'react-scroll'
 import InfoBox from '../Components/InfoBox'
@@ -43,9 +43,13 @@ const LandingPage = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className='w-1/2 flex items-center justify-center'>
-                        <img src={HeroImg} alt="Community Img" />
-                    </div>
+                    <img 
+    src={HeroImg} 
+    alt="Community Img" 
+    className="rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+/>
+
+
                 </div>
             </section>
 
