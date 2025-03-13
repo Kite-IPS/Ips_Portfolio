@@ -31,10 +31,10 @@ const ProjectSubmission = () => {
     year: '',
     title: '',
     domain: '',
-    description: '',
-    driveLink: '',
+    // description: '',
+    googleDriveLink: '',
     thinking: '',
-    projectFile: null
+    // projectFile: null
   };
 
   // Controlled form state
@@ -75,7 +75,8 @@ const ProjectSubmission = () => {
         year: formData.year,
         title: formData.title,
         domain: formData.domain,
-        description: formData.description,
+        thinking: formData.thinking,
+        googleDriveLink:formData.googleDriveLink,
         project_type: submissionType,
       };
 
@@ -117,7 +118,7 @@ const ProjectSubmission = () => {
         <div className="bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
           {/* Header with gradient background */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-4">
-            <h2 className="text-l font-semibold text-white mokoto-text">New Submission</h2>
+            <h2 className="text-l font-semibold text-center text-white mokoto-text">New Submission</h2>
           </div>
 
           {/* Submission Type Selector with icons */}
