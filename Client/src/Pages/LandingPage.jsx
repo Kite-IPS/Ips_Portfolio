@@ -14,7 +14,7 @@ import Footer from '../Components/footer';
 import { FaRocket } from "react-icons/fa";
 <link rel='stylesheet' href='index.css'></link>
 
-const words = ["Community", "Passion", "Humanity", "Solving",]; // Words to cycle
+const words = ["Community", "Co-Kreate", "Humanity", "Solving",]; // Words to cycle
 
 const LandingPage = () => {
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ const LandingPage = () => {
                 setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length); // Switch word
                 setFade(true); // Start fade-in
             }, 500); // Wait 500ms before changing the word
-        }, 2000); // Change word every 2 seconds
+        }, 3000); // Change word every 2 seconds
 
         return () => clearInterval(interval);
     }, []);
