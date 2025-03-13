@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { User, FileText, Globe, Calendar, Upload, CheckCircle, Briefcase, Lightbulb, AlignLeft } from 'lucide-react';
+import emailjs from 'emailjs-com'; // Importing EmailJS
 
 // Mock database (replace with actual Firebase implementation)
 const projectDB = {
@@ -54,11 +55,31 @@ const ProjectSubmission = () => {
 
     try {
       const dataToSubmit = { ...formData, type: submissionType };
+
+      // Save submission in the mock database (localStorage for now)
       await projectDB.saveSubmission(dataToSubmit);
+
+      // EmailJS data object
+      const emailData = {
+        name: formData.name,
+        year: formData.year,
+        title: formData.title,
+        domain: formData.domain,
+        description: formData.description,
+        project_type: submissionType,
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_veawp9g', // Replace with your EmailJS service ID
+        'template_p25a032', // Replace with your EmailJS template ID
+        emailData,
+        'maKw0xiMpSl3fit09' // Replace with your EmailJS user ID
+      );
 
       setSubmissionSuccess(true);
       setTimeout(() => {
-        setFormData({ name: '', year: '', title: '', domain: '', description: '', projectFile: null });
+        setFormData({ name: 'name', year: 'year', title: 'title', domain: 'domain', description: 'description', projectFile: null });
         setFileName('');
         setSubmissionSuccess(false);
       }, 3000);
@@ -94,22 +115,14 @@ const ProjectSubmission = () => {
             <div className="flex justify-center">
               <button
                 onClick={() => setSubmissionType('idea')}
-                className={`py-5 px-8 font-medium border-b-2 flex items-center ${
-                  submissionType === 'idea' 
-                    ? 'border-blue-500 text-blue-700' 
-                    : 'border-transparent text-gray-500 hover:text-gray-700'
-                }`}
+                className={`py-5 px-8 font-medium border-b-2 flex items-center ${submissionType === 'idea' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
               >
                 <Lightbulb className={`h-5 w-5 mr-2 ${submissionType === 'idea' ? 'text-blue-600' : 'text-gray-500'}`} />
                 Share an Idea
               </button>
               <button
                 onClick={() => setSubmissionType('project')}
-                className={`py-5 px-8 font-medium border-b-2 flex items-center ${
-                  submissionType === 'project' 
-                    ? 'border-blue-500 text-blue-700' 
-                    : 'border-transparent text-gray-500 hover:text-gray-700'
-                }`}
+                className={`py-5 px-8 font-medium border-b-2 flex items-center ${submissionType === 'project' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
               >
                 <Briefcase className={`h-5 w-5 mr-2 ${submissionType === 'project' ? 'text-blue-600' : 'text-gray-500'}`} />
                 Showcase a Project
