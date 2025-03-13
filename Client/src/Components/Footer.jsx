@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+<link rel="stylesheet" href="index.css"></link>
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-12 flex flex-wrap justify-between">
         
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
-          <h2 className="text-xl font-bold flex items-center">
+          <h2 className="text-xl font-bold flex items-center mokoto-text">
             <span className="text-blue-400 text-2xl mr-2">{"</>"}</span> IPS Tech
           </h2>
           <p className="text-gray-400 text-sm mt-2">

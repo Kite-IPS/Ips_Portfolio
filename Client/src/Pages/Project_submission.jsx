@@ -25,15 +25,20 @@ const ProjectSubmission = () => {
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
   const [fileName, setFileName] = useState('');
 
-  // Controlled form state
-  const [formData, setFormData] = useState({
+  // Initial empty form state
+  const initialFormState = {
     name: '',
     year: '',
     title: '',
     domain: '',
     description: '',
-    projectFile: null,
-  });
+    driveLink: '',
+    thinking: '',
+    projectFile: null
+  };
+
+  // Controlled form state
+  const [formData, setFormData] = useState(initialFormState);
 
   useEffect(() => {
     setSubmissions(projectDB.getSubmissions());
@@ -47,6 +52,11 @@ const ProjectSubmission = () => {
     } else {
       setFormData((prevData) => ({ ...prevData, [name]: value }));
     }
+  };
+
+  const resetForm = () => {
+    setFormData(initialFormState);
+    setFileName('');
   };
 
   const handleSubmit = async (e) => {
@@ -78,9 +88,9 @@ const ProjectSubmission = () => {
       );
 
       setSubmissionSuccess(true);
+      resetForm(); // Reset form immediately
+      
       setTimeout(() => {
-        setFormData({ name: 'name', year: 'year', title: 'title', domain: 'domain', description: 'description', projectFile: null });
-        setFileName('');
         setSubmissionSuccess(false);
       }, 3000);
     } catch (error) {
@@ -98,7 +108,7 @@ const ProjectSubmission = () => {
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Innovation Hub</h1>
+          <h1 className="text-4xl font-bold text-gray-900 tracking-tight mokoto-text">Innovation Hub</h1>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
             Submit your innovative ideas and projects to our platform
           </p>
@@ -107,7 +117,7 @@ const ProjectSubmission = () => {
         <div className="bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
           {/* Header with gradient background */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-4">
-            <h2 className="text-xl font-semibold text-white">New Submission</h2>
+            <h2 className="text-l font-semibold text-white mokoto-text">New Submission</h2>
           </div>
 
           {/* Submission Type Selector with icons */}
@@ -227,7 +237,7 @@ const ProjectSubmission = () => {
 
                   <div className="space-y-2">
                     <label className="block text-sm font-medium text-gray-700">
-                      Domain/Category <span className="text-red-500">*</span>
+                      Domain <span className="text-red-500">*</span>
                     </label>
                     <div className="relative rounded-md shadow-sm">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -245,69 +255,73 @@ const ProjectSubmission = () => {
                     </div>
                   </div>
 
-                  {/* New Description Field */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Brief Description <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
-                        <AlignLeft className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <textarea
-                        name="description"
-                        value={formData.description}
-                        onChange={handleChange}
-                        rows="4"
-                        className={`${inputClasses} pt-2`}
-                        placeholder={`Briefly describe your ${submissionType} in a few sentences...`}
-                        required
-                      />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">Provide a concise overview (100-250 words)</p>
-                  </div>
+                  
                 </div>
               </div>
 
-              {/* File upload section - only for projects */}
+              {/* Project Resources Section */}
               {submissionType === 'project' && (
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Project Files</h3>
-                  <div className="mt-2">
-                    <div className="border-2 border-gray-300 border-dashed rounded-lg p-6 flex flex-col items-center justify-center bg-gray-50 transition-all duration-200 ease-in-out hover:border-blue-400 hover:bg-blue-50">
-                      <Upload className="h-12 w-12 text-gray-400 mb-3" />
-                      <div className="flex text-sm text-gray-600">
-                        <label
-                          htmlFor="file-upload"
-                          className="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
-                        >
-                          <span>Upload a file</span>
-                          <input 
-                            id="file-upload" 
-                            name="projectFile" 
-                            type="file" 
-                            className="sr-only" 
-                            onChange={handleChange}
-                          />
-                        </label>
-                        <p className="pl-1">or drag and drop</p>
+                  <h3 className="text-lg font-medium text-gray-900 mb-4">Project Resources</h3>
+                  
+                  {/* Google Drive Link Input */}
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Google Drive Link <span className="text-red-500">*</span>
+                    </label>
+                    <div className="relative rounded-md shadow-sm">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <Globe className="h-5 w-5 text-gray-400" />
                       </div>
-                      <p className="text-xs text-gray-500 mt-1">
-                        PNG, JPG, PDF up to 10MB
-                      </p>
-                      {fileName && (
-                        <div className="mt-4 bg-blue-50 px-4 py-2 rounded-md text-sm text-blue-800 flex items-center">
-                          <FileText className="h-4 w-4 mr-2" />
-                          {fileName}
-                        </div>
-                      )}
+                      <input
+                        type="url"
+                        name="driveLink"
+                        value={formData.driveLink}
+                        onChange={handleChange}
+                        className={inputClasses}
+                        placeholder="https://drive.google.com/..."
+                        required={submissionType === 'project'}
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Please ensure the link is publicly accessible
+                    </p>
+                  </div>
+
+                  {/* Thinking Process Section */}
+                  <div className="mt-6 space-y-2">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Your Thinking Process <span className="text-red-500">*</span>
+                    </label>
+                    <div className="relative rounded-md shadow-sm">
+                      <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
+                        <Lightbulb className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <textarea
+                        name="thinking"
+                        value={formData.thinking}
+                        onChange={handleChange}
+                        rows="4"
+                        className={`${inputClasses} pt-2`}
+                        placeholder="Describe your problem-solving approach, challenges faced, and learning outcomes..."
+                        required={submissionType === 'project'}
+                      />
+                    </div>
+                    <div className="bg-yellow-50 p-4 rounded-md mt-2">
+                      <h4 className="text-sm font-medium text-yellow-800 mb-2">Include in your thinking process:</h4>
+                      <ul className="text-sm text-yellow-700 list-disc pl-4 space-y-1">
+                        <li>Initial approach to the problem</li>
+                        <li>Challenges encountered and solutions</li>
+                        <li>Key learning outcomes</li>
+                        <li>Future improvements</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               )}
 
               {/* Submit button with loading state */}
-              <div className="pt-4">
+              <div className="pt-4 mokoto-text">
                 <button
                   type="submit"
                   disabled={isSubmitting}

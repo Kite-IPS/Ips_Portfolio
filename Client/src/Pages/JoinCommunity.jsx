@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUser, FiMail, FiArrowRight } from 'react-icons/fi';
 import aboutImg from '../assets/IPS-WHITE-batch.png';
+<link rel='stylesheet' href='index.css'></link>
 
 const JoinCommunity = () => {
   const [formData, setFormData] = useState({
@@ -57,15 +58,14 @@ const JoinCommunity = () => {
         className="relative bg-white/5 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden w-full max-w-2xl"
       >
        
-        <div className="absolute w-25 top-4 mt-2 ml-18">
+        <div className="absolute w-25 top-4 ml-7">
           <img src={aboutImg} alt="IPS Tech Community" className="w-20 h-16 object-contain" />
         </div>
 
         <div className="relative z-10 p-10">
           
-          <h2 className="text-4xl -mt-2 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-1000 to-blue-50">
-            IPS Tech Community
-          </h2>
+          <h2 className="text-3xl -mt-2 ml-17 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-1000 to-blue-50 mokoto-text">
+            IPS Tech Community</h2>
 
           <AnimatePresence mode="wait">
             {submitted ? (

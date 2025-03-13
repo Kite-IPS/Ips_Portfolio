@@ -4,6 +4,22 @@
 :root {
   --font-primary: "Montserrat", "sans-serif";
 }
+@font-face {
+  font-family: 'Mokoto';
+  src: url('./assets/fonts/ttf/mokoto-mokoto-regular-400.ttf') format('truetype'),
+       url('./assets/fonts/otf/mokoto.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mokoto-text {
+  font-family: 'Mokoto', sans-serif;
+}
+
+.mokoto-font {
+  font-family: 'Mokoto', sans-serif;
+}
+
 
 .showcase-section {
   background-color: #2563eb; 
@@ -50,4 +66,20 @@
   color: white;
   border-color: #1e4db7;
   transform: scale(1.05); 
+}
+
+.fade-text {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #007bff; /* Blue text */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
 }
