@@ -97,7 +97,7 @@ const JoinCommunity = () => {
                   </select>
                   <select name="department" value={formData.department} onChange={handleChange} className="w-full bg-gray-800/50 text-gray-200 px-4 py-3 rounded-lg focus:outline-none">
                     <option value="">Select Department</option>
-                    {['CSE', 'IT', 'ECE', 'CSBS', 'MECH', 'AIML', 'AIDS', 'CYS'].map((dept) => (
+                    {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH'].map((dept) => (
                       <option key={dept} value={dept}>{dept}</option>
                     ))}
                   </select>
