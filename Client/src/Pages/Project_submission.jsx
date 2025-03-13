@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { User, FileText, Globe, Calendar, Upload, CheckCircle, Briefcase, Lightbulb } from 'lucide-react';
+import { User, FileText, Globe, Calendar, Upload, CheckCircle, Briefcase, Lightbulb, AlignLeft } from 'lucide-react';
 
 // Mock database (replace with actual Firebase implementation)
 const projectDB = {
@@ -30,6 +30,7 @@ const ProjectSubmission = () => {
     year: '',
     title: '',
     domain: '',
+    description: '',
     projectFile: null,
   });
 
@@ -57,7 +58,7 @@ const ProjectSubmission = () => {
 
       setSubmissionSuccess(true);
       setTimeout(() => {
-        setFormData({ name: '', year: '', title: '', domain: '', projectFile: null });
+        setFormData({ name: '', year: '', title: '', domain: '', description: '', projectFile: null });
         setFileName('');
         setSubmissionSuccess(false);
       }, 3000);
@@ -68,6 +69,9 @@ const ProjectSubmission = () => {
       setIsSubmitting(false);
     }
   };
+
+  // Custom input field styling with hover effect
+  const inputClasses = "block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md transition-all duration-200 ease-in-out focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 hover:shadow-md";
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -153,7 +157,7 @@ const ProjectSubmission = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className={inputClasses}
                         placeholder="John Doe"
                         required
                       />
@@ -173,7 +177,7 @@ const ProjectSubmission = () => {
                         name="year"
                         value={formData.year}
                         onChange={handleChange}
-                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className={inputClasses}
                         placeholder="e.g. 2nd Year"
                         required
                       />
@@ -201,7 +205,7 @@ const ProjectSubmission = () => {
                         name="title"
                         value={formData.title}
                         onChange={handleChange}
-                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className={inputClasses}
                         placeholder={`Enter ${submissionType} title`}
                         required
                       />
@@ -221,11 +225,33 @@ const ProjectSubmission = () => {
                         name="domain"
                         value={formData.domain}
                         onChange={handleChange}
-                        className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className={inputClasses}
                         placeholder="e.g. Technology, Healthcare, Education"
                         required
                       />
                     </div>
+                  </div>
+
+                  {/* New Description Field */}
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Brief Description <span className="text-red-500">*</span>
+                    </label>
+                    <div className="relative rounded-md shadow-sm">
+                      <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
+                        <AlignLeft className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <textarea
+                        name="description"
+                        value={formData.description}
+                        onChange={handleChange}
+                        rows="4"
+                        className={`${inputClasses} pt-2`}
+                        placeholder={`Briefly describe your ${submissionType} in a few sentences...`}
+                        required
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">Provide a concise overview (100-250 words)</p>
                   </div>
                 </div>
               </div>
@@ -235,7 +261,7 @@ const ProjectSubmission = () => {
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 mb-4">Project Files</h3>
                   <div className="mt-2">
-                    <div className="border-2 border-gray-300 border-dashed rounded-lg p-6 flex flex-col items-center justify-center bg-gray-50">
+                    <div className="border-2 border-gray-300 border-dashed rounded-lg p-6 flex flex-col items-center justify-center bg-gray-50 transition-all duration-200 ease-in-out hover:border-blue-400 hover:bg-blue-50">
                       <Upload className="h-12 w-12 text-gray-400 mb-3" />
                       <div className="flex text-sm text-gray-600">
                         <label
@@ -272,10 +298,10 @@ const ProjectSubmission = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full flex justify-center items-center py-3 px-6 border border-transparent text-base font-medium rounded-md text-white shadow-sm ${
+                  className={`w-full flex justify-center items-center py-3 px-6 border border-transparent text-base font-medium rounded-md text-white shadow-sm transition-all duration-200 ${
                     isSubmitting 
                       ? 'bg-blue-400 cursor-not-allowed' 
-                      : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                      : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
                   }`}
                 >
                   {isSubmitting ? (
