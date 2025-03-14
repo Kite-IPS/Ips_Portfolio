@@ -31,7 +31,7 @@ const ProjectSubmission = () => {
     year: '',
     title: '',
     domain: '',
-    description: '',
+    // description: '',
     googleDriveLink: '',
     thinking: '',
     // projectFile: null
@@ -261,34 +261,63 @@ const ProjectSubmission = () => {
                 </div>
               </div>
 
-              {/* Project Resources Section */}
-              {submissionType === 'project' && (
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Project Resources</h3>
-                  
-                  {/* Google Drive Link Input */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Google Drive Link <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Globe className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        type="url"
-                        name="googledriveLink"
-                        value={formData.googledriveLink}
-                        onChange={handleChange}
-                        className={inputClasses}
-                        placeholder="https://drive.google.com/..."
-                        required={submissionType === 'project'}
-                      />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                      Please ensure the link is publicly accessible
-                    </p>
-                  </div>
+             {/* Project Information Section */}
+<div>
+  
+  <div className="space-y-6">
+    
+   
+    {/* Description Box */}
+    <div className="space-y-2">
+      <label className="block text-sm font-medium text-gray-700">
+        Description <span className="text-red-500">*</span>
+      </label>
+      <div className="relative rounded-md shadow-sm">
+        <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
+          <FileText className="h-5 w-5 text-gray-400" />
+        </div>
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          rows="4"
+          className={`${inputClasses} pt-2`}
+          placeholder="Provide a detailed description of your idea or project..."
+          required
+        />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{submissionType === 'project' && (
+  <div>
+    <h3 className="text-lg font-medium text-gray-900 mb-4">Project Resources</h3>
+
+    
+    <div className="space-y-2">
+      <label className="block text-sm font-medium text-gray-700">
+        Google Drive Link <span className="text-red-500">*</span>
+      </label>
+      <div className="relative rounded-md shadow-sm">
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <Globe className="h-5 w-5 text-gray-400" />
+        </div>
+        <input
+          type="url"
+          name="driveLink"
+          value={formData.driveLink}
+          onChange={handleChange}
+          className={inputClasses}
+          placeholder="https://drive.google.com/..."
+          required={submissionType === 'project'}
+        />
+      </div>
+      <p className="text-xs text-gray-500 mt-1">
+        Please ensure the link is publicly accessible
+      </p>
+    </div>
 
    
     

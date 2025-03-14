@@ -13,3 +13,4 @@ const InfoBox = ({title,description}) => {
 }
 
 export default InfoBox
+
