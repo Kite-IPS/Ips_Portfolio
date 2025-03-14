@@ -75,6 +75,7 @@ const ProjectSubmission = () => {
         year: formData.year,
         title: formData.title,
         domain: formData.domain,
+        description: formData.description,
         thinking: formData.thinking,
         googleDriveLink:formData.googleDriveLink,
         project_type: submissionType,
