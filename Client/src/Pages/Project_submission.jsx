@@ -31,7 +31,7 @@ const ProjectSubmission = () => {
     year: '',
     title: '',
     domain: '',
-    // description: '',
+    description: '',
     googleDriveLink: '',
     thinking: '',
     // projectFile: null
@@ -306,8 +306,8 @@ const ProjectSubmission = () => {
         </div>
         <input
           type="url"
-          name="driveLink"
-          value={formData.driveLink}
+          name="googledriveLink"
+          value={formData.googledriveLink}
           onChange={handleChange}
           className={inputClasses}
           placeholder="https://drive.google.com/..."
