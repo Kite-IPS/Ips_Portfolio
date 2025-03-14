@@ -263,9 +263,7 @@ const ProjectSubmission = () => {
 
              {/* Project Information Section */}
 <div>
-  <h3 className="text-lg font-medium text-gray-900 mb-4">
-    {submissionType === 'idea' ? 'Idea' : 'Project'} Information
-  </h3>
+  
   <div className="space-y-6">
     
    
