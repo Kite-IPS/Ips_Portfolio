@@ -260,91 +260,96 @@ const ProjectSubmission = () => {
                 </div>
               </div>
 
-              {/* Project Resources Section */}
-              {submissionType === 'project' && (
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Project Resources</h3>
-                  
-                  {/* Google Drive Link Input */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Google Drive Link <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Globe className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        type="url"
-                        name="driveLink"
-                        value={formData.driveLink}
-                        onChange={handleChange}
-                        className={inputClasses}
-                        placeholder="https://drive.google.com/..."
-                        required={submissionType === 'project'}
-                      />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                      Please ensure the link is publicly accessible
-                    </p>
-                  </div>
+             {/* Project Information Section */}
+<div>
+  <h3 className="text-lg font-medium text-gray-900 mb-4">
+    {submissionType === 'idea' ? 'Idea' : 'Project'} Information
+  </h3>
+  <div className="space-y-6">
+    
+   
+    {/* Description Box */}
+    <div className="space-y-2">
+      <label className="block text-sm font-medium text-gray-700">
+        Description <span className="text-red-500">*</span>
+      </label>
+      <div className="relative rounded-md shadow-sm">
+        <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
+          <FileText className="h-5 w-5 text-gray-400" />
+        </div>
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          rows="4"
+          className={`${inputClasses} pt-2`}
+          placeholder="Provide a detailed description of your idea or project..."
+          required
+        />
+      </div>
+    </div>
 
-                  {/* Thinking Process Section */}
-                  <div className="mt-6 space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Your Thinking Process <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
-                        <Lightbulb className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <textarea
-                        name="thinking"
-                        value={formData.thinking}
-                        onChange={handleChange}
-                        rows="4"
-                        className={`${inputClasses} pt-2`}
-                        placeholder="Describe your problem-solving approach, challenges faced, and learning outcomes..."
-                        required={submissionType === 'project'}
-                      />
-                    </div>
-                    <div className="bg-yellow-50 p-4 rounded-md mt-2">
-                      <h4 className="text-sm font-medium text-yellow-800 mb-2">Include in your thinking process:</h4>
-                      <ul className="text-sm text-yellow-700 list-disc pl-4 space-y-1">
-                        <li>Initial approach to the problem</li>
-                        <li>Challenges encountered and solutions</li>
-                        <li>Key learning outcomes</li>
-                        <li>Future improvements</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
+  </div>
+</div>
 
-              {/* Submit button with loading state */}
-              <div className="pt-4 mokoto-text">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full flex justify-center items-center py-3 px-6 border border-transparent text-base font-medium rounded-md text-white shadow-sm transition-all duration-200 ${
-                    isSubmitting 
-                      ? 'bg-blue-400 cursor-not-allowed' 
-                      : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                  }`}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Submitting...
-                    </>
-                  ) : (
-                    'Submit'
-                  )}
-                </button>
-              </div>
+{submissionType === 'project' && (
+  <div>
+    <h3 className="text-lg font-medium text-gray-900 mb-4">Project Resources</h3>
+
+    
+    <div className="space-y-2">
+      <label className="block text-sm font-medium text-gray-700">
+        Google Drive Link <span className="text-red-500">*</span>
+      </label>
+      <div className="relative rounded-md shadow-sm">
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <Globe className="h-5 w-5 text-gray-400" />
+        </div>
+        <input
+          type="url"
+          name="driveLink"
+          value={formData.driveLink}
+          onChange={handleChange}
+          className={inputClasses}
+          placeholder="https://drive.google.com/..."
+          required={submissionType === 'project'}
+        />
+      </div>
+      <p className="text-xs text-gray-500 mt-1">
+        Please ensure the link is publicly accessible
+      </p>
+    </div>
+
+   
+    
+  </div>
+)}
+
+{/* Submit button with loading state */}
+<div className="pt-4 mokoto-text">
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className={`w-full flex justify-center items-center py-3 px-6 border border-transparent text-base font-medium rounded-md text-white shadow-sm transition-all duration-200 ${
+      isSubmitting 
+        ? 'bg-blue-400 cursor-not-allowed' 
+        : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+    }`}
+  >
+    {isSubmitting ? (
+      <>
+        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        Submitting...
+      </>
+    ) : (
+      'Submit'
+    )}
+  </button>
+</div>
+
             </form>
           </div>
         </div>
