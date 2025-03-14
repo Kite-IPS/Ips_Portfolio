@@ -55,7 +55,7 @@ const JoinCommunity = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative bg-white/5 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden w-full max-w-2xl"
+        className="relative bg-white rounded-2xl shadow-2xl overflow-hidden w-full max-w-2xl"
       >
        
         <div className="absolute w-25 top-4 ml-7">
@@ -64,7 +64,7 @@ const JoinCommunity = () => {
 
         <div className="relative z-10 p-10">
           
-          <h2 className="text-3xl -mt-2 ml-17 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-1000 to-blue-50 mokoto-text">
+          <h2 className="text-3xl -mt-2 ml-17 font-bold text-center text-transparent bg-clip-text bg-gradient-to-l from-gray-100 to-stone-950 mokoto-text">
             IPS Tech Community</h2>
 
           <AnimatePresence mode="wait">
@@ -98,34 +98,34 @@ const JoinCommunity = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[{ name: 'name', icon: <FiUser />, placeholder: 'Full Name' }, { name: 'email', icon: <FiMail />, placeholder: 'Email Address' }].map((field, index) => (
                     <motion.div key={field.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}>
-                      <div className="relative flex items-center space-x-3 bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-3 border border-gray-700/50">
-                        <span className="text-cyan-400">{field.icon}</span>
+                      <div className="relative flex items-center space-x-3 bg-gray-100 backdrop-blur-sm rounded-lg px-4 py-3 border border-gray-700/50">
+                        <span className="text-gray-500">{field.icon}</span>
                         <input
                           type="text"
                           name={field.name}
                           value={formData[field.name]}
                           onChange={handleChange}
                           placeholder={field.placeholder}
-                          className="w-full bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none text-lg"
+                          className="w-full bg-transparent text-white placeholder-stone-500  focus:outline-none text-lg"
                         />
                       </div>
                     </motion.div>
                   ))}
-                  <select name="year" value={formData.year} onChange={handleChange} className="w-full bg-gray-800/50 text-gray-200 px-4 py-3 rounded-lg focus:outline-none">
-                    <option value="">Select Academic Year</option>
+                  <select name="year" value={formData.year} onChange={handleChange} className="w-full bg-gray-100 border text-gray-500 border-gray-500 px-4 py-3 rounded-lg focus:outline-none">
+                    <option value="" className='text-gray-500'>Select Academic Year</option>
                     {['1st Year', '2nd Year', '3rd Year', '4th Year'].map((year) => (
                       <option key={year} value={year}>{year}</option>
                     ))}
                   </select>
-                  <select name="department" value={formData.department} onChange={handleChange} className="w-full bg-gray-800/50 text-gray-200 px-4 py-3 rounded-lg focus:outline-none">
+                  <select name="department" value={formData.department} onChange={handleChange} className="w-full bg-gray-100 border border-gray-500 text-gray-500 px-4 py-3 rounded-lg focus:outline-none">
                     <option value="">Select Department</option>
                     {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH'].map((dept) => (
                       <option key={dept} value={dept}>{dept}</option>
                     ))}
                   </select>
                 </div>
-                <input type="text" name="skill" value={formData.skill} onChange={handleChange} placeholder="Enter Your Skills" className="w-full bg-gray-800/50 text-gray-200 px-4 py-3 rounded-lg focus:outline-none" />
-                <textarea name="interest" value={formData.interest} onChange={handleChange} placeholder="Share your technical interests and aspirations..." rows="4" className="w-full bg-gray-800/50 text-gray-200 px-4 py-3 rounded-lg focus:outline-none resize-none"></textarea>
+                <input type="text" name="skill" value={formData.skill} onChange={handleChange} placeholder="Enter Your Skills" className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none" />
+                <textarea name="interest" value={formData.interest} onChange={handleChange} placeholder="Share your technical interests and aspirations..." rows="4" className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none resize-none"></textarea>
                 <button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold">
                   Join the Innovation Circle
                 </button>

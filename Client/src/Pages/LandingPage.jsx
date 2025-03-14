@@ -47,7 +47,7 @@ const LandingPage = () => {
                     <div className='w-1/2 flex flex-col items-start justify-center'>
 
                         {/* Animated Text with Smooth Transition */}
-                        <h1 className='font-bold text-6xl mokoto-text'>
+                        <h1 className='font-bold text-6xl mokoto-text leading-[75px]'>
                             Welcome to IPS TECH  
                             <span className={`fade-text ${fade ? 'fade-in' : 'fade-out'}`}>
                                 {words[currentWordIndex]}
