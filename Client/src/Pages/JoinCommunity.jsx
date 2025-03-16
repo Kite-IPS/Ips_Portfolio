@@ -15,6 +15,7 @@ const JoinCommunity = () => {
     interest: '',
   });
 
+  const [isSending, setIsSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const form = useRef();
 
@@ -38,10 +39,11 @@ const JoinCommunity = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
+    setIsSending(true);
     emailjs.sendForm(
       'service_veawp9g',
       'template_4jyepoy',
-      form.current,
+      form.current, 
       'maKw0xiMpSl3fit09'
     ).then(
       () => setSubmitted(true),
@@ -79,8 +81,8 @@ const JoinCommunity = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 rounded-full">
                   <FiArrowRight className="w-8 h-8 text-green-400 animate-bounce" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-300">Welcome!</h3>
-                <p className="text-gray-300 text-lg">
+                <h3 className="text-2xl font-semibold text-gray-500">Welcome!</h3>
+                <p className="text-gray-500 text-lg">
                   Thank you for joining the IPS Tech Community.<br />
                   We'll be in touch soon with more details.
                 </p>
@@ -106,7 +108,7 @@ const JoinCommunity = () => {
                           value={formData[field.name]}
                           onChange={handleChange}
                           placeholder={field.placeholder}
-                          className="w-full bg-transparent text-white placeholder-stone-500  focus:outline-none text-lg"
+                          className="w-full bg-transparent text-black placeholder-stone-500  focus:outline-none text-lg"
                         />
                       </div>
                     </motion.div>
