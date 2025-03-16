@@ -49,6 +49,7 @@ const LandingPage = () => {
                         {/* Animated Text with Smooth Transition */}
                         <h1 className='font-bold text-6xl mokoto-text leading-[75px]'>
                             Welcome to IPS TECH  
+                            <br />
                             <span className={`fade-text ${fade ? 'fade-in' : 'fade-out'}`}>
                                 {words[currentWordIndex]}
                             </span>
@@ -61,7 +62,7 @@ const LandingPage = () => {
                         <div className='font-semibold flex items-center gap-10'>
                             <Button onclick={() => navigate('/join-community')} type={'filled'} color={'blue-600'}>Join Community</Button>
                             <Link to='projects' smooth={true} duration={1000}>
-                                <Button type={'outlined'} color={'blue-500'}>View projects</Button>
+                                <Button type={'outlined'} color={'blue-600'}>View projects</Button>
                             </Link>
                         </div>
                     </div>

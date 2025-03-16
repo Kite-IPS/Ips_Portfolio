@@ -28,7 +28,7 @@ const Header = () => {
             </ul>
             <div>
                 <button 
-                    className='text-white px-5 py-2 rounded-lg bg-blue-600 font-medium cursor-pointer transition-all duration-300 hover:bg-blue-700 '
+                    className='text-white px-5 py-2 rounded-lg bg-blue-600 font-medium cursor-pointer transition-all duration-300 hover:bg-blue-600 '
                     onClick={handleJoinCommunity}  
                 >
                     Join Community
