@@ -8,7 +8,7 @@ import KGAPS from '../assets/KG-APS.jpg';
 
 const ProjectCard = ({ name, description }) => {
     return (
-        <div className="w-[400px] rounded-2xl h-[360px] overflow-hidden font-primary shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+        <div className="md:w-[400px] rounded-2xl h-[360px] overflow-hidden font-primary shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
             
             <div className="h-[50%] overflow-hidden">
                 {name === "KG-SLAR" ? (
