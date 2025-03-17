@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@shadcn/ui": "^0.0.4",
     "@tailwindcss/vite": "^4.0.4",
     "client": "file:",
     "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.5.0",
     "lucide-react": "^0.479.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
