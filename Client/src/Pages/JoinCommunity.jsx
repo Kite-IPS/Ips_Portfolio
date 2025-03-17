@@ -66,8 +66,9 @@ const JoinCommunity = () => {
 
         <div className="relative z-10 p-10">
           
-          <h2 className="text-3xl -mt-2 ml-17 font-bold text-center text-transparent bg-clip-text bg-gradient-to-l from-gray-100 to-stone-950 mokoto-text">
-            IPS Tech Community</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl -mt-4 ml-15 md:ml-11 font-bold text-center text-transparent bg-clip-text bg-gradient-to-l from-gray-100 to-stone-950 mokoto-text">
+          IPS Tech Community
+        </h2>
 
           <AnimatePresence mode="wait">
             {submitted ? (
@@ -129,7 +130,7 @@ const JoinCommunity = () => {
                 <input type="text" name="skill" value={formData.skill} onChange={handleChange} placeholder="Enter Your Skills" className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none" />
                 <textarea name="interest" value={formData.interest} onChange={handleChange} placeholder="Share your technical interests and aspirations..." rows="4" className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none resize-none"></textarea>
                 <button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold">
-                  Join the Innovation Circle
+                  Join the Community 
                 </button>
               </motion.form>
             )}
