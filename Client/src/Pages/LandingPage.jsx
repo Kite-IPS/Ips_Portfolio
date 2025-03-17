@@ -10,7 +10,7 @@ import ProjectCard from '../Components/ProjectCard';
 import section from '../assets/section.png';
 import ServiceBox from '../Components/ServiceBox';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
 
 const words = ["Community", "Co-Kreate", "Humanity", "Solving",]; // Words to cycle
@@ -151,12 +151,13 @@ const LandingPage = () => {
                         <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our Services</h1>
                         <p className='font-light text-base text-gray-500 mt-2 text-center'>Professional services to help you achieve your tech goals</p>
                     </div>
-                    <div className='mt-10 md:mt-20 w-[95%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 md:justify-between gap-4'>
-                        <div className='w-[95%] md:w-auto'><ServiceBox>Mobile Apps</ServiceBox></div>
-                        <div className='w-[95%] md:w-auto'><ServiceBox>Cloud Solutions</ServiceBox></div>
-                        <div className='w-[95%] md:w-auto'><ServiceBox>AI Services</ServiceBox></div>
-                        <div className='w-[95%] md:w-auto'><ServiceBox>Web Development</ServiceBox></div>
+                    <div className='mt-10 md:mt-20 w-[95%] md:w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center md:justify-items-start md:pl-25'>
+                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>Mobile Apps</ServiceBox></div>
+                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>Cloud Solutions</ServiceBox></div>
+                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>AI Services</ServiceBox></div>
+                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>Web Development</ServiceBox></div>
                     </div>
+
                 </div>
             </section>
 
