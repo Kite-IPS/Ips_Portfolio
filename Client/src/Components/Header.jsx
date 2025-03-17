@@ -20,7 +20,7 @@ const Header = () => {
     };
 
     return (
-        <div className='w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary bg-white shadow-md fixed top-0 left-0 right-0 z-50 opacity-85'>
+        <div className='w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary bg-white shadow-md fixed top-0 left-0 right-0 z-50'>
             {/* Logo and Title */}
             <div className='flex items-center gap-2 md:gap-5'>
                 <img src={Ips_Logo} alt="Logo" className='w-[50px] h-[50px] md:w-[70px] md:h-[70px]' />
