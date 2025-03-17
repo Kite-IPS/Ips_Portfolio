@@ -130,7 +130,7 @@ const JoinCommunity = () => {
                 <input type="text" name="skill" value={formData.skill} onChange={handleChange} placeholder="Enter Your Skills" className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none" />
                 <textarea name="interest" value={formData.interest} onChange={handleChange} placeholder="Share your technical interests and aspirations..." rows="4" className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none resize-none"></textarea>
                 <button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold">
-                  Join the Community 
+                  Join the Innovation Circle
                 </button>
               </motion.form>
             )}
