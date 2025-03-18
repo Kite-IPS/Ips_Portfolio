@@ -125,7 +125,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
-                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our projects</h1>
+                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our  projects</h1>
                 </div>
                 <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
                     <ProjectCard name={'KG-SLAR'} description={"It's a student late attendance report system using RFID technology"} />

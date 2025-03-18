@@ -162,9 +162,9 @@ const ProjectSubmission = () => {
     <div className="min-h-screen bg-blue-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 tracking-tight mokoto-text">Innovation Hub</h1>
+          <h1 className="text-4xl font-bold text-gray-900 tracking-tight mokoto-text">Idea Hub</h1>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
-            Submit your innovative ideas and projects to our platform
+            Submit your ideas and projects to our platform
           </p>
         </div>
 
