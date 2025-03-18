@@ -137,8 +137,8 @@ const LandingPage = () => {
                     <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our Organization</h1>
                 </div>
                 <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
-                    <ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} />
-                    <ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} />
+                    <a href = "https://pyexpo.co/" target='_blank'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
+                    <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank"><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
                 <div className='mt-16 md:mt-20'>
                     <Link to='contact' smooth={true} duration={1000}>
