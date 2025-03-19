@@ -129,7 +129,7 @@ const LandingPage = () => {
                 </div>
                 <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
                     <ProjectCard name={'KG-SLAR'} description={"It's a student late attendance report system using RFID technology"} />
-                    <ProjectCard name={'KG-CAR'} description={"It's a Certificate Acknowladgement System"} />
+                    <ProjectCard name={'KG-CAR'} description={"It's a Certificate Acknowlegement System"} />
                     <ProjectCard name={'KG-APS'} description={"A comprehensive dashboard to track and update academic progress in a college"} />
                 </div>
                 
