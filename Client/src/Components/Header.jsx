@@ -35,10 +35,10 @@ const Header = () => {
                         to={section} 
                         smooth={true} 
                         duration={1000}
-                    >
-                        <li className='text-base lg:text-lg font-semibold cursor-pointer px-3 lg:px-7 py-2 rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white'>
-                            {section.charAt(0).toUpperCase() + section.slice(1)}
-                        </li>
+                    ><li className='group text-base lg:text-lg font-semibold cursor-pointer px-3 lg:px-7 py-2 rounded-lg transition-all duration-300 relative'>
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                    <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full'></span>
+                  </li>
                     </Link>
                 ))}
             </ul>
