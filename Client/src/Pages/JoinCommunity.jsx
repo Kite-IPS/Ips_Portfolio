@@ -74,16 +74,36 @@ const JoinCommunity = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
+    // Create a temporary form element to prepare data for EmailJS
+    const formToSend = form.current;
+    
+    // Set the skills to a hidden field that matches the email template variable name
+    const skillsInput = formToSend.querySelector('input[name="skill"]');
+    if (skillsInput) {
+      skillsInput.value = formData.skills.join(', ');
+    }
+    
+    // Set the proficient languages to a hidden field
+    const proficientInInput = formToSend.querySelector('input[name="proficientInList"]');
+    if (proficientInInput) {
+      proficientInInput.value = formData.proficientIn.join(', ');
+    }
+
     setIsSending(true);
     emailjs.sendForm(
       'service_veawp9g',
       'template_4jyepoy',
-      form.current, 
+      formToSend,
       'maKw0xiMpSl3fit09'
     ).then(
       () => setSubmitted(true),
-      () => alert('An error occurred, please try again.')
-    );
+      (error) => {
+        console.error("EmailJS error:", error);
+        alert('An error occurred, please try again.');
+      }
+    ).finally(() => {
+      setIsSending(false);
+    });
   };
 
   // Skills list
@@ -276,8 +296,12 @@ const JoinCommunity = () => {
                     </div>
                   )}
                   
-                  {/* Hidden input for form submission */}
-                  <input type="hidden" name="skillsList" value={formData.skills.join(', ')} />
+                  {/* Critical: Hidden input with name="skill" for EmailJS template compatibility */}
+                  <input 
+                    type="hidden" 
+                    name="skill" 
+                    value={formData.skills.join(', ')} 
+                  />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -333,20 +357,20 @@ const JoinCommunity = () => {
                   name="interest" 
                   value={formData.interest} 
                   onChange={handleChange} 
-                  placeholder="Whats the aspirations to join IPS Tech Community..." 
+                  placeholder="Share your technical interests and aspirations..." 
                   rows="4" 
                   className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none resize-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
                 />
                 
-                {/* Hidden fields for emailjs */}
+                {/* Hidden input for proficientIn list */}
                 <input type="hidden" name="proficientInList" value={formData.proficientIn.join(', ')} />
-                <input type="hidden" name="skills" value={formData.skills.join(', ')} />
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg"
+                  disabled={isSending}
+                  className={`w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out ${!isSending ? 'hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg' : 'opacity-80 cursor-not-allowed'}`}
                 >
-                  Join the Community
+                  {isSending ? 'Submitting...' : 'Join the Community'}
                 </button>
               </motion.form>
             )}
