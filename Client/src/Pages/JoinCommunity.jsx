@@ -3,7 +3,6 @@ import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUser, FiMail, FiArrowRight, FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi';
 import aboutImg from '../assets/IPS-WHITE-batch.png';
-<link rel='stylesheet' href='index.css'></link>
 
 const JoinCommunity = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +10,7 @@ const JoinCommunity = () => {
     email: '',
     department: '',
     year: '',
-    skill: '',
+    skills: [],
     interest: '',
     areaOfInterest: '',
     githubLink: '',
@@ -22,6 +21,7 @@ const JoinCommunity = () => {
 
   const [isSending, setIsSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [skillsDropdownOpen, setSkillsDropdownOpen] = useState(false);
   const form = useRef();
 
   const handleChange = (e) => {
@@ -36,6 +36,20 @@ const JoinCommunity = () => {
       setFormData({
         ...formData,
         proficientIn: formData.proficientIn.filter(item => item !== value)
+      });
+    }
+  };
+
+  const handleSkillSelection = (skill) => {
+    if (formData.skills.includes(skill)) {
+      setFormData({
+        ...formData,
+        skills: formData.skills.filter(item => item !== skill)
+      });
+    } else {
+      setFormData({
+        ...formData,
+        skills: [...formData.skills, skill]
       });
     }
   };
@@ -71,6 +85,19 @@ const JoinCommunity = () => {
       () => alert('An error occurred, please try again.')
     );
   };
+
+  // Skills list
+  const skillsList = [
+    "JavaScript", "Frameworks & Libraries", "Databases & APIs", 
+    "Mathematics & Algorithms", "Programming (Python & Libraries)", 
+    "Model Deployment & Cloud Integration", "Real-Time Operating Systems (RTOS)", 
+    "IoT Communication Protocols", "Embedded & Cloud Integration", 
+    "Cybersecurity & Data Handling", "3D Modeling Software", 
+    "Rendering & Animation", "3D Printing & Simulation", 
+    "Robot Operating System (ROS)", "Kinematics & Motion Planning", 
+    "Sensor Integration & Actuation", "Visual & Interaction Design", 
+    "App Deployment & Performance Optimization"
+  ];
 
   // Common input field styles with hover effect
   const inputStyles = "w-full bg-transparent text-black placeholder-stone-500 focus:outline-none text-lg transition-all duration-300 ease-in-out";
@@ -187,14 +214,71 @@ const JoinCommunity = () => {
                     ))}
                   </select>
                 </div>
-                <input 
-                  type="text" 
-                  name="skill" 
-                  value={formData.skill} 
-                  onChange={handleChange} 
-                  placeholder="Enter Your Skills" 
-                  className={`w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50`} 
-                />
+                
+                {/* Multi-select Skills Dropdown */}
+                <div className="relative">
+                  <div 
+                    className={`w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${skillsDropdownOpen ? 'border-blue-500 ring-2 ring-blue-300 ring-opacity-50' : 'hover:border-blue-500'}`}
+                    onClick={() => setSkillsDropdownOpen(!skillsDropdownOpen)}
+                  >
+                    <div className="flex justify-between items-center">
+                      <span>{formData.skills.length > 0 ? `${formData.skills.length} skill(s) selected` : 'Select Your Skills'}</span>
+                      <svg className={`w-5 h-5 transition-transform duration-300 ${skillsDropdownOpen ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
+                    
+                    {/* Selected skills preview */}
+                    {formData.skills.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {formData.skills.map(skill => (
+                          <span 
+                            key={skill} 
+                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
+                          >
+                            {skill}
+                            <button 
+                              type="button"
+                              className="ml-1.5 inline-flex text-blue-500 hover:text-blue-700 focus:outline-none" 
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleSkillSelection(skill);
+                              }}
+                            >
+                              ×
+                            </button>
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Dropdown menu */}
+                  {skillsDropdownOpen && (
+                    <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                      {skillsList.map(skill => (
+                        <div 
+                          key={skill}
+                          className={`px-4 py-2 cursor-pointer transition-all duration-200 ease-in-out hover:bg-blue-50 ${formData.skills.includes(skill) ? 'bg-blue-100 text-blue-800' : 'text-gray-700'}`}
+                          onClick={() => handleSkillSelection(skill)}
+                        >
+                          <div className="flex items-center">
+                            <input
+                              type="checkbox"
+                              checked={formData.skills.includes(skill)}
+                              onChange={() => {}}
+                              className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                            />
+                            {skill}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {/* Hidden input for form submission */}
+                  <input type="hidden" name="skillsList" value={formData.skills.join(', ')} />
+                </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
@@ -249,13 +333,14 @@ const JoinCommunity = () => {
                   name="interest" 
                   value={formData.interest} 
                   onChange={handleChange} 
-                  placeholder="Share your technical interests and aspirations..." 
+                  placeholder="Whats the aspirations to join IPS Tech Community..." 
                   rows="4" 
                   className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none resize-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
                 />
                 
-                {/* Hidden fields for emailjs to include proficientIn as a comma-separated string */}
+                {/* Hidden fields for emailjs */}
                 <input type="hidden" name="proficientInList" value={formData.proficientIn.join(', ')} />
+                <input type="hidden" name="skills" value={formData.skills.join(', ')} />
                 
                 <button 
                   type="submit" 
