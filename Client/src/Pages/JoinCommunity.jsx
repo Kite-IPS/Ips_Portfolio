@@ -91,10 +91,10 @@ const JoinCommunity = () => {
 
     setIsSending(true);
     emailjs.sendForm(
-      'service_veawp9g',
-      'template_4jyepoy',
+      'service_nj7e4pf',
+      'template_1tssygg',
       formToSend,
-      'maKw0xiMpSl3fit09'
+      'neGb32l3efGX_O7HW'
     ).then(
       () => setSubmitted(true),
       (error) => {

@@ -92,10 +92,10 @@ const ProjectSubmission = () => {
 
       // Send email using EmailJS
       await emailjs.send(
-        'service_veawp9g',
-        'template_p25a032',
+        'service_nj7e4pf',
+        'template_v1xhwb9',
         emailData,
-        'maKw0xiMpSl3fit09'
+        'neGb32l3efGX_O7HW'
       );
 
       setIdeaSubmissionSuccess(true);
