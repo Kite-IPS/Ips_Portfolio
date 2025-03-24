@@ -256,7 +256,7 @@ const ProjectSubmission = () => {
                         value={ideaFormData.year}
                         onChange={handleIdeaChange}
                         className={inputClasses}
-                        placeholder="e.g. 2nd Year"
+                        placeholder="e.g. 1nd Year"
                         required
                       />
                     </div>

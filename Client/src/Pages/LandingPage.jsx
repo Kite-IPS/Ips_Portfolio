@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
 
-const words = ["Community", "Co-Kreate", "Humanity", "Solving",]; // Words to cycle
+const words = ["Community","Building","Learning","Growing",]; // Words to cycle
 
 const LandingPage = () => {
     const navigate = useNavigate();
@@ -52,11 +52,13 @@ const LandingPage = () => {
                     <div className='w-full md:w-1/2 flex flex-col items-start justify-center mb-8 md:mb-0'>
                         {/* Animated Text with Smooth Transition */}
                         <h1 className='font-bold text-4xl md:text-5xl lg:text-6xl mokoto-text leading-tight md:leading-[75px]'>
-                            Welcome to IPS TECH  
+                            Welcome to IPS TECH
+                            
                             <br />
                             <span className={`fade-text ${fade ? 'fade-in' : 'fade-out'}`}>
                                 {words[currentWordIndex]}
                             </span>
+                            Together
                         </h1>
 
                         <p className='font-semibold text-base my-6 md:my-10 w-full md:w-[60%]'>
@@ -75,7 +77,7 @@ const LandingPage = () => {
                         <img 
                             src={HeroImg} 
                             alt="Community Img" 
-                            className="w-full lg-w-[90%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                            className="w-full lg-w-[80%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
                         />
                     </div>
                 </div>
