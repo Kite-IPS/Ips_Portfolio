@@ -29,7 +29,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <ul className='hidden md:flex items-center gap-6 lg:gap-10 mokoto-text'>
-                {['home', 'about', 'projects', 'contact'].map((section) => (
+                {['home', 'about', 'projects', 'members','contact'].map((section) => (
                     <Link 
                         key={section} 
                         to={section} 
@@ -81,7 +81,7 @@ const Header = () => {
             {mobileMenuOpen && (
                 <div className='md:hidden absolute top-[80px] left-0 right-0 bg-white shadow-md z-40'>
                     <ul className='flex flex-col w-full mokoto-text'>
-                        {['home', 'about', 'projects', 'contact'].map((section) => (
+                        {['home', 'about', 'projects', 'members','contact'].map((section) => (
                             <Link 
                                 key={section} 
                                 to={section} 

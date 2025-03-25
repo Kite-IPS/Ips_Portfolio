@@ -9,6 +9,7 @@ import { HiArrowSmRight } from "react-icons/hi";
 import ProjectCard from '../Components/ProjectCard';
 import section from '../assets/section.png';
 import ServiceBox from '../Components/ServiceBox';
+import Member from '../Components/Member';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
@@ -140,11 +141,11 @@ const LandingPage = () => {
                     <a href = "https://pyexpo.co/" target='_blank'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank"><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
-                <div className='mt-16 md:mt-20'>
-                    <Link to='contact' smooth={true} duration={1000}>
-                        <img src={section} alt="Image" className='mx-auto max-w-full' />
-                    </Link>
-                </div>
+
+                <Member></Member>
+               
+
+
 
                 <div className="mt-16 md:mt-20">
                     <div className='w-[90%] md:w-[80%] mx-auto flex flex-col items-center justify-center'>
