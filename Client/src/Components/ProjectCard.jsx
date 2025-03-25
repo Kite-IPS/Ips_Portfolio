@@ -9,9 +9,9 @@ import KGAPS from '../assets/KG-APS.jpg';
 const ProjectCard = ({ name, description }) => {
     // Mapping project names to their respective route paths
     const projectRoutes = {
-        "KG-SLAR": "/projects/kg-slar",
-        "KG-CAR": "/projects/kg-car",
-        "KG-APS": "/projects/kg-aps"
+        "KG-SLAR": "/kgslar",
+        "KG-CAR": "/kgcar",
+        "KG-APS": "/kgaps"
     };
 
     return (
