@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
 
-const words = ["Community","Building","Learning","Growing",]; // Words to cycle
+const words = ["Community","Learning","Growing","Building"]; // Words to cycle
 
 const LandingPage = () => {
     const navigate = useNavigate();
@@ -59,7 +59,7 @@ const LandingPage = () => {
                             <span className={`fade-text ${fade ? 'fade-in' : 'fade-out'}`}>
                                 {words[currentWordIndex]}
                             </span>
-                            Together
+                            
                         </h1>
 
                         <p className='font-semibold text-base my-6 md:my-10 w-full md:w-[60%]'>
@@ -103,10 +103,7 @@ const LandingPage = () => {
                         <p className='font-light text-base text-gray-500'>
                             Whether you want to edit your Google Docs, resolve Jira issues, or collaborate over Zoom, Miro has 100+ integrations with tools you already use and love.
                         </p>
-                        <p className='underline cursor-pointer flex items-center gap-2 text-blue-600'>
-                            Learn more
-                            <HiArrowSmRight />
-                        </p>
+                        
                     </div>
                 </div>
             </section>
