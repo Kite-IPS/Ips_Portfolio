@@ -22,74 +22,112 @@ const createMembersData = (photos = []) => {
 
 const ProfessionalMemberMarquee = ({ memberPhotos = [] }) => {
   const [selectedMember, setSelectedMember] = useState(null);
-  const scrollRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const scrollRefTop = useRef(null);
+  const scrollRefBottom = useRef(null);
+  const [isHoveredTop, setIsHoveredTop] = useState(false);
+  const [isHoveredBottom, setIsHoveredBottom] = useState(false);
 
   // Generate members data from provided photos or use defaults
   const membersData = createMembersData(memberPhotos);
 
+  // Split members into two rows
+  const topRowMembers = membersData.slice(0, 17);
+  const bottomRowMembers = membersData.slice(17);
+
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+    const setupAutoScroll = (scrollContainer, isReverse = false) => {
+      if (!scrollContainer) return;
 
-    let animationFrameId;
-    const scrollStep = 1; // Adjust for speed (lower = slower)
+      let animationFrameId;
+      const scrollStep = 1; // Consistent scroll speed for both rows
 
-    const autoScroll = () => {
-      if (!isHovered) {
-        scrollContainer.scrollLeft += scrollStep;
+      const autoScroll = () => {
+        const isHovered = isReverse ? isHoveredBottom : isHoveredTop;
+        
+        if (!isHovered) {
+          scrollContainer.scrollLeft = isReverse 
+            ? scrollContainer.scrollLeft - scrollStep 
+            : scrollContainer.scrollLeft + scrollStep;
 
-        // Reset scroll position when reaching the end
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0;
+          // Reset scroll position when reaching the end
+          if (isReverse) {
+            if (scrollContainer.scrollLeft <= 0) {
+              scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+            }
+          } else {
+            if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+              scrollContainer.scrollLeft = 0;
+            }
+          }
         }
-      }
+
+        animationFrameId = requestAnimationFrame(autoScroll);
+      };
 
       animationFrameId = requestAnimationFrame(autoScroll);
+
+      return () => {
+        cancelAnimationFrame(animationFrameId);
+      };
     };
 
-    animationFrameId = requestAnimationFrame(autoScroll);
+    const cleanupTop = setupAutoScroll(scrollRefTop.current, false);
+    const cleanupBottom = setupAutoScroll(scrollRefBottom.current, true);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      cleanupTop();
+      cleanupBottom();
     };
-  }, [isHovered]);
+  }, [isHoveredTop, isHoveredBottom]);
 
-  // Duplicate the array to create a seamless loop
-  const duplicatedMembersData = [...membersData, ...membersData];
+  // Duplicate the arrays to create seamless loops
+  const topRowDuplicated = [...topRowMembers, ...topRowMembers];
+  const bottomRowDuplicated = [...bottomRowMembers, ...bottomRowMembers];
+
+  const renderMemberCard = (member, index) => (
+    <div 
+      key={`${member.id}-${index}`}
+      className="flex-shrink-0 w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden cursor-pointer"
+      onClick={() => setSelectedMember(member)}
+    >
+      <div className="relative">
+        <img 
+          src={member.imageUrl} 
+          alt={member.name}
+          className="w-full h-56 object-cover"
+        />
+        <div className="absolute top-2 right-2 bg-slate-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm">
+          {member.id}
+        </div>
+      </div>
+      <div className="p-4 bg-white">
+        <h3 className="font-semibold text-lg text-slate-800">{member.name}</h3>
+        <p className="text-sm text-slate-600 mb-1">{member.role}</p>
+        <p className="text-xs text-slate-500 italic">Specialty: {member.specialty}</p>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+    <div className="bg-slate-20 min-h-screen flex flex-col items-center justify-center p-4 space-y-8">
+      {/* Top Row - Scrolling Left to Right */}
       <div 
-        ref={scrollRef}
+        ref={scrollRefTop}
         className="flex overflow-x-hidden space-x-6 py-8 px-4 w-full"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => setIsHoveredTop(true)}
+        onMouseLeave={() => setIsHoveredTop(false)}
       >
-        {duplicatedMembersData.map((member, index) => (
-          <motion.div 
-            key={`${member.id}-${index}`}
-            className="flex-shrink-0 w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer"
-            whileHover={{ scale: 1.03 }}
-            onClick={() => setSelectedMember(member)}
-          >
-            <div className="relative">
-              <img 
-                src={member.imageUrl} 
-                alt={member.name}
-                className="w-full h-56 object-cover"
-              />
-              <div className="absolute top-2 right-2 bg-slate-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm">
-                {member.id}
-              </div>
-            </div>
-            <div className="p-4">
-              <h3 className="font-semibold text-lg text-slate-800">{member.name}</h3>
-              <p className="text-sm text-slate-600 mb-1">{member.role}</p>
-              <p className="text-xs text-slate-500 italic">Specialty: {member.specialty}</p>
-            </div>
-          </motion.div>
-        ))}
+        {topRowDuplicated.map(renderMemberCard)}
+      </div>
+
+      {/* Bottom Row - Scrolling Right to Left */}
+      <div 
+        ref={scrollRefBottom}
+        className="flex overflow-x-hidden space-x-6 py-8 px-4 w-full"
+        onMouseEnter={() => setIsHoveredBottom(true)}
+        onMouseLeave={() => setIsHoveredBottom(false)}
+      >
+        {bottomRowDuplicated.map(renderMemberCard)}
       </div>
 
       {/* Member Details Modal */}
