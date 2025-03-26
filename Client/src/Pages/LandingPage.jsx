@@ -141,7 +141,10 @@ const LandingPage = () => {
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank"><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
 
-                <Member></Member>
+
+                <div className="mt-16 md:mt-20">
+                    <Member></Member>
+                </div>
                
 
 
