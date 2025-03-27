@@ -156,18 +156,16 @@ const LandingPage = () => {
                 </div>
                 
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
-                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our Organization</h1>
+                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Events Organised</h1>
                 </div>
                 <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
                     <a href = "https://pyexpo.co/" target='_blank'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank"><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
 
-                {/* Members Section with ID for scrolling */}
-                <div id="members" className="mt-16 md:mt-20 ">
-                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
-                    <p className='font-light text-base text-gray-500 mt-2 text-center'>Meet the talented individuals behind our community</p>
-                    <Member />
+
+                <div className="mt-16 md:mt-20">
+                    <Member></Member>
                 </div>
 
                 <div className="mt-16 md:mt-20">
