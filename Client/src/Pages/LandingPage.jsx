@@ -164,9 +164,11 @@ const LandingPage = () => {
                 </div>
 
 
-                <div className="mt-16 md:mt-20">
-                    <Member></Member>
-                </div>
+                <div id="members" className="mt-16 md:mt-20 ">
+    <h1 className='font-bold text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
+    <p className='font-light text-base text-gray-500 mt-2 text-center'>Meet the talented individuals behind our community</p>
+    <Member />
+</div>
 
                 <div className="mt-16 md:mt-20">
                     <div className='w-[90%] md:w-[80%] mx-auto flex flex-col items-center justify-center'>
