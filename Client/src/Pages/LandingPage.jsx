@@ -134,7 +134,7 @@ const LandingPage = () => {
                 </div>
                 
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
-                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our Organization</h1>
+                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Events Organised</h1>
                 </div>
                 <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
                     <a href = "https://pyexpo.co/" target='_blank'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
@@ -143,6 +143,7 @@ const LandingPage = () => {
 
 
                 <div className="mt-16 md:mt-20">
+                    <h1 className='font-semibold text-2xl md:text-3xl mokoto-text'>Team MEMBERS</h1>
                     <Member></Member>
                 </div>
                
