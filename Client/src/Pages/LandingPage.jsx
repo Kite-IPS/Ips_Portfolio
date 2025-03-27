@@ -45,7 +45,29 @@ const LandingPage = () => {
     return (
         <>
             {/* Mobile menu toggle button can be added to your Header component */}
-            <Header handleButtonClick={() => navigate('/join-community')} />
+            <Header 
+                handleButtonClick={() => navigate('/join-community')}
+                additionalLinks={
+                    <>
+                        <Link 
+                            to='projects' 
+                            smooth={true} 
+                            duration={1000} 
+                            className="cursor-pointer"
+                        >
+                            Projects
+                        </Link>
+                        <Link 
+                            to='members' 
+                            smooth={true} 
+                            duration={1000} 
+                            className="cursor-pointer"
+                        >
+                            Members
+                        </Link>
+                    </>
+                }
+            />
 
             {/* Hero Section */}
             <section id='home' className='w-full min-h-screen mt-10 flex items-center justify-center font-primary'>
@@ -141,13 +163,12 @@ const LandingPage = () => {
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank"><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
 
-
-                <div className="mt-16 md:mt-20">
-                    <Member></Member>
+                {/* Members Section with ID for scrolling */}
+                <div id="members" className="mt-16 md:mt-20 ">
+                    <h1 className='font-bold text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
+                    <p className='font-light text-base text-gray-500 mt-2 text-center'>Meet the talented individuals behind our community</p>
+                    <Member />
                 </div>
-               
-
-
 
                 <div className="mt-16 md:mt-20">
                     <div className='w-[90%] md:w-[80%] mx-auto flex flex-col items-center justify-center'>

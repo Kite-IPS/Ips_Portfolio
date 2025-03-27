@@ -1,133 +1,221 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Ranjith from '../assets/ranjith.jpg';
+import Gopi from '../assets/gopi.jpg';
+import SK from '../assets/sk.jpg';
+import Yogesh from '../assets/yogesh.jpg';
+// Community Members Array
+const communityMembers = [
+  {
+    name: "Sivakanesh",
+    role: "Community Leader", 
+    specialty: "Strategic Planning",
+    imageUrl: SK
+  },
+  {
+    name: "Yogesh",
+    role: "Developer",
+    specialty: "Frontend Development", 
+    imageUrl: Yogesh
+  },
+  {
+    name: "Gopi",
+    role: "Designer",
+    specialty: "UI/UX Design",
+    imageUrl: Gopi
+  },
+  {
+    name: "Ranjith", 
+    role: "Engineer",
+    specialty: "Backend Development",
+    imageUrl: Ranjith
+  },
+  // Repeated 20 more times
+  ...Array(20).fill().map(() => [
+    {
+      name: "Sivakanesh",
+      role: "Community Leader",
+      specialty: "Strategic Planning", 
+      imageUrl: SK
+    },
+    {
+      name: "Yogesh",
+      role: "Developer", 
+      specialty: "Frontend Development",
+      imageUrl: Yogesh
+    },
+    {
+      name: "Gopi",
+      role: "Designer",
+      specialty: "UI/UX Design",
+      imageUrl: Gopi
+    },
+    {
+      name: "Ranjith",
+      role: "Engineer", 
+      specialty: "Backend Development",
+      imageUrl: Ranjith
+    }
+  ]).flat()
+];
 
-// Default placeholder images if no photos are provided
-const DEFAULT_PLACEHOLDERS = Array.from({ length: 35 }, (_, index) => 
-  `/api/placeholder/300/300?text=M${index + 1}`
-);
-
-// Function to generate members with custom or default photos
-const createMembersData = (photos = []) => {
-  // Use provided photos or default placeholders
-  const safePhotos = photos.length > 0 ? photos : DEFAULT_PLACEHOLDERS;
-
-  return safePhotos.slice(0, 35).map((photo, index) => ({
-    id: index + 1,
-    name: `Team Member ${index + 1}`,
-    role: ['Senior Developer', 'Lead Designer', 'Principal Engineer', 'Technical Specialist'][index % 4],
-    specialty: ['Backend', 'Frontend', 'AI/ML', 'UX Research', 'Cloud Architecture'][index % 5],
-    imageUrl: photo
-  }));
-};
-
-const ProfessionalMemberMarquee = ({ memberPhotos = [] }) => {
+const ProfessionalMemberMarquee = ({ 
+  members = [],
+  autoScrollSpeed = 1,  // Adjustable auto-scroll speed
+  manualScrollMultiplier = 2 // Adjusts manual scroll sensitivity
+}) => {
+  const scrollRef = useRef(null);
   const [selectedMember, setSelectedMember] = useState(null);
-  const scrollRefTop = useRef(null);
-  const scrollRefBottom = useRef(null);
-  const [isHoveredTop, setIsHoveredTop] = useState(false);
-  const [isHoveredBottom, setIsHoveredBottom] = useState(false);
+  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false);
+  
+  // Scroll State Management
+  const [scrollState, setScrollState] = useState({
+    isScrolling: false,
+    startX: 0,
+    scrollLeft: 0
+  });
 
-  // Generate members data from provided photos or use defaults
-  const membersData = createMembersData(memberPhotos);
+  // Prepare Members Data
+  const membersData = members.length > 0 
+    ? members.slice(0, 31).map((member, index) => ({
+      id: index + 1,
+      name: member.name || `Community Member ${index + 1}`,
+      role: member.role || 'Community Contributor',
+      specialty: member.specialty || 'Diverse Skills',
+      imageUrl: member.imageUrl || `/assets/placeholder-${(index % 5) + 1}.png`
+    }))
+    : Array.from({ length: 31 }, (_, index) => ({
+      id: index + 1,
+      name: `Community Member ${index + 1}`,
+      role: 'Community Contributor',
+      specialty: 'Diverse Skills',
+      imageUrl: `/assets/placeholder-${(index % 5) + 1}.png`
+    }));
 
-  // Split members into two rows
-  const topRowMembers = membersData.slice(0, 17);
-  const bottomRowMembers = membersData.slice(17);
+  // Manual Scroll Handlers
+  const startManualScroll = (e) => {
+    if (!scrollRef.current) return;
+    
+    // Prevent text selection
+    e.preventDefault();
+    
+    setScrollState({
+      isScrolling: true,
+      startX: e.pageX - scrollRef.current.offsetLeft,
+      scrollLeft: scrollRef.current.scrollLeft
+    });
 
+    // Pause auto-scroll when manually scrolling
+    setIsAutoScrollPaused(true);
+  };
+
+  const stopManualScroll = () => {
+    setScrollState(prev => ({ ...prev, isScrolling: false }));
+    
+    // Resume auto-scroll after a short delay
+    const timer = setTimeout(() => {
+      setIsAutoScrollPaused(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  };
+
+  const performManualScroll = (e) => {
+    if (!scrollState.isScrolling || !scrollRef.current) return;
+    
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - scrollState.startX) * manualScrollMultiplier;
+    
+    scrollRef.current.scrollLeft = scrollState.scrollLeft - walk;
+  };
+
+  // Wheel Scroll Handler
+  const handleWheel = (e) => {
+    if (!scrollRef.current) return;
+    
+    e.preventDefault();
+    
+    // Horizontal scroll with wheel
+    scrollRef.current.scrollLeft += e.deltaY * manualScrollMultiplier;
+    
+    // Pause auto-scroll temporarily
+    setIsAutoScrollPaused(true);
+    
+    // Resume auto-scroll after a delay
+    const timer = setTimeout(() => {
+      setIsAutoScrollPaused(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  };
+
+  // Automated Scroll Effect
   useEffect(() => {
-    const setupAutoScroll = (scrollContainer, isReverse = false) => {
-      if (!scrollContainer) return;
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
 
-      let animationFrameId;
-      const scrollStep = 1; // Consistent scroll speed for both rows
+    let animationFrameId;
+    
+    const autoScroll = () => {
+      // Only scroll if not paused and not at the end
+      if (!isAutoScrollPaused) {
+        scrollContainer.scrollLeft += autoScrollSpeed;
 
-      const autoScroll = () => {
-        const isHovered = isReverse ? isHoveredBottom : isHoveredTop;
-        
-        if (!isHovered) {
-          scrollContainer.scrollLeft = isReverse 
-            ? scrollContainer.scrollLeft - scrollStep 
-            : scrollContainer.scrollLeft + scrollStep;
-
-          // Reset scroll position when reaching the end
-          if (isReverse) {
-            if (scrollContainer.scrollLeft <= 0) {
-              scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
-            }
-          } else {
-            if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-              scrollContainer.scrollLeft = 0;
-            }
-          }
+        // Reset scroll to start when reaching halfway
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0;
         }
-
-        animationFrameId = requestAnimationFrame(autoScroll);
-      };
+      }
 
       animationFrameId = requestAnimationFrame(autoScroll);
-
-      return () => {
-        cancelAnimationFrame(animationFrameId);
-      };
     };
 
-    const cleanupTop = setupAutoScroll(scrollRefTop.current, false);
-    const cleanupBottom = setupAutoScroll(scrollRefBottom.current, true);
+    animationFrameId = requestAnimationFrame(autoScroll);
 
     return () => {
-      cleanupTop();
-      cleanupBottom();
+      cancelAnimationFrame(animationFrameId);
     };
-  }, [isHoveredTop, isHoveredBottom]);
+  }, [isAutoScrollPaused, autoScrollSpeed]);
 
-  // Duplicate the arrays to create seamless loops
-  const topRowDuplicated = [...topRowMembers, ...topRowMembers];
-  const bottomRowDuplicated = [...bottomRowMembers, ...bottomRowMembers];
-
-  const renderMemberCard = (member, index) => (
-    <div 
-      key={`${member.id}-${index}`}
-      className="flex-shrink-0 w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden cursor-pointer"
-      onClick={() => setSelectedMember(member)}
-    >
-      <div className="relative">
-        <img 
-          src={member.imageUrl} 
-          alt={member.name}
-          className="w-full h-56 object-cover"
-        />
-        <div className="absolute top-2 right-2 bg-slate-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm">
-          {member.id}
-        </div>
-      </div>
-      <div className="p-4 bg-white">
-        <h3 className="font-semibold text-lg text-slate-800">{member.name}</h3>
-        <p className="text-sm text-slate-600 mb-1">{member.role}</p>
-        <p className="text-xs text-slate-500 italic">Specialty: {member.specialty}</p>
-      </div>
-    </div>
-  );
+  // Duplicate members for seamless scrolling
+  const duplicatedMembersData = [...membersData, ...membersData];
 
   return (
-    <div className="bg-slate-20 min-h-screen flex flex-col items-center justify-center p-4 space-y-8">
-      {/* Top Row - Scrolling Left to Right */}
+    <div className="bg-slate-50 py-8">
       <div 
-        ref={scrollRefTop}
-        className="flex overflow-x-hidden space-x-6 py-8 px-4 w-full"
-        onMouseEnter={() => setIsHoveredTop(true)}
-        onMouseLeave={() => setIsHoveredTop(false)}
+        ref={scrollRef}
+        className="flex overflow-x-hidden space-x-6 px-4 w-full select-none cursor-grab active:cursor-grabbing"
+        onMouseDown={startManualScroll}
+        onMouseLeave={stopManualScroll}
+        onMouseUp={stopManualScroll}
+        onMouseMove={performManualScroll}
+        onWheel={handleWheel}
       >
-        {topRowDuplicated.map(renderMemberCard)}
-      </div>
-
-      {/* Bottom Row - Scrolling Right to Left */}
-      <div 
-        ref={scrollRefBottom}
-        className="flex overflow-x-hidden space-x-6 py-8 px-4 w-full"
-        onMouseEnter={() => setIsHoveredBottom(true)}
-        onMouseLeave={() => setIsHoveredBottom(false)}
-      >
-        {bottomRowDuplicated.map(renderMemberCard)}
+        {duplicatedMembersData.map((member, index) => (
+          <motion.div 
+            key={`${member.id}-${index}`}
+            className="flex-shrink-0 w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setSelectedMember(member)}
+          >
+            <div className="relative">
+              <img 
+                src={member.imageUrl} 
+                alt={member.name}
+                className="w-full h-56 object-cover"
+              />
+              <div className="absolute top-2 right-2 bg-slate-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm">
+                {member.id}
+              </div>
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold text-lg text-slate-800">{member.name}</h3>
+              <p className="text-sm text-slate-600 mb-1">{member.role}</p>
+              <p className="text-xs text-slate-500 italic">Specialty: {member.specialty}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* Member Details Modal */}
@@ -167,4 +255,8 @@ const ProfessionalMemberMarquee = ({ memberPhotos = [] }) => {
   );
 };
 
-export default ProfessionalMemberMarquee;
+function App() {
+  return <ProfessionalMemberMarquee members={communityMembers} />;
+}
+
+export default App;
