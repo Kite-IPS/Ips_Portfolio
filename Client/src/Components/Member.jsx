@@ -182,7 +182,7 @@ const ProfessionalMemberMarquee = ({
   const duplicatedMembersData = [...membersData, ...membersData];
 
   return (
-    <div className="bg-slate-50 py-8">
+    <div className="bg-slate-20 py-8">
       <div 
         ref={scrollRef}
         className="flex overflow-x-hidden space-x-6 px-4 w-full select-none cursor-grab active:cursor-grabbing"
