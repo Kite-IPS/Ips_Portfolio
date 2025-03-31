@@ -24,10 +24,10 @@ const Footer = () => {
           <div className="text-center md:text-left md:w-1/4">
             <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">Projects</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">Services</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">Contact</a></li>
+              <li><a href="#about"  className="text-gray-400 hover:text-blue-400">About Us</a></li>
+              <li><a href="#projects" className="text-gray-400 hover:text-blue-400">Projects</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-blue-400">Services</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-blue-400">Contact</a></li>
             </ul>
           </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
               <a href="https://lnkd.in/gZdPmjSB" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
                 <FaLinkedin className="text-2xl" />
               </a>
-              <a href="mailto:your-email@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
+              <a href="ipstechcommunity@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
                 <BiLogoGmail className="text-2xl" />
               </a>
               <a href="https://discord.com/invite/your-invite-link" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
