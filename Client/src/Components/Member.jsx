@@ -4,66 +4,304 @@ import Ranjith from '../assets/ranjith.jpg';
 import Gopi from '../assets/gopi.jpg';
 import SK from '../assets/sk.jpg';
 import Yogesh from '../assets/yogesh.jpg';
+import Black from '../assets/black-badge.png';
+import White from '../assets/IPS WHITE batch 1.png'; 
+import LinkedinIcon from '../assets/linkedin-icon.jpg'; 
+import GithubIcon from '../assets/github-icon.png'; 
+ 
 
-// Community Members Array
 const communityMembers = [
   {
     name: "Sivakanesh",
     role: "Community Leader", 
     specialty: "Strategic Planning",
-    imageUrl: SK
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
   },
   {
     name: "Yogesh",
     role: "Developer",
     specialty: "Frontend Development", 
-    imageUrl: Yogesh
+    imageUrl: Yogesh,
+    badges: [Black],
+    github: "https://github.com/yogesh",
+    linkedin: "https://linkedin.com/in/yogesh"
   },
   {
     name: "Gopi",
     role: "Designer",
     specialty: "UI/UX Design",
-    imageUrl: Gopi
+    imageUrl: Gopi,
+    badges: [Black],
+    github: "https://github.com/gopi",
+    linkedin: "https://linkedin.com/in/gopi"
   },
   {
     name: "Ranjith", 
-    role: "Engineer",
-    specialty: "Backend Development",
-    imageUrl: Ranjith
+    role: "Developer",
+    specialty: "Devops & Backend Development",
+    imageUrl: Ranjith,
+    badges: [Black],
+    github: "https://github.com/ranjith",
+    linkedin: "https://linkedin.com/in/ranjith"
   },
-  // Repeated 20 more times
-  ...Array(20).fill().map(() => [
-    {
-      name: "Sivakanesh",
-      role: "Community Leader",
-      specialty: "Strategic Planning", 
-      imageUrl: SK
-    },
-    {
-      name: "Yogesh",
-      role: "Developer", 
-      specialty: "Frontend Development",
-      imageUrl: Yogesh
-    },
-    {
-      name: "Gopi",
-      role: "Designer",
-      specialty: "UI/UX Design",
-      imageUrl: Gopi
-    },
-    {
-      name: "Ranjith",
-      role: "Engineer", 
-      specialty: "Backend Development",
-      imageUrl: Ranjith
-    }
-  ]).flat()
+
+  {
+    name: "Sivakanesh",
+    role: "Community Leader", 
+    specialty: "Strategic Planning",
+    imageUrl: SK,
+    badges: [White],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Yogesh",
+    role: "Developer",
+    specialty: "Frontend Development", 
+    imageUrl: Yogesh,
+    badges: [White],
+    github: "https://github.com/yogesh",
+    linkedin: "https://linkedin.com/in/yogesh"
+  },
+  {
+    name: "Gopi",
+    role: "Designer",
+    specialty: "UI/UX Design",
+    imageUrl: Gopi,
+    badges: [White],
+    github: "https://github.com/gopi",
+    linkedin: "https://linkedin.com/in/gopi"  
+  },
+ 
+  {
+    name: "Ranjith",
+    role: "Developer",
+    specialty: "Devops & Backend Development",
+    imageUrl: Ranjith,
+    badges: [White],
+    github: "https://github.com/ranjith",
+    linkedin: "https://linkedin.com/in/ranjith"
+  },
+
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Sivakanesh",
+    role: "Community Leader",
+    specialty: "Strategic Planning", 
+    imageUrl: SK,
+    badges: [Black],
+    github: "https://github.com/sivakanesh",
+    linkedin: "https://linkedin.com/in/sivakanesh"
+  },
+  {
+    name: "Ranjith",
+    role: "Developer",
+    specialty: "Devops & Backend Development",
+    imageUrl: Ranjith,
+    badges: [White],
+    github: "https://github.com/ranjith",
+    linkedin: "https://linkedin.com/in/ranjith"
+  },
+  {
+    name: "Ranjith",
+    role: "Developer",
+    specialty: "Devops & Backend Development",
+    imageUrl: Ranjith,
+    badges: [White],
+    github: "https://github.com/ranjith",
+    linkedin: "https://linkedin.com/in/ranjith"
+  },
+  {
+    name: "Ranjith",
+    role: "Developer",
+    specialty: "Devops & Backend Development",
+    imageUrl: Ranjith,
+    badges: [White],
+    github: "https://github.com/ranjith",
+    linkedin: "https://linkedin.com/in/ranjith"
+  },
+  {
+    name: "Ranjith",
+    role: "Developer",
+    specialty: "Devops & Backend Development",
+    imageUrl: Ranjith,
+    badges: [White],
+    github: "https://github.com/ranjith",
+    linkedin: "https://linkedin.com/in/ranjith"
+  },
+
+  
+ 
 ];
 
 const ProfessionalMemberMarquee = ({ 
   members = [],
-  autoScrollSpeed = 1,  // Adjustable auto-scroll speed
-  manualScrollMultiplier = 2 // Adjusts manual scroll sensitivity
+  autoScrollSpeed = 1,
+  manualScrollMultiplier = 2
 }) => {
   const scrollRef = useRef(null);
   const [selectedMember, setSelectedMember] = useState(null);
@@ -75,7 +313,7 @@ const ProfessionalMemberMarquee = ({
     isScrolling: false,
     startX: 0,
     scrollLeft: 0,
-    startY: 0 // For detecting vertical scroll on mobile
+    startY: 0
   });
 
   // Check if device is mobile
@@ -90,21 +328,27 @@ const ProfessionalMemberMarquee = ({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Prepare Members Data
+  // Prepare Members Data with badges and social links
   const membersData = members.length > 0 
     ? members.slice(0, 31).map((member, index) => ({
       id: index + 1,
       name: member.name || `Community Member ${index + 1}`,
       role: member.role || 'Community Contributor',
       specialty: member.specialty || 'Diverse Skills',
-      imageUrl: member.imageUrl || `/assets/placeholder-${(index % 5) + 1}.png`
+      imageUrl: member.imageUrl || `/assets/placeholder-${(index % 5) + 1}.png`,
+      badges: member.badges || [],
+      github: member.github || 'https://github.com',
+      linkedin: member.linkedin || 'https://linkedin.com'
     }))
     : Array.from({ length: 31 }, (_, index) => ({
       id: index + 1,
       name: `Community Member ${index + 1}`,
       role: 'Community Contributor',
       specialty: 'Diverse Skills',
-      imageUrl: `/assets/placeholder-${(index % 5) + 1}.png`
+      imageUrl: `/assets/placeholder-${(index % 5) + 1}.png`,
+      badges: [GithubIcon, LinkedinIcon],
+      github: 'https://github.com',
+      linkedin: 'https://linkedin.com'
     }));
 
   // Touch Events for Mobile
@@ -127,14 +371,11 @@ const ProfessionalMemberMarquee = ({
     const touchX = e.touches[0].pageX;
     const touchY = e.touches[0].pageY;
     
-    // Calculate X and Y difference
     const diffX = scrollState.startX - touchX;
     const diffY = Math.abs(scrollState.startY - touchY);
     
-    // If vertical scroll is greater than horizontal, let the browser handle it
     if (diffY > Math.abs(diffX)) return;
     
-    // Prevent default only for horizontal scrolling
     e.preventDefault();
     
     scrollRef.current.scrollLeft = scrollState.scrollLeft + diffX;
@@ -225,6 +466,19 @@ const ProfessionalMemberMarquee = ({
     };
   }, [isAutoScrollPaused, autoScrollSpeed]);
 
+  // Handle social profile navigation
+  const handleSocialClick = (e, url) => {
+    e.stopPropagation();
+    window.open(url, '_blank');
+  };
+
+  // Handle badge click
+  const handleBadgeClick = (e, badgeIndex) => {
+    e.stopPropagation(); // Prevent card click
+    // You can add specific actions for each badge type here
+    console.log(`Badge ${badgeIndex} clicked`);
+  };
+
   // Duplicate members for seamless scrolling
   const duplicatedMembersData = [...membersData, ...membersData];
 
@@ -257,8 +511,27 @@ const ProfessionalMemberMarquee = ({
                 alt={member.name}
                 className="w-full h-44 md:h-56 object-cover"
               />
-              <div className="absolute top-2 right-2 bg-slate-800 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-xs md:text-sm">
+              
+              {/* Member ID badge */}
+              <div className="absolute top-2 left-2 bg-slate-800 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-xs md:text-sm">
                 {member.id}
+              </div>
+              
+              {/* Custom badges - positioned on right corner */}
+              <div className="absolute top-2 right-2 flex flex-col space-y-1">
+                {member.badges && member.badges.map((badge, badgeIndex) => (
+                  <div 
+                    key={badgeIndex}
+                    className="bg-black rounded-full  shadow-md cursor-pointer hover:scale-110 transition-transform duration-200"
+                    onClick={(e) => handleBadgeClick(e, badgeIndex)}
+                  >
+                    <img 
+                      src={badge} 
+                      alt={`Badge ${badgeIndex + 1}`}
+                      className="w-6 h-6 md:w-8 md:h-8"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
             <div className="p-3 md:p-4">
@@ -270,7 +543,7 @@ const ProfessionalMemberMarquee = ({
         ))}
       </div>
 
-      {/* Member Details Modal - Responsive */}
+      {/* Member Details Modal - Now with GitHub and LinkedIn links */}
       {selectedMember && (
         <div 
           className="fixed inset-0 bg-slate-900 bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4"
@@ -279,7 +552,7 @@ const ProfessionalMemberMarquee = ({
           <motion.div 
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white rounded-xl max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-slate-200"
+            className="bg-white rounded max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-slate-200"
             onClick={e => e.stopPropagation()}
           >
             <div className="relative">
@@ -295,6 +568,43 @@ const ProfessionalMemberMarquee = ({
             <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-2">{selectedMember.name}</h2>
             <p className="text-slate-600 mb-1">{selectedMember.role}</p>
             <p className="text-sm text-slate-500 mb-4">Specialty in {selectedMember.specialty}</p>
+            
+            {/* Social profile links */}
+            <div className="flex justify-center space-x-4 mb-6">
+              <button
+                className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
+                onClick={(e) => handleSocialClick(e, selectedMember.github)}
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                GitHub Profile
+              </button>
+              <button
+                className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                onClick={(e) => handleSocialClick(e, selectedMember.linkedin)}
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                </svg>
+                LinkedIn Profile
+              </button>
+            </div>
+            
+            {/* Display badges in modal */}
+            {selectedMember.badges && selectedMember.badges.length > 0 && (
+              <div className="flex justify-center space-x-3 mb-4">
+                {selectedMember.badges.map((badge, idx) => (
+                  <div 
+                    key={idx} 
+                    className="bg-gray-100  rounded-full hover:bg-gray-200 transition-colors"
+                  >
+                    <img src={badge} alt={`Badge ${idx + 1}`} className="w-6 h-6" />
+                  </div>
+                ))}
+              </div>
+            )}
+            
             <button 
               className="bg-slate-800 text-white px-6 py-2 rounded-md hover:bg-slate-700 transition-colors"
               onClick={(e) => {
