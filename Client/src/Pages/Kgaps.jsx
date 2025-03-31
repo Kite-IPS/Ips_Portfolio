@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import KGAPS from '../assets/KG-APS.jpg';
 
 const Kgaps = () => {
   return (
@@ -7,12 +8,7 @@ const Kgaps = () => {
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 bg-blue-50 flex items-center justify-center p-6">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold mb-4 text-blue-600">KG-APS 🚀</h1>
-              <p className="text-lg text-gray-700">
-                <strong>Smart Academic Progress Tracking System</strong>
-              </p>
-            </div>
+           <img src={KGAPS} alt="KG-APS" classname="w-full h-full object-cover"/>
           </div>
           <div className="md:w-1/2 p-6">
             <p className="text-lg text-gray-700 mb-4">
