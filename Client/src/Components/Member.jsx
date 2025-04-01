@@ -111,195 +111,195 @@ const communityMembers = [
     linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
   
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Ranjith",
-    role: "Developer",
-    specialty: "Devops & Backend Development",
-    imageUrl: Ranjith,
-    badges: [White],
-    github: "https://github.com/ranjith",
-    linkedin: "https://linkedin.com/in/ranjith"
-  },
-  {
-    name: "Ranjith",
-    role: "Developer",
-    specialty: "Devops & Backend Development",
-    imageUrl: Ranjith,
-    badges: [White],
-    github: "https://github.com/ranjith",
-    linkedin: "https://linkedin.com/in/ranjith"
-  },
-  {
-    name: "Ranjith",
-    role: "Developer",
-    specialty: "Devops & Backend Development",
-    imageUrl: Ranjith,
-    badges: [White],
-    github: "https://github.com/ranjith",
-    linkedin: "https://linkedin.com/in/ranjith"
-  },
-  {
-    name: "Ranjith",
-    role: "Developer",
-    specialty: "Devops & Backend Development",
-    imageUrl: Ranjith,
-    badges: [White],
-    github: "https://github.com/ranjith",
-    linkedin: "https://linkedin.com/in/ranjith"
-  },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Sivakanesh",
+  //   role: "Community Leader",
+  //   specialty: "Strategic Planning", 
+  //   imageUrl: SK,
+  //   badges: [Black],
+  //   github: "https://github.com/sivakanesh",
+  //   linkedin: "https://linkedin.com/in/sivakanesh"
+  // },
+  // {
+  //   name: "Ranjith",
+  //   role: "Developer",
+  //   specialty: "Devops & Backend Development",
+  //   imageUrl: Ranjith,
+  //   badges: [White],
+  //   github: "https://github.com/ranjith",
+  //   linkedin: "https://linkedin.com/in/ranjith"
+  // },
+  // {
+  //   name: "Ranjith",
+  //   role: "Developer",
+  //   specialty: "Devops & Backend Development",
+  //   imageUrl: Ranjith,
+  //   badges: [White],
+  //   github: "https://github.com/ranjith",
+  //   linkedin: "https://linkedin.com/in/ranjith"
+  // },
+  // {
+  //   name: "Ranjith",
+  //   role: "Developer",
+  //   specialty: "Devops & Backend Development",
+  //   imageUrl: Ranjith,
+  //   badges: [White],
+  //   github: "https://github.com/ranjith",
+  //   linkedin: "https://linkedin.com/in/ranjith"
+  // },
+  // {
+  //   name: "Ranjith",
+  //   role: "Developer",
+  //   specialty: "Devops & Backend Development",
+  //   imageUrl: Ranjith,
+  //   badges: [White],
+  //   github: "https://github.com/ranjith",
+  //   linkedin: "https://linkedin.com/in/ranjith"
+  // },
 
   
  
