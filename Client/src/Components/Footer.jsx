@@ -1,6 +1,7 @@
-import React from "react";
+// import React from "react";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -24,10 +25,10 @@ const Footer = () => {
           <div className="text-center md:text-left md:w-1/4">
             <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#about"  className="text-gray-400 hover:text-blue-400">About Us</a></li>
-              <li><a href="#projects" className="text-gray-400 hover:text-blue-400">Projects</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-blue-400">Services</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-blue-400">Contact</a></li>
+              <li><Link to="about" smooth={true} duration={1000} className="text-gray-400 hover:text-blue-400 cursor-pointer">About Us</Link></li>
+              <li><Link to="projects" smooth={true} duration={1000} className="text-gray-400 hover:text-blue-400 cursor-pointer">Projects</Link></li>
+              <li><Link to="services" smooth={true} duration={1000} className="text-gray-400 hover:text-blue-400 cursor-pointer">Services</Link></li>
+              <li><Link to="contact" smooth={true} duration={1000} className="text-gray-400 hover:text-blue-400 cursor-pointer">Contact</Link></li>
             </ul>
           </div>
 

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../Components/Header';
 import HeroImg from '../assets/community2.png';
 import Button from '../Components/Button';
 import { Link } from 'react-scroll';
 import InfoBox from '../Components/InfoBox';
 import aboutImg from '../assets/aboutImg.png';
-import { HiArrowSmRight } from "react-icons/hi";
+// import { HiArrowSmRight } from "react-icons/hi";
 import ProjectCard from '../Components/ProjectCard';
-import section from '../assets/section.png';
+// import section from '../assets/section.png';
 import ServiceBox from '../Components/ServiceBox';
 import Member from '../Components/Member';
 import { useNavigate } from 'react-router-dom';
@@ -20,7 +20,7 @@ const LandingPage = () => {
     const navigate = useNavigate();
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [fade, setFade] = useState(true);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -38,9 +38,9 @@ const LandingPage = () => {
         navigate('/project-submission');
     };
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+    // const toggleMobileMenu = () => {
+    //     setIsMobileMenuOpen(!isMobileMenuOpen);
+    // };
 
     return (
         <>
@@ -131,7 +131,7 @@ const LandingPage = () => {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="font-primary py-10">
+            <section id="projects" className="font-primary pb-10">
                 <div className='w-[90%] md:w-[80%] mx-auto flex flex-col sm:flex-row items-center justify-around gap-8 sm:gap-0'>
                     <div className='flex flex-col items-center'>
                         <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>20+</h1>

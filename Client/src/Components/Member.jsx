@@ -490,7 +490,7 @@ const ProfessionalMemberMarquee = ({
   const duplicatedMembersData = [...membersData, ...membersData];
 
   return (
-    <div className="bg-slate-20 py-4 md:py-8">
+    <div className="bg-slate-20 py-4 md:py-8 cursor-pointer">
       <div 
         ref={scrollRef}
         className="flex overflow-x-hidden space-x-3 md:space-x-6 px-2 md:px-4 w-full select-none"
@@ -553,7 +553,7 @@ const ProfessionalMemberMarquee = ({
       {/* Member Details Modal - Now with GitHub and LinkedIn links */}
       {selectedMember && (
         <div 
-          className="fixed inset-0 bg-slate-900 bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4"
+          className="fixed inset-0 bg-slate-900 bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4 cursor-pointer"
           onClick={() => setSelectedMember(null)}
         >
           <motion.div 
