@@ -1,9 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import Ranjith from '../assets/ranjith.jpg';
-import Gopi from '../assets/gopi.jpg';
-import SK from '../assets/sk.jpg';
-import Yogesh from '../assets/yogesh.jpg';
+import Ranjith from '../assets/ranjith.png';
+import Rajarajan from '../assets/rajarajan.png';
+import Mitun from '../assets/mithun.png';
+// import Gopi from '../assets/gopi.jpg';
+import SK from '../assets/sk.png';
+import Yogesh from '../assets/yogesh.png';
+import Adithya from '../assets/adithya.png';
+import Gobi from '../assets/gobi.png';
+import Nishanth from '../assets/nishanth.png';
 import Black from '../assets/black-badge.png';
 import White from '../assets/IPS WHITE batch 1.png'; 
 import LinkedinIcon from '../assets/linkedin-icon.jpg'; 
@@ -12,98 +18,99 @@ import GithubIcon from '../assets/github-icon.png';
 
 const communityMembers = [
   {
-    name: "Sivakanesh",
-    role: "Community Leader", 
-    specialty: "Strategic Planning",
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
-  {
-    name: "Yogesh",
+    name: "Siva Ramana H V",
     role: "Developer",
-    specialty: "Frontend Development", 
-    imageUrl: Yogesh,
-    badges: [Black],
-    github: "https://github.com/yogesh",
-    linkedin: "https://linkedin.com/in/yogesh"
+    specialty: "Full-Stack Development", 
+    imageUrl: SK,
+    badges: [White],
+    github: "https://github.com/SivaRamana-H-V",
+    linkedin: "https://www.linkedin.com/in/sivaramanahv/"
   },
   {
-    name: "Gopi",
-    role: "Designer",
-    specialty: "UI/UX Design",
-    imageUrl: Gopi,
-    badges: [Black],
-    github: "https://github.com/gopi",
-    linkedin: "https://linkedin.com/in/gopi"
+    name: "Nishanth R",
+    role: "Developer", 
+    specialty: "Full-Stack Development",
+    imageUrl: Nishanth,
+    badges: [White],
+    github: "https://github.com/NishanthSbz",
+    linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
   },
   {
-    name: "Ranjith", 
+    name: "Adithya G",
+    role: "Developer",
+    specialty: "Full-Stack Development", 
+    imageUrl: Adithya,
+    badges: [Black],
+    github: "https://github.com/Adithya14255",
+    linkedin: "https://www.linkedin.com/in/adithya-g-a2085b268/"
+  },
+  {
+    name: "GopiKrishnan K",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Gobi,
+    badges: [Black],
+    github: "https://github.com/krishgobi",
+    linkedin: "https://www.linkedin.com/in/gobi-krishnan-998847300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Ranjith M", 
     role: "Developer",
     specialty: "Devops & Backend Development",
     imageUrl: Ranjith,
     badges: [Black],
-    github: "https://github.com/ranjith",
-    linkedin: "https://linkedin.com/in/ranjith"
+    github: "https://github.com/rxnjitth",
+    linkedin: "https://www.linkedin.com/in/ranjith-m-sundaram-8263b8282/"
   },
 
   {
-    name: "Sivakanesh",
-    role: "Community Leader", 
-    specialty: "Strategic Planning",
+    name: "Sivakanesh SK",
+    role: "Developer", 
+    specialty: "Backend Development",
     imageUrl: SK,
-    badges: [White],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
+    badges: [Black],
+    github: "http://github.com/sivakaneshh",
+    linkedin: "https://www.linkedin.com/in/sivakanesh-s-k-632008281/"
   },
   {
-    name: "Yogesh",
+    name: "Yogesh Venugopal R",
     role: "Developer",
     specialty: "Frontend Development", 
     imageUrl: Yogesh,
-    badges: [White],
-    github: "https://github.com/yogesh",
-    linkedin: "https://linkedin.com/in/yogesh"
+    badges: [Black],
+    github: "https://github.com/YogeshVenugopal",
+    linkedin: "https://www.linkedin.com/in/yogesh-venugopal/"
   },
   {
-    name: "Gopi",
-    role: "Designer",
-    specialty: "UI/UX Design",
-    imageUrl: Gopi,
-    badges: [White],
-    github: "https://github.com/gopi",
-    linkedin: "https://linkedin.com/in/gopi"  
+    name: "Raja Rajan K",
+    role: "Developer",
+    specialty: "Backend Development",
+    imageUrl: Rajarajan,
+    badges: [Black],
+    github: "https://github.com/Raj051105",
+    linkedin: "http://www.linkedin.com/in/rrkk"  
   },
  
   {
-    name: "Ranjith",
+    name: "Mitun M",
     role: "Developer",
-    specialty: "Devops & Backend Development",
-    imageUrl: Ranjith,
-    badges: [White],
-    github: "https://github.com/ranjith",
-    linkedin: "https://linkedin.com/in/ranjith"
+    specialty: "Frontend Development",
+    imageUrl: Mitun,
+    badges: [Black],
+    github: "https://github.com/zvoidy",
+    linkedin: "http://www.linkedin.com/in/mitun-m"
   },
 
   {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
+    name: "Gopi Krishna",
+    role: "",
+    specialty: "Ai Engineer", 
     imageUrl: SK,
     badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
+    github: "https://github.com/gopu-005",
+    linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
-  {
-    name: "Sivakanesh",
-    role: "Community Leader",
-    specialty: "Strategic Planning", 
-    imageUrl: SK,
-    badges: [Black],
-    github: "https://github.com/sivakanesh",
-    linkedin: "https://linkedin.com/in/sivakanesh"
-  },
+  
   {
     name: "Sivakanesh",
     role: "Community Leader",
@@ -509,7 +516,7 @@ const ProfessionalMemberMarquee = ({
               <img 
                 src={member.imageUrl} 
                 alt={member.name}
-                className="w-full h-44 md:h-56 object-cover"
+                className="w-full h-50 md:h-70 object-cover"
               />
               
               {/* Member ID badge */}
@@ -624,5 +631,18 @@ const ProfessionalMemberMarquee = ({
 function App() {
   return <ProfessionalMemberMarquee members={communityMembers} />;
 }
+ProfessionalMemberMarquee.propTypes = {
+  members: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    role: PropTypes.string,
+    specialty: PropTypes.string,
+    imageUrl: PropTypes.string,
+    badges: PropTypes.arrayOf(PropTypes.string),
+    github: PropTypes.string,
+    linkedin: PropTypes.string
+  })),
+  autoScrollSpeed: PropTypes.number,
+  manualScrollMultiplier: PropTypes.number
+};
 
 export default App;

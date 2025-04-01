@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import KGAPS from '../assets/KG-APS.jpg';
 
@@ -8,7 +7,7 @@ const Kgaps = () => {
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 bg-blue-50 flex items-center justify-center p-6">
-           <img src={KGAPS} alt="KG-APS" classname="w-full h-full object-cover"/>
+           <img src={KGAPS} alt="KG-APS" className="w-full h-full object-cover"/>
           </div>
           <div className="md:w-1/2 p-6">
             <p className="text-lg text-gray-700 mb-4">
@@ -39,7 +38,7 @@ const Kgaps = () => {
             <h3 className="text-2xl font-semibold mb-2">🌟 Key Features</h3>
             <div className="text-lg text-gray-700">
               <p className="mb-2">✅ <strong>Centralized Dashboard</strong>: View and manage academic records in one place.</p>
-              <p className="mb-2">✅ <strong>Real-Time Performance Tracking</strong>: Monitor students' grades, attendance, and progress instantly.</p>
+              <p className="mb-2">✅ <strong>Real-Time Performance Tracking</strong>: Monitor students&apos; grades, attendance, and progress instantly.</p>
               <p className="mb-2">✅ <strong>Automated Reports</strong>: Generate detailed reports for students, faculty, and parents.</p>
               <p className="mb-2">✅ <strong>User-Friendly Interface</strong>: Intuitive design for seamless navigation and analysis.</p>
               <p className="mb-2">✅ <strong>Secure & Reliable</strong>: Ensures data accuracy and confidentiality.</p>
