@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import KGCAR from '../assets/KG-CAR.png'; 
 
 const Kgcar = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-2 sm:p-4">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
@@ -13,6 +15,16 @@ const Kgcar = () => {
                 <strong>Smart Certificate Acknowledgment System</strong>
               </p>
             </div>
+=======
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="md:flex">
+          <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-6">
+            <img
+              src={KGCAR} // Replace with actual image URL
+              alt="KG-CAR Project"
+              className="w-full h-full object-cover rounded-lg shadow-lg"/>
+>>>>>>> ca806f58c3aa38e4aebc7575c3263fa5fd2d1e7f
           </div>
           <div className="md:w-1/2 p-4 sm:p-6">
             <p className="text-base sm:text-lg text-gray-700 mb-4">

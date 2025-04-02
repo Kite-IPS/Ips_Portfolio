@@ -1,8 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import KGAPS from '../assets/KG-APS.jpg';
 
 const Kgaps = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-2 sm:p-4">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
@@ -13,6 +14,13 @@ const Kgaps = () => {
                 <strong>Smart Academic Progress Tracking System</strong>
               </p>
             </div>
+=======
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="md:flex">
+          <div className="md:w-1/2 bg-blue-50 flex items-center justify-center p-6">
+           <img src={KGAPS} alt="KG-APS" className="w-full h-full object-cover"/>
+>>>>>>> ca806f58c3aa38e4aebc7575c3263fa5fd2d1e7f
           </div>
           <div className="md:w-1/2 p-4 sm:p-6">
             <p className="text-base sm:text-lg text-gray-700 mb-4">
@@ -37,7 +45,7 @@ const Kgaps = () => {
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">🌟 Key Features</h3>
             <div className="text-base sm:text-lg text-gray-700">
               <p className="mb-2">✅ <strong>Centralized Dashboard</strong>: View and manage academic records in one place.</p>
-              <p className="mb-2">✅ <strong>Real-Time Performance Tracking</strong>: Monitor students' grades, attendance, and progress instantly.</p>
+              <p className="mb-2">✅ <strong>Real-Time Performance Tracking</strong>: Monitor students&apos; grades, attendance, and progress instantly.</p>
               <p className="mb-2">✅ <strong>Automated Reports</strong>: Generate detailed reports for students, faculty, and parents.</p>
               <p className="mb-2">✅ <strong>User-Friendly Interface</strong>: Intuitive design for seamless navigation and analysis.</p>
               <p className="mb-2">✅ <strong>Secure & Reliable</strong>: Ensures data accuracy and confidentiality.</p>
