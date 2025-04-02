@@ -4,45 +4,39 @@ import KGSLAR from '../assets/KG-SLAR.png';
 
 const Kgslar = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="md:flex">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-2 sm:p-4">
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <img
               src={KGSLAR}
               alt="KG-SLAR Project"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
             />
           </div>
-          <div className="md:w-1/2 p-6">
-            <h1 className="text-4xl font-bold mb-4 text-blue-600">KG-SLAR Project 🚀</h1>
-            <p className="text-lg text-gray-700 mb-4">
+          <div className="md:w-1/2 p-4 sm:p-6">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-blue-600">KG-SLAR Project 🚀</h1>
+            <p className="text-base sm:text-lg text-gray-700 mb-4">
               <strong>KG-SLAR</strong> (Student Late Attendance Report System) is an innovative solution 
               designed to automate and streamline attendance tracking using <strong>RFID Technology</strong>. 🎓
             </p>
-            <div className="flex space-x-4 mb-4 ml-35 mt-7">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
               <Link
                 to="/"
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition text-center"
               >
                 Back to Home
               </Link>
-              {/* <a
-                href="#project-details"
-                className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
-              >
-                Project Details
-              </a> */}
             </div>
           </div>
         </div>
         
-        <div id="project-details" className="p-6 bg-gray-50">
-          <h2 className="text-3xl font-bold mb-4 text-blue-600">🔍 Project Overview</h2>
+        <div className="p-4 sm:p-6 bg-gray-50">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-600">🔍 Project Overview</h2>
           
           <section className="mb-6">
-            <h3 className="text-2xl font-semibold mb-2">🌟 Key Features</h3>
-            <div className="text-lg text-gray-700">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">🌟 Key Features</h3>
+            <div className="text-base sm:text-lg text-gray-700">
               <p className="mb-2">
               ✅ <strong>RFID-Based Automation</strong>: Students simply scan their RFID cards, and their attendance is instantly recorded. 🚀
               </p>
@@ -62,33 +56,33 @@ const Kgslar = () => {
           </section>
           
           <section className="mb-6">
-            <h3 className="text-2xl font-semibold mb-2">🚀 Why KG-SLAR?</h3>
-            <div className="text-lg text-gray-700">
-              <p>🔹 Eliminates manual errors and paper-based records.</p>
-              <p>🔹 Saves time for faculty and students.</p>
-              <p>🔹 Encourages punctuality and accountability.</p>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">🚀 Why KG-SLAR?</h3>
+            <div className="text-base sm:text-lg text-gray-700">
+              <p className="mb-2">🔹 Eliminates manual errors and paper-based records.</p>
+              <p className="mb-2">🔹 Saves time for faculty and students.</p>
+              <p className="mb-2">🔹 Encourages punctuality and accountability.</p>
               <p>🔹 Seamlessly integrates with existing school/college management systems.</p>
             </div>
           </section>
           
           <section className="mb-6">
-            <h3 className="text-2xl font-semibold mb-2">📊 How It Works?</h3>
-            <div className="text-lg text-gray-700">
-              <p>1️⃣ Students scan their <strong>RFID card</strong> upon arrival.</p>
-              <p>2️⃣ The system records the entry time and cross-checks it with the scheduled class time.</p>
-              <p>3️⃣ Late arrivals are automatically flagged, and reports are generated.</p>
-              <p>4️⃣ Faculty and parents receive real-time notifications.</p>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">📊 How It Works?</h3>
+            <div className="text-base sm:text-lg text-gray-700">
+              <p className="mb-1">1️⃣ Students scan their <strong>RFID card</strong> upon arrival.</p>
+              <p className="mb-1">2️⃣ The system records the entry time and cross-checks it with the scheduled class time.</p>
+              <p className="mb-1">3️⃣ Late arrivals are automatically flagged, and reports are generated.</p>
+              <p className="mb-1">4️⃣ Faculty and parents receive real-time notifications.</p>
             </div>
           </section>
           
           <section>
-            <h3 className="text-2xl font-semibold mb-2">🌟 Making Campuses Smarter!</h3>
-            <div className="text-lg text-gray-700">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">🌟 Making Campuses Smarter!</h3>
+            <div className="text-base sm:text-lg text-gray-700">
               <p className="mb-4">
                 With <strong>KG-SLAR</strong>, institutions can <strong>enhance attendance management</strong>, ensure <strong>student discipline</strong>, 
                 and <strong>improve administrative efficiency</strong> like never before! 🎓
               </p>
-              <p className="font-bold text-blue-600 text-xl">
+              <p className="font-bold text-blue-600 text-lg sm:text-xl text-center">
                 📌 Join the Future of Smart Attendance Tracking Today! 🚀🎓
               </p>
             </div>
