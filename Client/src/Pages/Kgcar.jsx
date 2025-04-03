@@ -1,30 +1,18 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import KGCAR from '../assets/KG-CAR.png'; 
 
 const Kgcar = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-2 sm:p-4">
-      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-4 sm:p-6">
-            <div className="text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-blue-600">KG-CAR 🚀</h1>
-              <p className="text-base sm:text-lg text-gray-700">
-                <strong>Smart Certificate Acknowledgment System</strong>
-              </p>
-            </div>
-=======
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-6">
             <img
-              src={KGCAR} // Replace with actual image URL
+              src={KGCAR}
               alt="KG-CAR Project"
-              className="w-full h-full object-cover rounded-lg shadow-lg"/>
->>>>>>> ca806f58c3aa38e4aebc7575c3263fa5fd2d1e7f
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+            />
           </div>
           <div className="md:w-1/2 p-4 sm:p-6">
             <p className="text-base sm:text-lg text-gray-700 mb-4">
