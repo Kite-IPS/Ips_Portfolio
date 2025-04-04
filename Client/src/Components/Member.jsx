@@ -21,10 +21,46 @@ const communityMembers = [
     name: "Siva Ramana H V",
     role: "Developer",
     specialty: "Full-Stack Development", 
-    imageUrl: SK,
+    // imageUrl: SK,
     badges: [White],
     github: "https://github.com/SivaRamana-H-V",
     linkedin: "https://www.linkedin.com/in/sivaramanahv/"
+  },
+  {
+    name: "Praveen Raj C",
+    role: "Designer",
+    specialty: "UI/UX Developer", 
+    // imageUrl: Gopi,
+    badges: [White],
+    github: "https://github.com/Praveen-Raj-Chan",
+    linkedin: "https://www.linkedin.com/in/praveen-raj-chandiran"
+  },
+  {
+    name: "Gnana Chandru KR",
+    role: "Designer",
+    specialty: "UI/UX Developer", 
+    // imageUrl: Gopi,
+    badges: [White],
+    github: "https://github.com/GnanaChandruKR",
+    linkedin: "https://in.linkedin.com/in/gnana-chandru-raja-90755a225?"
+  },
+  {
+    name: "Jaayaraajadhanus S",
+    role: "Developer",
+    specialty: "Backend Developer", 
+    // imageUrl: Gopi,
+    badges: [White],
+    github: "https://github.com/jaayaraajadhanus",
+    linkedin: "https://www.linkedin.com/in/jaayaraajadhanus"
+  },
+  {
+    name: "Marudhu Paandian K",
+    // role: "Developer",
+    // specialty: "FuDeveloper", 
+    // imageUrl: Gopi,
+    badges: [White],
+    github: "https://github.com/marudhu2004",
+    linkedin: "https://www.linkedin.com/in/marudhu2004/"
   },
   {
     name: "Nishanth R",
@@ -40,18 +76,99 @@ const communityMembers = [
     role: "Developer",
     specialty: "Full-Stack Development", 
     imageUrl: Adithya,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Adithya14255",
     linkedin: "https://www.linkedin.com/in/adithya-g-a2085b268/"
+  },
+  {
+    name: "Vigneshwar SU",
+    role: "Developer", 
+    specialty: "Full-Stack Development",
+    // imageUrl: Nishanth,
+    badges: [White],
+    github: "https://github.com/Vigneshwar-SU",
+    linkedin: "https://www.linkedin.com/in/vigneshwar-s-u-1a8467247/"
+  },
+  {
+    name: "Nagaroshan NS",
+    role: "Developer", 
+    specialty: "Backend Development",
+    // imageUrl: Nishanth,
+    badges: [White],
+    github: "https://github.com/Roshan0909",
+    linkedin: "https://www.linkedin.com/in/nagaroshan-ns-87b207259/"
+  },
+  {
+    name: "Gokulramm S",
+    role: "Developer", 
+    specialty: "Full-Stack Development",
+    // imageUrl: Nishanth,
+    badges: [Black],
+    github: "https://github.com/Gokulramms",
+    linkedin: "https://www.linkedin.com/in/gokulramm-s-984a69257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Nishanth M",
+    role: "Developer", 
+    specialty: "Full-Stack Development",
+    // imageUrl: Nishanth,
+    badges: [Black],
+    github: "https://github.com/NISHANTH1107",
+    linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Jaisrinivasan J",
+    role: "Developer",
+    specialty: "Ai Engineer", 
+    // imageUrl: Gopi,
+    badges: [Black],
+    github: "https://github.com/jaisrinivasan23",
+    linkedin: "https://in.linkedin.com/in/jaisrinivasan-j-a68398259?trk=public_profile_browsemap"
   },
   {
     name: "GobiKrishnan K",
     role: "Developer",
     specialty: "Full-Stack Development",
-    imageUrl: Gobi,
+    // imageUrl: Gobi,
     badges: [Black],
     github: "https://github.com/krishgobi",
     linkedin: "https://www.linkedin.com/in/gobi-krishnan-998847300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Dharun A",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    // imageUrl: Gobi,
+    badges: [Black],
+    github: "https://github.com/Dharun-Ashokkumar",
+    linkedin: "https://www.linkedin.com/in/dharun-ashokkumar/"
+  },
+  {
+    name: "Yogalakshmi S",
+    role: "Developer",
+    specialty: "Full-Stack Engineer", 
+    // imageUrl: Gopi,
+    badges: [Black],
+    github: "https://github.com/Yogalakshu",
+    linkedin: "https://www.linkedin.com/in/yogalakshmi-sankaranarayanan-060320250/"
+  },
+  {
+    name: "Aishwarya B",
+    role: "Developer",
+    specialty: "Full-Stack Engineer", 
+    // imageUrl: Gopi,
+    badges: [Black],
+    github: "https://github.com/Aishwaryaboobalan",
+    linkedin: "https://www.linkedin.com/in/aishwarya-boobalan-480368244 "
+  },
+  {
+    name: "Gopi Krishna S",
+    role: "Developer",
+    specialty: "Ai Engineer", 
+    imageUrl: Gopi,
+    badges: [Black],
+    github: "https://github.com/gopu-005",
+    linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
   {
     name: "Ranjith M", 
@@ -99,13 +216,31 @@ const communityMembers = [
     linkedin: "http://www.linkedin.com/in/mitun-m"
   },
   {
-    name: "Gopi Krishna S",
+    name: "Harishwa S",
+    role: "Designer",
+    specialty: "3D Designer",
+    // imageUrl: Mitun,
+    badges: [Black],
+    github: "https://github.com/projects-harishwa",
+    linkedin: "https://www.linkedin.com/in/harishwa-here/"
+  },
+  {
+    name: "Mourish Antony C",
+    role: "Developer",
+    specialty: "Full-Stack Developer", 
+    // imageUrl: Gopi,
+    badges: [Black],
+    github: "https://github.com/mourishantony",
+    linkedin: "https://www.linkedin.com/in/mourish-a-6b51b0301/"
+  },
+  {
+    name: "Joe Daniel A",
     role: "Developer",
     specialty: "Ai Engineer", 
-    imageUrl: Gopi,
+    // imageUrl: Gopi,
     badges: [Black],
-    github: "https://github.com/gopu-005",
-    linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    github: "https://github.com/joedanields",
+    linkedin: "https://www.linkedin.com/in/joe-daniel1911?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   // Commented out placeholder members are preserved but not shown here for brevity
 ];
