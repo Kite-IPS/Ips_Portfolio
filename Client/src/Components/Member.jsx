@@ -11,6 +11,7 @@ import Aiswarya from '../assets/aiswarya.png';
 import Praveenraj from '../assets/praveenraj.png';
 import Jd from '../assets/jd.png';
 import SK from '../assets/sk.png';
+import Ajay from '../assets/ajay.png';
 import Harishwa from '../assets/harishwa.png';
 import Yogesh from '../assets/yogesh.png';
 import Adithya from '../assets/adithya.png';
@@ -23,7 +24,7 @@ import GithubIcon from '../assets/github-icon.png';
  
 
 const communityMembers = [
-  // {
+  // {  
   //   name: "Siva Ramana H V",
   //   role: "Developer",
   //   specialty: "Full-Stack Development", 
@@ -239,6 +240,56 @@ const communityMembers = [
     github: "https://github.com/projects-harishwa",
     linkedin: "https://www.linkedin.com/in/harishwa-here/"
   },
+  {
+    name: "Ajay S",
+    role: "Developer",
+    specialty: "Frontend Development",
+    imageUrl: Ajay,
+    badges: [Black],
+    github: "https://github.com/Ajay987654",
+    linkedin: "https://www.linkedin.com/in/ajay162006/",
+  },
+  
+    // {
+    //   name: "Gunal P",
+    //   role: "Developer",
+    //   specialty: "backend Development",
+    //   imageUrl: Ajay,
+    //   badges: [Black],
+    //   github: "https://github.com/Gunal531",
+    //   linkedin: "https://www.linkedin.com/in/gunal-p-74bb90272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    // },
+    
+    // {
+    //   name: "Anumitha J",
+    //   role: "Developer",
+    //   specialty: "Backend Development",
+    //   imageUrl: Ajay,
+    //   badges: [Black],
+    //   github: "https://github.com/Anumitha-369",
+    //   linkedin: "https://www.linkedin.com/in/anumitha-jayachandran-421693297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    // },
+    
+    // {
+    //   name: "Mahadarshini S",
+    //   role: "Developer",
+    //   specialty: "Frontend Development",
+    //   imageUrl: Ajay,
+    //   badges: [Black],
+    //   github: "https://github.com/Maha-kg",
+    //   linkedin: "https://www.linkedin.com/in/mahadarshini-selvam-169099288/",
+    // },
+    
+    // {
+    //   name: "Kalainathan S",
+    //   role: "Developer",
+    //   specialty: "Full-Stack Development",
+    //   imageUrl: Ajay,
+    //   badges: [Black],
+    //   github: "https://github.com/kailai-13",
+    //   linkedin: "https://www.linkedin.com/in/kailai-nathan-442b23281/",
+    // },
+
     // {
     //   name: "Mourish Antony C",
     //   role: "Developer",
