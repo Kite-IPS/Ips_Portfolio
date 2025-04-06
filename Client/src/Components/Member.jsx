@@ -20,7 +20,7 @@ import Sivaramana from '../assets/sivaramana.png';
 import Naagaroshan from '../assets/nagaroshan.png';
 import Yogalaksmi from '../assets/yoga.png';
 import Rishwanth from '../assets/rishwanth.png';
-import Jaisreenivasan from '../assets/jai.jpg';
+import Jaisreenivasan from '../assets/jai.png';
 import Mourish from '../assets/mourish.png';
 import Joedaniel from '../assets/joedaniel.png';
 import Nishanth from '../assets/nishanth.png';
