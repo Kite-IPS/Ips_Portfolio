@@ -22,6 +22,8 @@ import Yogalaksmi from '../assets/yoga.png';
 import Rishwanth from '../assets/rishwanth.png';
 import Jaisreenivasan from '../assets/jai.png';
 import Mourish from '../assets/mourish.png';
+import Vigneshwar from '../assets/vigneshwar.png';
+import Nishanthm from '../assets/nishanthm.png';
 import Joedaniel from '../assets/joedaniel.png';
 import Nishanth from '../assets/nishanth.png';
 import Black from '../assets/black-badge.png';
@@ -103,15 +105,15 @@ const communityMembers = [
     github: "https://github.com/Adithya14255",
     linkedin: "https://www.linkedin.com/in/adithya-g-a2085b268/"
   },
-  // {
-  //   name: "Vigneshwar SU",
-  //   role: "Developer", 
-  //   specialty: "Full-Stack Development",
-  //   // imageUrl: Nishanth,
-  //   badges: [White],
-  //   github: "https://github.com/Vigneshwar-SU",
-  //   linkedin: "https://www.linkedin.com/in/vigneshwar-s-u-1a8467247/"
-  // },
+  {
+    name: "Vigneshwar SU",
+    role: "Developer", 
+    specialty: "Full-Stack Development",
+    imageUrl: Vigneshwar,
+    badges: [White],
+    github: "https://github.com/Vigneshwar-SU",
+    linkedin: "https://www.linkedin.com/in/vigneshwar-s-u-1a8467247/"
+  },
   {
     name: "Nagaroshan NS",
     role: "Developer", 
@@ -140,15 +142,15 @@ const communityMembers = [
     github: "https://github.com/Gokulramms",
     linkedin: "https://www.linkedin.com/in/gokulramm-s-984a69257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
-  // {
-  //   name: "Nishanth M",
-  //   role: "Developer", 
-  //   specialty: "Full-Stack Development",
-  //   // imageUrl: Nishanth,
-  //   badges: [Black],
-  //   github: "https://github.com/NISHANTH1107",
-  //   linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-  // },
+  {
+    name: "Nishanth M",
+    role: "Developer", 
+    specialty: "Full-Stack Development",
+    imageUrl: Nishanthm,
+    badges: [Black],
+    github: "https://github.com/NISHANTH1107",
+    linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
   {
     name: "Jaisrinivasan J",
     role: "Developer",
@@ -528,7 +530,7 @@ const ProfessionalMemberMarquee = ({
         {duplicatedMembersData.map((member, index) => (
           <motion.div 
             key={`member-${index}`}
-            className="flex-shrink-0 w-56 md:w-73bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl"
+            className="flex-shrink-0 w-56 md:w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl"
             whileHover={{ scale: 1.03 }}
             whileTap={isMobile ? { scale: 0.98 } : {}}
             onClick={() => setSelectedMember(member)}
