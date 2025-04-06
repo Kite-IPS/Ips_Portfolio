@@ -10,6 +10,7 @@ import ProjectCard from '../Components/ProjectCard';
 // import section from '../assets/section.png';
 import ServiceBox from '../Components/ServiceBox';
 import Member from '../Components/Member';
+import Intern from '../Components/Intern';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
@@ -168,6 +169,7 @@ const LandingPage = () => {
     <h1 className='font-bold text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
     <p className='font-light text-base text-gray-500 mt-2 text-center'>Meet the talented individuals behind our community</p>
     <Member />
+    <Intern></Intern>
 </div>
 
                 <div className="mt-16 md:mt-20">
