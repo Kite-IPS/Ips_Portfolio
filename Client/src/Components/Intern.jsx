@@ -6,6 +6,7 @@ import Mourish from '../assets/mourish.png';
 import Joedaniel from '../assets/joedaniel.png';
 import Gunal from '../assets/gunal.png';
 import Anumitha from '../assets/anumitha.png';
+import Kalainathan from '../assets/kailainathan.png';
 
 // Sample intern data - replace with your actual 7 interns
 const internMembers = [
@@ -44,14 +45,14 @@ const internMembers = [
     //   linkedin: "https://www.linkedin.com/in/mahadarshini-selvam-169099288/",
     // },
     
-    // {
-    //   name: "Kalainathan S",
-    //   role: "Intern",
-    //   specialty: "Full-Stack Development",
-    //   imageUrl: Ajay,
-    //   github: "https://github.com/kailai-13",
-    //   linkedin: "https://www.linkedin.com/in/kailai-nathan-442b23281/",
-    // },
+    {
+      name: "Kalainathan S",
+      role: "Intern",
+      specialty: "Full-Stack Development",
+      imageUrl: Kalainathan,
+      github: "https://github.com/kailai-13",
+      linkedin: "https://www.linkedin.com/in/kailai-nathan-442b23281/",
+    },
   {
     name: "Mourish Antony C",
     role: "Intern",
