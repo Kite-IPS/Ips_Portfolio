@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Ajay from '../assets/ajay.png';
 import Mourish from '../assets/mourish.png';
 import Joedaniel from '../assets/joedaniel.png';
+import Gunal from '../assets/gunal.png';
+import Anumitha from '../assets/anumitha.png';
 
 // Sample intern data - replace with your actual 7 interns
 const internMembers = [
@@ -15,6 +17,41 @@ const internMembers = [
     github: "https://github.com/Ajay987654",
     linkedin: "https://www.linkedin.com/in/ajay162006/",
   },
+  {
+      name: "Gunal P",
+      role: "Intern",
+      specialty: "backend Development",
+      imageUrl: Gunal,
+      github: "https://github.com/Gunal531",
+      linkedin: "https://www.linkedin.com/in/gunal-p-74bb90272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    
+    {
+      name: "Anumitha J",
+      role: "Intern",
+      specialty: "Backend Development",
+      imageUrl: Anumitha,
+      github: "https://github.com/Anumitha-369",
+      linkedin: "https://www.linkedin.com/in/anumitha-jayachandran-421693297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    
+    // {
+    //   name: "Mahadarshini S",
+    //   role: "Intern",
+    //   specialty: "Frontend Development",
+    //   imageUrl: Ajay,
+    //   github: "https://github.com/Maha-kg",
+    //   linkedin: "https://www.linkedin.com/in/mahadarshini-selvam-169099288/",
+    // },
+    
+    // {
+    //   name: "Kalainathan S",
+    //   role: "Intern",
+    //   specialty: "Full-Stack Development",
+    //   imageUrl: Ajay,
+    //   github: "https://github.com/kailai-13",
+    //   linkedin: "https://www.linkedin.com/in/kailai-nathan-442b23281/",
+    // },
   {
     name: "Mourish Antony C",
     role: "Intern",
@@ -31,22 +68,7 @@ const internMembers = [
     github: "https://github.com/joedanields",
     linkedin: "https://www.linkedin.com/in/joe-daniel1911?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
-  // {
-  //   name: "Joe Daniel A",
-  //   role: "Intern",
-  //   specialty: "Ai Engineer", 
-  //   imageUrl: Joedaniel,
-  //   github: "https://github.com/joedanields",
-  //   linkedin: "https://www.linkedin.com/in/joe-daniel1911?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-  // },
-  // {
-  //   name: "Joe Daniel A",
-  //   role: "Intern",
-  //   specialty: "Ai Engineer", 
-  //   imageUrl: Joedaniel,
-  //   github: "https://github.com/joedanields",
-  //   linkedin: "https://www.linkedin.com/in/joe-daniel1911?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-  // },
+
 ];
 
 const InternsMarquee = ({ 

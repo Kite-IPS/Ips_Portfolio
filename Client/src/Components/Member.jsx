@@ -11,7 +11,7 @@ import Aiswarya from '../assets/aiswarya.png';
 import Praveenraj from '../assets/praveenraj.png';
 import Jd from '../assets/jd.png';
 import SK from '../assets/sk.png';
-// import Ajay from '../assets/ajay.png';
+import Rajiv from '../assets/rajiv.png';
 import Harishwa from '../assets/harishwa.png';
 import Yogesh from '../assets/yogesh.png';
 import Adithya from '../assets/adithya.png';
@@ -21,11 +21,14 @@ import Naagaroshan from '../assets/nagaroshan.png';
 import Yogalaksmi from '../assets/yoga.png';
 import Rishwanth from '../assets/rishwanth.png';
 import Jaisreenivasan from '../assets/jai.png';
-// import Mourish from '../assets/mourish.png';
 import Vigneshwar from '../assets/vigneshwar.png';
 import Nishanthm from '../assets/nishanthm.png';
-// import Joedaniel from '../assets/joedaniel.png';
 import Nishanth from '../assets/nishanth.png';
+// import Ajay from '../assets/ajay.png';
+// import Mourish from '../assets/mourish.png';
+// import Joedaniel from '../assets/joedaniel.png';
+// import Gunal from '../assets/gnal.png';
+// import Anumitha from '../assets/anumitha.png';
 import Black from '../assets/black-badge.png';
 import White from '../assets/IPS WHITE batch 1.png'; 
 import LinkedinIcon from '../assets/linkedin-icon.jpg'; 
@@ -87,15 +90,15 @@ const communityMembers = [
     github: "https://github.com/NishanthSbz",
     linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
   },
-  // {
-  //   name: "Rajiv N",
-  //   role: "Developer",
-  //   specialty: "Devops & Frontend Development",
-  //   imageUrl: Rajarajan,
-  //   badges: [White],
-  //   github: "https://github.com/rajiv2004-cloud",
-  //   linkedin: "https://www.linkedin.com/in/rajiv-cloud"
-  // },
+  {
+    name: "Rajiv N",
+    role: "Developer",
+    specialty: "Devops & Frontend Development",
+    imageUrl: Rajiv,
+    badges: [White],
+    github: "https://github.com/rajiv2004-cloud",
+    linkedin: "https://www.linkedin.com/in/rajiv-cloud"
+  },
   {
     name: "Adithya G",
     role: "Developer",
@@ -273,7 +276,7 @@ const communityMembers = [
   //   //   name: "Gunal P",
   //   //   role: "Developer",
   //   //   specialty: "backend Development",
-  //   //   imageUrl: Ajay,
+  //   //   imageUrl: Gunal,
   //   //   badges: [Black],
   //   //   github: "https://github.com/Gunal531",
   //   //   linkedin: "https://www.linkedin.com/in/gunal-p-74bb90272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -283,7 +286,7 @@ const communityMembers = [
   //   //   name: "Anumitha J",
   //   //   role: "Developer",
   //   //   specialty: "Backend Development",
-  //   //   imageUrl: Ajay,
+  //   //   imageUrl: Anumitha,
   //   //   badges: [Black],
   //   //   github: "https://github.com/Anumitha-369",
   //   //   linkedin: "https://www.linkedin.com/in/anumitha-jayachandran-421693297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
