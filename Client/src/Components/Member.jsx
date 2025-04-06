@@ -528,7 +528,7 @@ const ProfessionalMemberMarquee = ({
         {duplicatedMembersData.map((member, index) => (
           <motion.div 
             key={`member-${index}`}
-            className="flex-shrink-0 w-56 md:w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl"
+            className="flex-shrink-0 w-56 md:w-73bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl"
             whileHover={{ scale: 1.03 }}
             whileTap={isMobile ? { scale: 0.98 } : {}}
             onClick={() => setSelectedMember(member)}
