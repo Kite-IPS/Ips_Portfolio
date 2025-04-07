@@ -18,7 +18,7 @@ const PyexpoWebsite = () => {
     badges: [White],
     github: "https://github.com/NishanthSbz",
     linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
-  },-
+  },
     {
       name: "Vigneshwar SU",
       role: "Developer", 

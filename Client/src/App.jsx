@@ -10,7 +10,7 @@ import Kgslar from './Pages/Kgslar'
 import Kgcar from './Pages/Kgcar'
 import Kgaps from './Pages/Kgaps'
 import Kgbites from './Pages/Kgbites'
-import Pyexpowebsite from './Pages/Pyexpowebsite.jsx'
+import Pyexpowebsite from './Pages/Pyexpowebsite'
 
 const App = () => {
   return (
