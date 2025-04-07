@@ -7,6 +7,7 @@ import Joedaniel from '../assets/joedaniel.png';
 import Gunal from '../assets/gunal.png';
 import Anumitha from '../assets/anumitha.png';
 import Kalainathan from '../assets/kailainathan.png';
+import Maha from '../assets/maha1.png';
 
 // Sample intern data - replace with your actual 7 interns
 const internMembers = [
@@ -36,14 +37,14 @@ const internMembers = [
       linkedin: "https://www.linkedin.com/in/anumitha-jayachandran-421693297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     
-    // {
-    //   name: "Mahadarshini S",
-    //   role: "Intern",
-    //   specialty: "Frontend Development",
-    //   imageUrl: Ajay,
-    //   github: "https://github.com/Maha-kg",
-    //   linkedin: "https://www.linkedin.com/in/mahadarshini-selvam-169099288/",
-    // },
+    {
+      name: "Mahadarshini S",
+      role: "Intern",
+      specialty: "Frontend Development",
+      imageUrl: Maha,
+      github: "https://github.com/Maha-kg",
+      linkedin: "https://www.linkedin.com/in/mahadarshini-selvam-169099288/",
+    },
     
     {
       name: "Kalainathan S",
