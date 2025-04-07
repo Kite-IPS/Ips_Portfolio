@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Pyexpowebsite from '../assets/pyexpo-website.png';
+import Pyexpowebsite from '../assets/PYEXPO-WEBSITE.png';
 import Nishanthm from '../assets/nishanthm.png';
 import Nishanth from '../assets/nishanth.png';
 import Vigneshwar from '../assets/vigneshwar.png';
@@ -18,7 +18,7 @@ const PyexpoWebsite = () => {
     badges: [White],
     github: "https://github.com/NishanthSbz",
     linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
-  },
+  },-
     {
       name: "Vigneshwar SU",
       role: "Developer", 
