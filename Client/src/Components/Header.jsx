@@ -67,7 +67,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <ul className='hidden md:flex items-center gap-6 lg:gap-10 mokoto-text'>
+            <ul className='hidden md:flex items-center gap-6 lg:gap-10 '>
                 {navSections.map((section) => (
                     <Link 
                         key={section.name} 
@@ -131,7 +131,7 @@ const Header = () => {
             {/* Mobile Menu Dropdown */}
             {mobileMenuOpen && (
                 <div className='md:hidden absolute top-[80px] left-0 right-0 bg-white shadow-md z-40'>
-                    <ul className='flex flex-col w-full mokoto-text'>
+                    <ul className='flex flex-col w-full'>
                         {navSections.map((section) => (
                             <Link 
                                 key={section.name} 

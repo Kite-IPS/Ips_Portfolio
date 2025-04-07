@@ -24,6 +24,8 @@ import Jaisreenivasan from '../assets/jai.png';
 import Vigneshwar from '../assets/vigneshwar.png';
 import Nishanthm from '../assets/nishanthm.png';
 import Nishanth from '../assets/nishanth.png';
+import Dharun from '../assets/dharun.png';
+import Chandru from '../assets/chandru.png';
 // import Ajay from '../assets/ajay.png';
 // import Mourish from '../assets/mourish.png';
 // import Joedaniel from '../assets/joedaniel.png';
@@ -54,15 +56,15 @@ const communityMembers = [
     github: "https://github.com/Praveen-Raj-Chan",
     linkedin: "https://www.linkedin.com/in/praveen-raj-chandiran"
   },
-  // {
-  //   name: "Gnana Chandru KR",
-  //   role: "Designer",
-  //   specialty: "UI/UX Developer", 
-  //   // imageUrl: Gopi,
-  //   badges: [White],
-  //   github: "https://github.com/GnanaChandruKR",
-  //   linkedin: "https://in.linkedin.com/in/gnana-chandru-raja-90755a225?"
-  // },
+  {
+    name: "Gnana Chandru KR",
+    role: "Designer",
+    specialty: "UI/UX Developer", 
+    imageUrl: Chandru,
+    badges: [White],
+    github: "https://github.com/GnanaChandruKR",
+    linkedin: "https://in.linkedin.com/in/gnana-chandru-raja-90755a225?"
+  },
   {
     name: "Jaayaraajadhanus S",
     role: "Developer",
@@ -172,15 +174,15 @@ const communityMembers = [
     github: "https://github.com/krishgobi",
     linkedin: "https://www.linkedin.com/in/gobi-krishnan-998847300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
-  // {
-  //   name: "Dharun A",
-  //   role: "Developer",
-  //   specialty: "Full-Stack Development",
-  //   imageUrl: Gobi,
-  //   badges: [Black],
-  //   github: "https://github.com/Dharun-Ashokkumar",
-  //   linkedin: "https://www.linkedin.com/in/dharun-ashokkumar/"
-  // },
+  {
+    name: "Dharun A",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Dharun,
+    badges: [Black],
+    github: "https://github.com/Dharun-Ashokkumar",
+    linkedin: "https://www.linkedin.com/in/dharun-ashokkumar/"
+  },
   {
     name: "Yogalakshmi S",
     role: "Developer",

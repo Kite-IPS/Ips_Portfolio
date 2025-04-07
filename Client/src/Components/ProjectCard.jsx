@@ -52,7 +52,7 @@ const ProjectCard = ({ name, description }) => {
         <p className="text-gray-500 transition-all duration-500 hover:text-gray-700">
           {description}
         </p>
-        {projectRoutes[name] && (
+        {(name === "KG-SLAR" || name === "KG-CAR" || name === "KG-APS") && (
           <button
             className="group relative inline-block px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:translate-x-1 relative overflow-hidden"
             onClick={() => handleClick(name)}
