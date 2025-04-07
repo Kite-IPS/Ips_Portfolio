@@ -174,12 +174,12 @@ const LandingPage = () => {
             <section id="projects" className="font-primary pb-10">
                 <div className='w-[90%] md:w-[80%] mx-auto flex flex-col sm:flex-row items-center justify-around gap-8 sm:gap-0'>
                     <div className='flex flex-col items-center'>
-                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>20+</h1>
+                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>30+</h1>
                         <p className='text-base text-gray-500'>Community Members</p>
                     </div>
                     <div className='flex flex-col items-center'>
-                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>3</h1>
-                        <p className='text-base text-gray-500'>Completed Projects</p>
+                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>5</h1>
+                        <p className='text-base text-gray-500'>Live Projects</p>
                     </div>
                     <div className='flex flex-col items-center'>
                         <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>10+</h1>
@@ -193,6 +193,15 @@ const LandingPage = () => {
                     <ProjectCard name={'KG-SLAR'} description={"It's a student late attendance report system using RFID technology"} />
                     <ProjectCard name={'KG-CAR'} description={"It's a Certificate Acknowlegement System"} />
                     <ProjectCard name={'KG-APS'} description={"A comprehensive dashboard to track and update academic progress in a college"} />
+                    
+                    
+                </div>
+                <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
+                    <ProjectCard name={'KG-BITES'} description={"It's a Canteen Management System"} />
+                    <ProjectCard name={'PYEXPO-WEBSITE'} description={"It is an exclusive hackathon event."} />
+                   
+                    
+                    
                 </div>
                 
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
@@ -208,7 +217,7 @@ const LandingPage = () => {
     <h1 className='font-bold text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
     <p className='font-light text-base text-gray-500 mt-2 text-center'>Meet the talented individuals behind our community</p>
     <Member />
-    <Intern></Intern>
+    <Intern />
 </div>
 
                 <div className="mt-16 md:mt-20">

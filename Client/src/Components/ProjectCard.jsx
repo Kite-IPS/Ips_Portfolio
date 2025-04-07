@@ -5,6 +5,8 @@ import KGCAR from "../assets/KG-CAR.png";
 import SIHTHIRUVIZHA from "../assets/SIH-THIRUVIZHA.png";
 import PYEXPO from "../assets/PYEXPO.png";
 import KGAPS from "../assets/KG-APS.jpg";
+import KGBITES from "../assets/KG-BITES.png";
+import PYEXPOWEBSITE from "../assets/PYEXPO-WEBSITE.png";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
@@ -17,6 +19,8 @@ const ProjectCard = ({ name, description }) => {
     "KG-APS": "/kgaps",
     "SIH-THIRUVIZHA": "/sihthiruvizha",
     "PYEXPO": "/pyexpo",
+    "KG-BITES": "/kgbites",
+    "PYEXPO-WEBSITE": "/pyexpowebsite",
   };
 
   const handleClick = (projectName) => {
@@ -34,6 +38,8 @@ const ProjectCard = ({ name, description }) => {
     "SIH-THIRUVIZHA": SIHTHIRUVIZHA,
     "PYEXPO": PYEXPO,
     "KG-APS": KGAPS,
+    "KG-BITES": KGBITES,
+    "PYEXPO-WEBSITE": PYEXPOWEBSITE,
   };
 
   return (
@@ -53,7 +59,7 @@ const ProjectCard = ({ name, description }) => {
         <p className="text-gray-500 transition-all duration-500 hover:text-gray-700">
           {description}
         </p>
-        {(name === "KG-SLAR" || name === "KG-CAR" || name === "KG-APS") && (
+        {(name === "KG-SLAR" || name === "KG-CAR" || name === "KG-APS" || name ==="KG-BITES" || name === "PYEXPO-WEBSITE") && (
           <button
             className="group relative inline-block px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:translate-x-1 overflow-hidden"
             onClick={() => handleClick(name)}

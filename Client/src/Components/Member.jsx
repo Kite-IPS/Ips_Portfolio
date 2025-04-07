@@ -113,7 +113,7 @@ const communityMembers = [
   {
     name: "Vigneshwar SU",
     role: "Developer", 
-    specialty: "Full-Stack Development",
+    specialty: "Frontend Development",
     imageUrl: Vigneshwar,
     badges: [White],
     github: "https://github.com/Vigneshwar-SU",

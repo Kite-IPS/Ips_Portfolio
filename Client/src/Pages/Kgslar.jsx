@@ -47,13 +47,13 @@ const Kgslar = () => {
       linkedin: "https://www.linkedin.com/in/ranjith-m-sundaram-8263b8282/"
     },
     {
-            name: "Yogesh Venugopal R",
-            role: "Developer",
-            specialty: "Frontend Development", 
-            imageUrl: Yogesh,
-            badges: [Black],
-            github: "https://github.com/YogeshVenugopal",
-            linkedin: "https://www.linkedin.com/in/yogesh-venugopal/"
+      name: "Yogesh Venugopal R",
+      role: "Developer",
+      specialty: "Frontend Development", 
+      imageUrl: Yogesh,
+      badges: [Black],
+      github: "https://github.com/YogeshVenugopal",
+      linkedin: "https://www.linkedin.com/in/yogesh-venugopal/"
     },
   ];
 
@@ -295,7 +295,7 @@ const Kgslar = () => {
         </div>
       </div>
 
-      {/* Team Section - Optimized for exactly 4 members */}
+      {/* Team Section - Updated for 5 members */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
@@ -305,8 +305,8 @@ const Kgslar = () => {
           </p>
         </div>
         
-        {/* Perfect grid for 4 members - 2x2 on medium screens, 4x1 on large */}
-        <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
+        {/* Updated grid for 5 members - 3x2 on medium screens, 5x1 on large */}
+        <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
               <div className="relative overflow-hidden h-48 sm:h-52">

@@ -9,6 +9,8 @@ import Project_submission from './Pages/Project_submission'
 import Kgslar from './Pages/Kgslar'
 import Kgcar from './Pages/Kgcar'
 import Kgaps from './Pages/Kgaps'
+import Kgbites from './Pages/Kgbites'
+import Pyexpowebsite from './Pages/Pyexpowebsite.jsx'
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
           <Route path="/kgslar" element={<Kgslar />} />
           <Route path="/kgcar" element={<Kgcar />} />
           <Route path="/kgaps" element={<Kgaps />} />
+          <Route path="/kgbites" element={<Kgbites />} />
+          <Route path="/pyexpowebsite" element={<Pyexpowebsite />} />
         </Routes>
       </Router>
     </>
