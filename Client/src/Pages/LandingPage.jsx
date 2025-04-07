@@ -14,6 +14,7 @@ import Intern from '../Components/Intern';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
+import { Helmet } from 'react-helmet';
 
 const words = ["Community","Learning","Growing","Building"]; // Words to cycle
 
@@ -46,6 +47,44 @@ const LandingPage = () => {
     return (
         <>
             {/* Mobile menu toggle button can be added to your Header component */}
+            <Helmet> 
+            <title>IPS TECH Community | Empowering Developers Through Collaboration</title>
+                <meta name="title" content="IPS TECH Community | Empowering Developers Through Collaboration" />
+                <meta name="description" content="Join IPS TECH community for technical workshops, networking, project collaboration, and innovation. Connect with like-minded developers and tech enthusiasts." />
+                
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.facebook.com/story.php/?story_fbid=1072198944917791&id=100063830864791&_rdr" />
+                <meta property="og:title" content="IPS TECH Community | Empowering Developers Through Collaboration" />
+                <meta property="og:description" content="Join IPS TECH community for technical workshops, networking, project collaboration, and innovation. Connect with like-minded developers and tech enthusiasts." />
+                <meta property="og:image" content="/og-image.jpg" />
+                
+                {/* Keywords */}
+                <meta name="keywords" content="IPS TECH, tech community, developer community, technical workshops, hackathons, tech events, PyExpo, SIH-THIRUVIZHA, project collaboration" />
+                
+                {/* Other important meta tags */}
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="index, follow" />
+                <meta name="language" content="English" />
+                <link rel="canonical" href="http://ips-portfolio.netlify.app/" />
+                
+                {/* Structured data for rich search results */}
+                <script type="application/ld+json">
+                {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "IPS TECH Community",
+                        "url": "http://ips-portfolio.netlify.app/",
+                        "description": "Empowering developers and tech enthusiasts through collaboration, learning, and innovation.",
+                        "sameAs": [
+                            "https://www.instagram.com/ips_tech.community/",
+                            "https://linkedin.com/company/ipstechinc"
+                        ]
+                    }
+                `}
+                </script>
+            </Helmet>
             <Header 
                 handleButtonClick={() => navigate('/join-community')}
                 additionalLinks={
@@ -77,7 +116,6 @@ const LandingPage = () => {
                         {/* Animated Text with Smooth Transition */}
                         <h1 className='font-bold text-4xl md:text-5xl lg:text-6xl mokoto-text leading-tight md:leading-[75px]'>
                             Welcome to IPS TECH
-                            
                             <br />
                             <span className={`fade-text ${fade ? 'fade-in' : 'fade-out'}`}>
                                 {words[currentWordIndex]}

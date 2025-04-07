@@ -7,7 +7,7 @@ import Joedaniel from '../assets/joedaniel.png';
 import Gunal from '../assets/gunal.png';
 import Anumitha from '../assets/anumitha.png';
 import Kalainathan from '../assets/kailainathan.png';
-import Maha from '../assets/maha1.png';
+import Maha from '../assets/maha.png';
 
 // Sample intern data - replace with your actual 7 interns
 const internMembers = [
