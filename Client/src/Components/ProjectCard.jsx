@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 import { useNavigate } from "react-router-dom";
 import KGSLAR from "../assets/KG-SLAR.png";
 import KGCAR from "../assets/KG-CAR.png";
@@ -6,6 +6,7 @@ import SIHTHIRUVIZHA from "../assets/SIH-THIRUVIZHA.png";
 import PYEXPO from "../assets/PYEXPO.png";
 import KGAPS from "../assets/KG-APS.jpg";
 
+// eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
   const navigate = useNavigate();
 
@@ -54,7 +55,7 @@ const ProjectCard = ({ name, description }) => {
         </p>
         {(name === "KG-SLAR" || name === "KG-CAR" || name === "KG-APS") && (
           <button
-            className="group relative inline-block px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:translate-x-1 relative overflow-hidden"
+            className="group relative inline-block px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:translate-x-1 overflow-hidden"
             onClick={() => handleClick(name)}
           >
             <span className="relative z-10">View Project</span>

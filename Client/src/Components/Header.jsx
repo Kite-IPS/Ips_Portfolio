@@ -67,7 +67,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <ul className='hidden md:flex items-center gap-6 lg:gap-10 '>
+            <ul className='hidden md:flex items-center gap-6 lg:gap-10'>
                 {navSections.map((section) => (
                     <Link 
                         key={section.name} 
@@ -77,7 +77,7 @@ const Header = () => {
                         offset={-80} // Adjust for fixed header
                         className='group'
                     >
-                        <li className='text-base font-semibold cursor-pointer px-3 lg:px-7 py-2 rounded-lg transition-all duration-300 relative'>
+                        <li className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg transition-all duration-300 relative'>
                             {section.label}
                             <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full'></span>
                         </li>
