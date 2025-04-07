@@ -176,7 +176,7 @@ const communityMembers = [
   //   name: "Dharun A",
   //   role: "Developer",
   //   specialty: "Full-Stack Development",
-  //   // imageUrl: Gobi,
+  //   imageUrl: Gobi,
   //   badges: [Black],
   //   github: "https://github.com/Dharun-Ashokkumar",
   //   linkedin: "https://www.linkedin.com/in/dharun-ashokkumar/"
