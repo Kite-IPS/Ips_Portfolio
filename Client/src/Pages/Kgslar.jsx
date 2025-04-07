@@ -6,6 +6,7 @@ import Ranjith from '../assets/ranjith.png';
 import Rajarajan from '../assets/rajarajan.png';
 import Marudhu from '../assets/marudhu.png';
 import Nishanth from '../assets/nishanth.png';
+import Yogesh from '../assets/yogesh.png';
 
 const Kgslar = () => {
   const teamMembers = [
@@ -44,7 +45,16 @@ const Kgslar = () => {
       badges: [Black],
       github: "https://github.com/rxnjitth",
       linkedin: "https://www.linkedin.com/in/ranjith-m-sundaram-8263b8282/"
-    }
+    },
+    {
+            name: "Yogesh Venugopal R",
+            role: "Developer",
+            specialty: "Frontend Development", 
+            imageUrl: Yogesh,
+            badges: [Black],
+            github: "https://github.com/YogeshVenugopal",
+            linkedin: "https://www.linkedin.com/in/yogesh-venugopal/"
+    },
   ];
 
   return (
@@ -291,7 +301,7 @@ const Kgslar = () => {
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
           <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4 md:mb-6"></div>
           <p className="section-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            The talented professionals who collaborated to develop KG-SLAR
+            The talented professionals who contributed to develop KG-SLAR
           </p>
         </div>
         

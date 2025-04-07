@@ -4,7 +4,8 @@ import Black from '../assets/black-badge.png';
   import White from '../assets/IPS WHITE batch 1.png';
 import Rajiv from '../assets/rajiv.png';
 import Yogesh from '../assets/yogesh.png';
-import Nishanthm from '../assets/nishanthm.png';  
+import Marudhu from '../assets/marudhu.png';
+import Nishanth from '../assets/nishanth.png';
 
 
 const Kgcar = () => {
@@ -18,15 +19,25 @@ const Kgcar = () => {
         github: "https://github.com/rajiv2004-cloud",
         linkedin: "https://www.linkedin.com/in/rajiv-cloud"
       },
-    {
-      name: "Nishanth M",
-      role: "Developer", 
-      specialty: "Full-Stack Development",
-      imageUrl: Nishanthm,
-      badges: [Black],
-      github: "https://github.com/NISHANTH1107",
-      linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-    },
+      {
+            name: "Marudhu Paandian K",
+            role: "Developer",
+            specialty: "Full-Stack Developer", 
+            imageUrl: Marudhu,
+            badges: [White],
+            github: "https://github.com/marudhu2004",
+            linkedin: "https://www.linkedin.com/in/marudhu2004/"
+          },
+          {
+            name: "Nishanth R",
+            role: "Developer", 
+            specialty: "Full-Stack Development",
+            imageUrl: Nishanth,
+            badges: [White],
+            github: "https://github.com/NishanthSbz",
+            linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
+          },
+
      {
         name: "Yogesh Venugopal R",
         role: "Developer",
@@ -279,7 +290,7 @@ const Kgcar = () => {
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
           <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4 md:mb-6"></div>
           <p className="section-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            The talented professionals who collaborated to develop KG-CAR
+            The talented professionals who contributed to develop KG-CAR
           </p>
         </div>
         

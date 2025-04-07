@@ -248,7 +248,7 @@ const Kgaps = () => {
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
           <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4 md:mb-6"></div>
           <p className="section-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            The talented professionals who collaborated to develop KG-APS
+            The talented professionals who contributed to develop KG-APS
           </p>
         </div>
         

@@ -38,6 +38,7 @@ const LandingPage = () => {
 
     const projectButtonClick = () => {
         navigate('/project-submission');
+        window.scrollTo(0, 0);
     };
 
     // const toggleMobileMenu = () => {
