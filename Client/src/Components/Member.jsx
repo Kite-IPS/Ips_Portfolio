@@ -76,8 +76,9 @@ const communityMembers = [
   },
   {
     name: "Marudhu Paandian K",
-    role: "Developer",
-    specialty: "Full-Stack Developer", 
+    role: "Entrepreneur",
+    specialty: "Cyber Security",  
+    
     imageUrl: Marudhu,
     badges: [White],
     github: "https://github.com/marudhu2004",
@@ -85,7 +86,7 @@ const communityMembers = [
   },
   {
     name: "Nishanth R",
-    role: "Developer", 
+    role: "Entrepreneur",
     specialty: "Full-Stack Development",
     imageUrl: Nishanth,
     badges: [White],
@@ -94,7 +95,7 @@ const communityMembers = [
   },
   {
     name: "Rajiv N",
-    role: "Developer",
+    role: "Entrepreneur",
     specialty: "Devops & Frontend Development",
     imageUrl: Rajiv,
     badges: [White],

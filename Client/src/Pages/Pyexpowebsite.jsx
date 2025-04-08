@@ -5,7 +5,7 @@ import Nishanth from '../assets/nishanth.png';
 import Vigneshwar from '../assets/vigneshwar.png';
 import Naagaroshan from '../assets/nagaroshan.png';
 import Rishwanth from '../assets/rishwanth.png';
-import Gopi from '../assets/gopi.jpg';
+import Gopi from '../assets/gopi.png';
 import Mitun from '../assets/mithun.png';
 import Black from '../assets/black-badge.png';
 import White from '../assets/IPS WHITE batch 1.png'; 
@@ -15,8 +15,9 @@ const PyexpoWebsite = () => {
   const teamMembers = [
     {
       name: "Nishanth R",
-      role: "Developer", 
+      role: "Enterupeneur",
       specialty: "Full-Stack Development",
+      
       imageUrl: Nishanth,
       badges: [White],
       github: "https://github.com/NishanthSbz",
