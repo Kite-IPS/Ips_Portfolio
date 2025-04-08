@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Ranjith from '../assets/ranjith.png';
 import Rajarajan from '../assets/rajarajan.png';
 import Mitun from '../assets/mithun.png';
-import Gopi from '../assets/gopi.jpg';
+import Gopi from '../assets/gopi.png';
 import Marudhu from '../assets/marudhu.png';
 import Gokulramm from '../assets/gokulramm.png';
 import Aiswarya from '../assets/aiswarya.png';
