@@ -4,21 +4,24 @@ import Nishanthm from '../assets/nishanthm.png';
 import Nishanth from '../assets/nishanth.png';
 import Vigneshwar from '../assets/vigneshwar.png';
 import Naagaroshan from '../assets/nagaroshan.png';
+import Rishwanth from '../assets/rishwanth.png';
+import Gopi from '../assets/gopi.jpg';
 import Mitun from '../assets/mithun.png';
 import Black from '../assets/black-badge.png';
 import White from '../assets/IPS WHITE batch 1.png'; 
 
+
 const PyexpoWebsite = () => {
   const teamMembers = [
-{
-    name: "Nishanth R",
-    role: "Developer", 
-    specialty: "Full-Stack Development",
-    imageUrl: Nishanth,
-    badges: [White],
-    github: "https://github.com/NishanthSbz",
-    linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
-  },
+    {
+      name: "Nishanth R",
+      role: "Developer", 
+      specialty: "Full-Stack Development",
+      imageUrl: Nishanth,
+      badges: [White],
+      github: "https://github.com/NishanthSbz",
+      linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
+    },
     {
       name: "Vigneshwar SU",
       role: "Developer", 
@@ -28,33 +31,51 @@ const PyexpoWebsite = () => {
       github: "https://github.com/Vigneshwar-SU",
       linkedin: "https://www.linkedin.com/in/vigneshwar-s-u-1a8467247/"
     },
-     {
-        name: "Nagaroshan NS",
-        role: "Developer", 
-        specialty: "Backend Development",
-        imageUrl: Naagaroshan,
-        badges: [White],
-        github: "https://github.com/Roshan0909",
-        linkedin: "https://www.linkedin.com/in/nagaroshan-ns-87b207259/"
-      },
-      {
-        name: "Nishanth M",
-        role: "Developer", 
-        specialty: "Full-Stack Development",
-        imageUrl: Nishanthm,
-        badges: [Black],
-        github: "https://github.com/NISHANTH1107",
-        linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-      },
-     {
-       name: "Mitun M",
-       role: "Developer",
-       specialty: "Frontend Development",
-       imageUrl: Mitun,
-       badges: [Black],
-       github: "https://github.com/zvoidy",
-       linkedin: "http://www.linkedin.com/in/mitun-m"
-     },
+    {
+      name: "Nagaroshan NS",
+      role: "Developer", 
+      specialty: "Backend Development",
+      imageUrl: Naagaroshan,
+      badges: [White],
+      github: "https://github.com/Roshan0909",
+      linkedin: "https://www.linkedin.com/in/nagaroshan-ns-87b207259/"
+    },
+    {
+      name: "Rishvanth K K",
+      role: "Developer",
+      specialty: "Full-Stack Development",
+      imageUrl: Rishwanth,
+      badges: [Black],
+      github: "https://github.com/Rishvanth28",
+      linkedin: "https://www.linkedin.com/in/rishvanth-k-k-8a6876293/"
+    },
+    {
+      name: "Nishanth M",
+      role: "Developer", 
+      specialty: "Full-Stack Development",
+      imageUrl: Nishanthm,
+      badges: [Black],
+      github: "https://github.com/NISHANTH1107",
+      linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    {
+      name: "Gopi Krishna S",
+      role: "Developer",
+      specialty: "Ai Engineer", 
+      imageUrl: Gopi,
+      badges: [Black],
+      github: "https://github.com/gopu-005",
+      linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+      name: "Mitun M",
+      role: "Developer",
+      specialty: "Frontend Development",
+      imageUrl: Mitun,
+      badges: [Black],
+      github: "https://github.com/zvoidy",
+      linkedin: "http://www.linkedin.com/in/mitun-m"
+    },
   ];
 
   return (
@@ -245,9 +266,6 @@ const PyexpoWebsite = () => {
         </div>
       </div>
 
-      {/* Schedule Section */}
-      
-      
       {/* Team Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
@@ -258,63 +276,125 @@ const PyexpoWebsite = () => {
           </p>
         </div>
         
-        {/* Team Grid */}
-        <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
-              <div className="relative overflow-hidden h-48 sm:h-52">
-                <img 
-                  src={member.imageUrl} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 w-full">
-                    <div className="flex justify-center space-x-3">
-                      {member.github && (
-                        <a 
-                          href={member.github} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-white hover:text-indigo-300 transition-colors"
-                          aria-label={`${member.name}'s GitHub`}
-                        >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1. 231 3.297-1.231.645 1.311.26 2.873.128 3.176.767.84 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.922.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.769-1.588 8.205-6.086 8.205-11.388 0-6.627-5.373-12-12-12z" />
+        {/* Team Grid - Modified to center all cards including the last row */}
+        <div className="max-w-6xl mx-auto">
+          {/* First row - 5 members */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 mb-8">
+            {teamMembers.slice(0, 5).map((member, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
+                <div className="relative overflow-hidden h-48 sm:h-52">
+                  <img 
+                    src={member.imageUrl} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-4 w-full">
+                      <div className="flex justify-center space-x-3">
+                        {member.github && (
+                          <a 
+                            href={member.github} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-indigo-300 transition-colors"
+                            aria-label={`${member.name}'s GitHub`}
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.231 3.297-1.231.645 1.311.26 2.873.128 3.176.767.84 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.922.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.769-1.588 8.205-6.086 8.205-11.388 0-6.627-5.373-12-12-12z" />
                             </svg>
-                            
-                        </a>
-                      )}
-                      {member.linkedin && (
-                        <a
-                          href={member.linkedin} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-white hover:text-indigo-300 transition-colors"
-                          aria-label={`${member.name}'s LinkedIn`}
-                        >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19.5 0h-15C2.01 0 0 .99 0 2.25v19.5C0 23.01.99 24 2.25 24h15c1.26 0 2.25-.99 2.25-2.25V2.25C21.75.99 20.76 0 19.5 0zM7.09 20H4.5V9h2.59v11zm-1.29-12.65c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5c.82 0 1.49.67 1.49 1.5s-.67 1.5-1.49 1.5zM20 20h-2.59v-6c0-3-.64-4-3-4s-3 .99-3 4v6H10V9h2v1c1-.99 3-.99 4-.99s3 .99 3 .99v9z" />
+                          </a>
+                        )}
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-indigo-300 transition-colors"
+                            aria-label={`${member.name}'s LinkedIn`}
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M19.5 0h-15C2.01 0 0 .99 0 2.25v19.5C0 23.01.99 24 2.25 24h15c1.26 0 2.25-.99 2.25-2.25V2.25C21.75.99 20.76 0 19.5 0zM7.09 20H4.5V9h2.59v11zm-1.29-12.65c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5c.82 0 1.49.67 1.49 1.5s-.67 1.5-1.49 1.5zM20 20h-2.59v-6c0-3-.64-4-3-4s-3 .99-3 4v6H10V9h2v1c1-.99 3-.99 4-.99s3 .99 3 .99v9z" />
                             </svg>
-                        </a>
-                      )}
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-sm text-gray-600 mb-1">{member.role}</p>
-                <p className="text-sm text-gray-500">{member.specialty}</p>
-                <div className="mt-2 flex justify-center space-x-2">
-                  {member.badges.map((badge, idx) => (
-                    <img key={idx} src={badge} alt="Badge" className="w-8 h-8" />
-                  ))}
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-sm text-gray-600 mb-1">{member.role}</p>
+                  <p className="text-sm text-gray-500">{member.specialty}</p>
+                  <div className="mt-2 flex justify-center space-x-2">
+                    {member.badges.map((badge, idx) => (
+                      <img key={idx} src={badge} alt="Badge" className="w-8 h-8" />
+                    ))}
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+          
+          {/* Second row - 2 members (Gopi and Mitun) centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-md md:max-w-xl">
+              {teamMembers.slice(5, 7).map((member, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
+                  <div className="relative overflow-hidden h-48 sm:h-52">
+                    <img 
+                      src={member.imageUrl} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-4 w-full">
+                        <div className="flex justify-center space-x-3">
+                          {member.github && (
+                            <a 
+                              href={member.github} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-indigo-300 transition-colors"
+                              aria-label={`${member.name}'s GitHub`}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.231 3.297-1.231.645 1.311.26 2.873.128 3.176.767.84 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.922.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.769-1.588 8.205-6.086 8.205-11.388 0-6.627-5.373-12-12-12z" />
+                              </svg>
+                            </a>
+                          )}
+                          {member.linkedin && (
+                            <a
+                              href={member.linkedin} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-indigo-300 transition-colors"
+                              aria-label={`${member.name}'s LinkedIn`}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.5 0h-15C2.01 0 0 .99 0 2.25v19.5C0 23.01.99 24 2.25 24h15c1.26 0 2.25-.99 2.25-2.25V2.25C21.75.99 20.76 0 19.5 0zM7.09 20H4.5V9h2.59v11zm-1.29-12.65c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5c.82 0 1.49.67 1.49 1.5s-.67 1.5-1.49 1.5zM20 20h-2.59v-6c0-3-.64-4-3-4s-3 .99-3 4v6H10V9h2v1c1-.99 3-.99 4-.99s3 .99 3 .99v9z" />
+                              </svg>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
+                    <p className="text-sm text-gray-600 mb-1">{member.role}</p>
+                    <p className="text-sm text-gray-500">{member.specialty}</p>
+                    <div className="mt-2 flex justify-center space-x-2">
+                      {member.badges.map((badge, idx) => (
+                        <img key={idx} src={badge} alt="Badge" className="w-8 h-8" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>
@@ -322,6 +402,3 @@ const PyexpoWebsite = () => {
 } 
 
 export default PyexpoWebsite;
-
-
-
