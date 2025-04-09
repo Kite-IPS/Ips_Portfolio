@@ -116,7 +116,7 @@ const Kgaps = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-                <span className="text-blue-600">KG-APS</span>
+                <span className="text-pink-600">KG-APS</span>
                 <span className="inline-block ml-2 animate-pulse">🚀</span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
@@ -128,13 +128,13 @@ const Kgaps = () => {
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
                 <Link
                   to="/"
-                  className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                  className="px-6 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50"
                 >
                   Back to Home
                 </Link>
                 <a 
                   href="#features" 
-                  className="px-6 py-3 bg-white text-blue-600 border border-blue-600 font-medium rounded-md hover:bg-blue-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                  className="px-6 py-3 bg-white text-pink-600 border border-pink-600 font-medium rounded-md hover:bg-pink-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50"
                 >
                   Learn More
                 </a>
@@ -153,42 +153,42 @@ const Kgaps = () => {
       <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Features & Benefits</h2>
-          <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <div className="w-16 md:w-24 h-1 bg-pink-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Centralized Dashboard</h3>
             <p className="text-gray-600 text-sm md:text-base">View and manage all academic records in one intuitive interface, eliminating data silos.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">⚡</div>
+            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">⚡</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Tracking</h3>
             <p className="text-gray-600 text-sm md:text-base">Monitor students grades, attendance, and progress instantaneously for timely interventions.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">📝</div>
+            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">📝</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Automated Reports</h3>
             <p className="text-gray-600 text-sm md:text-base">Generate comprehensive reports for students, faculty, and parents with a single click.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
+            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
             <p className="text-gray-600 text-sm md:text-base">Enterprise-grade security ensures data accuracy, privacy, and confidentiality.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">🔍</div>
+            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">🔍</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Insightful Analytics</h3>
             <p className="text-gray-600 text-sm md:text-base">Gain valuable insights into academic trends for data-driven decision making.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">🔄</div>
+            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">🔄</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Seamless Integration</h3>
             <p className="text-gray-600 text-sm md:text-base">Easily integrates with existing college management systems and workflows.</p>
           </div>
@@ -196,44 +196,44 @@ const Kgaps = () => {
       </div>
 
       {/* Process Section */}
-      <div className="bg-blue-50 py-12 md:py-16">
+      <div className="bg-pink-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            <div className="w-16 md:w-24 h-1 bg-pink-600 mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">1</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">1</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Data Collection</h3>
                 <p className="text-gray-600 text-sm md:text-base">Student academic data (grades, attendance, assignments) is uploaded to the system.</p>
               </div>
-              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-blue-600"></div>
+              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-pink-600"></div>
             </div>
             
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">2</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">2</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Analysis</h3>
                 <p className="text-gray-600 text-sm md:text-base">Dashboard visualizes trends, strengths, and areas of improvement for each student.</p>
               </div>
-              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-blue-600"></div>
+              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-pink-600"></div>
             </div>
             
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">3</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">3</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Access & Insights</h3>
                 <p className="text-gray-600 text-sm md:text-base">Students, faculty, and administrators access real-time insights through intuitive interfaces.</p>
               </div>
-              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-blue-600"></div>
+              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-pink-600"></div>
             </div>
             
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">4</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">4</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Action & Improvement</h3>
                 <p className="text-gray-600 text-sm md:text-base">Automated reports and alerts keep stakeholders informed about progress and areas for intervention.</p>
               </div>
@@ -246,7 +246,7 @@ const Kgaps = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-          <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4 md:mb-6"></div>
+          <div className="w-16 md:w-24 h-1 bg-pink-600 mx-auto rounded-full mb-4 md:mb-6"></div>
           <p className="section-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             The talented professionals who contributed to develop KG-APS
           </p>
@@ -269,7 +269,7 @@ const Kgaps = () => {
                           href={member.github} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors"
+                          className="text-white hover:text-pink-300 transition-colors"
                           aria-label={`${member.name}'s GitHub`}
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -282,7 +282,7 @@ const Kgaps = () => {
                           href={member.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors"
+                          className="text-white hover:text-pink-300 transition-colors"
                           aria-label={`${member.name}'s LinkedIn`}
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -296,7 +296,7 @@ const Kgaps = () => {
               </div>
               <div className="p-3 md:p-4 text-center">
                 <h3 className="font-bold text-base md:text-lg text-gray-900">{member.name}</h3>
-                <p className="text-blue-600 font-medium text-sm md:text-base">{member.role}</p>
+                <p className="text-pink-600 font-medium text-sm md:text-base">{member.role}</p>
                 <p className="text-gray-600 text-xs md:text-sm">{member.specialty}</p>
                 <div className="flex justify-center space-x-1 mt-2">
                   {member.badges.map((badge, badgeIndex) => (
