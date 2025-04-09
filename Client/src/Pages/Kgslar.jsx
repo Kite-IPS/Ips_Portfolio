@@ -116,7 +116,7 @@ const Kgslar = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-                <span className="text-blue-600">KG-SLAR</span>
+                <span className="text-orange-600">KG-SLAR</span>
                 <span className="inline-block ml-2 animate-pulse">🚀</span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
@@ -128,13 +128,13 @@ const Kgslar = () => {
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
                 <Link
                   to="/"
-                  className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                  className="px-6 py-3 bg-orange-600 text-white font-medium rounded-md hover:bg-orange-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50"
                 >
                   Back to Home
                 </Link>
                 <a 
                   href="#features" 
-                  className="px-6 py-3 bg-white text-blue-600 border border-blue-600 font-medium rounded-md hover:bg-blue-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                  className="px-6 py-3 bg-white text-orange-600 border border-orange-600 font-medium rounded-md hover:bg-orange-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50"
                 >
                   Learn More
                 </a>
@@ -153,42 +153,42 @@ const Kgslar = () => {
       <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Features & Benefits</h2>
-          <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <div className="w-16 md:w-24 h-1 bg-orange-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">🔖</div>
+            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">🔖</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">RFID-Based Automation</h3>
             <p className="text-gray-600 text-sm md:text-base">Students simply scan their RFID cards for instant attendance recording without manual intervention.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">⏱️</div>
+            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">⏱️</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Tracking</h3>
             <p className="text-gray-600 text-sm md:text-base">Get instant insights into late arrivals and attendance patterns for timely interventions.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Automated Reports</h3>
             <p className="text-gray-600 text-sm md:text-base">Generate comprehensive attendance reports for faculty, administrators, and parents automatically.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">🔔</div>
+            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">🔔</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Instant Notifications</h3>
             <p className="text-gray-600 text-sm md:text-base">Real-time alerts for late arrivals sent to faculty and parents to ensure prompt attention.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">📱</div>
+            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">📱</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">User-Friendly Dashboard</h3>
             <p className="text-gray-600 text-sm md:text-base">Intuitive interface makes reviewing attendance trends and managing reports effortless.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
+            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
             <p className="text-gray-600 text-sm md:text-base">Enterprise-grade security ensures data accuracy, privacy, and confidentiality of student records.</p>
           </div>
@@ -196,44 +196,44 @@ const Kgslar = () => {
       </div>
 
       {/* Process Section */}
-      <div className="bg-blue-50 py-12 md:py-16">
+      <div className="bg-orange-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            <div className="w-16 md:w-24 h-1 bg-orange-600 mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">1</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">1</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">RFID Scan</h3>
                 <p className="text-gray-600 text-sm md:text-base">Students scan their RFID card when arriving at the institution entrance or classroom.</p>
               </div>
-              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-blue-600"></div>
+              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-orange-600"></div>
             </div>
             
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">2</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">2</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Time Recording</h3>
                 <p className="text-gray-600 text-sm md:text-base">System records entry time and compares it with scheduled class timing to identify late arrivals.</p>
               </div>
-              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-blue-600"></div>
+              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-orange-600"></div>
             </div>
             
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">3</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">3</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Report Generation</h3>
                 <p className="text-gray-600 text-sm md:text-base">Late arrivals are automatically flagged, and comprehensive reports are generated instantly.</p>
               </div>
-              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-blue-600"></div>
+              <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-8 h-2 bg-orange-600"></div>
             </div>
             
             <div className="relative">
               <div className="process-step bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100 h-full">
-                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">4</div>
+                <div className="step-number w-10 h-10 md:w-12 md:h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">4</div>
                 <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Notifications</h3>
                 <p className="text-gray-600 text-sm md:text-base">Faculty and parents receive real-time alerts about attendance status, promoting accountability.</p>
               </div>
@@ -246,7 +246,7 @@ const Kgslar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose KG-SLAR?</h2>
-          <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4 md:mb-6"></div>
+          <div className="w-16 md:w-24 h-1 bg-orange-600 mx-auto rounded-full mb-4 md:mb-6"></div>
           <p className="section-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Transforming attendance management for educational institutions
           </p>
@@ -255,7 +255,7 @@ const Kgslar = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-blue-600 text-2xl mr-3">🎯</div>
+              <div className="text-orange-600 text-2xl mr-3">🎯</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Eliminates Manual Errors</h3>
                 <p className="text-gray-600">Say goodbye to paper-based records and human errors in attendance tracking, ensuring accuracy and reliability.</p>
@@ -265,7 +265,7 @@ const Kgslar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-blue-600 text-2xl mr-3">⏳</div>
+              <div className="text-orange-600 text-2xl mr-3">⏳</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Saves Valuable Time</h3>
                 <p className="text-gray-600">Automates time-consuming attendance processes, allowing faculty to focus more on teaching and student development.</p>
@@ -275,7 +275,7 @@ const Kgslar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-blue-600 text-2xl mr-3">📈</div>
+              <div className="text-orange-600 text-2xl mr-3">📈</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Encourages Punctuality</h3>
                 <p className="text-gray-600">Promotes better time management and attendance habits among students with transparent tracking and accountability.</p>
@@ -285,7 +285,7 @@ const Kgslar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-blue-600 text-2xl mr-3">🔄</div>
+              <div className="text-orange-600 text-2xl mr-3">🔄</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Seamless Integration</h3>
                 <p className="text-gray-600">Easily integrates with existing school/college management systems for a unified administrative experience.</p>
@@ -299,7 +299,7 @@ const Kgslar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-          <div className="w-16 md:w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4 md:mb-6"></div>
+          <div className="w-16 md:w-24 h-1 bg-orange-600 mx-auto rounded-full mb-4 md:mb-6"></div>
           <p className="section-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             The talented professionals who contributed to develop KG-SLAR
           </p>
@@ -323,7 +323,7 @@ const Kgslar = () => {
                           href={member.github} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors"
+                          className="text-white hover:text-orange-300 transition-colors"
                           aria-label={`${member.name}'s GitHub`}
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -336,7 +336,7 @@ const Kgslar = () => {
                           href={member.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-white hover:text-blue-300 transition-colors"
+                          className="text-white hover:text-orange-300 transition-colors"
                           aria-label={`${member.name}'s LinkedIn`}
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -350,7 +350,7 @@ const Kgslar = () => {
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-bold text-base md:text-lg text-gray-900">{member.name}</h3>
-                <p className="text-blue-600 font-medium text-sm md:text-base">{member.role}</p>
+                <p className="text-orange-600 font-medium text-sm md:text-base">{member.role}</p>
                 <p className="text-gray-600 text-xs md:text-sm">{member.specialty}</p>
                 <div className="flex justify-center space-x-1 mt-2">
                   {member.badges.map((badge, badgeIndex) => (
