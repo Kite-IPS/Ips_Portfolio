@@ -52,7 +52,7 @@ const LandingPage = () => {
             <title>IPS TECH Community | Empowering Developers Through Collaboration</title>
                 <meta name="title" content="IPS TECH Community | Empowering Developers Through Collaboration" />
                 <meta name="description" content="Join IPS TECH community for technical workshops, networking, project collaboration, and innovation. Connect with like-minded developers and tech enthusiasts." />
-                
+                <meta name="google-site-verification" content="b878cd76e1092ad4" />
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.facebook.com/story.php/?story_fbid=1072198944917791&id=100063830864791&_rdr" />
