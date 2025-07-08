@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';  
+import { useNavigate } from 'react-router-dom';
 import Ips_Logo from '../assets/IPS WHITE batch 1.png';
 import { Link } from 'react-scroll';
 
@@ -8,36 +8,22 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    // Add scroll effect to change header background
     useEffect(() => {
         const handleScroll = () => {
-            const offset = window.scrollY;
-            if (offset > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            setScrolled(window.scrollY > 50);
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handleJoinCommunity = () => {
-        navigate('/join-community');  
+        navigate('/join-community');
     };
 
-    const toggleMobileMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen);
-    };
+    const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+    const closeMobileMenu = () => setMobileMenuOpen(false);
 
-    const closeMobileMenu = () => {
-        setMobileMenuOpen(false);
-    };
-
-    // Navigation sections with additional customization
     const navSections = [
         { name: 'home', label: 'Home' },
         { name: 'about', label: 'About' },
@@ -47,18 +33,12 @@ const Header = () => {
     ];
 
     return (
-        <div 
-            className={`
-                w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary 
-                fixed top-0 left-0 right-0 z-50 transition-all duration-300
-                ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}
-            `}
-        >
-            {/* Logo and Title */}
+        <div className={`w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+            {/* Logo */}
             <div className='flex items-center gap-2 md:gap-5'>
-                <img 
-                    src={Ips_Logo} 
-                    alt="Logo" 
+                <img
+                    src={Ips_Logo}
+                    alt="Logo"
                     className='w-[50px] h-[50px] md:w-[70px] md:h-[70px] transition-transform hover:scale-110'
                 />
                 <h1 className='font-semibold text-xl md:text-2xl mokoto-text'>
@@ -69,12 +49,12 @@ const Header = () => {
             {/* Desktop Navigation */}
             <ul className='hidden md:flex items-center gap-6 lg:gap-10'>
                 {navSections.map((section) => (
-                    <Link 
-                        key={section.name} 
-                        to={section.name} 
-                        smooth={true} 
+                    <Link
+                        key={section.name}
+                        to={section.name}
+                        smooth={true}
                         duration={1000}
-                        offset={-80} // Adjust for fixed header
+                        offset={-80}
                         className='group'
                     >
                         <li className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg transition-all duration-300 relative'>
@@ -83,35 +63,35 @@ const Header = () => {
                         </li>
                     </Link>
                 ))}
+                <a
+                    href="https://intern.up.railway.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg hover:text-blue-600 transition-all duration-300'
+                >
+                    Internship
+                </a>
             </ul>
 
-            {/* Desktop Join Community Button */}
+            {/* Desktop Join Button */}
             <div className='hidden md:block'>
-                <button 
-                    className='
-                        text-white px-4 py-2 rounded-lg bg-blue-600 
-                        font-medium cursor-pointer transition-all 
-                        duration-300 hover:bg-blue-700 hover:shadow-lg
-                    '
-                    onClick={handleJoinCommunity}  
+                <button
+                    className='text-white px-4 py-2 rounded-lg bg-blue-600 font-medium cursor-pointer transition-all duration-300 hover:bg-blue-700 hover:shadow-lg'
+                    onClick={handleJoinCommunity}
                 >
                     Join Community
                 </button>
             </div>
 
-            {/* Mobile Menu Components */}
+            {/* Mobile Menu Icons */}
             <div className='md:hidden flex items-center gap-2'>
-                <button 
-                    className='
-                        text-white px-3 py-1 rounded-lg bg-blue-600 
-                        font-medium text-sm cursor-pointer 
-                        transition-all duration-300 hover:bg-blue-700
-                    '
-                    onClick={handleJoinCommunity}  
+                <button
+                    className='text-white px-3 py-1 rounded-lg bg-blue-600 font-medium text-sm cursor-pointer transition-all duration-300 hover:bg-blue-700'
+                    onClick={handleJoinCommunity}
                 >
                     Join
                 </button>
-                <button 
+                <button
                     onClick={toggleMobileMenu}
                     className='text-blue-600 p-2 focus:outline-none'
                     aria-label="Toggle Mobile Menu"
@@ -128,28 +108,33 @@ const Header = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu Dropdown */}
+            {/* Mobile Dropdown Menu */}
             {mobileMenuOpen && (
                 <div className='md:hidden absolute top-[80px] left-0 right-0 bg-white shadow-md z-40'>
                     <ul className='flex flex-col w-full'>
                         {navSections.map((section) => (
-                            <Link 
-                                key={section.name} 
-                                to={section.name} 
-                                smooth={true} 
+                            <Link
+                                key={section.name}
+                                to={section.name}
+                                smooth={true}
                                 duration={1000}
-                                offset={-80} // Adjust for fixed header
+                                offset={-80}
                                 onClick={closeMobileMenu}
                             >
-                                <li className='
-                                    text-base font-semibold cursor-pointer 
-                                    px-6 py-4 border-b border-gray-100 
-                                    hover:bg-blue-50 transition-all duration-200
-                                '>
+                                <li className='text-base font-semibold cursor-pointer px-6 py-4 border-b border-gray-100 hover:bg-blue-50 transition-all duration-200'>
                                     {section.label}
                                 </li>
                             </Link>
                         ))}
+                        <a
+                            href="https://intern.up.railway.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={closeMobileMenu}
+                            className='text-base font-semibold px-6 py-4 border-b border-gray-100 hover:bg-blue-50 transition-all duration-200'
+                        >
+                            Internship
+                        </a>
                     </ul>
                 </div>
             )}
