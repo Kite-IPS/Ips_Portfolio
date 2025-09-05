@@ -1,5 +1,5 @@
 // import React from "react";
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-scroll";
 
@@ -47,8 +47,8 @@ const Footer = () => {
               <a href="ipstechcommunity@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
                 <BiLogoGmail className="text-2xl" />
               </a>
-              <a href="https://discord.com/invite/your-invite-link" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
-                <FaDiscord className="text-2xl" />
+              <a href="https://instagram.com/ips.tech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
+                <FaInstagram className="text-2xl" />
               </a>
             </div>
             
@@ -70,8 +70,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://discord.com/invite/your-invite-link" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
-                  <FaDiscord /> Discord
+                <a href="https://www.instagram.com/ips_tech.community?igsh=MXNkdndoNzV6YWM3" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
+                  <FaInstagram /> Instagram
                 </a>
               </li>
             </ul>
