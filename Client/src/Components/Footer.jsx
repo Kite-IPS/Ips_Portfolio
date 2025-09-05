@@ -65,7 +65,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:your-email@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ipstechcommunity@kgkite.ac.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 flex items-center gap-2">
                   <BiLogoGmail /> Gmail
                 </a>
               </li>
