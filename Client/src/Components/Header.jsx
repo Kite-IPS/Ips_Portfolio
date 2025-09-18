@@ -18,7 +18,7 @@ const Header = () => {
     }, []);
 
     const handleJoinCommunity = () => {
-        navigate('/join-community');
+        navigate('');
     };
 
     const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
@@ -64,7 +64,7 @@ const Header = () => {
                     </Link>
                 ))}
                 <a
-                    href="https://intern.up.railway.app"
+                    // href="https://intern.up.railway.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg hover:text-blue-600 transition-all duration-300'
@@ -127,7 +127,7 @@ const Header = () => {
                             </Link>
                         ))}
                         <a
-                            href="https://intern.up.railway.app"
+                            // href="https://intern.up.railway.app"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={closeMobileMenu}
