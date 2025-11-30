@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from '../Components/Header';
-import HeroImg from '../assets/ips.jpg';
+import HeroImg from '../assets/community2.png';
 import Button from '../Components/Button';
 import { Link } from 'react-scroll';
 import InfoBox from '../Components/InfoBox';
