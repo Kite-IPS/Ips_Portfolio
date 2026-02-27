@@ -328,9 +328,9 @@ const InternsMarquee = ({
             <p className="text-sm text-slate-500 mb-4">Specialty in {selectedIntern.specialty}</p>
             
             {/* Social profile links */}
-            <div className="flex justify-center space-x-4 mb-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:space-x-4 mb-6">
               <button
-                className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
+                className="flex items-center justify-center bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors text-sm sm:text-base"
                 onClick={(e) => handleSocialClick(e, selectedIntern.github)}
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -339,7 +339,7 @@ const InternsMarquee = ({
                 GitHub Profile
               </button>
               <button
-                className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                className="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm sm:text-base"
                 onClick={(e) => handleSocialClick(e, selectedIntern.linkedin)}
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

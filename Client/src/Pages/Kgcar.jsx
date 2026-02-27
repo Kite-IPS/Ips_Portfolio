@@ -306,7 +306,7 @@ const Kgcar = () => {
         </div>
         
         {/* Updated grid for 5 members */}
-        <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="team-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
               <div className="relative overflow-hidden h-48 sm:h-52">

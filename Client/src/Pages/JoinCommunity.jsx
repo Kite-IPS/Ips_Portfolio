@@ -120,12 +120,12 @@ const JoinCommunity = () => {
   ];
 
   // Common input field styles with hover effect
-  const inputStyles = "w-full bg-transparent text-black placeholder-stone-500 focus:outline-none text-lg transition-all duration-300 ease-in-out";
-  const inputContainerStyles = "relative flex items-center space-x-3 bg-gray-100 backdrop-blur-sm rounded-lg px-4 py-3 border border-gray-700/50 transition-all duration-300 ease-in-out hover:border-blue-500 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-300 focus-within:ring-opacity-50";
-  const selectStyles = "w-full bg-gray-100 border border-gray-500 text-gray-500 px-4 py-3 rounded-lg focus:outline-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50";
+  const inputStyles = "w-full bg-transparent text-black placeholder-stone-500 focus:outline-none text-base sm:text-lg transition-all duration-300 ease-in-out";
+  const inputContainerStyles = "relative flex items-center space-x-3 bg-gray-100 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-700/50 transition-all duration-300 ease-in-out hover:border-blue-500 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-300 focus-within:ring-opacity-50";
+  const selectStyles = "w-full bg-gray-100 border border-gray-500 text-gray-500 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg focus:outline-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center p-4 sm:p-6">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -133,13 +133,13 @@ const JoinCommunity = () => {
         className="relative bg-white rounded-2xl shadow-2xl overflow-hidden w-full max-w-2xl"
       >
        
-        <div className="absolute w-25 top-4 ml-7">
-          <img src={aboutImg} alt="IPS Tech Community" className="w-20 h-16 object-contain" />
+        <div className="absolute w-16 sm:w-20 top-4 ml-4 sm:ml-7">
+          <img src={aboutImg} alt="IPS Tech Community" className="w-14 h-12 sm:w-20 sm:h-16 object-contain" />
         </div>
 
-        <div className="relative z-10 p-10">
+        <div className="relative z-10 p-5 sm:p-7 md:p-10">
           
-        <h2 className="text-xl sm:text-2xl md:text-3xl -mt-4 ml-15 md:ml-11 font-bold text-center text-transparent bg-clip-text bg-gradient-to-l from-gray-100 to-stone-950 mokoto-text">
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl -mt-2 sm:-mt-4 ml-12 sm:ml-16 md:ml-11 font-bold text-center text-transparent bg-clip-text bg-gradient-to-l from-gray-100 to-stone-950 mokoto-text">
           IPS Tech Community
         </h2>
 

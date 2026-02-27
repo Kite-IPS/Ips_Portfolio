@@ -280,7 +280,7 @@ const PyexpoWebsite = () => {
         {/* Team Grid - Modified to center all cards including the last row */}
         <div className="max-w-6xl mx-auto">
           {/* First row - 5 members */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 mb-8">
             {teamMembers.slice(0, 5).map((member, index) => (
               <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
                 <div className="relative overflow-hidden h-48 sm:h-52">
@@ -323,13 +323,13 @@ const PyexpoWebsite = () => {
                   </div>
                 </div>
 
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-sm text-gray-600 mb-1">{member.role}</p>
-                  <p className="text-sm text-gray-500">{member.specialty}</p>
+                <div className="p-3 sm:p-4 text-center">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-1">{member.role}</p>
+                  <p className="text-xs sm:text-sm text-gray-500">{member.specialty}</p>
                   <div className="mt-2 flex justify-center space-x-2">
                     {member.badges.map((badge, idx) => (
-                      <img key={idx} src={badge} alt="Badge" className="w-8 h-8" />
+                      <img key={idx} src={badge} alt="Badge" className="w-5 h-5 md:w-6 md:h-6" />
                     ))}
                   </div>
                 </div>
@@ -382,13 +382,13 @@ const PyexpoWebsite = () => {
                     </div>
                   </div>
 
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-sm text-gray-600 mb-1">{member.role}</p>
-                    <p className="text-sm text-gray-500">{member.specialty}</p>
+                  <div className="p-3 sm:p-4 text-center">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-1">{member.role}</p>
+                    <p className="text-xs sm:text-sm text-gray-500">{member.specialty}</p>
                     <div className="mt-2 flex justify-center space-x-2">
                       {member.badges.map((badge, idx) => (
-                        <img key={idx} src={badge} alt="Badge" className="w-8 h-8" />
+                        <img key={idx} src={badge} alt="Badge" className="w-5 h-5 md:w-6 md:h-6" />
                       ))}
                     </div>
                   </div>

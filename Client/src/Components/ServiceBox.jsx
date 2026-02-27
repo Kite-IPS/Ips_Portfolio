@@ -19,10 +19,10 @@
     };
 
     return (
-      <div className="flex flex-col items-center text-center w-48">
-        <img src={service.image} alt={children} className=" h-8 mb-2" />
-        <h2 className="text-lg font-semibold">{children}</h2>
-        <p className="text-gray-600 text-sm">{service.description}</p>
+      <div className="flex flex-col items-center text-center w-36 sm:w-40 md:w-48">
+        <img src={service.image} alt={children} className="h-6 sm:h-7 md:h-8 mb-2" />
+        <h2 className="text-base sm:text-lg font-semibold">{children}</h2>
+        <p className="text-gray-600 text-xs sm:text-sm">{service.description}</p>
       </div>
     );
   }

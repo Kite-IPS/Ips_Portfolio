@@ -43,7 +43,7 @@ const ProjectCard = ({ name, description }) => {
   };
 
   return (
-    <div className="md:w-[400px] rounded-2xl h-[360px] overflow-hidden font-primary shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl perspective-1000 transform-gpu hover:rotate-3 hover:brightness-110">
+    <div className="w-full sm:w-[340px] md:w-[360px] lg:w-[400px] rounded-2xl h-[320px] sm:h-[340px] md:h-[360px] overflow-hidden font-primary shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl perspective-1000 transform-gpu hover:rotate-3 hover:brightness-110">
       <div className="h-[50%] overflow-hidden">
         <img
           src={imageMap[name]}
@@ -53,10 +53,10 @@ const ProjectCard = ({ name, description }) => {
       </div>
 
       <div className="h-[50%] flex flex-col justify-between p-5 bg-white transition-all duration-500 transform-gpu hover:-translate-y-2">
-        <h1 className="font-bold text-3xl transition-transform duration-500 hover:text-blue-600">
+        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl transition-transform duration-500 hover:text-blue-600">
           {name}
         </h1>
-        <p className="text-gray-500 transition-all duration-500 hover:text-gray-700">
+        <p className="text-gray-500 text-sm sm:text-base transition-all duration-500 hover:text-gray-700">
           {description}
         </p>
         {(name === "KG-SLAR" || name === "KG-CAR" || name === "KG-APS" || name ==="KG-BITES" || name === "PYEXPO-WEBSITE") && (

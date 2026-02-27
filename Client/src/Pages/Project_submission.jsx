@@ -159,19 +159,19 @@ const ProjectSubmission = () => {
   const inputClasses = "block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md transition-all duration-200 ease-in-out focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 hover:shadow-md";
 
   return (
-    <div className="min-h-screen bg-blue-200 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-blue-200 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 tracking-tight mokoto-text">Idea Hub</h1>
-          <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mokoto-text">Idea Hub</h1>
+          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Submit your ideas and projects to our platform
           </p>
         </div>
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
           {/* Header with gradient background */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-4">
-            <h2 className="text-l font-semibold text-center text-white mokoto-text">New Submission</h2>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-4 sm:px-6 py-3 sm:py-4">
+            <h2 className="text-base sm:text-lg font-semibold text-center text-white mokoto-text">New Submission</h2>
           </div>
 
           {/* Tab Selector - just controls visibility */}
@@ -179,23 +179,23 @@ const ProjectSubmission = () => {
             <div className="flex justify-center">
               <button
                 onClick={() => setActiveTab('idea')}
-                className={`py-5 px-8 font-medium border-b-2 flex items-center ${activeTab === 'idea' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                className={`py-3 sm:py-5 px-4 sm:px-8 text-sm sm:text-base font-medium border-b-2 flex items-center ${activeTab === 'idea' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
               >
-                <Lightbulb className={`h-5 w-5 mr-2 ${activeTab === 'idea' ? 'text-blue-600' : 'text-gray-500'}`} />
+                <Lightbulb className={`h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 ${activeTab === 'idea' ? 'text-blue-600' : 'text-gray-500'}`} />
                 Share an Idea
               </button>
               <button
                 onClick={() => setActiveTab('project')}
-                className={`py-5 px-8 font-medium border-b-2 flex items-center ${activeTab === 'project' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                className={`py-3 sm:py-5 px-4 sm:px-8 text-sm sm:text-base font-medium border-b-2 flex items-center ${activeTab === 'project' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
               >
-                <Briefcase className={`h-5 w-5 mr-2 ${activeTab === 'project' ? 'text-blue-600' : 'text-gray-500'}`} />
+                <Briefcase className={`h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 ${activeTab === 'project' ? 'text-blue-600' : 'text-gray-500'}`} />
                 Showcase a Project
               </button>
             </div>
           </div>
 
           {/* IDEA FORM */}
-          <div className={`p-8 relative ${activeTab === 'idea' ? 'block' : 'hidden'}`}>
+          <div className={`p-4 sm:p-6 md:p-8 relative ${activeTab === 'idea' ? 'block' : 'hidden'}`}>
             {ideaSubmissionSuccess && (
               <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-95 z-10 rounded-lg backdrop-blur-sm">
                 <div className="text-center p-8 bg-white shadow-2xl rounded-lg border border-green-100">
@@ -359,7 +359,7 @@ const ProjectSubmission = () => {
           </div>
 
           {/* PROJECT FORM */}
-          <div className={`p-8 relative ${activeTab === 'project' ? 'block' : 'hidden'}`}>
+          <div className={`p-4 sm:p-6 md:p-8 relative ${activeTab === 'project' ? 'block' : 'hidden'}`}>
             {projectSubmissionSuccess && (
               <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-95 z-10 rounded-lg backdrop-blur-sm">
                 <div className="text-center p-8 bg-white shadow-2xl rounded-lg border border-green-100">

@@ -252,7 +252,7 @@ const Kgaps = () => {
           </p>
         </div>
         
-        <div className="team-grid grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
+        <div className="team-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
               <div className="relative overflow-hidden h-40 sm:h-48">

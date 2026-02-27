@@ -14,7 +14,7 @@ import Intern from '../Components/Intern';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const words = ["Community","Learning","Growing","Building"]; // Words to cycle
 
@@ -111,11 +111,11 @@ const LandingPage = () => {
             />
 
             {/* Hero Section */}
-            <section id='home' className='w-full min-h-screen mt-10 flex items-center justify-center font-primary'>
-                <div className='w-[80%] md:flex flex-col md:flex-row'>
-                    <div className='w-full md:w-1/2 flex flex-col items-start justify-center mb-8 md:mb-0'>
+            <section id='home' className='w-full min-h-screen pt-24 sm:pt-20 md:mt-10 flex items-center justify-center font-primary px-4 sm:px-6'>
+                <div className='w-full sm:w-[90%] md:w-[80%] flex flex-col md:flex-row gap-8 md:gap-0'>
+                    <div className='w-full md:w-1/2 flex flex-col items-center md:items-start justify-center mb-8 md:mb-0'>
                         {/* Animated Text with Smooth Transition */}
-                        <h1 className='font-bold text-4xl md:text-5xl lg:text-6xl mokoto-text leading-tight md:leading-[75px]'>
+                        <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mokoto-text leading-tight sm:leading-[55px] md:leading-[65px] lg:leading-[75px] text-center md:text-left'>
                             Welcome to IPS TECH
                             <br />
                             <span className={`fade-text ${fade ? 'fade-in' : 'fade-out'}`}>
@@ -124,11 +124,11 @@ const LandingPage = () => {
                             
                         </h1>
 
-                        <p className='font-semibold text-base my-6 md:my-10 w-full md:w-[60%]'>
+                        <p className='font-semibold text-sm sm:text-base my-6 md:my-10 w-full sm:w-[80%] md:w-[60%] text-center md:text-left'>
                             Empowering developers and tech enthusiasts through collaboration, learning, and innovation.
                         </p>
 
-                        <div className='font-semibold flex sm:flex-row items-start sm:items-center gap-4 sm:gap-6'>
+                        <div className='font-semibold flex flex-row items-center justify-center md:justify-start gap-3 sm:gap-6 w-full'>
                             <Button onclick={() => navigate('')} type={'filled'} color={'blue-600'}>Join Community</Button>
                             <Link to='projects' smooth={true} duration={1000}>
                                 <Button type={'outlined'} color={'blue-600'}>View projects</Button>
@@ -136,32 +136,32 @@ const LandingPage = () => {
                         </div>
                     </div>
 
-                    <div className='w-full md:w-1/2 flex justify-center md:justify-end'>
+                    <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0'>
                         <img 
                             src={HeroImg} 
                             alt="Community Img" 
-                            className="w-full lg-w-[80%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                            className="w-[85%] sm:w-[75%] md:w-full lg:w-[80%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
                         />
                     </div>
                 </div>
             </section>
 
             {/* About Section */}
-            <section id="about" className="min-h-screen py-10 md:py-0 font-primary">
-                <div className='h-[80px] font-semibold text-xl md:text-4xl flex items-center justify-center mokoto-text'>
+            <section id="about" className="min-h-screen py-10 md:py-0 font-primary px-4 sm:px-6 md:px-0">
+                <div className='h-auto py-6 sm:py-4 sm:h-[80px] font-semibold text-lg sm:text-xl md:text-4xl flex items-center justify-center mokoto-text'>
                     <h1>What We Offer</h1>
                 </div>
-                <div className='w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row items-center justify-around mt-5 gap-6 md:gap-0'>
+                <div className='w-[95%] sm:w-[90%] md:w-[80%] mx-auto flex flex-col items-center md:flex-row md:items-center justify-around mt-5 gap-6 md:gap-4'>
                     <InfoBox title={'Technical Workshops'} description={'Learn from industry experts through hands-on workshops and training sessions.'} />
                     <InfoBox title={'Community Event'} description={'Connect with like-minded professionals in our networking events.'} />
                     <InfoBox title={'Innovation Hub'} description={'Access resources and mentorship to bring your ideas to life.'} />
                 </div>
-                <div className='mt-10 md:mt-15 w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row items-center justify-center'>
+                <div className='mt-10 md:mt-15 w-[95%] sm:w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row items-center justify-center'>
                     <div className="w-full md:w-1/2 flex items-center justify-center mb-6 md:mb-0">
                         <img src={aboutImg} alt="Image" className="w-full max-w-md" />
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col items-start justify-center space-y-6 md:space-y-15">
-                        <h1 className='font-bold text-3xl md:text-4xl w-full md:w-[80%] mokoto-text'>Connect your tools, close your tabs</h1>
+                        <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl w-full md:w-[80%] mokoto-text'>Connect your tools, close your tabs</h1>
                         <p className='font-light text-base text-gray-500'>
                             Whether you want to edit your Google Docs, resolve Jira issues, or collaborate over Zoom, Miro has 100+ integrations with tools you already use and love.
                         </p>
@@ -171,8 +171,8 @@ const LandingPage = () => {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="font-primary pb-10">
-                <div className='w-[90%] md:w-[80%] mx-auto flex flex-col sm:flex-row items-center justify-around gap-8 sm:gap-0'>
+            <section id="projects" className="font-primary pb-10 px-4 sm:px-6 md:px-0">
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto flex flex-col sm:flex-row items-center justify-around gap-6 sm:gap-0'>
                     <div className='flex flex-col items-center'>
                         <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>30+</h1>
                         <p className='text-base text-gray-500'>Community Members</p>
@@ -189,14 +189,14 @@ const LandingPage = () => {
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
                     <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our  projects</h1>
                 </div>
-                <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
                     <ProjectCard name={'KG-SLAR'} description={"It's a student late attendance report system using RFID technology"} />
                     <ProjectCard name={'KG-CAR'} description={"It's a Certificate Acknowlegement System"} />
                     <ProjectCard name={'KG-APS'} description={"A comprehensive dashboard to track and update academic progress in a college"} />
                     
                     
                 </div>
-                <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
                     <ProjectCard name={'KG-BITES'} description={"It's a Canteen Management System"} />
                     <ProjectCard name={'PYEXPO-WEBSITE'} description={"It is an exclusive hackathon event."} />
                    
@@ -207,37 +207,37 @@ const LandingPage = () => {
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
                     <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Events Organised</h1>
                 </div>
-                <div className='w-[90%] md:w-[80%] mx-auto mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4'>
-                    <a href = "https://pyexpo.co/" target='_blank'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
-                    <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank"><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
+                    <a href = "https://pyexpo.co/" target='_blank' className='w-full sm:w-auto'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
+                    <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank" className='w-full sm:w-auto'><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
 
 
                 <div id="members" className="mt-16 md:mt-20 ">
-    <h1 className='font-bold text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
-    <p className='font-light text-base text-gray-500 mt-2 text-center'>Meet the talented individuals behind our community</p>
+    <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
+    <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center px-4'>Meet the talented individuals behind our community</p>
     <Member />
     <Intern />
 </div>
 
                 <div className="mt-16 md:mt-20">
-                    <div className='w-[90%] md:w-[80%] mx-auto flex flex-col items-center justify-center'>
-                        <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Our Services</h1>
-                        <p className='font-light text-base text-gray-500 mt-2 text-center'>Professional services to help you achieve your tech goals</p>
+                    <div className='w-[95%] sm:w-[90%] md:w-[80%] mx-auto flex flex-col items-center justify-center'>
+                        <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text'>Our Services</h1>
+                        <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center'>Professional services to help you achieve your tech goals</p>
                     </div>
-                    <div className='mt-10 md:mt-20 w-[95%] md:w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center md:justify-items-start md:pl-25'>
-                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>Mobile Apps</ServiceBox></div>
-                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>Cloud Solutions</ServiceBox></div>
-                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>AI Services</ServiceBox></div>
-                    <div className='w-full md:w-auto flex justify-center md:justify-start'><ServiceBox>Web Development</ServiceBox></div>
+                    <div className='mt-8 sm:mt-10 md:mt-20 w-[95%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center'>
+                    <div className='w-full flex justify-center'><ServiceBox>Mobile Apps</ServiceBox></div>
+                    <div className='w-full flex justify-center'><ServiceBox>Cloud Solutions</ServiceBox></div>
+                    <div className='w-full flex justify-center'><ServiceBox>AI Services</ServiceBox></div>
+                    <div className='w-full flex justify-center'><ServiceBox>Web Development</ServiceBox></div>
                     </div>
 
                 </div>
             </section>
 
-            <section id="contact" className="showcase-section px-4 py-10 md:py-16">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Showcase Your Project?</h2>
-                <p className="mb-6 max-w-lg mx-auto">Join our community and share your technical innovations with the world</p>
+            <section id="contact" className="showcase-section px-4 sm:px-6 py-10 md:py-16">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Ready to Showcase Your Project?</h2>
+                <p className="mb-6 max-w-lg mx-auto text-sm sm:text-base">Join our community and share your technical innovations with the world</p>
                 <button className="submit-btn px-6 py-3 flex items-center justify-center gap-2 mx-auto" onClick={projectButtonClick}>
                     <FaRocket /> Submit Your Project
                 </button>

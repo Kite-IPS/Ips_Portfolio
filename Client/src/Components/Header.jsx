@@ -35,13 +35,13 @@ const Header = () => {
     return (
         <div className={`w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
             {/* Logo */}
-            <div className='flex items-center gap-2 md:gap-5'>
+            <div className='flex items-center gap-1.5 sm:gap-2 md:gap-5 shrink-0'>
                 <img
                     src={Ips_Logo}
                     alt="Logo"
-                    className='w-[50px] h-[50px] md:w-[70px] md:h-[70px] transition-transform hover:scale-110'
+                    className='w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[70px] md:h-[70px] flex-shrink-0 transition-transform hover:scale-110'
                 />
-                <h1 className='font-semibold text-xl md:text-2xl mokoto-text'>
+                <h1 className='font-semibold text-[13px] sm:text-xl md:text-2xl mokoto-text whitespace-nowrap'>
                     IPS Tech Community
                 </h1>
             </div>
