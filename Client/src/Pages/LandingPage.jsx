@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Header from '../Components/Header';
-import HeroImg from '../assets/community2.png';
+import HeroImg from '../assets/general/community2.png';
 import Button from '../Components/Button';
 import { Link } from 'react-scroll';
 import InfoBox from '../Components/InfoBox';
-import aboutImg from '../assets/aboutImg.png';
+import aboutImg from '../assets/general/aboutImg.png';
 // import { HiArrowSmRight } from "react-icons/hi";
 import ProjectCard from '../Components/ProjectCard';
 // import section from '../assets/section.png';
@@ -196,11 +196,12 @@ const LandingPage = () => {
                         <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text'>Our Services</h1>
                         <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center'>Professional services to help you achieve your tech goals</p>
                     </div>
-                    <div className='mt-8 sm:mt-10 md:mt-20 w-[95%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center'>
+                    <div className='mt-8 sm:mt-10 md:mt-20 w-[95%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center'>
                     <div className='w-full flex justify-center'><ServiceBox>Mobile Apps</ServiceBox></div>
                     <div className='w-full flex justify-center'><ServiceBox>Cloud Solutions</ServiceBox></div>
                     <div className='w-full flex justify-center'><ServiceBox>AI Services</ServiceBox></div>
                     <div className='w-full flex justify-center'><ServiceBox>Web Development</ServiceBox></div>
+                    <div className='w-full flex justify-center'><ServiceBox>Embedded Systems & IoT</ServiceBox></div>
                     </div>
 
                 </div>

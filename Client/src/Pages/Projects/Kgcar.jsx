@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import KGCAR from '../../assets/KG-CAR.png';
-import Black from '../../assets/black-badge.png';
-import White from '../../assets/IPS WHITE batch 1.png';
-import Rajiv from '../../assets/rajiv.png';
-import Yogesh from '../../assets/yogesh.png';
-import Marudhu from '../../assets/marudhu.png';
-import Nishanth from '../../assets/nishanth.png';
-import SK from '../../assets/sk.png';
+import KGCAR from '../../assets/projects/KG-CAR.png';
+import Black from '../../assets/general/black-badge.png';
+import White from '../../assets/general/IPS WHITE batch 1.png';
+// import Rajiv from '../../assets/rajiv.png'; // image missing
+import Yogesh from '../../assets/members/3rd-4th-yrs/yogesh.png';
+import Marudhu from '../../assets/members/3rd-4th-yrs/marudhu.png';
+import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
+import SK from '../../assets/members/3rd-4th-yrs/sk.png';
 
 
 const Kgcar = () => {
@@ -16,7 +16,7 @@ const Kgcar = () => {
         role: "Entrepreneur",
         specialty: "Devops & Frontend Development",
        
-        imageUrl: Rajiv,
+        imageUrl: null,
         badges: [White],
         github: "https://github.com/rajiv2004-cloud",
         linkedin: "https://www.linkedin.com/in/rajiv-cloud"

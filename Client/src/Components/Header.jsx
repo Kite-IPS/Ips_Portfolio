@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Ips_Logo from '../assets/IPS WHITE batch 1.png';
+import Ips_Logo from '../assets/general/IPS WHITE batch 1.png';
 import { Link } from 'react-scroll';
 
 const Header = () => {
