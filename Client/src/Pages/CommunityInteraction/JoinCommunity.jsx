@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUser, FiMail, FiArrowRight, FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi';
-import aboutImg from '../../assets/IPS-WHITE-batch.png';
+import aboutImg from '../../assets/general/IPS-WHITE-batch.png';
 
 const JoinCommunity = () => {
   const [formData, setFormData] = useState({

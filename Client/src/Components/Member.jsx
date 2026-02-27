@@ -1,40 +1,40 @@
 import { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import Ranjith from '../assets/ranjith.png';
-import Rajarajan from '../assets/rajarajan.png';
-import Mitun from '../assets/mithun.png';
-import Gopi from '../assets/gopi.png';
-import Marudhu from '../assets/marudhu.png';
-import Gokulramm from '../assets/gokulramm.png';
-import Aiswarya from '../assets/aiswarya.png';
-import Praveenraj from '../assets/praveenraj.png';
-import Jd from '../assets/jd.png';
-import SK from '../assets/sk.png';
-import Rajiv from '../assets/rajiv.png';
-import Harishwa from '../assets/harishwa.png';
-import Yogesh from '../assets/yogesh.png';
-import Adithya from '../assets/adithya.png';
-import Gobi from '../assets/gobi.png';
-import Sivaramana from '../assets/sivaramana.png';
-import Naagaroshan from '../assets/nagaroshan.png';
-import Yogalaksmi from '../assets/yoga.png';
-import Rishwanth from '../assets/rishwanth.png';
-import Jaisreenivasan from '../assets/jai.png';
-import Vigneshwar from '../assets/vigneshwar.png';
-import Nishanthm from '../assets/nishanthm.png';
-import Nishanth from '../assets/nishanth.png';
-import Dharun from '../assets/dharun.png';
-import Chandru from '../assets/chandru.png';
+import Ranjith from '../assets/members/3rd-4th-yrs/ranjith.png';
+import Rajarajan from '../assets/members/3rd-4th-yrs/rajarajan.png';
+import Mitun from '../assets/members/3rd-4th-yrs/mithun.png';
+// import Gopi from '../assets/gopi.png'; // image missing
+import Marudhu from '../assets/members/3rd-4th-yrs/marudhu.png';
+import Gokulramm from '../assets/members/3rd-4th-yrs/gokulramm.png';
+import Aiswarya from '../assets/members/3rd-4th-yrs/aiswarya.png';
+import Praveenraj from '../assets/members/alumni/praveenraj.png';
+import Jd from '../assets/members/alumni/jd.png';
+import SK from '../assets/members/3rd-4th-yrs/sk.png';
+// import Rajiv from '../assets/rajiv.png'; // image missing
+// import Harishwa from '../assets/harishwa.png'; // image missing
+import Yogesh from '../assets/members/3rd-4th-yrs/yogesh.png';
+import Adithya from '../assets/members/3rd-4th-yrs/adithya.png';
+import Gobi from '../assets/members/3rd-4th-yrs/gobi.png';
+import Sivaramana from '../assets/members/alumni/sivaramana.png';
+import Naagaroshan from '../assets/members/3rd-4th-yrs/nagaroshan.png';
+import Yogalaksmi from '../assets/members/3rd-4th-yrs/yoga.png';
+import Rishwanth from '../assets/members/3rd-4th-yrs/rishwanth.png';
+import Jaisreenivasan from '../assets/members/3rd-4th-yrs/jai.png';
+import Vigneshwar from '../assets/members/3rd-4th-yrs/vigneshwar.png';
+import Nishanthm from '../assets/members/3rd-4th-yrs/nishanthm.png';
+import Nishanth from '../assets/members/3rd-4th-yrs/nishanth.png';
+import Dharun from '../assets/members/3rd-4th-yrs/dharun.png';
+import Chandru from '../assets/members/alumni/chandru.png';
 // import Ajay from '../assets/ajay.png';
-// import Mourish from '../assets/mourish.png';
-// import Joedaniel from '../assets/joedaniel.png';
+// import Mourish from '../assets/members/2nd-yrs/mourish.png';
+// import Joedaniel from '../assets/members/2nd-yrs/joedaniel.png';
 // import Gunal from '../assets/gnal.png';
 // import Anumitha from '../assets/anumitha.png';
-import Black from '../assets/black-badge.png';
-import White from '../assets/IPS WHITE batch 1.png'; 
-import LinkedinIcon from '../assets/linkedin-icon.jpg'; 
-import GithubIcon from '../assets/github-icon.png'; 
+import Black from '../assets/general/black-badge.png';
+import White from '../assets/general/IPS WHITE batch 1.png'; 
+import LinkedinIcon from '../assets/general/linkedin-icon.jpg'; 
+import GithubIcon from '../assets/general/github-icon.png'; 
  
 
 const communityMembers = [
@@ -97,7 +97,7 @@ const communityMembers = [
     name: "Rajiv N",
     role: "Entrepreneur",
     specialty: "Devops & Frontend Development",
-    imageUrl: Rajiv,
+    imageUrl: null,
     badges: [White],
     github: "https://github.com/rajiv2004-cloud",
     linkedin: "https://www.linkedin.com/in/rajiv-cloud"
@@ -206,7 +206,7 @@ const communityMembers = [
     name: "Gopi Krishna S",
     role: "Developer",
     specialty: "Ai Engineer", 
-    imageUrl: Gopi,
+    imageUrl: null,
     badges: [Black],
     github: "https://github.com/gopu-005",
     linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
@@ -260,7 +260,7 @@ const communityMembers = [
     name: "Harishwa S",
     role: "Designer",
     specialty: "3D Designer",
-    imageUrl: Harishwa,
+    imageUrl: null,
     badges: [Black],
     github: "https://github.com/projects-harishwa",
     linkedin: "https://www.linkedin.com/in/harishwa-here/"

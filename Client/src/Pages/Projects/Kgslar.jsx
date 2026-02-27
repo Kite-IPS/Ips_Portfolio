@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import KGSLAR from '../../assets/KG-SLAR.png';
-import Black from '../../assets/black-badge.png';
-import White from '../../assets/IPS WHITE batch 1.png';
-import Ranjith from '../../assets/ranjith.png';
-import Rajarajan from '../../assets/rajarajan.png';
-import Marudhu from '../../assets/marudhu.png';
-import Nishanth from '../../assets/nishanth.png';
-import Yogesh from '../../assets/yogesh.png';
+import KGSLAR from '../../assets/projects/KG-SLAR.png';
+import Black from '../../assets/general/black-badge.png';
+import White from '../../assets/general/IPS WHITE batch 1.png';
+import Ranjith from '../../assets/members/3rd-4th-yrs/ranjith.png';
+import Rajarajan from '../../assets/members/3rd-4th-yrs/rajarajan.png';
+import Marudhu from '../../assets/members/3rd-4th-yrs/marudhu.png';
+import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
+import Yogesh from '../../assets/members/3rd-4th-yrs/yogesh.png';
 
 const Kgslar = () => {
   const teamMembers = [

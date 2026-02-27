@@ -1,8 +1,8 @@
   import React from 'react'
-  import technical from '../assets/technical.png'
-  import mobile from '../assets/mobile.png'
-  import cloud from '../assets/cloud.png'
-  import ai from '../assets/ai.png'
+  import technical from '../assets/general/technical.png'
+  import mobile from '../assets/icons/mobile.png'
+  import cloud from '../assets/icons/cloud.png'
+  import ai from '../assets/icons/ai.png'
   import { MdMemory } from 'react-icons/md'
 
   const serviceData = {

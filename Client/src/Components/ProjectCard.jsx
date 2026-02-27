@@ -1,12 +1,12 @@
 import "react";
 import { useNavigate } from "react-router-dom";
-import KGSLAR from "../assets/KG-SLAR.png";
-import KGCAR from "../assets/KG-CAR.png";
-import SIHTHIRUVIZHA from "../assets/SIH-THIRUVIZHA.png";
-import PYEXPO from "../assets/PYEXPO.png";
-import KGAPS from "../assets/KG-APS.jpg";
-import KGBITES from "../assets/KG-BITES.png";
-import PYEXPOWEBSITE from "../assets/PYEXPO-WEBSITE.png";
+import KGSLAR from "../assets/projects/KG-SLAR.png";
+import KGCAR from "../assets/projects/KG-CAR.png";
+import SIHTHIRUVIZHA from "../assets/events/SIH-THIRUVIZHA.png";
+import PYEXPO from "../assets/events/PYEXPO.png";
+import KGAPS from "../assets/projects/KG-APS.jpg";
+import KGBITES from "../assets/projects/KG-BITES.png";
+import PYEXPOWEBSITE from "../assets/projects/PYEXPO-WEBSITE.png";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {

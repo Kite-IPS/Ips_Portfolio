@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import Pyexpowebsite from '../../assets/PYEXPO-WEBSITE.png';
-import Nishanthm from '../../assets/nishanthm.png';
-import Nishanth from '../../assets/nishanth.png';
-import Vigneshwar from '../../assets/vigneshwar.png';
-import Naagaroshan from '../../assets/nagaroshan.png';
-import Rishwanth from '../../assets/rishwanth.png';
-import Gopi from '../../assets/gopi.png';
-import Mitun from '../../assets/mithun.png';
-import Black from '../../assets/black-badge.png';
-import White from '../../assets/IPS WHITE batch 1.png'; 
+import Pyexpowebsite from '../../assets/projects/PYEXPO-WEBSITE.png';
+import Nishanthm from '../../assets/members/3rd-4th-yrs/nishanthm.png';
+import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
+import Vigneshwar from '../../assets/members/3rd-4th-yrs/vigneshwar.png';
+import Naagaroshan from '../../assets/members/3rd-4th-yrs/nagaroshan.png';
+import Rishwanth from '../../assets/members/3rd-4th-yrs/rishwanth.png';
+// import Gopi from '../../assets/gopi.png'; // image missing
+import Mitun from '../../assets/members/3rd-4th-yrs/mithun.png';
+import Black from '../../assets/general/black-badge.png';
+import White from '../../assets/general/IPS WHITE batch 1.png'; 
 
 
 const PyexpoWebsite = () => {
@@ -63,7 +63,7 @@ const PyexpoWebsite = () => {
       name: "Gopi Krishna S",
       role: "Developer",
       specialty: "Ai Engineer", 
-      imageUrl: Gopi,
+      imageUrl: null,
       badges: [Black],
       github: "https://github.com/gopu-005",
       linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"

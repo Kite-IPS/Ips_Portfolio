@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Header from '../Components/Header';
-import HeroImg from '../assets/community2.png';
+import HeroImg from '../assets/general/community2.png';
 import Button from '../Components/Button';
 import { Link } from 'react-scroll';
 import InfoBox from '../Components/InfoBox';
-import aboutImg from '../assets/aboutImg.png';
+import aboutImg from '../assets/general/aboutImg.png';
 // import { HiArrowSmRight } from "react-icons/hi";
 import ProjectCard from '../Components/ProjectCard';
 // import section from '../assets/section.png';
