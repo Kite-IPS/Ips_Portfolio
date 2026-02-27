@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import KGBITES from '../assets/KG-BITES.png';
-import Black from '../assets/black-badge.png';
-import SK from '../assets/sk.png';
+import KGBITES from '../../assets/KG-BITES.png';
+import Black from '../../assets/black-badge.png';
+import SK from '../../assets/sk.png';
 
 const Kgbites = () => {
   const teamMembers = [

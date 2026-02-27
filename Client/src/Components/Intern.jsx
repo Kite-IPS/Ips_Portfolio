@@ -260,13 +260,16 @@ const InternsMarquee = ({
 
   return (
     <div className="bg-slate-90 py-4 md:py-8 cursor-pointer">
+      {/* 
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-slate-800 mokoto-text">Our Interns</h2>
         <p className="text-center text-slate-600 mb-8 max-w-2xl mx-auto">
           Meet our talented interns who are gaining valuable experience and bringing fresh perspectives to our team.
         </p>
       </div>
+      */}
       
+      {/* 
       <div 
         ref={scrollRef}
         className="flex overflow-x-hidden space-x-3 md:space-x-6 px-2 md:px-4 w-full select-none"
@@ -303,6 +306,7 @@ const InternsMarquee = ({
           </motion.div>
         ))}
       </div>
+      */}
 
       {/* Intern Details Modal */}
       {selectedIntern && (

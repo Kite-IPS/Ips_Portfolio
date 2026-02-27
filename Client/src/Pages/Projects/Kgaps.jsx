@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import KGAPS from '../assets/KG-APS.jpg';
-import Black from '../assets/black-badge.png';
-import White from '../assets/IPS WHITE batch 1.png';
-import Adithya from '../assets/adithya.png';
-import Mitun from '../assets/mithun.png';
-import Naagaroshan from '../assets/nagaroshan.png';
-import Rishwanth from '../assets/rishwanth.png';
-import Vigneshwar from '../assets/vigneshwar.png';
+import KGAPS from '../../assets/KG-APS.jpg';
+import Black from '../../assets/black-badge.png';
+import White from '../../assets/IPS WHITE batch 1.png';
+import Adithya from '../../assets/adithya.png';
+import Mitun from '../../assets/mithun.png';
+import Naagaroshan from '../../assets/nagaroshan.png';
+import Rishwanth from '../../assets/rishwanth.png';
+import Vigneshwar from '../../assets/vigneshwar.png';
 
 const Kgaps = () => {
   const teamMembers = [

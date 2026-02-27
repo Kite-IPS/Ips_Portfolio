@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import Pyexpowebsite from '../assets/PYEXPO-WEBSITE.png';
-import Nishanthm from '../assets/nishanthm.png';
-import Nishanth from '../assets/nishanth.png';
-import Vigneshwar from '../assets/vigneshwar.png';
-import Naagaroshan from '../assets/nagaroshan.png';
-import Rishwanth from '../assets/rishwanth.png';
-import Gopi from '../assets/gopi.png';
-import Mitun from '../assets/mithun.png';
-import Black from '../assets/black-badge.png';
-import White from '../assets/IPS WHITE batch 1.png'; 
+import Pyexpowebsite from '../../assets/PYEXPO-WEBSITE.png';
+import Nishanthm from '../../assets/nishanthm.png';
+import Nishanth from '../../assets/nishanth.png';
+import Vigneshwar from '../../assets/vigneshwar.png';
+import Naagaroshan from '../../assets/nagaroshan.png';
+import Rishwanth from '../../assets/rishwanth.png';
+import Gopi from '../../assets/gopi.png';
+import Mitun from '../../assets/mithun.png';
+import Black from '../../assets/black-badge.png';
+import White from '../../assets/IPS WHITE batch 1.png'; 
 
 
 const PyexpoWebsite = () => {

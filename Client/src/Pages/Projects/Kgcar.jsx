@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import KGCAR from '../assets/KG-CAR.png';
-import Black from '../assets/black-badge.png';
-import White from '../assets/IPS WHITE batch 1.png';
-import Rajiv from '../assets/rajiv.png';
-import Yogesh from '../assets/yogesh.png';
-import Marudhu from '../assets/marudhu.png';
-import Nishanth from '../assets/nishanth.png';
-import SK from '../assets/sk.png';
+import KGCAR from '../../assets/KG-CAR.png';
+import Black from '../../assets/black-badge.png';
+import White from '../../assets/IPS WHITE batch 1.png';
+import Rajiv from '../../assets/rajiv.png';
+import Yogesh from '../../assets/yogesh.png';
+import Marudhu from '../../assets/marudhu.png';
+import Nishanth from '../../assets/nishanth.png';
+import SK from '../../assets/sk.png';
 
 
 const Kgcar = () => {
