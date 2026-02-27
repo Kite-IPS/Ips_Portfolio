@@ -2,15 +2,15 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import LandingPage from './Pages/LandingPage'
 import CustomErrorPage from './Pages/CustomErrorPage'
-import JoinCommunity from './Pages/JoinCommunity'
-import Project_submission from './Pages/Project_submission'
+import JoinCommunity from './Pages/CommunityInteraction/JoinCommunity'
+import Project_submission from './Pages/CommunityInteraction/ProjectSubmission'
 
 // Import the new project page components
-import Kgslar from './Pages/Kgslar'
-import Kgcar from './Pages/Kgcar'
-import Kgaps from './Pages/Kgaps'
-import Kgbites from './Pages/Kgbites'
-import Pyexpowebsite from './Pages/Pyexpowebsite'
+import Kgslar from './Pages/Projects/Kgslar'
+import Kgcar from './Pages/Projects/Kgcar'
+import Kgaps from './Pages/Projects/Kgaps'
+import Kgbites from './Pages/Projects/Kgbites'
+import Pyexpowebsite from './Pages/Projects/Pyexpowebsite'
 
 const App = () => {
   return (
