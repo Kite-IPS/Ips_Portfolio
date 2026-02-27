@@ -160,9 +160,20 @@ const LandingPage = () => {
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
                     <ProjectCard name={'KG-BITES'} description={"It's a Canteen Management System"} />
                     <ProjectCard name={'PYEXPO-WEBSITE'} description={"It is an exclusive hackathon event."} />
-                   
-                    
-                    
+                    <ProjectCard name={'IQAC PORTAL'} description={"A digital portal to streamline the event approval process with a structured hierarchical workflow, ensuring transparency and traceability."} />
+                </div>
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
+                    <ProjectCard name={'FACULTY APPRAISAL SYSTEM'} description={"A web-based system to evaluate faculty performance, collect appraisal data, and streamline academic review workflows."} />
+                    <ProjectCard name={'TASK SCHEDULER'} description={"A task scheduling and workflow management system to create, track, and manage academic or administrative tasks."} />
+                    <ProjectCard name={'RECORD GENERATOR'} description={"A web application for generating formatted academic records and documentation automatically."} />
+                </div>
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
+                    <ProjectCard name={'GATE E-PASS SYSTEM'} description={"A system to digitize visitor/event gate pass creation, approval, and tracking with role-based access, QR/OTP verification, and audit logging."} />
+                    <ProjectCard name={'LETTER GENERATOR'} description={"An automated portal to generate official letters dynamically based on predefined templates and input parameters."} />
+                    <ProjectCard name={'EDU MANAGE FOR C FACULTIES'} description={"An administrative chatbot portal designed for managing C programming faculty academic resources and workflows."} />
+                </div>
+                <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
+                    <ProjectCard name={'ISSUE ADDRESS PORTAL'} description={"A complaint management system to submit, track, and resolve institutional issues efficiently."} />
                 </div>
                 
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
