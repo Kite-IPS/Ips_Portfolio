@@ -4,15 +4,12 @@ import { motion } from 'framer-motion';
 import Ranjith from '../assets/members/3rd-4th-yrs/ranjith.png';
 import Rajarajan from '../assets/members/3rd-4th-yrs/rajarajan.png';
 import Mitun from '../assets/members/3rd-4th-yrs/mithun.png';
-// import Gopi from '../assets/gopi.png'; // image missing
 import Marudhu from '../assets/members/3rd-4th-yrs/marudhu.png';
 import Gokulramm from '../assets/members/3rd-4th-yrs/gokulramm.png';
 import Aiswarya from '../assets/members/3rd-4th-yrs/aiswarya.png';
 import Praveenraj from '../assets/members/alumni/praveenraj.png';
 import Jd from '../assets/members/alumni/jd.png';
 import SK from '../assets/members/3rd-4th-yrs/sk.png';
-// import Rajiv from '../assets/rajiv.png'; // image missing
-// import Harishwa from '../assets/harishwa.png'; // image missing
 import Yogesh from '../assets/members/3rd-4th-yrs/yogesh.png';
 import Adithya from '../assets/members/3rd-4th-yrs/adithya.png';
 import Gobi from '../assets/members/3rd-4th-yrs/gobi.png';
@@ -26,11 +23,6 @@ import Nishanthm from '../assets/members/3rd-4th-yrs/nishanthm.png';
 import Nishanth from '../assets/members/3rd-4th-yrs/nishanth.png';
 import Dharun from '../assets/members/3rd-4th-yrs/dharun.png';
 import Chandru from '../assets/members/alumni/chandru.png';
-// import Ajay from '../assets/ajay.png';
-// import Mourish from '../assets/members/2nd-yrs/mourish.png';
-// import Joedaniel from '../assets/members/2nd-yrs/joedaniel.png';
-// import Gunal from '../assets/gnal.png';
-// import Anumitha from '../assets/anumitha.png';
 import Black from '../assets/general/black-badge.png';
 import White from '../assets/general/IPS WHITE batch 1.png'; 
 import LinkedinIcon from '../assets/general/linkedin-icon.jpg'; 
@@ -92,15 +84,6 @@ const communityMembers = [
     badges: [White],
     github: "https://github.com/NishanthSbz",
     linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
-  },
-  {
-    name: "Rajiv N",
-    role: "Entrepreneur",
-    specialty: "Devops & Frontend Development",
-    imageUrl: null,
-    badges: [White],
-    github: "https://github.com/rajiv2004-cloud",
-    linkedin: "https://www.linkedin.com/in/rajiv-cloud"
   },
   {
     name: "Adithya G",
@@ -203,15 +186,6 @@ const communityMembers = [
     linkedin: "https://www.linkedin.com/in/aishwarya-boobalan-480368244 "
   },
   {
-    name: "Gopi Krishna S",
-    role: "Developer",
-    specialty: "Ai Engineer", 
-    imageUrl: null,
-    badges: [Black],
-    github: "https://github.com/gopu-005",
-    linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-  },
-  {
     name: "Ranjith M", 
     role: "Developer",
     specialty: "Devops & Backend Development",
@@ -265,74 +239,7 @@ const communityMembers = [
     github: "https://github.com/projects-harishwa",
     linkedin: "https://www.linkedin.com/in/harishwa-here/"
   },
-  // {
-  //   name: "Ajay S",
-  //   role: "Developer",
-  //   specialty: "Frontend Development",
-  //   imageUrl: Ajay,
-  //   badges: [Black],
-  //   github: "https://github.com/Ajay987654",
-  //   linkedin: "https://www.linkedin.com/in/ajay162006/",
-  // },
   
-  //   // {
-  //   //   name: "Gunal P",
-  //   //   role: "Developer",
-  //   //   specialty: "backend Development",
-  //   //   imageUrl: Gunal,
-  //   //   badges: [Black],
-  //   //   github: "https://github.com/Gunal531",
-  //   //   linkedin: "https://www.linkedin.com/in/gunal-p-74bb90272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  //   // },
-    
-  //   // {
-  //   //   name: "Anumitha J",
-  //   //   role: "Developer",
-  //   //   specialty: "Backend Development",
-  //   //   imageUrl: Anumitha,
-  //   //   badges: [Black],
-  //   //   github: "https://github.com/Anumitha-369",
-  //   //   linkedin: "https://www.linkedin.com/in/anumitha-jayachandran-421693297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  //   // },
-    
-  //   // {
-  //   //   name: "Mahadarshini S",
-  //   //   role: "Developer",
-  //   //   specialty: "Frontend Development",
-  //   //   imageUrl: Ajay,
-  //   //   badges: [Black],
-  //   //   github: "https://github.com/Maha-kg",
-  //   //   linkedin: "https://www.linkedin.com/in/mahadarshini-selvam-169099288/",
-  //   // },
-    
-  //   // {
-  //   //   name: "Kalainathan S",
-  //   //   role: "Developer",
-  //   //   specialty: "Full-Stack Development",
-  //   //   imageUrl: Ajay,
-  //   //   badges: [Black],
-  //   //   github: "https://github.com/kailai-13",
-  //   //   linkedin: "https://www.linkedin.com/in/kailai-nathan-442b23281/",
-  //   // },
-
-  //   {
-  //     name: "Mourish Antony C",
-  //     role: "Developer",
-  //     specialty: "Backend Development",
-  //     imageUrl: Mourish,  
-  //     badges: [Black],
-  //     github: "https://github.com/mourishantony",
-  //     linkedin: "https://www.linkedin.com/in/mourish-a-6b51b0301/"
-  //   },
-  //   {
-  //     name: "Joe Daniel A",
-  //     role: "Developer",
-  //     specialty: "Ai Engineer", 
-  //     imageUrl: Joedaniel,
-  //     badges: [Black],
-  //     github: "https://github.com/joedanields",
-  //     linkedin: "https://www.linkedin.com/in/joe-daniel1911?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-  //   },
   // Commented out placeholder members are preserved but not shown here for brevity
 ];
 

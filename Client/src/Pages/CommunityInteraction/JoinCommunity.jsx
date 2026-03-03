@@ -1,10 +1,13 @@
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiUser, FiMail, FiArrowRight, FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi';
-import aboutImg from '../../assets/general/IPS-WHITE-batch.png';
+import { FiUser, FiMail, FiPhone, FiGithub, FiLinkedin, FiCheckCircle } from 'react-icons/fi';
+import { FaUsers, FaRocket, FaCode, FaStar } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import Ips_Logo from '../../assets/general/IPS WHITE batch 1.png';
 
 const JoinCommunity = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,24 +36,15 @@ const JoinCommunity = () => {
     if (checked) {
       setFormData({ ...formData, proficientIn: [...formData.proficientIn, value] });
     } else {
-      setFormData({
-        ...formData,
-        proficientIn: formData.proficientIn.filter(item => item !== value)
-      });
+      setFormData({ ...formData, proficientIn: formData.proficientIn.filter(item => item !== value) });
     }
   };
 
   const handleSkillSelection = (skill) => {
     if (formData.skills.includes(skill)) {
-      setFormData({
-        ...formData,
-        skills: formData.skills.filter(item => item !== skill)
-      });
+      setFormData({ ...formData, skills: formData.skills.filter(item => item !== skill) });
     } else {
-      setFormData({
-        ...formData,
-        skills: [...formData.skills, skill]
-      });
+      setFormData({ ...formData, skills: [...formData.skills, skill] });
     }
   };
 
@@ -74,309 +68,271 @@ const JoinCommunity = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    // Create a temporary form element to prepare data for EmailJS
     const formToSend = form.current;
-    
-    // Set the skills to a hidden field that matches the email template variable name
     const skillsInput = formToSend.querySelector('input[name="skill"]');
-    if (skillsInput) {
-      skillsInput.value = formData.skills.join(', ');
-    }
-    
-    // Set the proficient languages to a hidden field
+    if (skillsInput) skillsInput.value = formData.skills.join(', ');
     const proficientInInput = formToSend.querySelector('input[name="proficientInList"]');
-    if (proficientInInput) {
-      proficientInInput.value = formData.proficientIn.join(', ');
-    }
+    if (proficientInInput) proficientInInput.value = formData.proficientIn.join(', ');
 
     setIsSending(true);
-    emailjs.sendForm(
-      'service_nj7e4pf',
-      'template_1tssygg',
-      formToSend,
-      'neGb32l3efGX_O7HW'
-    ).then(
-      () => setSubmitted(true),
-      (error) => {
-        console.error("EmailJS error:", error);
+    emailjs.sendForm('service_nj7e4pf', 'template_1tssygg', formToSend, 'neGb32l3efGX_O7HW')
+      .then(() => setSubmitted(true), (error) => {
+        console.error('EmailJS error:', error);
         alert('An error occurred, please try again.');
-      }
-    ).finally(() => {
-      setIsSending(false);
-    });
+      })
+      .finally(() => setIsSending(false));
   };
 
-  // Skills list
   const skillsList = [
-    "JavaScript", "Frameworks & Libraries", "Databases & APIs", 
-    "Mathematics & Algorithms", "Programming (Python & Libraries)", 
-    "Model Deployment & Cloud Integration", "Real-Time Operating Systems (RTOS)", 
-    "IoT Communication Protocols", "Embedded & Cloud Integration", 
-    "Cybersecurity & Data Handling", "3D Modeling Software", 
-    "Rendering & Animation", "3D Printing & Simulation", 
-    "Robot Operating System (ROS)", "Kinematics & Motion Planning", 
-    "Sensor Integration & Actuation", "Visual & Interaction Design", 
+    "JavaScript", "Frameworks & Libraries", "Databases & APIs",
+    "Mathematics & Algorithms", "Programming (Python & Libraries)",
+    "Model Deployment & Cloud Integration", "Real-Time Operating Systems (RTOS)",
+    "IoT Communication Protocols", "Embedded & Cloud Integration",
+    "Cybersecurity & Data Handling", "3D Modeling Software",
+    "Rendering & Animation", "3D Printing & Simulation",
+    "Robot Operating System (ROS)", "Kinematics & Motion Planning",
+    "Sensor Integration & Actuation", "Visual & Interaction Design",
     "App Deployment & Performance Optimization"
   ];
 
-  // Common input field styles with hover effect
-  const inputStyles = "w-full bg-transparent text-black placeholder-stone-500 focus:outline-none text-base sm:text-lg transition-all duration-300 ease-in-out";
-  const inputContainerStyles = "relative flex items-center space-x-3 bg-gray-100 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-700/50 transition-all duration-300 ease-in-out hover:border-blue-500 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-300 focus-within:ring-opacity-50";
-  const selectStyles = "w-full bg-gray-100 border border-gray-500 text-gray-500 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg focus:outline-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50";
+  const perks = [
+    { icon: <FaCode className="text-xl" />, text: 'Work on live projects' },
+    { icon: <FaUsers className="text-xl" />, text: 'Expert mentorship' },
+    { icon: <FaRocket className="text-xl" />, text: 'Skill acceleration' },
+    { icon: <FaStar className="text-xl" />, text: 'Community events & hackathons' },
+  ];
+
+  const inputBase = "w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-sm transition-all duration-200";
+  const fieldWrap = "flex items-center gap-3 bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-3 hover:border-slate-400 focus-within:border-white focus-within:ring-2 focus-within:ring-white/20 transition-all duration-200";
+  const selectBase = "w-full bg-[#0d1460] border border-[#2a3490] text-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-white hover:border-slate-400 transition-all duration-200 text-sm";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center p-4 sm:p-6">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="relative bg-white rounded-2xl shadow-2xl overflow-hidden w-full max-w-2xl"
-      >
-       
-        <div className="absolute w-16 sm:w-20 top-4 ml-4 sm:ml-7">
-          <img src={aboutImg} alt="IPS Tech Community" className="w-14 h-12 sm:w-20 sm:h-16 object-contain" />
+    <div className="min-h-screen font-primary flex flex-col" style={{ background: 'linear-gradient(149deg,rgba(3, 12, 105, 1) 66%, rgba(28, 39, 163, 1) 100%)' }}>
+
+      {/* Top Nav */}
+      <nav className="w-full px-6 md:px-12 py-4 flex items-center justify-between bg-[#080d47] border-b border-[#2a3490]">
+        <button onClick={() => navigate('/')} className="flex items-center gap-2 text-blue-200 hover:text-white transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          <span className="text-sm font-medium">Back to Home</span>
+        </button>
+        <div className="flex items-center gap-3">
+          <img src={Ips_Logo} alt="IPS Logo" className="w-8 h-8 object-contain" />
+          <span className="text-white font-semibold text-sm sm:text-base mokoto-text hidden sm:block">IPS Tech Community</span>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col lg:flex-row items-stretch max-w-[90vW] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8 gap-10 lg:gap-30">
+
+        {/* Left Panel — Branding */}
+        <div className="lg:w-[45%] flex flex-col justify-center text-white lg:mr-10">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">
+              Open Applications
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-bold mokoto-text leading-tight mb-5">
+              Join IPS<br />Tech Community
+            </h1>
+            <p className="text-blue-100 text-base leading-relaxed mb-8 max-w-md">
+              Become part of a passionate community of developers, designers, and innovators. Build real products, grow your skills, and launch your tech career.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              {perks.map((perk, i) => (
+                <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3 backdrop-blur-sm">
+                  <div className="text-blue-300 shrink-0">{perk.icon}</div>
+                  <span className="text-sm text-blue-100 font-medium">{perk.text}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {['A','B','C','D'].map((l, i) => (
+                  <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-blue-800 flex items-center justify-center text-white text-xs font-bold">
+                    {l}
+                  </div>
+                ))}
+              </div>
+              <p className="text-blue-200 text-sm"><span className="text-white font-semibold">30+ members</span> already building together</p>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="relative z-10 p-5 sm:p-7 md:p-10">
-          
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl -mt-2 sm:-mt-4 ml-12 sm:ml-16 md:ml-11 font-bold text-center text-transparent bg-clip-text bg-gradient-to-l from-gray-100 to-stone-950 mokoto-text">
-          IPS Tech Community
-        </h2>
+        {/* Right Panel — Form */}
+        <div className="lg:w-[58%] flex items-start lg:items-center lg:ml-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="w-full bg-[#0d1460] border border-[#2a3490] rounded-3xl p-6 sm:p-8 shadow-2xl"
+          >
+            <AnimatePresence mode="wait">
+              {submitted ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-center py-12 space-y-5"
+                >
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-green-400/20 rounded-full mb-2">
+                    <FiCheckCircle className="w-10 h-10 text-green-400" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">You're in!</h3>
+                  <p className="text-blue-100 text-base max-w-sm mx-auto">
+                    Welcome to IPS Tech Community. We'll review your application and reach out soon.
+                  </p>
+                  <button
+                    onClick={() => navigate('/')}
+                    className="mt-4 inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-xl hover:bg-blue-50 transition-all duration-200"
+                  >
+                    Back to Home
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.form
+                  key="form"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onSubmit={handleSubmit}
+                  ref={form}
+                  className="space-y-4"
+                >
+                  <h2 className="text-xl font-bold text-white mb-1">Your Details</h2>
+                  <p className="text-blue-200 text-sm mb-4">Fill in the form below to apply. Fields marked * are required.</p>
 
-          <AnimatePresence mode="wait">
-            {submitted ? (
-              <motion.div
-                key="success"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="text-center space-y-6 mt-6"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 rounded-full">
-                  <FiArrowRight className="w-8 h-8 text-green-400 animate-bounce" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-500">Welcome!</h3>
-                <p className="text-gray-500 text-lg">
-                  Thank you for joining the IPS Tech Community.<br />
-                  We'll be in touch soon with more details.
-                </p>
-              </motion.div>
-            ) : (
-              <motion.form
-                key="form"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onSubmit={handleSubmit}
-                ref={form}
-                className="space-y-6 mt-6"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[{ name: 'name', icon: <FiUser />, placeholder: 'Full Name' }, { name: 'email', icon: <FiMail />, placeholder: 'Email Address' }].map((field, index) => (
-                    <motion.div key={field.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}>
-                      <div className={inputContainerStyles}>
-                        <span className="text-gray-500">{field.icon}</span>
-                        <input
-                          type="text"
-                          name={field.name}
-                          value={formData[field.name]}
-                          onChange={handleChange}
-                          placeholder={field.placeholder}
-                          className={inputStyles}
-                        />
+                  {/* Row 1 */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className={fieldWrap}>
+                      <FiUser className="text-blue-300 shrink-0" />
+                      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name *" className={inputBase} />
+                    </div>
+                    <div className={fieldWrap}>
+                      <FiMail className="text-blue-300 shrink-0" />
+                      <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address *" className={inputBase} />
+                    </div>
+                  </div>
+
+                  {/* Row 2 */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className={fieldWrap}>
+                      <FiPhone className="text-blue-300 shrink-0" />
+                      <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number *" className={inputBase} />
+                    </div>
+                    <select name="year" value={formData.year} onChange={handleChange} className={selectBase}>
+                      <option value="">Academic Year</option>
+                      {['1st Year', '2nd Year', '3rd Year', '4th Year'].map(y => <option key={y} value={y}>{y}</option>)}
+                    </select>
+                  </div>
+
+                  {/* Row 3 */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <select name="department" value={formData.department} onChange={handleChange} className={selectBase}>
+                      <option value="">Department</option>
+                      {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH'].map(d => <option key={d} value={d}>{d}</option>)}
+                    </select>
+                    <select name="areaOfInterest" value={formData.areaOfInterest} onChange={handleChange} className={selectBase}>
+                      <option value="">Area of Interest</option>
+                      {['Artificial Intelligence','Web Development','IoT','App Development','UI/UX','3D Designing','Robotics'].map(a => <option key={a} value={a}>{a}</option>)}
+                    </select>
+                  </div>
+
+                  {/* Skills multi-select */}
+                  <div className="relative">
+                    <div
+                      className={`w-full bg-[#0d1460] border rounded-xl px-4 py-3 cursor-pointer transition-all duration-200 text-sm ${skillsDropdownOpen ? 'border-white ring-2 ring-white/20' : 'border-[#2a3490] hover:border-slate-400'}`}
+                      onClick={() => setSkillsDropdownOpen(!skillsDropdownOpen)}
+                    >
+                      <div className="flex justify-between items-center">
+                        <span className="text-blue-100">{formData.skills.length > 0 ? `${formData.skills.length} skill(s) selected` : 'Select Your Skills'}</span>
+                        <svg className={`w-4 h-4 text-blue-300 transition-transform duration-300 ${skillsDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                        </svg>
                       </div>
-                    </motion.div>
-                  ))}
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-                    <div className={inputContainerStyles}>
-                      <span className="text-gray-500"><FiPhone /></span>
-                      <input
-                        type="text"
-                        name="phoneNumber"
-                        value={formData.phoneNumber}
-                        onChange={handleChange}
-                        placeholder="Phone Number"
-                        className={inputStyles}
-                      />
+                      {formData.skills.length > 0 && (
+                        <div className="mt-2 flex flex-wrap gap-1.5">
+                          {formData.skills.map(skill => (
+                            <span key={skill} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/40 text-white border border-white/20">
+                              {skill}
+                              <button type="button" className="ml-1 hover:text-red-300 focus:outline-none" onClick={(e) => { e.stopPropagation(); handleSkillSelection(skill); }}>×</button>
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  </motion.div>
-                  <select 
-                    name="year" 
-                    value={formData.year} 
-                    onChange={handleChange} 
-                    className={selectStyles}
-                  >
-                    <option value="" className='text-gray-500'>Select Academic Year</option>
-                    {['1st Year', '2nd Year', '3rd Year', '4th Year'].map((year) => (
-                      <option key={year} value={year}>{year}</option>
-                    ))}
-                  </select>
-                  <select 
-                    name="department" 
-                    value={formData.department} 
-                    onChange={handleChange} 
-                    className={selectStyles}
-                  >
-                    <option value="">Select Department</option>
-                    {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH'].map((dept) => (
-                      <option key={dept} value={dept}>{dept}</option>
-                    ))}
-                  </select>
-                  <select 
-                    name="areaOfInterest" 
-                    value={formData.areaOfInterest} 
-                    onChange={handleChange} 
-                    className={selectStyles}
-                  >
-                    <option value="">Select Area of Interest</option>
-                    {['Artificial Intelligence', 'Web Development', 'IoT', 'App Development', 'UI/UX', '3D Designing', 'Robotics'].map((area) => (
-                      <option key={area} value={area}>{area}</option>
-                    ))}
-                  </select>
-                </div>
-                
-                {/* Multi-select Skills Dropdown */}
-                <div className="relative">
-                  <div 
-                    className={`w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${skillsDropdownOpen ? 'border-blue-500 ring-2 ring-blue-300 ring-opacity-50' : 'hover:border-blue-500'}`}
-                    onClick={() => setSkillsDropdownOpen(!skillsDropdownOpen)}
-                  >
-                    <div className="flex justify-between items-center">
-                      <span>{formData.skills.length > 0 ? `${formData.skills.length} skill(s) selected` : 'Select Your Skills'}</span>
-                      <svg className={`w-5 h-5 transition-transform duration-300 ${skillsDropdownOpen ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
-                    </div>
-                    
-                    {/* Selected skills preview */}
-                    {formData.skills.length > 0 && (
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {formData.skills.map(skill => (
-                          <span 
-                            key={skill} 
-                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
-                          >
-                            {skill}
-                            <button 
-                              type="button"
-                              className="ml-1.5 inline-flex text-blue-500 hover:text-blue-700 focus:outline-none" 
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleSkillSelection(skill);
-                              }}
-                            >
-                              ×
-                            </button>
-                          </span>
+                    {skillsDropdownOpen && (
+                      <div className="absolute z-20 mt-1 w-full bg-[#0d1460] border border-[#2a3490] rounded-xl shadow-2xl max-h-52 overflow-y-auto">
+                        {skillsList.map(skill => (
+                          <div key={skill} className={`px-4 py-2.5 cursor-pointer text-sm transition-colors duration-150 hover:bg-[#1a2480] ${formData.skills.includes(skill) ? 'bg-[#1a2480] text-white' : 'text-slate-300'}`} onClick={() => handleSkillSelection(skill)}>
+                            <div className="flex items-center gap-2">
+                              <input type="checkbox" checked={formData.skills.includes(skill)} onChange={() => {}} className="h-3.5 w-3.5 accent-blue-400" />
+                              {skill}
+                            </div>
+                          </div>
                         ))}
                       </div>
                     )}
+                    <input type="hidden" name="skill" value={formData.skills.join(', ')} />
                   </div>
-                  
-                  {/* Dropdown menu */}
-                  {skillsDropdownOpen && (
-                    <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                      {skillsList.map(skill => (
-                        <div 
-                          key={skill}
-                          className={`px-4 py-2 cursor-pointer transition-all duration-200 ease-in-out hover:bg-blue-50 ${formData.skills.includes(skill) ? 'bg-blue-100 text-blue-800' : 'text-gray-700'}`}
-                          onClick={() => handleSkillSelection(skill)}
-                        >
-                          <div className="flex items-center">
-                            <input
-                              type="checkbox"
-                              checked={formData.skills.includes(skill)}
-                              onChange={() => {}}
-                              className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                            />
-                            {skill}
-                          </div>
-                        </div>
+
+                  {/* GitHub & LinkedIn */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className={fieldWrap}>
+                      <FiGithub className="text-blue-300 shrink-0" />
+                      <input type="text" name="githubLink" value={formData.githubLink} onChange={handleChange} placeholder="GitHub Profile Link" className={inputBase} />
+                    </div>
+                    <div className={fieldWrap}>
+                      <FiLinkedin className="text-blue-300 shrink-0" />
+                      <input type="text" name="linkedinLink" value={formData.linkedinLink} onChange={handleChange} placeholder="LinkedIn Profile Link" className={inputBase} />
+                    </div>
+                  </div>
+
+                  {/* Proficient In */}
+                  <div className="bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-3">
+                    <p className="text-blue-200 text-sm mb-2.5 font-medium">Proficient In</p>
+                    <div className="grid grid-cols-3 gap-2">
+                      {['Python', 'C', 'C++', 'Rust', 'Go', 'Javascript'].map(lang => (
+                        <label key={lang} className="flex items-center gap-2 text-sm text-blue-100 cursor-pointer hover:text-white transition-colors">
+                          <input type="checkbox" id={lang} name="proficientIn" value={lang} checked={formData.proficientIn.includes(lang)} onChange={handleCheckboxChange} className="accent-blue-400 h-3.5 w-3.5" />
+                          {lang}
+                        </label>
                       ))}
                     </div>
-                  )}
-                  
-                  {/* Critical: Hidden input with name="skill" for EmailJS template compatibility */}
-                  <input 
-                    type="hidden" 
-                    name="skill" 
-                    value={formData.skills.join(', ')} 
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-                    <div className={inputContainerStyles}>
-                      <span className="text-gray-500"><FiGithub /></span>
-                      <input
-                        type="text"
-                        name="githubLink"
-                        value={formData.githubLink}
-                        onChange={handleChange}
-                        placeholder="GitHub Profile Link"
-                        className={inputStyles}
-                      />
-                    </div>
-                  </motion.div>
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-                    <div className={inputContainerStyles}>
-                      <span className="text-gray-500"><FiLinkedin /></span>
-                      <input
-                        type="text"
-                        name="linkedinLink"
-                        value={formData.linkedinLink}
-                        onChange={handleChange}
-                        placeholder="LinkedIn Profile Link"
-                        className={inputStyles}
-                      />
-                    </div>
-                  </motion.div>
-                </div>
-                
-                <div className="bg-gray-100 border border-gray-500 px-4 py-3 rounded-lg transition-all duration-300 ease-in-out hover:border-blue-500 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-300 focus-within:ring-opacity-50">
-                  <p className="text-gray-500 mb-2">Proficient in</p>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                    {['Python', 'C', 'C++', 'Rust', 'Go', 'Javascript'].map((lang) => (
-                      <div key={lang} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={lang}
-                          name="proficientIn"
-                          value={lang}
-                          checked={formData.proficientIn.includes(lang)}
-                          onChange={handleCheckboxChange}
-                          className="mr-2 text-blue-500 focus:ring-blue-300 focus:ring-opacity-50 transition-all duration-300 ease-in-out"
-                        />
-                        <label htmlFor={lang} className="text-gray-500 hover:text-blue-500 transition-all duration-300 ease-in-out cursor-pointer">{lang}</label>
-                      </div>
-                    ))}
                   </div>
-                </div>
-                
-                <textarea 
-                  name="interest" 
-                  value={formData.interest} 
-                  onChange={handleChange} 
-                  placeholder="Share your technical interests and aspirations..." 
-                  rows="4" 
-                  className="w-full bg-gray-100 text-gray-500 border border-gray-500 px-4 py-3 rounded-lg focus:outline-none resize-none transition-all duration-300 ease-in-out hover:border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
-                />
-                
-                {/* Hidden input for proficientIn list */}
-                <input type="hidden" name="proficientInList" value={formData.proficientIn.join(', ')} />
-                
-                <button 
-                  type="submit" 
-                  disabled={isSending}
-                  className={`w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out ${!isSending ? 'hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg' : 'opacity-80 cursor-not-allowed'}`}
-                >
-                  {isSending ? 'Submitting...' : 'Join the Community'}
-                </button>
-              </motion.form>
-            )}
-          </AnimatePresence>
+
+                  {/* Interests */}
+                  <textarea
+                    name="interest"
+                    value={formData.interest}
+                    onChange={handleChange}
+                    placeholder="Share your technical interests and aspirations... *"
+                    rows="3"
+                    className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
+                  />
+
+                  <input type="hidden" name="proficientInList" value={formData.proficientIn.join(', ')} />
+
+                  <button
+                    type="submit"
+                    disabled={isSending}
+                    className={`w-full bg-white text-blue-700 font-bold py-3.5 rounded-xl transition-all duration-300 text-base ${!isSending ? 'hover:bg-blue-50 hover:shadow-xl hover:scale-[1.01]' : 'opacity-70 cursor-not-allowed'}`}
+                  >
+                    {isSending ? 'Submitting...' : 'Join the Community →'}
+                  </button>
+                </motion.form>
+              )}
+            </AnimatePresence>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

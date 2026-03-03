@@ -18,7 +18,7 @@ const Header = () => {
     }, []);
 
     const handleJoinCommunity = () => {
-        navigate('');
+        navigate('/join-community');
     };
 
     const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
@@ -63,14 +63,12 @@ const Header = () => {
                         </li>
                     </Link>
                 ))}
-                <a
-                    // href="https://intern.up.railway.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <span
+                    onClick={() => navigate('/internship')}
                     className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg hover:text-blue-600 transition-all duration-300'
                 >
                     Internship
-                </a>
+                </span>
             </ul>
 
             {/* Desktop Join Button */}
@@ -126,15 +124,12 @@ const Header = () => {
                                 </li>
                             </Link>
                         ))}
-                        <a
-                            // href="https://intern.up.railway.app"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={closeMobileMenu}
-                            className='text-base font-semibold px-6 py-4 border-b border-gray-100 hover:bg-blue-50 transition-all duration-200'
+                        <span
+                            onClick={() => { navigate('/internship'); closeMobileMenu(); }}
+                            className='text-base font-semibold px-6 py-4 border-b border-gray-100 hover:bg-blue-50 transition-all duration-200 block cursor-pointer'
                         >
                             Internship
-                        </a>
+                        </span>
                     </ul>
                 </div>
             )}

@@ -4,6 +4,7 @@ import LandingPage from './Pages/LandingPage'
 import CustomErrorPage from './Pages/CustomErrorPage'
 import JoinCommunity from './Pages/CommunityInteraction/JoinCommunity'
 import Project_submission from './Pages/CommunityInteraction/ProjectSubmission'
+import Internship from './Pages/CommunityInteraction/Internship'
 
 // Import the new project page components
 import Kgslar from './Pages/Projects/Kgslar'
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/join-community" element={<JoinCommunity />} />
           <Route path="/project-submission" element={<Project_submission />} />
+          <Route path="/internship" element={<Internship />} />
           
           {/* New project routes */}
           <Route path="/kgslar" element={<Kgslar />} />
