@@ -47,61 +47,47 @@ const ProjectSubmission = () => {
   const resetIdeaForm = () => setIdeaFormData(initialIdeaFormState);
   const resetProjectForm = () => setProjectFormData(initialProjectFormState);
 
-  const handleIdeaSubmit = async (e) => {
+  const handleIdeaSubmit = (e) => {
     e.preventDefault();
-    setIsSubmittingIdea(true);
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify({
-          sheet: 'Idea',
-          name: ideaFormData.name,
-          year: ideaFormData.year,
-          title: ideaFormData.title,
-          domain: ideaFormData.domain,
-          description: ideaFormData.description,
-        }),
-      });
-      setIdeaSubmissionSuccess(true);
-      resetIdeaForm();
-      setTimeout(() => setIdeaSubmissionSuccess(false), 3000);
-    } catch (error) {
-      console.log('Idea submitted (CORS response expected):', error);
-      setIdeaSubmissionSuccess(true);
-      resetIdeaForm();
-      setTimeout(() => setIdeaSubmissionSuccess(false), 3000);
-    } finally {
-      setIsSubmittingIdea(false);
-    }
+    // Fire-and-forget — Apps Script processes data before response
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        sheet: 'Idea',
+        name: ideaFormData.name,
+        year: ideaFormData.year,
+        title: ideaFormData.title,
+        domain: ideaFormData.domain,
+        description: ideaFormData.description,
+      }),
+    }).catch(() => {});
+
+    setSubmissionCount((prev) => (prev !== null ? prev + 1 : 1));
+    setIdeaSubmissionSuccess(true);
+    resetIdeaForm();
+    setTimeout(() => setIdeaSubmissionSuccess(false), 3000);
   };
 
-  const handleProjectSubmit = async (e) => {
+  const handleProjectSubmit = (e) => {
     e.preventDefault();
-    setIsSubmittingProject(true);
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify({
-          sheet: 'Project',
-          name: projectFormData.name,
-          year: projectFormData.year,
-          title: projectFormData.title,
-          domain: projectFormData.domain,
-          description: projectFormData.description,
-          githubrepolink: projectFormData.githubrepolink || '',
-        }),
-      });
-      setProjectSubmissionSuccess(true);
-      resetProjectForm();
-      setTimeout(() => setProjectSubmissionSuccess(false), 3000);
-    } catch (error) {
-      console.log('Project submitted (CORS response expected):', error);
-      setProjectSubmissionSuccess(true);
-      resetProjectForm();
-      setTimeout(() => setProjectSubmissionSuccess(false), 3000);
-    } finally {
-      setIsSubmittingProject(false);
-    }
+    // Fire-and-forget — Apps Script processes data before response
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        sheet: 'Project',
+        name: projectFormData.name,
+        year: projectFormData.year,
+        title: projectFormData.title,
+        domain: projectFormData.domain,
+        description: projectFormData.description,
+        githubrepolink: projectFormData.githubrepolink || '',
+      }),
+    }).catch(() => {});
+
+    setSubmissionCount((prev) => (prev !== null ? prev + 1 : 1));
+    setProjectSubmissionSuccess(true);
+    resetProjectForm();
+    setTimeout(() => setProjectSubmissionSuccess(false), 3000);
   };
 
   const perks = [

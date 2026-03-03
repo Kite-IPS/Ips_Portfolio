@@ -69,36 +69,29 @@ const JoinCommunity = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    setIsSending(true);
-    try {
-      const payload = {
-        sheet: 'Intern',
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phoneNumber,
-        department: formData.department,
-        year: formData.year,
-        areaOfInterest: formData.areaOfInterest,
-        skills: formData.skills.join(', '),
-        proficientIn: formData.proficientIn.join(', '),
-        github: formData.githubLink,
-        linkedin: formData.linkedinLink,
-        interests: formData.interest,
-      };
+    // Fire-and-forget — Apps Script processes data before response
+    const payload = {
+      sheet: 'Intern',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phoneNumber,
+      department: formData.department,
+      year: formData.year,
+      areaOfInterest: formData.areaOfInterest,
+      skills: formData.skills.join(', '),
+      proficientIn: formData.proficientIn.join(', '),
+      github: formData.githubLink,
+      linkedin: formData.linkedinLink,
+      interests: formData.interest,
+    };
 
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify(payload),
-      });
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }).catch(() => {});
 
-      setSubmitted(true);
-    } catch (error) {
-      // Google Apps Script processes the data before CORS error — treat as success
-      console.log('Form submitted (CORS response expected):', error);
-      setSubmitted(true);
-    } finally {
-      setIsSending(false);
-    }
+    setSubmitted(true);
+    setIsSending(false);
   };
 
   const skillsList = [
