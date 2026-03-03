@@ -1,60 +1,43 @@
 import React, { useState } from 'react';
-import { User, FileText, Globe, Calendar, Upload, CheckCircle, Briefcase, Lightbulb } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiUser, FiFileText, FiGlobe, FiCalendar, FiGithub, FiCheckCircle } from 'react-icons/fi';
+import { FaLightbulb, FaBriefcase, FaRocket, FaPaperPlane, FaLayerGroup, FaUsers } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import Ips_Logo from '../../assets/general/IPS WHITE batch 1.png';
 
 // Google Apps Script Web App URL — replace with your deployed URL
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3JlCK-sixUCQg_0Ujl3zO-uU9i9mksEg1syUb2xzbIoJs-xDbLXvAMFDIxAWbydt4Tg/exec';
 
 const ProjectSubmission = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('idea');
   const [isSubmittingIdea, setIsSubmittingIdea] = useState(false);
   const [isSubmittingProject, setIsSubmittingProject] = useState(false);
   const [ideaSubmissionSuccess, setIdeaSubmissionSuccess] = useState(false);
   const [projectSubmissionSuccess, setProjectSubmissionSuccess] = useState(false);
 
-  // Initial empty form states - separate for each form
-  const initialIdeaFormState = {
-    name: '',
-    year: '',
-    title: '',
-    domain: '',
-    description: '',
-  };
+  const initialIdeaFormState = { name: '', year: '', title: '', domain: '', description: '' };
+  const initialProjectFormState = { name: '', year: '', title: '', domain: '', description: '', githubrepolink: '' };
 
-  const initialProjectFormState = {
-    name: '',
-    year: '',
-    title: '',
-    domain: '',
-    description: '',
-    githubrepolink: '',
-  };
-
-  // Controlled form states - separate for each form
   const [ideaFormData, setIdeaFormData] = useState(initialIdeaFormState);
   const [projectFormData, setProjectFormData] = useState(initialProjectFormState);
 
   const handleIdeaChange = (e) => {
     const { name, value } = e.target;
-    setIdeaFormData((prevData) => ({ ...prevData, [name]: value }));
+    setIdeaFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleProjectChange = (e) => {
     const { name, value } = e.target;
-    setProjectFormData((prevData) => ({ ...prevData, [name]: value }));
+    setProjectFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const resetIdeaForm = () => {
-    setIdeaFormData(initialIdeaFormState);
-  };
-
-  const resetProjectForm = () => {
-    setProjectFormData(initialProjectFormState);
-  };
+  const resetIdeaForm = () => setIdeaFormData(initialIdeaFormState);
+  const resetProjectForm = () => setProjectFormData(initialProjectFormState);
 
   const handleIdeaSubmit = async (e) => {
     e.preventDefault();
     setIsSubmittingIdea(true);
-
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
@@ -67,22 +50,14 @@ const ProjectSubmission = () => {
           description: ideaFormData.description,
         }),
       });
-
       setIdeaSubmissionSuccess(true);
       resetIdeaForm();
-      
-      setTimeout(() => {
-        setIdeaSubmissionSuccess(false);
-      }, 3000);
+      setTimeout(() => setIdeaSubmissionSuccess(false), 3000);
     } catch (error) {
-      // Google Apps Script processes data before CORS error — treat as success
       console.log('Idea submitted (CORS response expected):', error);
       setIdeaSubmissionSuccess(true);
       resetIdeaForm();
-      
-      setTimeout(() => {
-        setIdeaSubmissionSuccess(false);
-      }, 3000);
+      setTimeout(() => setIdeaSubmissionSuccess(false), 3000);
     } finally {
       setIsSubmittingIdea(false);
     }
@@ -91,7 +66,6 @@ const ProjectSubmission = () => {
   const handleProjectSubmit = async (e) => {
     e.preventDefault();
     setIsSubmittingProject(true);
-
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
@@ -105,417 +79,269 @@ const ProjectSubmission = () => {
           githubrepolink: projectFormData.githubrepolink || '',
         }),
       });
-
       setProjectSubmissionSuccess(true);
       resetProjectForm();
-      
-      setTimeout(() => {
-        setProjectSubmissionSuccess(false);
-      }, 3000);
+      setTimeout(() => setProjectSubmissionSuccess(false), 3000);
     } catch (error) {
-      // Google Apps Script processes data before CORS error — treat as success
       console.log('Project submitted (CORS response expected):', error);
       setProjectSubmissionSuccess(true);
       resetProjectForm();
-      
-      setTimeout(() => {
-        setProjectSubmissionSuccess(false);
-      }, 3000);
+      setTimeout(() => setProjectSubmissionSuccess(false), 3000);
     } finally {
       setIsSubmittingProject(false);
     }
   };
 
-  // Custom input field styling with hover effect
-  const inputClasses = "block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md transition-all duration-200 ease-in-out focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 hover:shadow-md";
+  const perks = [
+    { icon: <FaLightbulb className="text-xl" />, text: 'Share innovative ideas' },
+    { icon: <FaRocket className="text-xl" />, text: 'Showcase your projects' },
+    { icon: <FaLayerGroup className="text-xl" />, text: 'Build your portfolio' },
+    { icon: <FaUsers className="text-xl" />, text: 'Get community feedback' },
+  ];
+
+  const inputBase = "w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-sm transition-all duration-200";
+  const fieldWrap = "flex items-center gap-3 bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-3 hover:border-slate-400 focus-within:border-white focus-within:ring-2 focus-within:ring-white/20 transition-all duration-200";
+
+  const isSubmitting = activeTab === 'idea' ? isSubmittingIdea : isSubmittingProject;
+  const isSuccess = activeTab === 'idea' ? ideaSubmissionSuccess : projectSubmissionSuccess;
 
   return (
-    <div className="min-h-screen bg-blue-200 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mokoto-text">Idea Hub</h1>
-          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Submit your ideas and projects to our platform
-          </p>
+    <div className="min-h-screen font-primary flex flex-col" style={{ background: 'linear-gradient(149deg,rgba(3, 12, 105, 1) 66%, rgba(28, 39, 163, 1) 100%)' }}>
+
+      {/* Top Nav */}
+      <nav className="w-full px-6 md:px-12 py-4 flex items-center justify-between bg-[#080d47] border-b border-[#2a3490]">
+        <button onClick={() => navigate('/')} className="flex items-center gap-2 text-blue-200 hover:text-white transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          <span className="text-sm font-medium">Back to Home</span>
+        </button>
+        <div className="flex items-center gap-3">
+          <img src={Ips_Logo} alt="IPS Logo" className="w-8 h-8 object-contain" />
+          <span className="text-white font-semibold text-sm sm:text-base mokoto-text hidden sm:block">IPS Tech Community</span>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col lg:flex-row items-stretch max-w-[90vw] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8 gap-10 lg:gap-16">
+
+        {/* Left Panel — Branding */}
+        <div className="lg:w-[40%] flex flex-col justify-center text-white">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">
+              Open Submissions
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-bold mokoto-text leading-tight mb-5">
+              Idea Hub
+            </h1>
+            <p className="text-blue-100 text-base leading-relaxed mb-8 max-w-md">
+              Got a brilliant idea or a completed project? Submit it here and let the community see your work. Every great innovation starts with a single idea.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              {perks.map((perk, i) => (
+                <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3 backdrop-blur-sm">
+                  <div className="text-blue-300 shrink-0">{perk.icon}</div>
+                  <span className="text-sm text-blue-100 font-medium">{perk.text}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {['A','B','C','D'].map((l, i) => (
+                  <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-blue-800 flex items-center justify-center text-white text-xs font-bold">
+                    {l}
+                  </div>
+                ))}
+              </div>
+              <p className="text-blue-200 text-sm"><span className="text-white font-semibold">50+ submissions</span> and counting</p>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
-          {/* Header with gradient background */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-4 sm:px-6 py-3 sm:py-4">
-            <h2 className="text-base sm:text-lg font-semibold text-center text-white mokoto-text">New Submission</h2>
-          </div>
-
-          {/* Tab Selector - just controls visibility */}
-          <div className="border-b border-gray-200">
-            <div className="flex justify-center">
-              <button
-                onClick={() => setActiveTab('idea')}
-                className={`py-3 sm:py-5 px-4 sm:px-8 text-sm sm:text-base font-medium border-b-2 flex items-center ${activeTab === 'idea' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
-              >
-                <Lightbulb className={`h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 ${activeTab === 'idea' ? 'text-blue-600' : 'text-gray-500'}`} />
-                Share an Idea
-              </button>
-              <button
-                onClick={() => setActiveTab('project')}
-                className={`py-3 sm:py-5 px-4 sm:px-8 text-sm sm:text-base font-medium border-b-2 flex items-center ${activeTab === 'project' ? 'border-blue-500 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
-              >
-                <Briefcase className={`h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 ${activeTab === 'project' ? 'text-blue-600' : 'text-gray-500'}`} />
-                Showcase a Project
-              </button>
-            </div>
-          </div>
-
-          {/* IDEA FORM */}
-          <div className={`p-4 sm:p-6 md:p-8 relative ${activeTab === 'idea' ? 'block' : 'hidden'}`}>
-            {ideaSubmissionSuccess && (
-              <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-95 z-10 rounded-lg backdrop-blur-sm">
-                <div className="text-center p-8 bg-white shadow-2xl rounded-lg border border-green-100">
-                  <div className="bg-green-100 p-3 rounded-full inline-flex mb-4">
-                    <CheckCircle className="h-12 w-12 text-green-600" />
+        {/* Right Panel — Form */}
+        <div className="lg:w-[60%] flex items-start lg:items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="w-full bg-[#0d1460] border border-[#2a3490] rounded-3xl p-6 sm:p-8 shadow-2xl"
+          >
+            <AnimatePresence mode="wait">
+              {isSuccess ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-center py-12 space-y-5"
+                >
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-green-400/20 rounded-full mb-2">
+                    <FiCheckCircle className="w-10 h-10 text-green-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Submission Successful!</h3>
-                  <p className="text-gray-600">
-                    Thank you for your idea. Our review team will evaluate it shortly.
+                  <h3 className="text-2xl font-bold text-white">Submitted!</h3>
+                  <p className="text-blue-100 text-base max-w-sm mx-auto">
+                    {activeTab === 'idea'
+                      ? 'Thank you for your idea. Our review team will evaluate it shortly.'
+                      : 'Thank you for your project. Our review team will evaluate it shortly.'}
                   </p>
-                </div>
-              </div>
-            )}
-
-            <form onSubmit={handleIdeaSubmit} className="space-y-8">
-              {/* Form introduction */}
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                <p className="text-blue-800 text-sm">
-                  Fill out the form below to submit your idea. All fields marked with * are required.
-                </p>
-              </div>
-
-              {/* Personal Information Section */}
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Personal Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Your Name <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <User className="h-5 w-5 text-gray-400" />
-                      </div>
-                      <input
-                        type="text"
-                        name="name"
-                        value={ideaFormData.name}
-                        onChange={handleIdeaChange}
-                        className={inputClasses}
-                        placeholder="John Doe"
-                        required
-                      />
-                    </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="form"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  {/* Tab Selector */}
+                  <div className="flex mb-6 border-b border-[#2a3490]">
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab('idea')}
+                      className={`flex items-center gap-2 pb-3 px-4 text-sm font-medium border-b-2 transition-all duration-200 ${
+                        activeTab === 'idea'
+                          ? 'border-white text-white'
+                          : 'border-transparent text-blue-300 hover:text-white'
+                      }`}
+                    >
+                      <FaLightbulb className="text-sm" />
+                      Share an Idea
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab('project')}
+                      className={`flex items-center gap-2 pb-3 px-4 text-sm font-medium border-b-2 transition-all duration-200 ${
+                        activeTab === 'project'
+                          ? 'border-white text-white'
+                          : 'border-transparent text-blue-300 hover:text-white'
+                      }`}
+                    >
+                      <FaBriefcase className="text-sm" />
+                      Showcase a Project
+                    </button>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Year <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Calendar className="h-5 w-5 text-gray-400" />
+                  {/* IDEA FORM */}
+                  {activeTab === 'idea' && (
+                    <form onSubmit={handleIdeaSubmit} className="space-y-4">
+                      <div>
+                        <h2 className="text-xl font-bold text-white mb-1">Share Your Idea</h2>
+                        <p className="text-blue-200 text-sm mb-4">Fields marked * are required.</p>
                       </div>
-                      <input
-                        type="text"
-                        name="year"
-                        value={ideaFormData.year}
-                        onChange={handleIdeaChange}
-                        className={inputClasses}
-                        placeholder="e.g. 1nd Year"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Idea Information Section */}
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Idea Information</h3>
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Title <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <FileText className="h-5 w-5 text-gray-400" />
+                      {/* Name & Year */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className={fieldWrap}>
+                          <FiUser className="text-blue-300 shrink-0" />
+                          <input type="text" name="name" value={ideaFormData.name} onChange={handleIdeaChange} placeholder="Your Name *" className={inputBase} required />
+                        </div>
+                        <div className={fieldWrap}>
+                          <FiCalendar className="text-blue-300 shrink-0" />
+                          <input type="text" name="year" value={ideaFormData.year} onChange={handleIdeaChange} placeholder="Year (e.g. 2nd Year) *" className={inputBase} required />
+                        </div>
                       </div>
-                      <input
-                        type="text"
-                        name="title"
-                        value={ideaFormData.title}
-                        onChange={handleIdeaChange}
-                        className={inputClasses}
-                        placeholder="Enter idea title"
-                        required
-                      />
-                    </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Domain <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Globe className="h-5 w-5 text-gray-400" />
+                      {/* Title */}
+                      <div className={fieldWrap}>
+                        <FiFileText className="text-blue-300 shrink-0" />
+                        <input type="text" name="title" value={ideaFormData.title} onChange={handleIdeaChange} placeholder="Idea Title *" className={inputBase} required />
                       </div>
-                      <input
-                        type="text"
-                        name="domain"
-                        value={ideaFormData.domain}
-                        onChange={handleIdeaChange}
-                        className={inputClasses}
-                        placeholder="e.g. Technology, Healthcare, Education"
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  {/* Description Box */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Description <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
-                        <FileText className="h-5 w-5 text-gray-400" />
+
+                      {/* Domain */}
+                      <div className={fieldWrap}>
+                        <FiGlobe className="text-blue-300 shrink-0" />
+                        <input type="text" name="domain" value={ideaFormData.domain} onChange={handleIdeaChange} placeholder="Domain (e.g. Technology, Healthcare) *" className={inputBase} required />
                       </div>
+
+                      {/* Description */}
                       <textarea
                         name="description"
                         value={ideaFormData.description}
                         onChange={handleIdeaChange}
-                        rows="4"
-                        className={`${inputClasses} pt-2`}
-                        placeholder="Provide a detailed description of your idea..."
+                        placeholder="Describe your idea in detail... *"
+                        rows="3"
+                        className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
                         required
                       />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Submit button for Idea form */}
-              <div className="pt-4 mokoto-text">
-                <button
-                  type="submit"
-                  disabled={isSubmittingIdea}
-                  className={`w-full flex justify-center items-center py-3 px-6 border border-transparent text-base font-medium rounded-md text-white shadow-sm transition-all duration-200 ${
-                    isSubmittingIdea 
-                      ? 'bg-blue-400 cursor-not-allowed' 
-                      : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                  }`}
-                >
-                  {isSubmittingIdea ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Submitting...
-                    </>
-                  ) : (
-                    'Submit Idea'
+                      <button
+                        type="submit"
+                        disabled={isSubmittingIdea}
+                        className={`w-full bg-white text-blue-700 font-bold py-3.5 rounded-xl transition-all duration-300 text-base ${!isSubmittingIdea ? 'hover:bg-blue-50 hover:shadow-xl hover:scale-[1.01]' : 'opacity-70 cursor-not-allowed'}`}
+                      >
+                        {isSubmittingIdea ? 'Submitting...' : 'Submit Idea →'}
+                      </button>
+                    </form>
                   )}
-                </button>
-              </div>
-            </form>
-          </div>
 
-          {/* PROJECT FORM */}
-          <div className={`p-4 sm:p-6 md:p-8 relative ${activeTab === 'project' ? 'block' : 'hidden'}`}>
-            {projectSubmissionSuccess && (
-              <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-95 z-10 rounded-lg backdrop-blur-sm">
-                <div className="text-center p-8 bg-white shadow-2xl rounded-lg border border-green-100">
-                  <div className="bg-green-100 p-3 rounded-full inline-flex mb-4">
-                    <CheckCircle className="h-12 w-12 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Submission Successful!</h3>
-                  <p className="text-gray-600">
-                    Thank you for submitting your project. Our review team will evaluate it shortly.
-                  </p>
-                </div>
-              </div>
-            )}
-
-            <form onSubmit={handleProjectSubmit} className="space-y-8">
-              {/* Form introduction */}
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                <p className="text-blue-800 text-sm">
-                  Fill out the form below to submit your completed project. All fields marked with * are required.
-                </p>
-              </div>
-
-              {/* Personal Information Section */}
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Personal Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Your Name <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <User className="h-5 w-5 text-gray-400" />
+                  {/* PROJECT FORM */}
+                  {activeTab === 'project' && (
+                    <form onSubmit={handleProjectSubmit} className="space-y-4">
+                      <div>
+                        <h2 className="text-xl font-bold text-white mb-1">Showcase Your Project</h2>
+                        <p className="text-blue-200 text-sm mb-4">Fields marked * are required.</p>
                       </div>
-                      <input
-                        type="text"
-                        name="name"
-                        value={projectFormData.name}
-                        onChange={handleProjectChange}
-                        className={inputClasses}
-                        placeholder="John Doe"
-                        required
-                      />
-                    </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Year <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Calendar className="h-5 w-5 text-gray-400" />
+                      {/* Name & Year */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className={fieldWrap}>
+                          <FiUser className="text-blue-300 shrink-0" />
+                          <input type="text" name="name" value={projectFormData.name} onChange={handleProjectChange} placeholder="Your Name *" className={inputBase} required />
+                        </div>
+                        <div className={fieldWrap}>
+                          <FiCalendar className="text-blue-300 shrink-0" />
+                          <input type="text" name="year" value={projectFormData.year} onChange={handleProjectChange} placeholder="Year (e.g. 2nd Year) *" className={inputBase} required />
+                        </div>
                       </div>
-                      <input
-                        type="text"
-                        name="year"
-                        value={projectFormData.year}
-                        onChange={handleProjectChange}
-                        className={inputClasses}
-                        placeholder="e.g. 2nd Year"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Project Information Section */}
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Project Information</h3>
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Project Title <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <FileText className="h-5 w-5 text-gray-400" />
+                      {/* Project Title */}
+                      <div className={fieldWrap}>
+                        <FiFileText className="text-blue-300 shrink-0" />
+                        <input type="text" name="title" value={projectFormData.title} onChange={handleProjectChange} placeholder="Project Title *" className={inputBase} required />
                       </div>
-                      <input
-                        type="text"
-                        name="title"
-                        value={projectFormData.title}
-                        onChange={handleProjectChange}
-                        className={inputClasses}
-                        placeholder="Enter project title"
-                        required
-                      />
-                    </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Domain <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Globe className="h-5 w-5 text-gray-400" />
+                      {/* Domain */}
+                      <div className={fieldWrap}>
+                        <FiGlobe className="text-blue-300 shrink-0" />
+                        <input type="text" name="domain" value={projectFormData.domain} onChange={handleProjectChange} placeholder="Domain (e.g. Technology, Healthcare) *" className={inputBase} required />
                       </div>
-                      <input
-                        type="text"
-                        name="domain"
-                        value={projectFormData.domain}
-                        onChange={handleProjectChange}
-                        className={inputClasses}
-                        placeholder="e.g. Technology, Healthcare, Education"
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  {/* Description Box */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Description <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 pt-3 pointer-events-none">
-                        <FileText className="h-5 w-5 text-gray-400" />
-                      </div>
+
+                      {/* Description */}
                       <textarea
                         name="description"
                         value={projectFormData.description}
                         onChange={handleProjectChange}
-                        rows="4"
-                        className={`${inputClasses} pt-2`}
-                        placeholder="Provide a detailed description of your project..."
+                        placeholder="Describe your project in detail... *"
+                        rows="3"
+                        className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
                         required
                       />
-                    </div>
-                  </div>
 
-                  {/* GitHub Repo Link */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                      GitHub Repo Link <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative rounded-md shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Upload className="h-5 w-5 text-gray-400" />
+                      {/* GitHub Repo Link */}
+                      <div className={fieldWrap}>
+                        <FiGithub className="text-blue-300 shrink-0" />
+                        <input type="url" name="githubrepolink" value={projectFormData.githubrepolink} onChange={handleProjectChange} placeholder="GitHub Repository Link *" className={inputBase} required />
                       </div>
-                      <input
-                        type="url"
-                        name="githubrepolink"
-                        value={projectFormData.githubrepolink}
-                        onChange={handleProjectChange}
-                        className={inputClasses}
-                        placeholder="Paste your GitHub repository link"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Submit button for Project form */}
-              <div className="pt-4 mokoto-text">
-                <button
-                  type="submit"
-                  disabled={isSubmittingProject}
-                  className={`w-full flex justify-center items-center py-3 px-6 border border-transparent text-base font-medium rounded-md text-white shadow-sm transition-all duration-200 ${
-                    isSubmittingProject 
-                      ? 'bg-blue-400 cursor-not-allowed' 
-                      : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                  }`}
-                >
-                  {isSubmittingProject ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Submitting...
-                    </>
-                  ) : (
-                    'Submit Project'
+                      <button
+                        type="submit"
+                        disabled={isSubmittingProject}
+                        className={`w-full bg-white text-blue-700 font-bold py-3.5 rounded-xl transition-all duration-300 text-base ${!isSubmittingProject ? 'hover:bg-blue-50 hover:shadow-xl hover:scale-[1.01]' : 'opacity-70 cursor-not-allowed'}`}
+                      >
+                        {isSubmittingProject ? 'Submitting...' : 'Submit Project →'}
+                      </button>
+                    </form>
                   )}
-                </button>
-              </div>
-            </form>
-          </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         </div>
-
-        
       </div>
     </div>
   );
