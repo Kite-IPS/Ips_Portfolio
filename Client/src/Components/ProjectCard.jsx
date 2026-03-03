@@ -43,29 +43,25 @@ const ProjectCard = ({ name, description }) => {
   };
 
   return (
-    <div className="w-full sm:w-[340px] md:w-[360px] lg:w-[400px] rounded-2xl h-[320px] sm:h-[340px] md:h-[360px] overflow-hidden font-primary shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl perspective-1000 transform-gpu hover:rotate-3 hover:brightness-110">
-      <div className="h-[50%] overflow-hidden">
+    <div className="w-full sm:w-[340px] md:w-[360px] lg:w-[400px] rounded-2xl overflow-hidden font-primary shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-2xl transform-gpu">
+      <div className="h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden">
         <img
           src={imageMap[name]}
           alt={name}
-          className="w-full h-full object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover rounded-t-2xl"
         />
       </div>
 
-      <div className="h-[50%] flex flex-col justify-between p-5 bg-white transition-all duration-500 transform-gpu hover:-translate-y-2">
-        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl transition-transform duration-500 hover:text-blue-600">
+      <div className="flex items-center justify-between p-5 sm:p-6 bg-white">
+        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl transition-colors duration-300 hover:text-blue-600 cursor-default">
           {name}
         </h1>
-        <p className="text-gray-500 text-sm sm:text-base transition-all duration-500 hover:text-gray-700">
-          {description}
-        </p>
-        {(name === "KG-SLAR" || name === "KG-CAR" || name === "KG-APS" || name ==="KG-BITES" || name === "PYEXPO-WEBSITE") && (
+        {projectRoutes[name] && (
           <button
-            className="group relative inline-block px-6 py-2 bg-blue-600 text-white rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:translate-x-1 overflow-hidden"
+            className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg whitespace-nowrap"
             onClick={() => handleClick(name)}
           >
-            <span className="relative z-10">View Project</span>
-            <span className="absolute inset-0 bg-blue-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            View Project
           </button>
         )}
       </div>
