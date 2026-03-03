@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TASKSCHEDULER from '../../assets/projects/TASK-SCHEDULER.png';
 
 const TaskScheduler = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <style>{`
@@ -38,12 +42,12 @@ const TaskScheduler = () => {
                 A task scheduling and workflow management system to create, track, and manage academic or administrative tasks across departments with real-time progress visibility.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-slate-700 text-white font-medium rounded-md hover:bg-slate-800 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a
                   href="#features"
                   className="px-6 py-3 bg-white text-slate-700 border border-slate-700 font-medium rounded-md hover:bg-slate-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-opacity-50"

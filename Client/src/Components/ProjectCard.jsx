@@ -42,7 +42,6 @@ const ProjectCard = ({ name, description }) => {
   const handleClick = (projectName) => {
     const route = projectRoutes[projectName];
     if (route) {
-      window.scrollTo(0, 0);
       navigate(route);
     }
   };

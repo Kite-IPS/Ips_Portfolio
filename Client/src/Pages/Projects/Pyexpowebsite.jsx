@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Pyexpowebsite from '../../assets/projects/PYEXPO-WEBSITE.png';
 import Nishanthm from '../../assets/members/3rd-4th-yrs/nishanthm.png';
 import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
@@ -12,6 +13,9 @@ import White from '../../assets/general/IPS WHITE batch 1.png';
 
 
 const PyexpoWebsite = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   const teamMembers = [
     {
       name: "Nishanth R",
@@ -140,12 +144,12 @@ const PyexpoWebsite = () => {
                 Join the ultimate coding challenge for Python enthusiasts! Showcase your skills, build innovative projects, network with industry experts, and win exciting prizes.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a 
                   href="#about" 
                   className="px-6 py-3 bg-white text-indigo-600 border border-indigo-600 font-medium rounded-md hover:bg-indigo-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50"
