@@ -7,6 +7,12 @@ import PYEXPO from "../assets/events/PYEXPO.png";
 import KGAPS from "../assets/projects/KG-APS.jpg";
 import KGBITES from "../assets/projects/KG-BITES.png";
 import PYEXPOWEBSITE from "../assets/projects/PYEXPO-WEBSITE.png";
+import IQACPORTAL from "../assets/projects/IQAC-PORTAL.jpeg";
+import LETTERGENERATOR from "../assets/projects/LETTER-GENERATOR.png";
+import RECORDGENERATOR from "../assets/projects/RECORD-GENERATOR.png";
+import ISSUEADDRESSPORTAL from "../assets/projects/ISSUE-ADDRESS-PORTAL.png";
+import TASKSCHEDULER from "../assets/projects/TASK-SCHEDULER.png";
+import FACULTYAPPRAISALSYSTEM from "../assets/projects/FACULTY-APPRAISAL-SYSTEM.jpeg";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
@@ -21,6 +27,14 @@ const ProjectCard = ({ name, description }) => {
     "PYEXPO": "/pyexpo",
     "KG-BITES": "/kgbites",
     "PYEXPO-WEBSITE": "/pyexpowebsite",
+    "IQAC PORTAL": "/iqacportal",
+    "FACULTY APPRAISAL SYSTEM": "/facultyappraisalsystem",
+    "TASK SCHEDULER": "/taskscheduler",
+    "RECORD GENERATOR": "/recordgenerator",
+    "GATE E-PASS SYSTEM": "/gateepasssystem",
+    "LETTER GENERATOR": "/lettergenerator",
+    "EDU MANAGE FOR C FACULTIES": "/edumanagecfaculties",
+    "ISSUE ADDRESS PORTAL": "/issueaddressportal",
   };
 
   const handleClick = (projectName) => {
@@ -40,25 +54,40 @@ const ProjectCard = ({ name, description }) => {
     "KG-APS": KGAPS,
     "KG-BITES": KGBITES,
     "PYEXPO-WEBSITE": PYEXPOWEBSITE,
+    "IQAC PORTAL": IQACPORTAL,
+    "LETTER GENERATOR": LETTERGENERATOR,
+    "RECORD GENERATOR": RECORDGENERATOR,
+    "ISSUE ADDRESS PORTAL": ISSUEADDRESSPORTAL,
+    "TASK SCHEDULER": TASKSCHEDULER,
+    "FACULTY APPRAISAL SYSTEM": FACULTYAPPRAISALSYSTEM,
   };
 
   return (
-    <div className="w-full sm:w-[340px] md:w-[360px] lg:w-[400px] rounded-2xl overflow-hidden font-primary shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-2xl transform-gpu">
-      <div className="h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden">
-        <img
-          src={imageMap[name]}
-          alt={name}
-          className="w-full h-full object-cover rounded-t-2xl"
-        />
+    <div className="w-full sm:w-[340px] md:w-[360px] lg:w-[400px] rounded-2xl overflow-hidden font-primary border border-gray-200 shadow-md transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl hover:border-blue-300 transform-gpu flex flex-col bg-white">
+      <div className="h-[200px] sm:h-[220px] md:h-[240px] flex-shrink-0 overflow-hidden bg-gray-100">
+        {imageMap[name] ? (
+          <img
+            src={imageMap[name]}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+            <span className="text-6xl">🖥️</span>
+          </div>
+        )}
       </div>
 
-      <div className="flex items-center justify-between p-5 sm:p-6 bg-white">
-        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl transition-colors duration-300 hover:text-blue-600 cursor-default">
+      {/* Accent divider */}
+      <div className="h-[2px] w-full bg-blue-600 flex-shrink-0" />
+
+      <div className="flex items-center justify-between p-4 sm:p-5 bg-white h-[72px] flex-shrink-0">
+        <h1 className="font-bold text-sm sm:text-base leading-tight line-clamp-2 transition-colors duration-300 hover:text-blue-600 cursor-default flex-1 mr-3">
           {name}
         </h1>
         {projectRoutes[name] && (
           <button
-            className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg whitespace-nowrap"
+            className="px-3 py-2 bg-blue-600 text-white text-xs sm:text-sm rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md whitespace-nowrap flex-shrink-0"
             onClick={() => handleClick(name)}
           >
             View Project
