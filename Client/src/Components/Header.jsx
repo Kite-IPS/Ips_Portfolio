@@ -18,7 +18,7 @@ const Header = () => {
     }, []);
 
     const handleJoinCommunity = () => {
-        navigate('');
+        navigate('/join-community');
     };
 
     const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
