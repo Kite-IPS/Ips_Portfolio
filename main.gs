@@ -124,3 +124,24 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+function doGet(e) {
+  const action = e.parameter.action;
+
+  if (action === 'count') {
+    const ss = SpreadsheetApp.openById('1nZHc-_Vk1A8jPL_yA6sdaVI-07O8TgBLH9EuKXM7tbs');
+    const ideaSheet = ss.getSheetByName('Idea');
+    const projectSheet = ss.getSheetByName('Project');
+
+    const ideaCount = Math.max(0, (ideaSheet ? ideaSheet.getLastRow() - 1 : 0));
+    const projectCount = Math.max(0, (projectSheet ? projectSheet.getLastRow() - 1 : 0));
+    const total = ideaCount + projectCount;
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ count: total }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  return ContentService.createTextOutput(JSON.stringify({ error: 'Unknown action' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}

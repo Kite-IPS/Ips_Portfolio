@@ -63,7 +63,7 @@ const JoinCommunity = () => {
   };
 
   // Google Apps Script Web App URL — replace with your deployed URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3JlCK-sixUCQg_0Ujl3zO-uU9i9mksEg1syUb2xzbIoJs-xDbLXvAMFDIxAWbydt4Tg/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCDzkVEoNxZm41ks5SgvVHtfwC1acrjb2lg__PPJkI7H3Cs-VR71-7ds6jZHFbU5111w/exec';
 
   const handleSubmit = async (e) => {
     e.preventDefault();

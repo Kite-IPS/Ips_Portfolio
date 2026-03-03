@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUser, FiFileText, FiGlobe, FiCalendar, FiGithub, FiCheckCircle } from 'react-icons/fi';
 import { FaLightbulb, FaBriefcase, FaRocket, FaPaperPlane, FaLayerGroup, FaUsers } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Ips_Logo from '../../assets/general/IPS WHITE batch 1.png';
 
 // Google Apps Script Web App URL — replace with your deployed URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3JlCK-sixUCQg_0Ujl3zO-uU9i9mksEg1syUb2xzbIoJs-xDbLXvAMFDIxAWbydt4Tg/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCDzkVEoNxZm41ks5SgvVHtfwC1acrjb2lg__PPJkI7H3Cs-VR71-7ds6jZHFbU5111w/exec';
 
 const ProjectSubmission = () => {
   const navigate = useNavigate();
@@ -21,6 +21,18 @@ const ProjectSubmission = () => {
 
   const [ideaFormData, setIdeaFormData] = useState(initialIdeaFormState);
   const [projectFormData, setProjectFormData] = useState(initialProjectFormState);
+  const [submissionCount, setSubmissionCount] = useState(null);
+
+  useEffect(() => {
+    fetch(`${GOOGLE_SCRIPT_URL}?action=count`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (typeof data.count === 'number') setSubmissionCount(data.count);
+      })
+      .catch(() => {
+        // fetch failed — keep null, UI shows fallback
+      });
+  }, []);
 
   const handleIdeaChange = (e) => {
     const { name, value } = e.target;
@@ -159,7 +171,12 @@ const ProjectSubmission = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-blue-200 text-sm"><span className="text-white font-semibold">50+ submissions</span> and counting</p>
+              <p className="text-blue-200 text-sm">
+                {submissionCount !== null
+                  ? <><span className="text-white font-semibold">{submissionCount} submission{submissionCount !== 1 ? 's' : ''}</span> and counting</>
+                  : <span className="text-blue-300 italic text-xs">Loading count...</span>
+                }
+              </p>
             </div>
           </motion.div>
         </div>
