@@ -101,7 +101,7 @@ const LandingPage = () => {
                         <img 
                             src={HeroImg} 
                             alt="Community Img" 
-                            className="w-[85%] sm:w-[75%] md:w-full lg:w-[80%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                            className="w-[92%] sm:w-[85%] md:w-full lg:w-[92%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
                         />
                     </div>
                 </div>
