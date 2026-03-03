@@ -59,15 +59,7 @@ const PyexpoWebsite = () => {
       github: "https://github.com/NISHANTH1107",
       linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
-    {
-      name: "Gopi Krishna S",
-      role: "Developer",
-      specialty: "Ai Engineer", 
-      imageUrl: null,
-      badges: [Black],
-      github: "https://github.com/gopu-005",
-      linkedin: "https://www.linkedin.com/in/gopi-krishna-s-7770b1240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-    },
+
     {
       name: "Mitun M",
       role: "Developer",
