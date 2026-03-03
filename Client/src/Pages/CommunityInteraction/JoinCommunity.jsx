@@ -102,15 +102,15 @@ const JoinCommunity = () => {
     { icon: <FaStar className="text-xl" />, text: 'Community events & hackathons' },
   ];
 
-  const inputBase = "w-full bg-white/10 text-white placeholder-blue-200 focus:outline-none text-sm transition-all duration-200";
-  const fieldWrap = "flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3 hover:border-white/50 focus-within:border-white focus-within:ring-2 focus-within:ring-white/20 transition-all duration-200";
-  const selectBase = "w-full bg-blue-800/60 border border-white/20 text-blue-100 px-4 py-3 rounded-xl focus:outline-none focus:border-white hover:border-white/50 transition-all duration-200 text-sm";
+  const inputBase = "w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-sm transition-all duration-200";
+  const fieldWrap = "flex items-center gap-3 bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-3 hover:border-slate-400 focus-within:border-white focus-within:ring-2 focus-within:ring-white/20 transition-all duration-200";
+  const selectBase = "w-full bg-[#0d1460] border border-[#2a3490] text-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-white hover:border-slate-400 transition-all duration-200 text-sm";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 font-primary flex flex-col">
+    <div className="min-h-screen font-primary flex flex-col" style={{ background: 'linear-gradient(149deg,rgba(3, 12, 105, 1) 66%, rgba(28, 39, 163, 1) 100%)' }}>
 
       {/* Top Nav */}
-      <nav className="w-full px-6 md:px-12 py-4 flex items-center justify-between">
+      <nav className="w-full px-6 md:px-12 py-4 flex items-center justify-between bg-[#080d47] border-b border-[#2a3490]">
         <button onClick={() => navigate('/')} className="flex items-center gap-2 text-blue-200 hover:text-white transition-colors duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -124,10 +124,10 @@ const JoinCommunity = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col lg:flex-row items-stretch max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 py-8 gap-10 lg:gap-16">
+      <div className="flex-1 flex flex-col lg:flex-row items-stretch max-w-[90vW] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8 gap-10 lg:gap-30">
 
         {/* Left Panel — Branding */}
-        <div className="lg:w-[42%] flex flex-col justify-center text-white">
+        <div className="lg:w-[45%] flex flex-col justify-center text-white lg:mr-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -166,12 +166,12 @@ const JoinCommunity = () => {
         </div>
 
         {/* Right Panel — Form */}
-        <div className="lg:w-[58%] flex items-start lg:items-center">
+        <div className="lg:w-[58%] flex items-start lg:items-center lg:ml-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl"
+            className="w-full bg-[#0d1460] border border-[#2a3490] rounded-3xl p-6 sm:p-8 shadow-2xl"
           >
             <AnimatePresence mode="wait">
               {submitted ? (
@@ -248,7 +248,7 @@ const JoinCommunity = () => {
                   {/* Skills multi-select */}
                   <div className="relative">
                     <div
-                      className={`w-full bg-blue-800/60 border rounded-xl px-4 py-3 cursor-pointer transition-all duration-200 text-sm ${skillsDropdownOpen ? 'border-white ring-2 ring-white/20' : 'border-white/20 hover:border-white/50'}`}
+                      className={`w-full bg-[#0d1460] border rounded-xl px-4 py-3 cursor-pointer transition-all duration-200 text-sm ${skillsDropdownOpen ? 'border-white ring-2 ring-white/20' : 'border-[#2a3490] hover:border-slate-400'}`}
                       onClick={() => setSkillsDropdownOpen(!skillsDropdownOpen)}
                     >
                       <div className="flex justify-between items-center">
@@ -269,9 +269,9 @@ const JoinCommunity = () => {
                       )}
                     </div>
                     {skillsDropdownOpen && (
-                      <div className="absolute z-20 mt-1 w-full bg-blue-900 border border-white/20 rounded-xl shadow-2xl max-h-52 overflow-y-auto">
+                      <div className="absolute z-20 mt-1 w-full bg-[#0d1460] border border-[#2a3490] rounded-xl shadow-2xl max-h-52 overflow-y-auto">
                         {skillsList.map(skill => (
-                          <div key={skill} className={`px-4 py-2.5 cursor-pointer text-sm transition-colors duration-150 hover:bg-blue-700 ${formData.skills.includes(skill) ? 'bg-blue-700 text-white' : 'text-blue-100'}`} onClick={() => handleSkillSelection(skill)}>
+                          <div key={skill} className={`px-4 py-2.5 cursor-pointer text-sm transition-colors duration-150 hover:bg-[#1a2480] ${formData.skills.includes(skill) ? 'bg-[#1a2480] text-white' : 'text-slate-300'}`} onClick={() => handleSkillSelection(skill)}>
                             <div className="flex items-center gap-2">
                               <input type="checkbox" checked={formData.skills.includes(skill)} onChange={() => {}} className="h-3.5 w-3.5 accent-blue-400" />
                               {skill}
@@ -296,7 +296,7 @@ const JoinCommunity = () => {
                   </div>
 
                   {/* Proficient In */}
-                  <div className="bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+                  <div className="bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-3">
                     <p className="text-blue-200 text-sm mb-2.5 font-medium">Proficient In</p>
                     <div className="grid grid-cols-3 gap-2">
                       {['Python', 'C', 'C++', 'Rust', 'Go', 'Javascript'].map(lang => (
@@ -315,7 +315,7 @@ const JoinCommunity = () => {
                     onChange={handleChange}
                     placeholder="Share your technical interests and aspirations... *"
                     rows="3"
-                    className="w-full bg-white/10 border border-white/20 text-white placeholder-blue-200 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-white/50"
+                    className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
                   />
 
                   <input type="hidden" name="proficientInList" value={formData.proficientIn.join(', ')} />
