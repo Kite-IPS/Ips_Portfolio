@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import GATEEPASSSYSTEM from '../../assets/projects/GATE-EPASS-SYSTEM.jpeg';
 
 const GateEPassSystem = () => {
   return (
@@ -52,8 +53,8 @@ const GateEPassSystem = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="rounded-xl overflow-hidden shadow-xl bg-emerald-50 p-8 border border-gray-200 transform transition hover:scale-105 duration-300 w-full max-w-md mx-auto flex items-center justify-center">
-                <span className="text-9xl">🪪</span>
+              <div className="rounded-xl overflow-hidden shadow-xl bg-white p-2 border border-gray-200 transform transition hover:scale-105 duration-300 w-full max-w-md mx-auto">
+                <img src={GATEEPASSSYSTEM} alt="Gate E-Pass System" className="w-full h-auto rounded-lg" />
               </div>
             </div>
           </div>

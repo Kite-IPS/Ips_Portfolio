@@ -13,6 +13,8 @@ import RECORDGENERATOR from "../assets/projects/RECORD-GENERATOR.png";
 import ISSUEADDRESSPORTAL from "../assets/projects/ISSUE-ADDRESS-PORTAL.png";
 import TASKSCHEDULER from "../assets/projects/TASK-SCHEDULER.png";
 import FACULTYAPPRAISALSYSTEM from "../assets/projects/FACULTY-APPRAISAL-SYSTEM.jpeg";
+import EDUMANAGECFACULTIES from "../assets/projects/EDU-MANAGE-C-FACULTIES.png";
+import GATEEPASSSYSTEM from "../assets/projects/GATE-EPASS-SYSTEM.jpeg";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
@@ -60,6 +62,8 @@ const ProjectCard = ({ name, description }) => {
     "ISSUE ADDRESS PORTAL": ISSUEADDRESSPORTAL,
     "TASK SCHEDULER": TASKSCHEDULER,
     "FACULTY APPRAISAL SYSTEM": FACULTYAPPRAISALSYSTEM,
+    "EDU MANAGE FOR C FACULTIES": EDUMANAGECFACULTIES,
+    "GATE E-PASS SYSTEM": GATEEPASSSYSTEM,
   };
 
   return (
