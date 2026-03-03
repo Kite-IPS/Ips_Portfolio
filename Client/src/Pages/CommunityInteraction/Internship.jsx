@@ -6,10 +6,10 @@ const Internship = () => {
     const navigate = useNavigate();
 
     const benefits = [
-        { icon: <FaCode className="text-2xl" />, title: 'Real-World Projects', description: 'Work on live, production-grade projects that solve actual problems for institutions and communities.' },
-        { icon: <FaUsers className="text-2xl" />, title: 'Mentorship & Guidance', description: 'Get paired with experienced community members who guide you through your learning journey.' },
-        { icon: <FaStar className="text-2xl" />, title: 'Skill Development', description: 'Master modern tech stacks, tools, and industry best practices through hands-on experience.' },
-        { icon: <FaRocket className="text-2xl" />, title: 'Portfolio Building', description: 'Build an impressive portfolio with contributions to open-source and community-driven projects.' },
+        { icon: <FaCode className="text-2xl" />, title: 'Real-World Projects', description: 'Takes a real world problem statement and analyse the methodologies to obtain more efficient solution to solve the problem' },
+        { icon: <FaUsers className="text-2xl" />, title: 'Mentorship & Guidance', description: 'Get connected with experienced community members who give guidance through the learning journey.' },
+        { icon: <FaStar className="text-2xl" />, title: 'Skill Development', description: 'Master modern tech stacks, tools, and industry best practices through hands-on practice.' },
+        { icon: <FaRocket className="text-2xl" />, title: 'Portfolio Building', description: 'Build an impressive portfolio on what they practiced and built with contributions to open-source, community-driven projects and individual projects that help with upskilling.' },
         { icon: <FaClipboardList className="text-2xl" />, title: 'Certificate of Completion', description: 'Receive an official certificate recognizing your contributions and accomplishments.' },
         { icon: <FaBullseye className="text-2xl" />, title: 'Networking Opportunities', description: 'Connect with like-minded peers, alumni, and industry professionals within the community.' },
     ];
@@ -26,7 +26,7 @@ const Internship = () => {
         'Maintain professional conduct and respect all community members.',
         'Attend scheduled meetings, stand-ups, and review sessions consistently.',
         'Follow Git workflows — use branches, pull requests, and meaningful commit messages.',
-        'Write clean, documented, and testable code following project conventions.',
+        'Write clean, documented blog, and testable code following project conventions.',
         'Communicate blockers early and seek help proactively through designated channels.',
         'Complete assigned tasks within agreed-upon timelines.',
         'Respect intellectual property and maintain confidentiality of project details.',
@@ -37,7 +37,7 @@ const Internship = () => {
         { title: 'Industry Partnerships', description: 'Collaborate with tech companies to offer real internship pipelines and placement opportunities for community members.' },
         { title: 'Open-Source Contributions', description: 'Establish IPS as a recognized contributor in the global open-source ecosystem.' },
         { title: 'Research & Innovation Labs', description: 'Launch dedicated labs for AI, IoT, and emerging technology research driven by student-interns.' },
-        { title: 'Cross-Campus Expansion', description: 'Extend the internship program to partner institutions, building a wider talent network.' },
+        { title: 'Career Support', description: 'Provide students with opportunities, mentorship, and resources to prepare for internships and placements.' },
     ];
 
     return (
@@ -175,8 +175,8 @@ const Internship = () => {
                         {/* Timeline */}
                         <div className="hidden md:block absolute left-1/2 transform -translate-x-0.5 w-1 bg-blue-200 top-0 bottom-0 rounded-full"></div>
                         {[
-                            { phase: 'Phase 1', title: 'Onboarding', description: 'Get introduced to the community, meet your mentor, set up your development environment, and understand the project landscape.', align: 'right' },
-                            { phase: 'Phase 2', title: 'Active Contribution', description: 'Start working on assigned tasks, participate in code reviews, attend stand-ups, and learn team workflows through hands-on involvement.', align: 'left' },
+                            { phase: 'Phase 1', title: 'Onboarding', description: 'Get introduced to the community, meet your mentor, set up your development domain, and understand the domain-based project landscape.', align: 'right' },
+                            { phase: 'Phase 2', title: 'Active Contribution', description: 'Start working with the domain, participate in code reviews, presentation, attend stand-ups, and learn team workflows through hands-on involvement.', align: 'left' },
                             { phase: 'Phase 3', title: 'Ownership & Impact', description: 'Take ownership of features or modules, lead small initiatives, mentor newer interns, and demonstrate consistent quality contributions.', align: 'right' },
                             { phase: 'Phase 4', title: 'Full Membership', description: 'Upon successful completion, receive your certificate and transition into a full community member with voting rights, project leads access, and more.', align: 'left' },
                         ].map((item, index) => (
