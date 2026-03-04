@@ -1,5 +1,6 @@
 import "react";
 import { useNavigate } from "react-router-dom";
+import { Monitor } from "lucide-react";
 import KGSLAR from "../assets/projects/KG-SLAR.png";
 import KGCAR from "../assets/projects/KG-CAR.png";
 import SIHTHIRUVIZHA from "../assets/events/SIH-THIRUVIZHA.png";
@@ -85,7 +86,7 @@ const ProjectCard = ({ name, description }) => {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-            <span className="text-6xl">🖥️</span>
+            <Monitor className="w-16 h-16 text-blue-400" />
           </div>
         )}
       </div>

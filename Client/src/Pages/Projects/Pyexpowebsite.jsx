@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Code, Rocket, Users, Trophy, Briefcase, GraduationCap, Globe } from 'lucide-react';
 import Pyexpowebsite from '../../assets/projects/PYEXPO-WEBSITE.png';
 import Nishanthm from '../../assets/members/3rd-4th-yrs/nishanthm.png';
 import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
@@ -135,7 +136,7 @@ const PyexpoWebsite = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-indigo-600">PyExpo</span>
-                <span className="inline-block ml-2 animate-pulse">🐍</span>
+                <span className="inline-block ml-2 animate-pulse"><Code className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Exclusive Python Hackathon Event
@@ -176,37 +177,37 @@ const PyexpoWebsite = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-indigo-600 text-3xl md:text-4xl mb-3 md:mb-4">🚀</div>
+            <div className="text-indigo-600 mb-3 md:mb-4"><Rocket className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">24-Hour Coding Challenge</h3>
             <p className="text-gray-600 text-sm md:text-base">Immerse yourself in an intensive 24-hour hackathon focused exclusively on Python-based solutions.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-indigo-600 text-3xl md:text-4xl mb-3 md:mb-4">👥</div>
+            <div className="text-indigo-600 mb-3 md:mb-4"><Users className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Team Collaboration</h3>
             <p className="text-gray-600 text-sm md:text-base">Form teams of up to 4 members or participate solo to solve real-world problems with Python.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-indigo-600 text-3xl md:text-4xl mb-3 md:mb-4">🏆</div>
+            <div className="text-indigo-600 mb-3 md:mb-4"><Trophy className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Exciting Prizes</h3>
             <p className="text-gray-600 text-sm md:text-base">Win cash prizes, tech gadgets, and exclusive internship opportunities with our industry partners.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-indigo-600 text-3xl md:text-4xl mb-3 md:mb-4">👨‍💼</div>
+            <div className="text-indigo-600 mb-3 md:mb-4"><Briefcase className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Industry Mentors</h3>
             <p className="text-gray-600 text-sm md:text-base">Get guidance from top Python experts and industry professionals throughout the event.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-indigo-600 text-3xl md:text-4xl mb-3 md:mb-4">🎓</div>
+            <div className="text-indigo-600 mb-3 md:mb-4"><GraduationCap className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Learning Workshops</h3>
             <p className="text-gray-600 text-sm md:text-base">Attend specialized workshops on Python libraries, frameworks, and cutting-edge technologies.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-indigo-600 text-3xl md:text-4xl mb-3 md:mb-4">🌐</div>
+            <div className="text-indigo-600 mb-3 md:mb-4"><Globe className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Networking Opportunities</h3>
             <p className="text-gray-600 text-sm md:text-base">Connect with fellow developers, potential employers, and like-minded Python enthusiasts.</p>
           </div>

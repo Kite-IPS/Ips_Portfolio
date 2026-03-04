@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Landmark } from 'lucide-react';
 import IQACPORTAL from '../../assets/projects/IQAC-PORTAL.jpeg';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -116,6 +117,7 @@ const IqacPortal = () => {
               </span>
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-3">
                 <span className="text-blue-700">IQAC PORTAL</span>
+                <span className="inline-block ml-2 animate-pulse"><Landmark className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-600 mb-5">
                 Institutional Quality Assurance Cell — Event Approval System

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Rocket, BarChart3, Zap, PenLine, Lock, Search, RefreshCw } from 'lucide-react';
 import KGAPS from '../../assets/projects/KG-APS.jpg';
 import Black from '../../assets/general/black-badge.png';
 import White from '../../assets/general/IPS WHITE batch 1.png';
@@ -121,7 +122,7 @@ const Kgaps = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-pink-600">KG-APS</span>
-                <span className="inline-block ml-2 animate-pulse">🚀</span>
+                <span className="inline-block ml-2 animate-pulse"><Rocket className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Smart Academic Progress Tracking System
@@ -162,37 +163,37 @@ const Kgaps = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-pink-600 mb-3 md:mb-4"><BarChart3 className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Centralized Dashboard</h3>
             <p className="text-gray-600 text-sm md:text-base">View and manage all academic records in one intuitive interface, eliminating data silos.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">⚡</div>
+            <div className="text-pink-600 mb-3 md:mb-4"><Zap className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Tracking</h3>
             <p className="text-gray-600 text-sm md:text-base">Monitor students grades, attendance, and progress instantaneously for timely interventions.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">📝</div>
+            <div className="text-pink-600 mb-3 md:mb-4"><PenLine className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Automated Reports</h3>
             <p className="text-gray-600 text-sm md:text-base">Generate comprehensive reports for students, faculty, and parents with a single click.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
+            <div className="text-pink-600 mb-3 md:mb-4"><Lock className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
             <p className="text-gray-600 text-sm md:text-base">Enterprise-grade security ensures data accuracy, privacy, and confidentiality.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">🔍</div>
+            <div className="text-pink-600 mb-3 md:mb-4"><Search className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Insightful Analytics</h3>
             <p className="text-gray-600 text-sm md:text-base">Gain valuable insights into academic trends for data-driven decision making.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-pink-600 text-3xl md:text-4xl mb-3 md:mb-4">🔄</div>
+            <div className="text-pink-600 mb-3 md:mb-4"><RefreshCw className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Seamless Integration</h3>
             <p className="text-gray-600 text-sm md:text-base">Easily integrates with existing college management systems and workflows.</p>
           </div>

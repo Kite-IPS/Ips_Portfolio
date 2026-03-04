@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Rocket, Tag, Timer, BarChart3, Bell, Smartphone, Lock, Target, Hourglass, TrendingUp, RefreshCw } from 'lucide-react';
 import KGSLAR from '../../assets/projects/KG-SLAR.png';
 import Black from '../../assets/general/black-badge.png';
 import White from '../../assets/general/IPS WHITE batch 1.png';
@@ -121,7 +122,7 @@ const Kgslar = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-orange-600">KG-SLAR</span>
-                <span className="inline-block ml-2 animate-pulse">🚀</span>
+                <span className="inline-block ml-2 animate-pulse"><Rocket className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Student Late Attendance Report System
@@ -162,37 +163,37 @@ const Kgslar = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">🔖</div>
+            <div className="text-orange-600 mb-3 md:mb-4"><Tag className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">RFID-Based Automation</h3>
             <p className="text-gray-600 text-sm md:text-base">Students simply scan their RFID cards for instant attendance recording without manual intervention.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">⏱️</div>
+            <div className="text-orange-600 mb-3 md:mb-4"><Timer className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Tracking</h3>
             <p className="text-gray-600 text-sm md:text-base">Get instant insights into late arrivals and attendance patterns for timely interventions.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-orange-600 mb-3 md:mb-4"><BarChart3 className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Automated Reports</h3>
             <p className="text-gray-600 text-sm md:text-base">Generate comprehensive attendance reports for faculty, administrators, and parents automatically.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">🔔</div>
+            <div className="text-orange-600 mb-3 md:mb-4"><Bell className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Instant Notifications</h3>
             <p className="text-gray-600 text-sm md:text-base">Real-time alerts for late arrivals sent to faculty and parents to ensure prompt attention.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">📱</div>
+            <div className="text-orange-600 mb-3 md:mb-4"><Smartphone className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">User-Friendly Dashboard</h3>
             <p className="text-gray-600 text-sm md:text-base">Intuitive interface makes reviewing attendance trends and managing reports effortless.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-orange-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
+            <div className="text-orange-600 mb-3 md:mb-4"><Lock className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
             <p className="text-gray-600 text-sm md:text-base">Enterprise-grade security ensures data accuracy, privacy, and confidentiality of student records.</p>
           </div>
@@ -259,7 +260,7 @@ const Kgslar = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-orange-600 text-2xl mr-3">🎯</div>
+              <div className="text-orange-600 mr-3"><Target className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Eliminates Manual Errors</h3>
                 <p className="text-gray-600">Say goodbye to paper-based records and human errors in attendance tracking, ensuring accuracy and reliability.</p>
@@ -269,7 +270,7 @@ const Kgslar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-orange-600 text-2xl mr-3">⏳</div>
+              <div className="text-orange-600 mr-3"><Hourglass className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Saves Valuable Time</h3>
                 <p className="text-gray-600">Automates time-consuming attendance processes, allowing faculty to focus more on teaching and student development.</p>
@@ -279,7 +280,7 @@ const Kgslar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-orange-600 text-2xl mr-3">📈</div>
+              <div className="text-orange-600 mr-3"><TrendingUp className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Encourages Punctuality</h3>
                 <p className="text-gray-600">Promotes better time management and attendance habits among students with transparent tracking and accountability.</p>
@@ -289,7 +290,7 @@ const Kgslar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-orange-600 text-2xl mr-3">🔄</div>
+              <div className="text-orange-600 mr-3"><RefreshCw className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Seamless Integration</h3>
                 <p className="text-gray-600">Easily integrates with existing school/college management systems for a unified administrative experience.</p>

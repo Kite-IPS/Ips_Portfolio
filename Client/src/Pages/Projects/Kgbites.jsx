@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UtensilsCrossed, Utensils, PenLine, BarChart3, Smartphone, Bell, DollarSign, Timer, TrendingUp, ShoppingCart } from 'lucide-react';
 import KGBITES from '../../assets/projects/KG-BITES.png';
 import Black from '../../assets/general/black-badge.png';
 import SK from '../../assets/members/3rd-4th-yrs/sk.png';
@@ -76,7 +77,7 @@ const Kgbites = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-green-600">KG-BITES</span>
-                <span className="inline-block ml-2 animate-pulse">🍔</span>
+                <span className="inline-block ml-2 animate-pulse"><UtensilsCrossed className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Canteen Management System
@@ -117,37 +118,37 @@ const Kgbites = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-green-600 text-3xl md:text-4xl mb-3 md:mb-4">🍽️</div>
+            <div className="text-green-600 mb-3 md:mb-4"><Utensils className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Efficient Menu Management</h3>
             <p className="text-gray-600 text-sm md:text-base">Easily add, update, and categorize food items with prices, descriptions, and availability status.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-green-600 text-3xl md:text-4xl mb-3 md:mb-4">📝</div>
+            <div className="text-green-600 mb-3 md:mb-4"><PenLine className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Seamless Order Processing</h3>
             <p className="text-gray-600 text-sm md:text-base">Streamline customer orders with an intuitive interface for quick selection and checkout.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-green-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-green-600 mb-3 md:mb-4"><BarChart3 className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Analytics</h3>
             <p className="text-gray-600 text-sm md:text-base">Track sales, popular items, peak hours, and inventory levels with comprehensive reporting tools.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-green-600 text-3xl md:text-4xl mb-3 md:mb-4">📱</div>
+            <div className="text-green-600 mb-3 md:mb-4"><Smartphone className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Mobile-Friendly Interface</h3>
             <p className="text-gray-600 text-sm md:text-base">Access the system from any device with a responsive design optimized for both staff and customers.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-green-600 text-3xl md:text-4xl mb-3 md:mb-4">🔔</div>
+            <div className="text-green-600 mb-3 md:mb-4"><Bell className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Order Notifications</h3>
             <p className="text-gray-600 text-sm md:text-base">Real-time alerts for kitchen staff when new orders arrive, with status updates for customers.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-green-600 text-3xl md:text-4xl mb-3 md:mb-4">💰</div>
+            <div className="text-green-600 mb-3 md:mb-4"><DollarSign className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Payment Integration</h3>
             <p className="text-gray-600 text-sm md:text-base">Support for multiple payment methods with secure processing and transaction history.</p>
           </div>
@@ -214,7 +215,7 @@ const Kgbites = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-green-600 text-2xl mr-3">⏱️</div>
+              <div className="text-green-600 mr-3"><Timer className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Reduces Waiting Time</h3>
                 <p className="text-gray-600">Streamlined ordering process decreases queues and waiting periods during peak hours.</p>
@@ -224,7 +225,7 @@ const Kgbites = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-green-600 text-2xl mr-3">📈</div>
+              <div className="text-green-600 mr-3"><TrendingUp className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Increases Efficiency</h3>
                 <p className="text-gray-600">Automates order taking and inventory management, allowing staff to focus on food preparation and quality.</p>
@@ -234,7 +235,7 @@ const Kgbites = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-green-600 text-2xl mr-3">🛒</div>
+              <div className="text-green-600 mr-3"><ShoppingCart className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Inventory Control</h3>
                 <p className="text-gray-600">Helps prevent overordering or stockouts with real-time inventory tracking and alerts.</p>
@@ -244,7 +245,7 @@ const Kgbites = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-green-600 text-2xl mr-3">📊</div>
+              <div className="text-green-600 mr-3"><BarChart3 className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Data-Driven Decisions</h3>
                 <p className="text-gray-600">Provides insights on popular items, sales patterns, and customer preferences to optimize menu offerings.</p>

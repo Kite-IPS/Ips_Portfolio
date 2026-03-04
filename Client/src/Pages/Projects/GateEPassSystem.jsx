@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { IdCard, Smartphone, CircleCheck, ClipboardList, Users, Tag, BarChart3 } from 'lucide-react';
+>>>>>>> de3f617ced963d7deff0d8774df7d0236beb46aa
 import GATEEPASSSYSTEM from '../../assets/projects/GATE-EPASS-SYSTEM.jpeg';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -129,6 +135,10 @@ const GateEPassSystem = () => {
               </span>
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-3">
                 <span className="text-emerald-700">GATE E-PASS SYSTEM</span>
+<<<<<<< HEAD
+=======
+                <span className="inline-block ml-2 animate-pulse"><IdCard className="w-10 h-10 inline" /></span>
+>>>>>>> de3f617ced963d7deff0d8774df7d0236beb46aa
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-600 mb-5">
                 Visitor &amp; Event Entry Management Platform
@@ -216,6 +226,7 @@ const GateEPassSystem = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
+<<<<<<< HEAD
             {
               Icon: IconQR,
               title: "QR / OTP Verification",
@@ -263,6 +274,19 @@ const GateEPassSystem = () => {
               </div>
               <h3 className="feature-title text-base md:text-lg font-semibold text-gray-900">{title}</h3>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed flex-1">{desc}</p>
+=======
+            { icon: <Smartphone className="w-8 h-8 md:w-10 md:h-10" />, title: "QR / OTP Verification", desc: "Each gate pass includes a unique QR code or OTP for secure and tamper-proof entry verification." },
+            { icon: <CircleCheck className="w-8 h-8 md:w-10 md:h-10" />, title: "Digital Approval Workflow", desc: "Multi-level approval chain ensures only authorised passes are issued and honoured at the gate." },
+            { icon: <ClipboardList className="w-8 h-8 md:w-10 md:h-10" />, title: "Audit Logging", desc: "Every pass creation, approval, and scan event is logged with timestamps for full accountability." },
+            { icon: <Users className="w-8 h-8 md:w-10 md:h-10" />, title: "Role-Based Access Control", desc: "Security personnel, admins, and approvers each have specific access tailored to their responsibilities." },
+            { icon: <Tag className="w-8 h-8 md:w-10 md:h-10" />, title: "Visitor & Event Passes", desc: "Supports both one-time visitor passes and multi-use event passes with configurable validity." },
+            { icon: <BarChart3 className="w-8 h-8 md:w-10 md:h-10" />, title: "Entry Analytics", desc: "Track entry/exit patterns and generate reports for security and institutional review." },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
+              <div className="text-emerald-700 mb-3 md:mb-4">{icon}</div>
+              <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+              <p className="text-gray-600 text-sm md:text-base">{desc}</p>
+>>>>>>> de3f617ced963d7deff0d8774df7d0236beb46aa
             </div>
           ))}
         </div>

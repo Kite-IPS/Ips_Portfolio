@@ -1,19 +1,20 @@
 import { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+// 2nd-yr members
+import Joedaniel from '../assets/members/2nd-yrs/joedaniel.png';
+import Mourish from '../assets/members/2nd-yrs/mourish.png';
+// 3rd-4th-yr members
 import Ranjith from '../assets/members/3rd-4th-yrs/ranjith.png';
 import Rajarajan from '../assets/members/3rd-4th-yrs/rajarajan.png';
 import Mitun from '../assets/members/3rd-4th-yrs/mithun.png';
 import Marudhu from '../assets/members/3rd-4th-yrs/marudhu.png';
 import Gokulramm from '../assets/members/3rd-4th-yrs/gokulramm.png';
 import Aiswarya from '../assets/members/3rd-4th-yrs/aiswarya.png';
-import Praveenraj from '../assets/members/alumni/praveenraj.png';
-import Jd from '../assets/members/alumni/jd.png';
 import SK from '../assets/members/3rd-4th-yrs/sk.png';
 import Yogesh from '../assets/members/3rd-4th-yrs/yogesh.png';
 import Adithya from '../assets/members/3rd-4th-yrs/adithya.png';
 import Gobi from '../assets/members/3rd-4th-yrs/gobi.png';
-import Sivaramana from '../assets/members/alumni/sivaramana.png';
 import Naagaroshan from '../assets/members/3rd-4th-yrs/nagaroshan.png';
 import Yogalaksmi from '../assets/members/3rd-4th-yrs/yoga.png';
 import Rishwanth from '../assets/members/3rd-4th-yrs/rishwanth.png';
@@ -22,6 +23,10 @@ import Vigneshwar from '../assets/members/3rd-4th-yrs/vigneshwar.png';
 import Nishanthm from '../assets/members/3rd-4th-yrs/nishanthm.png';
 import Nishanth from '../assets/members/3rd-4th-yrs/nishanth.png';
 import Dharun from '../assets/members/3rd-4th-yrs/dharun.png';
+// Alumni members
+import Praveenraj from '../assets/members/alumni/praveenraj.png';
+import Jd from '../assets/members/alumni/jd.png';
+import Sivaramana from '../assets/members/alumni/sivaramana.png';
 import Chandru from '../assets/members/alumni/chandru.png';
 import Black from '../assets/general/black-badge.png';
 import White from '../assets/general/IPS WHITE batch 1.png'; 
@@ -29,7 +34,8 @@ import LinkedinIcon from '../assets/general/linkedin-icon.jpg';
 import GithubIcon from '../assets/general/github-icon.png'; 
  
 
-const communityMembers = [
+// ── Alumni Members ──────────────────────────────────────────────────────────
+const alumniMembers = [
   {  
     name: "Siva Ramana H V",
     role: "Developer",
@@ -65,6 +71,28 @@ const communityMembers = [
     badges: [White],
     github: "https://github.com/jaayaraajadhanus",
     linkedin: "https://www.linkedin.com/in/jaayaraajadhanus"
+  },
+];
+
+// ── Active Community Members (2nd-yrs + 3rd/4th-yrs) ────────────────────────
+const communityMembers = [
+  {
+    name: "Joe Daniel",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Joedaniel,
+    badges: [Black],
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
+  },
+  {
+    name: "Mourish",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Mourish,
+    badges: [Black],
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
   },
   {
     name: "Marudhu Paandian K",
@@ -230,14 +258,13 @@ const communityMembers = [
     github: "https://github.com/zvoidy",
     linkedin: "http://www.linkedin.com/in/mitun-m"
   },
-  
-  // Commented out placeholder members are preserved but not shown here for brevity
 ];
 
 const ProfessionalMemberMarquee = ({ 
   members = [],
   autoScrollSpeed = 1,
-  manualScrollMultiplier = 2
+  manualScrollMultiplier = 2,
+  direction = 'rtl'
 }) => {
   const scrollRef = useRef(null);
   const [selectedMember, setSelectedMember] = useState(null);
@@ -379,14 +406,25 @@ const ProfessionalMemberMarquee = ({
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
+    // For ltr, initialise at the midpoint so reverse looping works seamlessly
+    if (direction === 'ltr') {
+      scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+    }
+
     let animationFrameId;
     
     const autoScroll = () => {
       if (!isAutoScrollPaused) {
-        scrollContainer.scrollLeft += autoScrollSpeed;
-
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0;
+        if (direction === 'ltr') {
+          scrollContainer.scrollLeft -= autoScrollSpeed;
+          if (scrollContainer.scrollLeft <= 0) {
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+          }
+        } else {
+          scrollContainer.scrollLeft += autoScrollSpeed;
+          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+            scrollContainer.scrollLeft = 0;
+          }
         }
       }
 
@@ -398,7 +436,7 @@ const ProfessionalMemberMarquee = ({
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isAutoScrollPaused, autoScrollSpeed]);
+  }, [isAutoScrollPaused, autoScrollSpeed, direction]);
 
   // Handle social profile navigation
   const handleSocialClick = (e, url) => {
@@ -550,9 +588,14 @@ const ProfessionalMemberMarquee = ({
   );
 };
 
-function App() {
+function MembersSection() {
   return <ProfessionalMemberMarquee members={communityMembers} />;
 }
+
+function AlumniSection() {
+  return <ProfessionalMemberMarquee members={alumniMembers} direction="ltr" />;
+}
+
 ProfessionalMemberMarquee.propTypes = {
   members: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
@@ -564,7 +607,9 @@ ProfessionalMemberMarquee.propTypes = {
     linkedin: PropTypes.string
   })),
   autoScrollSpeed: PropTypes.number,
-  manualScrollMultiplier: PropTypes.number
+  manualScrollMultiplier: PropTypes.number,
+  direction: PropTypes.oneOf(['ltr', 'rtl'])
 };
 
-export default App;
+export default MembersSection;
+export { AlumniSection };
