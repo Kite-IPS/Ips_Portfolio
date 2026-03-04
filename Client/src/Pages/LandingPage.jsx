@@ -74,7 +74,7 @@ const LandingPage = () => {
 
             {/* Hero Section */}
             <section id='home' className='w-full min-h-screen pt-24 sm:pt-20 md:mt-10 flex items-center justify-center font-primary px-4 sm:px-6'>
-                <div className='w-full sm:w-[90%] md:w-[80%] flex flex-col md:flex-row gap-8 md:gap-0'>
+                <div className='w-full sm:w-[90%] md:w-[80%] flex flex-col md:flex-row gap-8 md:gap-0 -mt-11 md:-mt-22'>
                     <div className='w-full md:w-1/2 flex flex-col items-center md:items-start justify-center mb-8 md:mb-0'>
                         {/* Animated Text with Smooth Transition */}
                         <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mokoto-text leading-tight sm:leading-[55px] md:leading-[65px] lg:leading-[75px] text-center md:text-left'>

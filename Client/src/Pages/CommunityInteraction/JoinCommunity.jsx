@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUser, FiMail, FiPhone, FiGithub, FiLinkedin, FiCheckCircle } from 'react-icons/fi';
 import { FaUsers, FaRocket, FaCode, FaStar } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Ips_Logo from '../../assets/general/IPS WHITE batch 1.png';
 
+const allMemberModules = import.meta.glob('../../assets/members/**/*.png', { eager: true });
+const allMemberImages = Object.values(allMemberModules).map((m) => m.default);
+
+function pickRandom4(arr) {
+  const shuffled = [...arr].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, 4);
+}
+
 const JoinCommunity = () => {
   const navigate = useNavigate();
+  const [visibleMembers, setVisibleMembers] = useState(() => pickRandom4(allMemberImages));
+  const [fadeKey, setFadeKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleMembers(pickRandom4(allMemberImages));
+      setFadeKey((k) => k + 1);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -165,11 +184,20 @@ const JoinCommunity = () => {
 
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
-                {['A','B','C','D'].map((l, i) => (
-                  <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-blue-800 flex items-center justify-center text-white text-xs font-bold">
-                    {l}
-                  </div>
-                ))}
+                <AnimatePresence mode="popLayout">
+                  {visibleMembers.map((src, i) => (
+                    <motion.img
+                      key={`${fadeKey}-${i}`}
+                      src={src}
+                      alt="member"
+                      className="w-9 h-9 rounded-full border-2 border-blue-800 object-cover object-top"
+                      initial={{ opacity: 0, scale: 0.7 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.7 }}
+                      transition={{ duration: 0.4, delay: i * 0.07 }}
+                    />
+                  ))}
+                </AnimatePresence>
               </div>
               <p className="text-blue-200 text-sm"><span className="text-white font-semibold">30+ members</span> already building together</p>
             </div>

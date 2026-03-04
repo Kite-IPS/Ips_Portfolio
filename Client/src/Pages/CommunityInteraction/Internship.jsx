@@ -23,6 +23,8 @@ const Internship = () => {
     ];
 
     const rules = [
+        'The internship is conducted for 21 working days (excluding Saturdays and Sundays).',
+        'Interns will be provided with the last 2 hours as On-Duty (OD) each day to attend the internship activities.',
         'Maintain professionalism and respect towards mentors, organizers, and fellow interns.',
         'Complete assigned learning tasks, practice exercises, and project milestones on time.',
         'Publish weekly blogs summarizing what you learned and implemented during the internship.',
@@ -178,7 +180,7 @@ const Internship = () => {
                             { phase: 'Phase 1', title: 'Onboarding', description: 'Get introduced to the IPS Tech Community, meet your assigned mentor, and choose your preferred technical domain. Interns will set up their development environment and understand the internship workflow.', align: 'right' },
                             { phase: 'Phase 2', title: 'Learning & Hands-On Practice', description: 'Interns begin learning core concepts related to their domain while completing guided tasks and hands-on exercises. Weekly blogs and small contributions help reinforce learning.', align: 'left' },
                             { phase: 'Phase 3', title: 'Project Development', description: 'Interns start working on a real-world problem statement, applying the concepts they learned. Mentors provide feedback while interns build their project step-by-step.', align: 'right' },
-                            { phase: 'Phase 4', title: 'Final Presentation', description: 'In the final phase, interns present their project and complete the coding assessment. Evaluation will be based on the above criteria along with mentor feedback on the intern’s learning progress, contributions, and overall performance during the internship.', align: 'left' },
+                            { phase: 'Phase 4', title: 'Final Presentation', description: 'On 21st day, final phase. Interns present their project and complete the coding assessment. Evaluation will be based on the above criteria along with mentor feedback on the intern’s learning progress, contributions, and overall performance during the internship.', align: 'left' },
                         ].map((item, index) => (
                             <div key={index} className={`relative flex flex-col md:flex-row items-center mb-12 ${item.align === 'left' ? 'md:flex-row-reverse' : ''}`}>
                                 <div className={`w-full md:w-[45%] ${item.align === 'left' ? 'md:text-right md:pl-0 md:pr-8' : 'md:text-left md:pr-0 md:pl-8'}`}>
