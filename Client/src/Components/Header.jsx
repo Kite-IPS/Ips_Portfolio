@@ -47,7 +47,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <ul className='hidden md:flex items-center gap-6 lg:gap-10'>
+            <ul className='hidden md:flex items-center gap-6 lg:gap-10 ml-16 lg:ml-24'>
                 {navSections.map((section) => (
                     <Link
                         key={section.name}
