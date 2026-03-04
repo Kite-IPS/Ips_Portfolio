@@ -263,7 +263,8 @@ const communityMembers = [
 const ProfessionalMemberMarquee = ({ 
   members = [],
   autoScrollSpeed = 1,
-  manualScrollMultiplier = 2
+  manualScrollMultiplier = 2,
+  direction = 'rtl'
 }) => {
   const scrollRef = useRef(null);
   const [selectedMember, setSelectedMember] = useState(null);
@@ -405,14 +406,25 @@ const ProfessionalMemberMarquee = ({
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
+    // For ltr, initialise at the midpoint so reverse looping works seamlessly
+    if (direction === 'ltr') {
+      scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+    }
+
     let animationFrameId;
     
     const autoScroll = () => {
       if (!isAutoScrollPaused) {
-        scrollContainer.scrollLeft += autoScrollSpeed;
-
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0;
+        if (direction === 'ltr') {
+          scrollContainer.scrollLeft -= autoScrollSpeed;
+          if (scrollContainer.scrollLeft <= 0) {
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+          }
+        } else {
+          scrollContainer.scrollLeft += autoScrollSpeed;
+          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+            scrollContainer.scrollLeft = 0;
+          }
         }
       }
 
@@ -424,7 +436,7 @@ const ProfessionalMemberMarquee = ({
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isAutoScrollPaused, autoScrollSpeed]);
+  }, [isAutoScrollPaused, autoScrollSpeed, direction]);
 
   // Handle social profile navigation
   const handleSocialClick = (e, url) => {
@@ -581,7 +593,7 @@ function MembersSection() {
 }
 
 function AlumniSection() {
-  return <ProfessionalMemberMarquee members={alumniMembers} />;
+  return <ProfessionalMemberMarquee members={alumniMembers} direction="ltr" />;
 }
 
 ProfessionalMemberMarquee.propTypes = {
@@ -595,7 +607,8 @@ ProfessionalMemberMarquee.propTypes = {
     linkedin: PropTypes.string
   })),
   autoScrollSpeed: PropTypes.number,
-  manualScrollMultiplier: PropTypes.number
+  manualScrollMultiplier: PropTypes.number,
+  direction: PropTypes.oneOf(['ltr', 'rtl'])
 };
 
 export default MembersSection;
