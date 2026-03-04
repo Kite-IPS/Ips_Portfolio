@@ -174,7 +174,7 @@ const communityMembers = [
     linkedin: "https://www.linkedin.com/in/joshuamelvin7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
-    name: "Kayalvizhi",
+    name: "Joshpin Kayalvizhi",
     role: "Developer",
     specialty: "Full-Stack Developer",
     imageUrl: Kayal,
