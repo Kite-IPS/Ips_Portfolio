@@ -4,6 +4,22 @@ import { motion } from 'framer-motion';
 // 2nd-yr members
 import Joedaniel from '../assets/members/2nd-yrs/joedaniel.png';
 import Mourish from '../assets/members/2nd-yrs/mourish.png';
+import Aki from '../assets/members/2nd-yrs/aki.png';
+import Anish from '../assets/members/2nd-yrs/anish.png';
+import Arunaw from '../assets/members/2nd-yrs/arunaw.png';
+import Boo from '../assets/members/2nd-yrs/boo.png';
+import Harini from '../assets/members/2nd-yrs/harini.png';
+import Jeff from '../assets/members/2nd-yrs/jeff.png';
+import Joe from '../assets/members/2nd-yrs/joe.png';
+import Joshua from '../assets/members/2nd-yrs/joshua.png';
+import Kayal from '../assets/members/2nd-yrs/kayal.png';
+import Mirdula from '../assets/members/2nd-yrs/mirdula.png';
+import Nila from '../assets/members/2nd-yrs/nila.png';
+import Sami from '../assets/members/2nd-yrs/sami.png';
+import Sandy from '../assets/members/2nd-yrs/sandy.png';
+import Taya from '../assets/members/2nd-yrs/taya.png';
+import Vinu from '../assets/members/2nd-yrs/vinu.png';
+import Sri from '../assets/members/2nd-yrs/sri.png';
 // 3rd-4th-yr members
 import Ranjith from '../assets/members/3rd-4th-yrs/ranjith.png';
 import Rajarajan from '../assets/members/3rd-4th-yrs/rajarajan.png';
@@ -79,26 +95,160 @@ const communityMembers = [
   {
     name: "Joe Daniel",
     role: "Developer",
-    specialty: "Full-Stack Development",
+    specialty: "AIML Engineer",
     imageUrl: Joedaniel,
+    badges: [Black],
+    github: "https://github.com/joedanields",
+    linkedin: "https://www.linkedin.com/in/joe-daniel1911/"
+  },
+  {
+    name: "Mourish Antony",
+    role: "Developer",
+    specialty: "ML Engineer",
+    imageUrl: Mourish,
+    badges: [Black],
+    github: "https://github.com/mourishantony",
+    linkedin: "linkedin.com/in/mourishantonyc"
+  },
+  {
+    name: "Akilan",
+    role: "Developer",
+    specialty: "MERN developer",
+    imageUrl: Aki,
+    badges: [Black],
+    github: "https://github.com/miles-spidee",
+    linkedin: "'https://www.linkedin.com/in/akilan-ck?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Anish Karthic",
+    role: "Developer",
+    specialty: "Embedded and IoT",
+    imageUrl: Anish,
     badges: [Black],
     github: "https://github.com",
     linkedin: "https://linkedin.com"
   },
   {
-    name: "Mourish",
+    name: "Arunawrishe",
     role: "Developer",
-    specialty: "Full-Stack Development",
-    imageUrl: Mourish,
+    specialty: "Java developer",
+    imageUrl: Arunaw,
     badges: [Black],
     github: "https://github.com",
     linkedin: "https://linkedin.com"
+  },
+  {
+    name: "Boomathi",
+    role: "Developer",
+    specialty: "Full-Stack Developer",
+    imageUrl: Boo,
+    badges: [Black],
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
+  },
+  {
+    name: "Harini",
+    role: "Developer",
+    specialty: "Front-end developer",
+    imageUrl: Harini,
+    badges: [Black],
+    github: "https://github.com/Harini007m",
+    linkedin: "https://www.linkedin.com/in/harini-m-aa6a783157m"
+  },
+  {
+    name: "Jeremiah Jeffery",
+    role: "Developer",
+    specialty: "Web Developer",
+    imageUrl: Jeff,
+    badges: [Black],
+    github: "https://github.com/Jeremiah-Jefry",
+    linkedin: "https://www.linkedin.com/in/jeremiah-jefry-george"
+  },
+  {
+    name: "Joshua Melvin",
+    role: "Backend Developer",
+    specialty: "AI Engineer",
+    imageUrl: Joshua,
+    badges: [Black],
+    github: "https://github.com/JOSHUA-MELVIN-777/",
+    linkedin: "https://www.linkedin.com/in/joshuamelvin7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Kayalvizhi",
+    role: "Developer",
+    specialty: "Full-Stack Developer",
+    imageUrl: Kayal,
+    badges: [Black],
+    github: "https://github.com/JOSHPINKAYALVIZHI",
+    linkedin: "https://www.linkedin.com/in/joshpin-kayalvizhi-b47a2b314/"
+  },
+  {
+    name: "Mirdula",
+    role: "Developer",
+    specialty: "Full-Stack Developer",
+    imageUrl: Mirdula,
+    badges: [Black],
+    github: "https://github.com/Mirdula18",
+    linkedin: "https://www.linkedin.com/in/mirdula-r-06a771320/"
+  },
+  {
+    name: "Kavinila",
+    role: "Developer",
+    specialty: "Emotional support",
+    imageUrl: Nila,
+    badges: [Black],
+    github: "https://github.com/KavinilaLoganathan-2507",
+    linkedin: "https://www.linkedin.com/in/kavinila-loganathan-1bb49b315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Samikssha",
+    role: "Developer",
+    specialty: "Front-end developer",
+    imageUrl: Sami,
+    badges: [Black],
+    github: "https://github.com/samikssha04",
+    linkedin: "https://www.linkedin.com/in/samikssha-muthu-ab6771305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Santhosh",
+    role: "Developer",
+    specialty: "Front-end & DM",
+    imageUrl: Sandy,
+    badges: [Black],
+    github: "https://github.com/Santhosh-I",
+    linkedin: "https://www.linkedin.com/in/santhosh2006?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Tayanithaa",
+    role: "Developer",
+    specialty: "ML Developer",
+    imageUrl: Taya,
+    badges: [Black],
+    github: "https://github.com/Tayanithaa",
+    linkedin: "https://www.linkedin.com/in/tayanithaans-2196--/"
+  },
+  {
+    name: "Vinu Karthick",
+    role: "Developer",
+    specialty: "DevOps Engineer",
+    imageUrl: Vinu,
+    badges: [Black],
+    github: "https://github.com/VinuKarthick7",
+    linkedin: "https://www.linkedin.com/in/vinukarthick7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Srishanth",
+    role: "Developer",
+    specialty: "Embedded & Iot",
+    imageUrl: Sri,
+    badges: [Black],
+    github: "https://github.com/Srishanth-023",
+    linkedin: "https://www.linkedin.com/in/sri-shanth-0520a9315/"
   },
   {
     name: "Marudhu Paandian K",
     role: "Entrepreneur",
     specialty: "Cyber Security",  
-    
     imageUrl: Marudhu,
     badges: [White],
     github: "https://github.com/marudhu2004",
@@ -145,7 +295,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Full-Stack Development",
     imageUrl: Rishwanth,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Rishvanth28",
     linkedin: "https://www.linkedin.com/in/rishvanth-k-k-8a6876293/"
   },
@@ -155,7 +305,7 @@ const communityMembers = [
     role: "Developer", 
     specialty: "Full-Stack Development",
     imageUrl: Gokulramm,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Gokulramms",
     linkedin: "https://www.linkedin.com/in/gokulramm-s-984a69257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
@@ -164,7 +314,7 @@ const communityMembers = [
     role: "Developer", 
     specialty: "Full-Stack Development",
     imageUrl: Nishanthm,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/NISHANTH1107",
     linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
@@ -173,7 +323,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Ai Engineer", 
     imageUrl: Jaisreenivasan,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/jaisrinivasan23",
     linkedin: "https://in.linkedin.com/in/jaisrinivasan-j-a68398259?trk=public_profile_browsemap"
   },
@@ -182,7 +332,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Full-Stack Development",
     imageUrl: Gobi,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/krishgobi",
     linkedin: "https://www.linkedin.com/in/gobi-krishnan-998847300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
@@ -191,7 +341,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Full-Stack Development",
     imageUrl: Dharun,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Dharun-Ashokkumar",
     linkedin: "https://www.linkedin.com/in/dharun-ashokkumar/"
   },
@@ -200,7 +350,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Full-Stack Engineer", 
     imageUrl: Yogalaksmi,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Yogalakshu",
     linkedin: "https://www.linkedin.com/in/yogalakshmi-sankaranarayanan-060320250/"
   },
@@ -209,7 +359,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Full-Stack Engineer", 
     imageUrl: Aiswarya,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Aishwaryaboobalan",
     linkedin: "https://www.linkedin.com/in/aishwarya-boobalan-480368244 "
   },
