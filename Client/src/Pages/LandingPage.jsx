@@ -10,6 +10,7 @@ import ProjectCard from '../Components/ProjectCard';
 // import section from '../assets/section.png';
 import ServiceBox from '../Components/ServiceBox';
 import Member from '../Components/Member';
+import { AlumniSection } from '../Components/Member';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { FaRocket } from "react-icons/fa";
@@ -189,6 +190,12 @@ const LandingPage = () => {
     <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
     <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center px-4'>Meet the talented individuals behind our community</p>
     <Member />
+</div>
+
+                <div id="alumni" className="mt-16 md:mt-20 ">
+    <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text text-center'>Alumni</h1>
+    <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center px-4'>Honoring the pioneers who built our foundation</p>
+    <AlumniSection />
 </div>
 
                 <div className="mt-16 md:mt-20">
