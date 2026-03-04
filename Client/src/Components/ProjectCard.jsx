@@ -17,6 +17,7 @@ import FACULTYAPPRAISALSYSTEM from "../assets/projects/FACULTY-APPRAISAL-SYSTEM.
 import EDUMANAGECFACULTIES from "../assets/projects/EDU-MANAGE-C-FACULTIES.png";
 import GATEEPASSSYSTEM from "../assets/projects/GATE-EPASS-SYSTEM.jpeg";
 import PYTHODARPORTAL from "../assets/projects/PYTHODAR-PORTAL.png";
+import CLASSROOMENGAGEMENTSYSTEM from "../assets/projects/CLASSROOM-ENGAGEMENT-SYSTEM.png";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
@@ -38,6 +39,7 @@ const ProjectCard = ({ name, description }) => {
     "EDU MANAGE FOR C FACULTIES": "/edumanagecfaculties",
     "ISSUE ADDRESS PORTAL": "/issueaddressportal",
     "PYTHODAR PORTAL": "/pythodarportal",
+    "CLASSROOM ENGAGEMENT SYSTEM WITH METADATA": "/metaview",
   };
 
   // Map for external links (opens in new tab)
@@ -73,6 +75,7 @@ const ProjectCard = ({ name, description }) => {
     "EDU MANAGE FOR C FACULTIES": EDUMANAGECFACULTIES,
     "GATE E-PASS SYSTEM": GATEEPASSSYSTEM,
     "PYTHODAR PORTAL": PYTHODARPORTAL,
+    "CLASSROOM ENGAGEMENT SYSTEM WITH METADATA": CLASSROOMENGAGEMENTSYSTEM,
   };
 
   return (

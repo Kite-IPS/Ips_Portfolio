@@ -27,6 +27,7 @@ import LetterGenerator from './Pages/Projects/LetterGenerator'
 import EduManageCFaculties from './Pages/Projects/EduManageCFaculties'
 import IssueAddressPortal from './Pages/Projects/IssueAddressPortal'
 import PythodarPortal from './Pages/Projects/PythodarPortal'
+import Metaview from './Pages/Projects/Metaview'
 
 const App = () => {
   return (
@@ -55,6 +56,7 @@ const App = () => {
           <Route path="/edumanagecfaculties" element={<EduManageCFaculties />} />
           <Route path="/issueaddressportal" element={<IssueAddressPortal />} />
           <Route path="/pythodarportal" element={<PythodarPortal />} />
+          <Route path="/metaview" element={<Metaview />} />
         </Routes>
       </Router>
     </>
