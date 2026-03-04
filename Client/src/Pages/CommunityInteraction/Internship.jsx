@@ -23,6 +23,8 @@ const Internship = () => {
     ];
 
     const rules = [
+        'The internship is conducted for 21 working days (excluding Saturdays and Sundays).',
+        'Interns will be provided with the last 2 hours as On-Duty (OD) each day to attend the internship activities.',
         'Maintain professionalism and respect towards mentors, organizers, and fellow interns.',
         'Complete assigned learning tasks, practice exercises, and project milestones on time.',
         'Publish weekly blogs summarizing what you learned and implemented during the internship.',
