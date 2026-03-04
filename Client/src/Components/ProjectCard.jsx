@@ -15,6 +15,7 @@ import TASKSCHEDULER from "../assets/projects/TASK-SCHEDULER.png";
 import FACULTYAPPRAISALSYSTEM from "../assets/projects/FACULTY-APPRAISAL-SYSTEM.jpeg";
 import EDUMANAGECFACULTIES from "../assets/projects/EDU-MANAGE-C-FACULTIES.png";
 import GATEEPASSSYSTEM from "../assets/projects/GATE-EPASS-SYSTEM.jpeg";
+import PYTHODARPORTAL from "../assets/projects/PYTHODAR-PORTAL.png";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
@@ -35,6 +36,7 @@ const ProjectCard = ({ name, description }) => {
     "LETTER GENERATOR": "/lettergenerator",
     "EDU MANAGE FOR C FACULTIES": "/edumanagecfaculties",
     "ISSUE ADDRESS PORTAL": "/issueaddressportal",
+    "PYTHODAR PORTAL": "/pythodarportal",
   };
 
   // Map for external links (opens in new tab)
@@ -69,6 +71,7 @@ const ProjectCard = ({ name, description }) => {
     "FACULTY APPRAISAL SYSTEM": FACULTYAPPRAISALSYSTEM,
     "EDU MANAGE FOR C FACULTIES": EDUMANAGECFACULTIES,
     "GATE E-PASS SYSTEM": GATEEPASSSYSTEM,
+    "PYTHODAR PORTAL": PYTHODARPORTAL,
   };
 
   return (

@@ -174,6 +174,7 @@ const LandingPage = () => {
                 </div>
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
                     <ProjectCard name={'ISSUE ADDRESS PORTAL'} description={"A complaint management system to submit, track, and resolve institutional issues efficiently."} />
+                    <ProjectCard name={'PYTHODAR PORTAL'} description={"A student portal for the Pythodar event to submit innovative ideas and instantly generate a structured Idea Proposal PDF."} />
                 </div>
                 
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>

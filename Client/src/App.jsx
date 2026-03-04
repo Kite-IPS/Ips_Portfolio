@@ -1,5 +1,11 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+};
 import LandingPage from './Pages/LandingPage'
 import CustomErrorPage from './Pages/CustomErrorPage'
 import JoinCommunity from './Pages/CommunityInteraction/JoinCommunity'
@@ -20,11 +26,13 @@ import GateEPassSystem from './Pages/Projects/GateEPassSystem'
 import LetterGenerator from './Pages/Projects/LetterGenerator'
 import EduManageCFaculties from './Pages/Projects/EduManageCFaculties'
 import IssueAddressPortal from './Pages/Projects/IssueAddressPortal'
+import PythodarPortal from './Pages/Projects/PythodarPortal'
 
 const App = () => {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path='*' element={<CustomErrorPage />} />
           <Route path="/" element={<LandingPage />} />
@@ -46,6 +54,7 @@ const App = () => {
           <Route path="/lettergenerator" element={<LetterGenerator />} />
           <Route path="/edumanagecfaculties" element={<EduManageCFaculties />} />
           <Route path="/issueaddressportal" element={<IssueAddressPortal />} />
+          <Route path="/pythodarportal" element={<PythodarPortal />} />
         </Routes>
       </Router>
     </>
