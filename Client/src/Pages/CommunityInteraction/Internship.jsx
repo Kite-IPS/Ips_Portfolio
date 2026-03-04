@@ -6,12 +6,12 @@ const Internship = () => {
     const navigate = useNavigate();
 
     const benefits = [
-        { icon: <FaCode className="text-2xl" />, title: 'Real-World Projects', description: 'Takes a real world problem statement and analyse the methodologies to obtain more efficient solution to solve the problem' },
-        { icon: <FaUsers className="text-2xl" />, title: 'Mentorship & Guidance', description: 'Get connected with experienced community members who give guidance through the learning journey.' },
-        { icon: <FaStar className="text-2xl" />, title: 'Skill Development', description: 'Master modern tech stacks, tools, and industry best practices through hands-on practice.' },
-        { icon: <FaRocket className="text-2xl" />, title: 'Portfolio Building', description: 'Build an impressive portfolio on what they practiced and built with contributions to open-source, community-driven projects and individual projects that help with upskilling.' },
-        { icon: <FaClipboardList className="text-2xl" />, title: 'Certificate of Completion', description: 'Receive an official certificate recognizing your contributions and accomplishments.' },
-        { icon: <FaBullseye className="text-2xl" />, title: 'Networking Opportunities', description: 'Connect with like-minded peers, alumni, and industry professionals within the community.' },
+        { icon: <FaCode className="text-2xl" />, title: 'Real-World Projects', description: 'Work on practical problem statements inspired by real industry challenges. Interns analyze problems, design solutions, and build functional prototypes during the internship.' },
+        { icon: <FaUsers className="text-2xl" />, title: 'Mentorship & Guidance', description: 'Each intern is guided by experienced mentors from the community who provide technical direction, feedback, and support throughout the learning journey.' },
+        { icon: <FaStar className="text-2xl" />, title: 'Skill Development', description: 'Develop strong technical and problem-solving skills by learning modern tools, frameworks, and industry practices through hands-on tasks and collaborative work.' },
+        { icon: <FaRocket className="text-2xl" />, title: 'Portfolio Building', description: 'Build meaningful projects, contribute to open-source repositories, and document your work to create a strong technical portfolio.' },
+        { icon: <FaClipboardList className="text-2xl" />, title: 'Certificate of Completion', description: 'Interns who successfully complete the internship, tasks, and final presentation will receive an official certificate recognizing their contribution and achievements.' },
+        { icon: <FaBullseye className="text-2xl" />, title: 'Networking Opportunities', description: 'Connect with peers, mentors, and tech enthusiasts within the community to collaborate, exchange ideas, and grow your professional network.' },
     ];
 
     const tddSteps = [
@@ -23,21 +23,21 @@ const Internship = () => {
     ];
 
     const rules = [
-        'Maintain professional conduct and respect all community members.',
-        'Attend scheduled meetings, stand-ups, and review sessions consistently.',
-        'Follow Git workflows — use branches, pull requests, and meaningful commit messages.',
-        'Write clean, documented blog, and testable code following project conventions.',
-        'Communicate blockers early and seek help proactively through designated channels.',
-        'Complete assigned tasks within agreed-upon timelines.',
-        'Respect intellectual property and maintain confidentiality of project details.',
-        'Actively participate in code reviews — both giving and receiving feedback.',
+        'Maintain professionalism and respect towards mentors, organizers, and fellow interns.',
+        'Complete assigned learning tasks, practice exercises, and project milestones on time.',
+        'Publish weekly blogs summarizing what you learned and implemented during the internship.',
+        'Participate actively in discussions, mentor sessions, and project reviews.',
+        'Contribute to open-source or community repositories whenever possible.',
+        'Follow proper Git practices including meaningful commits and pull requests.',
+        'Communicate difficulties or blockers early so mentors can guide you.',
+        'Attend the final project presentation and demonstrate your completed work.'
     ];
 
     const futureGoals = [
         { title: 'Industry Partnerships', description: 'Collaborate with tech companies to offer real internship pipelines and placement opportunities for community members.' },
-        { title: 'Open-Source Contributions', description: 'Establish IPS as a recognized contributor in the global open-source ecosystem.' },
-        { title: 'Research & Innovation Labs', description: 'Launch dedicated labs for AI, IoT, and emerging technology research driven by student-interns.' },
-        { title: 'Career Support', description: 'Provide students with opportunities, mentorship, and resources to prepare for internships and placements.' },
+        { title: 'Open Source Community Growth', description: 'Encourage interns to actively contribute to open-source projects and position IPS as a contributor within the global developer ecosystem.' },
+        { title: 'Innovation & Research Culture', description: 'Promote innovation by enabling students to explore ideas, build prototypes, and experiment with emerging technologies.' },
+        { title:  'Career Development Support', description: 'Help students prepare for internships and placements through mentorship, technical guidance, and portfolio-building opportunities.' },
     ];
 
     return (
@@ -175,10 +175,10 @@ const Internship = () => {
                         {/* Timeline */}
                         <div className="hidden md:block absolute left-1/2 transform -translate-x-0.5 w-1 bg-blue-200 top-0 bottom-0 rounded-full"></div>
                         {[
-                            { phase: 'Phase 1', title: 'Onboarding', description: 'Get introduced to the community, meet your mentor, set up your development domain, and understand the domain-based project landscape.', align: 'right' },
-                            { phase: 'Phase 2', title: 'Active Contribution', description: 'Start working with the domain, participate in code reviews, presentation, attend stand-ups, and learn team workflows through hands-on involvement.', align: 'left' },
-                            { phase: 'Phase 3', title: 'Ownership & Impact', description: 'Take ownership of features or modules, lead small initiatives, mentor newer interns, and demonstrate consistent quality contributions.', align: 'right' },
-                            { phase: 'Phase 4', title: 'Full Membership', description: 'Upon successful completion, receive your certificate and transition into a full community member with voting rights, project leads access, and more.', align: 'left' },
+                            { phase: 'Phase 1', title: 'Onboarding', description: 'Get introduced to the IPS Tech Community, meet your assigned mentor, and choose your preferred technical domain. Interns will set up their development environment and understand the internship workflow.', align: 'right' },
+                            { phase: 'Phase 2', title: 'Learning & Hands-On Practice', description: 'Interns begin learning core concepts related to their domain while completing guided tasks and hands-on exercises. Weekly blogs and small contributions help reinforce learning.', align: 'left' },
+                            { phase: 'Phase 3', title: 'Project Development', description: 'Interns start working on a real-world problem statement, applying the concepts they learned. Mentors provide feedback while interns build their project step-by-step.', align: 'right' },
+                            { phase: 'Phase 4', title: 'Final Presentation', description: 'At the end of the internship, interns present their project, explain their approach, demonstrate the solution, and showcase their learning journey to the community.', align: 'left' },
                         ].map((item, index) => (
                             <div key={index} className={`relative flex flex-col md:flex-row items-center mb-12 ${item.align === 'left' ? 'md:flex-row-reverse' : ''}`}>
                                 <div className={`w-full md:w-[45%] ${item.align === 'left' ? 'md:text-right md:pl-0 md:pr-8' : 'md:text-left md:pr-0 md:pl-8'}`}>
@@ -231,7 +231,8 @@ const Internship = () => {
                             Test Driven Development
                         </h2>
                         <p className="text-gray-500 mt-4 text-lg max-w-2xl mx-auto">
-                            At IPS, we follow TDD as a core practice. Every intern learns to write tests first and code second.
+                            {/* At IPS, we follow TDD as a core practice. Every intern learns to write tests first and code second. */}
+                            During the internship, interns are encouraged to follow structured development practices. One of the approaches introduced is Test Driven Development (TDD), where tests are written before implementation. This helps build reliable, maintainable, and well-tested software.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
