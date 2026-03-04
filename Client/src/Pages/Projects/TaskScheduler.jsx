@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TASKSCHEDULER from '../../assets/projects/TASK-SCHEDULER.png';
 
 /* ─── Inline SVG icon components ─────────────────────────────────────────── */
@@ -80,6 +81,9 @@ const IconDocker = () => (
 );
 
 const TaskScheduler = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <style>{`
@@ -125,7 +129,7 @@ const TaskScheduler = () => {
                   className="inline-flex items-center justify-center px-6 py-3 bg-slate-700 text-white font-medium rounded-md hover:bg-slate-800 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a
                   href="#live-demo"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 border border-slate-700 font-medium rounded-md hover:bg-slate-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-opacity-50"

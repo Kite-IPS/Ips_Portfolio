@@ -139,11 +139,11 @@ const LandingPage = () => {
                         <p className='text-base text-gray-500'>Community Members</p>
                     </div>
                     <div className='flex flex-col items-center'>
-                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>5</h1>
+                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>13</h1>
                         <p className='text-base text-gray-500'>Live Projects</p>
                     </div>
                     <div className='flex flex-col items-center'>
-                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>10+</h1>
+                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>15+</h1>
                         <p className='text-base text-gray-500'>Tech Events</p>
                     </div>
                 </div>
@@ -180,7 +180,7 @@ const LandingPage = () => {
                     <h1 className='font-bold text-2xl md:text-3xl mokoto-text'>Events Organised</h1>
                 </div>
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
-                    <a href = "https://pyexpo.co/" target='_blank' className='w-full sm:w-auto'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
+                    <a href = "https://pyexpo2k26.pages.dev/" target='_blank' className='w-full sm:w-auto'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank" className='w-full sm:w-auto'><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
 

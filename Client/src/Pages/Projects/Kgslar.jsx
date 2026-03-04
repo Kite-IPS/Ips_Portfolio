@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import KGSLAR from '../../assets/projects/KG-SLAR.png';
 import Black from '../../assets/general/black-badge.png';
 import White from '../../assets/general/IPS WHITE batch 1.png';
@@ -9,6 +10,9 @@ import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
 import Yogesh from '../../assets/members/3rd-4th-yrs/yogesh.png';
 
 const Kgslar = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   const teamMembers = [
     {
       name: "Marudhu Paandian K",
@@ -126,12 +130,12 @@ const Kgslar = () => {
                 An innovative solution designed to automate and streamline attendance tracking using RFID Technology, enhancing campus efficiency and student accountability.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-orange-600 text-white font-medium rounded-md hover:bg-orange-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a 
                   href="#features" 
                   className="px-6 py-3 bg-white text-orange-600 border border-orange-600 font-medium rounded-md hover:bg-orange-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50"

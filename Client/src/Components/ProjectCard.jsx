@@ -20,13 +20,11 @@ import GATEEPASSSYSTEM from "../assets/projects/GATE-EPASS-SYSTEM.jpeg";
 const ProjectCard = ({ name, description }) => {
   const navigate = useNavigate();
 
-  // Map for project routes
+  // Map for project routes (internal pages)
   const projectRoutes = {
     "KG-SLAR": "/kgslar",
     "KG-CAR": "/kgcar",
     "KG-APS": "/kgaps",
-    "SIH-THIRUVIZHA": "/sihthiruvizha",
-    "PYEXPO": "/pyexpo",
     "KG-BITES": "/kgbites",
     "PYEXPO-WEBSITE": "/pyexpowebsite",
     "IQAC PORTAL": "/iqacportal",
@@ -39,11 +37,18 @@ const ProjectCard = ({ name, description }) => {
     "ISSUE ADDRESS PORTAL": "/issueaddressportal",
   };
 
+  // Map for external links (opens in new tab)
+  const externalLinks = {
+    "PYEXPO": "https://pyexpo2k26.pages.dev/",
+    "SIH-THIRUVIZHA": "https://sih-thiruvizha.netlify.app/",
+  };
+
   const handleClick = (projectName) => {
-    const route = projectRoutes[projectName];
-    if (route) {
-      window.scrollTo(0, 0);
-      navigate(route);
+    if (externalLinks[projectName]) {
+      window.open(externalLinks[projectName], "_blank", "noopener,noreferrer");
+    } else {
+      const route = projectRoutes[projectName];
+      if (route) navigate(route);
     }
   };
 
@@ -89,7 +94,7 @@ const ProjectCard = ({ name, description }) => {
         <h1 className="font-bold text-sm sm:text-base leading-tight line-clamp-2 transition-colors duration-300 hover:text-blue-600 cursor-default flex-1 mr-3">
           {name}
         </h1>
-        {projectRoutes[name] && (
+        {(projectRoutes[name] || externalLinks[name]) && (
           <button
             className="px-3 py-2 bg-blue-600 text-white text-xs sm:text-sm rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md whitespace-nowrap flex-shrink-0"
             onClick={() => handleClick(name)}

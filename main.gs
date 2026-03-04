@@ -1,0 +1,147 @@
+function doPost(e) {
+  try {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var data = JSON.parse(e.postData.contents);
+    var sheetName = data.sheet; // "Idea", "Project", or "Intern"
+
+    var sheet = ss.getSheetByName(sheetName);
+    if (!sheet) {
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          status: 'error',
+          message: 'Sheet not found: ' + sheetName
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    var timestamp = new Date().toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata'
+    });
+
+    // ================= IDEA SHEET =================
+    if (sheetName === 'Idea') {
+
+      if (sheet.getLastRow() === 0) {
+        sheet.appendRow([
+          'Timestamp', 'Name', 'Year', 'Title',
+          'Domain', 'Description'
+        ]);
+      }
+
+      sheet.appendRow([
+        timestamp,
+        data.name,
+        data.year,
+        data.title,
+        data.domain,
+        data.description
+      ]);
+    }
+
+    // ================= PROJECT SHEET =================
+    else if (sheetName === 'Project') {
+
+      if (sheet.getLastRow() === 0) {
+        sheet.appendRow([
+          'Timestamp', 'Name', 'Year', 'Title',
+          'Domain', 'Description', 'GitHub Repo Link'
+        ]);
+      }
+
+      sheet.appendRow([
+        timestamp,
+        data.name,
+        data.year,
+        data.title,
+        data.domain,
+        data.description,
+        data.githubrepolink
+      ]);
+    }
+
+    // ================= INTERN APPLICATION SHEET =================
+    else if (sheetName === 'Intern') {
+
+      if (sheet.getLastRow() === 0) {
+        sheet.appendRow([
+          'Timestamp', 'Name', 'Email', 'Phone',
+          'Department', 'Year', 'Area of Interest',
+          'Skills', 'Proficient In',
+          'GitHub', 'LinkedIn', 'Interests'
+        ]);
+      }
+
+      sheet.appendRow([
+        timestamp,
+        data.name,
+        data.email,
+        data.phone,
+        data.department,
+        data.year,
+        data.areaOfInterest,
+        data.skills,
+        data.proficientIn,
+        data.github,
+        data.linkedin,
+        data.interests
+      ]);
+
+      // ✅ Send confirmation email
+      var subject = "IPS Tech Community - Application Received";
+      var body =
+        "Dear " + data.name + ",\n\n" +
+        "You have applied for internship in IPS Tech Community.\n\n" +
+        "Contact:\n" +
+        "  • Email: ipstechcommunity@gmail.com\n" +
+        "  • Email: ipstechcommunity@kgkite.ac.in\n" +
+        "  • Mobile: 6381288559\n\n" +
+        "Wait for further updates.\n\n" +
+        "Reach out IPS Tech @ Room No. 210 (KiTE Academic Block 1st Floor)\n\n" +
+        "Thank you!!";
+
+      MailApp.sendEmail(data.email, subject, body);
+    }
+
+    else {
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          status: 'error',
+          message: 'Invalid sheet type'
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        status: 'error',
+        message: error.toString()
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet(e) {
+  const action = e.parameter.action;
+
+  if (action === 'count') {
+    const ss = SpreadsheetApp.openById('1nZHc-_Vk1A8jPL_yA6sdaVI-07O8TgBLH9EuKXM7tbs');
+    const ideaSheet = ss.getSheetByName('Idea');
+    const projectSheet = ss.getSheetByName('Project');
+
+    const ideaCount = Math.max(0, (ideaSheet ? ideaSheet.getLastRow() - 1 : 0));
+    const projectCount = Math.max(0, (projectSheet ? projectSheet.getLastRow() - 1 : 0));
+    const total = ideaCount + projectCount;
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ count: total }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  return ContentService.createTextOutput(JSON.stringify({ error: 'Unknown action' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}

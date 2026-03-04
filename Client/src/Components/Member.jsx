@@ -230,15 +230,6 @@ const communityMembers = [
     github: "https://github.com/zvoidy",
     linkedin: "http://www.linkedin.com/in/mitun-m"
   },
-  {
-    name: "Harishwa S",
-    role: "Designer",
-    specialty: "3D Designer",
-    imageUrl: null,
-    badges: [Black],
-    github: "https://github.com/projects-harishwa",
-    linkedin: "https://www.linkedin.com/in/harishwa-here/"
-  },
   
   // Commented out placeholder members are preserved but not shown here for brevity
 ];

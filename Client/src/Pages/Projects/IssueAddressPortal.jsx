@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ISSUEADDRESSPORTAL from '../../assets/projects/ISSUE-ADDRESS-PORTAL.png';
 
 const IssueAddressPortal = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <style>{`
@@ -38,12 +42,12 @@ const IssueAddressPortal = () => {
                 A complaint management system to submit, track, and resolve institutional issues efficiently — bringing transparency, accountability, and timely resolution to every concern.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-rose-600 text-white font-medium rounded-md hover:bg-rose-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-rose-600 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a
                   href="#features"
                   className="px-6 py-3 bg-white text-rose-600 border border-rose-600 font-medium rounded-md hover:bg-rose-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-rose-600 focus:ring-opacity-50"

@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import IQACPORTAL from '../../assets/projects/IQAC-PORTAL.jpeg';
 
 const IqacPortal = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <style>{`
@@ -38,12 +42,12 @@ const IqacPortal = () => {
                 A digital portal to streamline the event approval process with a structured hierarchical workflow, ensuring transparency and traceability across departments.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a
                   href="#features"
                   className="px-6 py-3 bg-white text-blue-700 border border-blue-700 font-medium rounded-md hover:bg-blue-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50"

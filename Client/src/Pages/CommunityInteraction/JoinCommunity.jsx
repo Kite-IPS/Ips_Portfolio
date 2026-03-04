@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUser, FiMail, FiPhone, FiGithub, FiLinkedin, FiCheckCircle } from 'react-icons/fi';
 import { FaUsers, FaRocket, FaCode, FaStar } from 'react-icons/fa';
@@ -25,7 +24,6 @@ const JoinCommunity = () => {
   const [isSending, setIsSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [skillsDropdownOpen, setSkillsDropdownOpen] = useState(false);
-  const form = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -64,23 +62,36 @@ const JoinCommunity = () => {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  // Google Apps Script Web App URL — replace with your deployed URL
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCDzkVEoNxZm41ks5SgvVHtfwC1acrjb2lg__PPJkI7H3Cs-VR71-7ds6jZHFbU5111w/exec';
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    const formToSend = form.current;
-    const skillsInput = formToSend.querySelector('input[name="skill"]');
-    if (skillsInput) skillsInput.value = formData.skills.join(', ');
-    const proficientInInput = formToSend.querySelector('input[name="proficientInList"]');
-    if (proficientInInput) proficientInInput.value = formData.proficientIn.join(', ');
+    // Fire-and-forget — Apps Script processes data before response
+    const payload = {
+      sheet: 'Intern',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phoneNumber,
+      department: formData.department,
+      year: formData.year,
+      areaOfInterest: formData.areaOfInterest,
+      skills: formData.skills.join(', '),
+      proficientIn: formData.proficientIn.join(', '),
+      github: formData.githubLink,
+      linkedin: formData.linkedinLink,
+      interests: formData.interest,
+    };
 
-    setIsSending(true);
-    emailjs.sendForm('service_nj7e4pf', 'template_1tssygg', formToSend, 'neGb32l3efGX_O7HW')
-      .then(() => setSubmitted(true), (error) => {
-        console.error('EmailJS error:', error);
-        alert('An error occurred, please try again.');
-      })
-      .finally(() => setIsSending(false));
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+
+    setSubmitted(true);
+    setIsSending(false);
   };
 
   const skillsList = [
@@ -203,7 +214,6 @@ const JoinCommunity = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit}
-                  ref={form}
                   className="space-y-4"
                 >
                   <h2 className="text-xl font-bold text-white mb-1">Your Details</h2>
@@ -280,7 +290,6 @@ const JoinCommunity = () => {
                         ))}
                       </div>
                     )}
-                    <input type="hidden" name="skill" value={formData.skills.join(', ')} />
                   </div>
 
                   {/* GitHub & LinkedIn */}
@@ -317,8 +326,6 @@ const JoinCommunity = () => {
                     rows="3"
                     className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
                   />
-
-                  <input type="hidden" name="proficientInList" value={formData.proficientIn.join(', ')} />
 
                   <button
                     type="submit"

@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import KGBITES from '../../assets/projects/KG-BITES.png';
 import Black from '../../assets/general/black-badge.png';
 import SK from '../../assets/members/3rd-4th-yrs/sk.png';
 
 const Kgbites = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   const teamMembers = [
     {
       name: "Sivakanesh SK",
@@ -81,12 +85,12 @@ const Kgbites = () => {
                 A streamlined solution designed to simplify canteen operations, from inventory management to order processing, enhancing efficiency and customer satisfaction.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-green-600 text-white font-medium rounded-md hover:bg-green-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a 
                   href="#features" 
                   className="px-6 py-3 bg-white text-green-600 border border-green-600 font-medium rounded-md hover:bg-green-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"

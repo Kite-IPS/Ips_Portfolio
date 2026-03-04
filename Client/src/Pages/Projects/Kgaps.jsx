@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import KGAPS from '../../assets/projects/KG-APS.jpg';
 import Black from '../../assets/general/black-badge.png';
 import White from '../../assets/general/IPS WHITE batch 1.png';
@@ -9,6 +10,9 @@ import Rishwanth from '../../assets/members/3rd-4th-yrs/rishwanth.png';
 import Vigneshwar from '../../assets/members/3rd-4th-yrs/vigneshwar.png';
 
 const Kgaps = () => {
+  const navigate = useNavigate();
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   const teamMembers = [
     {
       name: "Adithya G",
@@ -126,12 +130,12 @@ const Kgaps = () => {
                 A comprehensive dashboard designed to help educational institutions track, update, and analyze student academic performance with precision and efficiency.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-                <Link
-                  to="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="px-6 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50"
                 >
                   Back to Home
-                </Link>
+                </button>
                 <a 
                   href="#features" 
                   className="px-6 py-3 bg-white text-pink-600 border border-pink-600 font-medium rounded-md hover:bg-pink-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50"
