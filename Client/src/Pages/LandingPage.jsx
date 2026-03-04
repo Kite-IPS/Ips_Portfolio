@@ -13,6 +13,7 @@ import Member from '../Components/Member';
 import { AlumniSection } from '../Components/Member';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
+import SathishImg from '../assets/members/sathish.jpeg';
 import { FaRocket } from "react-icons/fa";
 
 
@@ -187,6 +188,50 @@ const LandingPage = () => {
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank" className='w-full sm:w-auto'><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
                 </div>
 
+
+                {/* SPOC / Mentor Section */}
+                <div id="spoc" className="mt-16 md:mt-20">
+                    <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text text-center'>SPOC <span className='text-blue-600'>(Mentor)</span></h1>
+                    <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center px-4'>The guiding force behind our community</p>
+
+                    <div className='mt-10 flex justify-center px-4'>
+                        <div className='relative w-full max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#172040] shadow-2xl border border-slate-700/60'>
+                            {/* Decorative blobs */}
+                            <div className='absolute -top-10 -right-10 w-40 h-40 rounded-full bg-blue-700/10 blur-2xl pointer-events-none'></div>
+                            <div className='absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-indigo-700/10 blur-2xl pointer-events-none'></div>
+
+                            {/* Top accent bar */}
+                            <div className='h-1.5 w-full bg-gradient-to-r from-blue-600/70 via-indigo-500/70 to-blue-500/70'></div>
+
+                            <div className='relative flex flex-col sm:flex-row items-center gap-6 px-8 py-8'>
+                                {/* Photo */}
+                                <div className='relative shrink-0'>
+                                    <div className='absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/40 to-indigo-600/40 blur-lg opacity-40 scale-110'></div>
+                                    <img
+                                        src={SathishImg}
+                                        alt='Sathish'
+                                        className='relative w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover object-top border-[3px] border-slate-500 shadow-xl'
+                                    />
+                                </div>
+
+                                {/* Info */}
+                                <div className='text-center sm:text-left'>
+                                    <span className='inline-block mb-2 px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase bg-slate-700/60 text-slate-300 border border-slate-600/40'>
+                                        SPOC &amp; Mentor
+                                    </span>
+                                    <h2 className='font-bold text-2xl sm:text-3xl mokoto-text text-white tracking-wide'>Sathish</h2>
+                                    <p className='mt-2 text-sm text-blue-200/70 leading-relaxed'>
+                                        Faculty advisor &amp; point of contact guiding the IPS Tech Community toward innovation and excellence.
+                                    </p>
+                                    <div className='mt-4 flex items-center justify-center sm:justify-start gap-2'>
+                                        <span className='w-2 h-2 rounded-full bg-green-400 animate-pulse'></span>
+                                        <span className='text-xs text-green-400 font-medium'>Actively mentoring</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div id="members" className="mt-16 md:mt-20 ">
     <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
