@@ -33,7 +33,7 @@ const Header = () => {
     ];
 
     return (
-        <div className={`w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+        <div className={`w-full h-[80px] flex px-4 md:px-10 justify-between items-center font-primary fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 shadow-md' : 'bg-gradient-to-r from-blue-100/70 via-blue-50/70 to-blue-100/70 backdrop-blur-sm'}`}>
             {/* Logo */}
             <div className='flex items-center gap-1.5 sm:gap-2 md:gap-5 shrink-0'>
                 <img
