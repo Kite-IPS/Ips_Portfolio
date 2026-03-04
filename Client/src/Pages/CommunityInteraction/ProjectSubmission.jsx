@@ -151,9 +151,14 @@ const ProjectSubmission = () => {
 
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
-                {['A','B','C','D'].map((l, i) => (
-                  <div key={i} className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-blue-800 flex items-center justify-center text-white text-xs font-bold">
-                    {l}
+                {[
+                  { icon: <FaLightbulb size={14} />, from: 'from-yellow-400', to: 'to-orange-500' },
+                  { icon: <FaRocket size={14} />,    from: 'from-blue-400',   to: 'to-indigo-500' },
+                  { icon: <FaLayerGroup size={13} />, from: 'from-emerald-400', to: 'to-teal-500' },
+                  { icon: <FaUsers size={14} />,     from: 'from-pink-400',   to: 'to-purple-500' },
+                ].map(({ icon, from, to }, i) => (
+                  <div key={i} className={`w-9 h-9 rounded-full bg-gradient-to-br ${from} ${to} border-2 border-blue-800 flex items-center justify-center text-white shadow-md`}>
+                    {icon}
                   </div>
                 ))}
               </div>
