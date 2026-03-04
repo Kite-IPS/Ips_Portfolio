@@ -73,7 +73,7 @@ const Internship = () => {
                         Intern at <br className="sm:hidden" />IPS Tech
                     </h1>
                     <p className="text-blue-100 text-lg sm:text-xl mt-6 max-w-2xl mx-auto leading-relaxed">
-                        Kickstart your tech career by working on real-world projects, learning from experienced mentors, and becoming part of a thriving developer community.
+                        Kickstart your technical journey by learning new skills, working on real-world problems, contributing to open-source, and building a project under mentor guidance. The IPS Internship Program is designed to help students gain practical experience and showcase their abilities.
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <button
@@ -107,25 +107,25 @@ const Internship = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
                             <h3 className="text-2xl font-bold text-blue-700 mb-4">Learn by Doing</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                We believe the best way to learn is through practice. As an intern, you'll be embedded in active project teams, writing code that ships to real users — not toy projects that sit in a folder.
+                                We believe real learning happens through practice. Interns work on real problem statements and build solutions instead of just learning theory.
                             </p>
                         </div>
                         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
                             <h3 className="text-2xl font-bold text-blue-700 mb-4">Community-Driven Growth</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                You'll work alongside passionate developers who share knowledge freely. Code reviews, pair programming sessions, and tech talks ensure you grow faster than going solo.
+                                Learn alongside passionate developers, share ideas, participate in discussions, and grow together as part of a collaborative tech community.
                             </p>
                         </div>
                         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
                             <h3 className="text-2xl font-bold text-blue-700 mb-4">Industry-Ready Skills</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                From Git workflows and CI/CD to agile methodologies and TDD, you'll gain the exact skills recruiters look for — before you even graduate.
+                                Gain practical knowledge of development tools, project workflows, and collaborative practices that prepare you for real industry environments.
                             </p>
                         </div>
                         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
                             <h3 className="text-2xl font-bold text-blue-700 mb-4">A Proven Track Record</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                Past interns have gone on to lead projects, organize hackathons, and secure roles at top companies. Your journey at IPS is the start of something bigger.
+                                IPS provides a structured environment where students consistently learn, practice, and build projects that strengthen their technical profile.
                             </p>
                         </div>
                     </div>
