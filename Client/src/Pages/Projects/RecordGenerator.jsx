@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FileText, Zap, Ruler, BookOpen, Download, Hash, Globe } from 'lucide-react';
 import RECORDGENERATOR from '../../assets/projects/RECORD-GENERATOR.png';
 
 const RecordGenerator = () => {
@@ -33,7 +34,7 @@ const RecordGenerator = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-teal-700">RECORD GENERATOR</span>
-                <span className="inline-block ml-2 animate-pulse">📄</span>
+                <span className="inline-block ml-2 animate-pulse"><FileText className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Automated Academic Record Generation
@@ -73,15 +74,15 @@ const RecordGenerator = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { icon: "⚡", title: "Instant Generation", desc: "Generate complete experiment records instantly by filling a simple form — no manual formatting required." },
-            { icon: "📐", title: "Consistent Formatting", desc: "All records follow a uniform academic format, ensuring professional and standardised documentation." },
-            { icon: "📚", title: "Multi-Year Support", desc: "Supports records for 1st, 2nd, 3rd, and 4th year students with relevant mark split-up displays." },
-            { icon: "📥", title: "PDF Export", desc: "Download generated records as print-ready PDF files directly from the browser." },
-            { icon: "🔢", title: "Experiment Management", desc: "Manage multiple experiment records with numbered entries, titles, and academic details." },
-            { icon: "🌐", title: "Accessible Anywhere", desc: "Web-based application accessible from any device — no installation or software required." },
+            { icon: <Zap className="w-8 h-8 md:w-10 md:h-10" />, title: "Instant Generation", desc: "Generate complete experiment records instantly by filling a simple form — no manual formatting required." },
+            { icon: <Ruler className="w-8 h-8 md:w-10 md:h-10" />, title: "Consistent Formatting", desc: "All records follow a uniform academic format, ensuring professional and standardised documentation." },
+            { icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10" />, title: "Multi-Year Support", desc: "Supports records for 1st, 2nd, 3rd, and 4th year students with relevant mark split-up displays." },
+            { icon: <Download className="w-8 h-8 md:w-10 md:h-10" />, title: "PDF Export", desc: "Download generated records as print-ready PDF files directly from the browser." },
+            { icon: <Hash className="w-8 h-8 md:w-10 md:h-10" />, title: "Experiment Management", desc: "Manage multiple experiment records with numbered entries, titles, and academic details." },
+            { icon: <Globe className="w-8 h-8 md:w-10 md:h-10" />, title: "Accessible Anywhere", desc: "Web-based application accessible from any device — no installation or software required." },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-              <div className="text-teal-700 text-3xl md:text-4xl mb-3 md:mb-4">{icon}</div>
+              <div className="text-teal-700 mb-3 md:mb-4">{icon}</div>
               <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-600 text-sm md:text-base">{desc}</p>
             </div>

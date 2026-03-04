@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Wrench, Inbox, Search, Bell, Users, BarChart3, ClipboardList } from 'lucide-react';
 import ISSUEADDRESSPORTAL from '../../assets/projects/ISSUE-ADDRESS-PORTAL.png';
 
 const IssueAddressPortal = () => {
@@ -33,7 +34,7 @@ const IssueAddressPortal = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-rose-600">ISSUE ADDRESS PORTAL</span>
-                <span className="inline-block ml-2 animate-pulse">🛠️</span>
+                <span className="inline-block ml-2 animate-pulse"><Wrench className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Institutional Complaint & Issue Management System
@@ -73,15 +74,15 @@ const IssueAddressPortal = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { icon: "📨", title: "Easy Issue Submission", desc: "Students and staff can submit complaints and issues through a simple, guided submission form." },
-            { icon: "🔍", title: "Real-Time Tracking", desc: "Track the status of every submitted issue — Open, In-Progress, Resolved — with full visibility." },
-            { icon: "🔔", title: "Status Notifications", desc: "Automatic notifications keep submitters informed at every stage of the resolution process." },
-            { icon: "👥", title: "Department Assignment", desc: "Issues are automatically or manually routed to the relevant department for resolution." },
-            { icon: "📊", title: "Issue Analytics", desc: "Analytics dashboard highlights recurring issues, resolution times, and department performance." },
-            { icon: "📋", title: "Audit Trail", desc: "Complete history of all actions taken on each issue ensures accountability and transparency." },
+            { icon: <Inbox className="w-8 h-8 md:w-10 md:h-10" />, title: "Easy Issue Submission", desc: "Students and staff can submit complaints and issues through a simple, guided submission form." },
+            { icon: <Search className="w-8 h-8 md:w-10 md:h-10" />, title: "Real-Time Tracking", desc: "Track the status of every submitted issue — Open, In-Progress, Resolved — with full visibility." },
+            { icon: <Bell className="w-8 h-8 md:w-10 md:h-10" />, title: "Status Notifications", desc: "Automatic notifications keep submitters informed at every stage of the resolution process." },
+            { icon: <Users className="w-8 h-8 md:w-10 md:h-10" />, title: "Department Assignment", desc: "Issues are automatically or manually routed to the relevant department for resolution." },
+            { icon: <BarChart3 className="w-8 h-8 md:w-10 md:h-10" />, title: "Issue Analytics", desc: "Analytics dashboard highlights recurring issues, resolution times, and department performance." },
+            { icon: <ClipboardList className="w-8 h-8 md:w-10 md:h-10" />, title: "Audit Trail", desc: "Complete history of all actions taken on each issue ensures accountability and transparency." },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-              <div className="text-rose-600 text-3xl md:text-4xl mb-3 md:mb-4">{icon}</div>
+              <div className="text-rose-600 mb-3 md:mb-4">{icon}</div>
               <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-600 text-sm md:text-base">{desc}</p>
             </div>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { GraduationCap, PenLine, BarChart3, RefreshCw, Lock, Calendar, Upload } from 'lucide-react';
 import FACULTYAPPRAISALSYSTEM from '../../assets/projects/FACULTY-APPRAISAL-SYSTEM.jpeg';
 
 const FacultyAppraisalSystem = () => {
@@ -33,7 +34,7 @@ const FacultyAppraisalSystem = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-purple-700">FACULTY APPRAISAL SYSTEM</span>
-                <span className="inline-block ml-2 animate-pulse">🎓</span>
+                <span className="inline-block ml-2 animate-pulse"><GraduationCap className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Academic Performance Evaluation Platform
@@ -73,15 +74,15 @@ const FacultyAppraisalSystem = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { icon: "📝", title: "Structured Appraisal Forms", desc: "Standardised forms capture all aspects of faculty performance — teaching, research, and administrative contributions." },
-            { icon: "📊", title: "Performance Analytics", desc: "Visual dashboards provide data-driven insights on faculty performance trends across departments." },
-            { icon: "🔄", title: "Multi-Stage Review", desc: "Supports HOD, Principal, and management-level review stages for comprehensive evaluations." },
-            { icon: "🔒", title: "Confidential Assessments", desc: "Secure and confidential data handling ensures privacy throughout the appraisal cycle." },
-            { icon: "📅", title: "Cycle Management", desc: "Manage appraisal cycles with configurable timelines, reminders, and automated deadlines." },
-            { icon: "📤", title: "Report Export", desc: "Generate and export comprehensive appraisal reports in multiple formats for records and review." },
+            { icon: <PenLine className="w-8 h-8 md:w-10 md:h-10" />, title: "Structured Appraisal Forms", desc: "Standardised forms capture all aspects of faculty performance — teaching, research, and administrative contributions." },
+            { icon: <BarChart3 className="w-8 h-8 md:w-10 md:h-10" />, title: "Performance Analytics", desc: "Visual dashboards provide data-driven insights on faculty performance trends across departments." },
+            { icon: <RefreshCw className="w-8 h-8 md:w-10 md:h-10" />, title: "Multi-Stage Review", desc: "Supports HOD, Principal, and management-level review stages for comprehensive evaluations." },
+            { icon: <Lock className="w-8 h-8 md:w-10 md:h-10" />, title: "Confidential Assessments", desc: "Secure and confidential data handling ensures privacy throughout the appraisal cycle." },
+            { icon: <Calendar className="w-8 h-8 md:w-10 md:h-10" />, title: "Cycle Management", desc: "Manage appraisal cycles with configurable timelines, reminders, and automated deadlines." },
+            { icon: <Upload className="w-8 h-8 md:w-10 md:h-10" />, title: "Report Export", desc: "Generate and export comprehensive appraisal reports in multiple formats for records and review." },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-              <div className="text-purple-700 text-3xl md:text-4xl mb-3 md:mb-4">{icon}</div>
+              <div className="text-purple-700 mb-3 md:mb-4">{icon}</div>
               <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-600 text-sm md:text-base">{desc}</p>
             </div>

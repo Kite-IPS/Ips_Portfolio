@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Landmark, ClipboardList, Search, Users, Bell, BarChart3, Lock } from 'lucide-react';
 import IQACPORTAL from '../../assets/projects/IQAC-PORTAL.jpeg';
 
 const IqacPortal = () => {
@@ -33,7 +34,7 @@ const IqacPortal = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-blue-700">IQAC PORTAL</span>
-                <span className="inline-block ml-2 animate-pulse">🏛️</span>
+                <span className="inline-block ml-2 animate-pulse"><Landmark className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Institutional Quality Assurance Cell Portal
@@ -73,32 +74,32 @@ const IqacPortal = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-700 text-3xl md:text-4xl mb-3 md:mb-4">📋</div>
+            <div className="text-blue-700 mb-3 md:mb-4"><ClipboardList className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Event Approval Workflow</h3>
             <p className="text-gray-600 text-sm md:text-base">Structured hierarchical approval process for events, ensuring each stage is reviewed and authorised properly.</p>
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-700 text-3xl md:text-4xl mb-3 md:mb-4">🔍</div>
+            <div className="text-blue-700 mb-3 md:mb-4"><Search className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Transparency & Traceability</h3>
             <p className="text-gray-600 text-sm md:text-base">Every action is logged and traceable, providing full audit trails for institutional quality assurance.</p>
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-700 text-3xl md:text-4xl mb-3 md:mb-4">👥</div>
+            <div className="text-blue-700 mb-3 md:mb-4"><Users className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Role-Based Access</h3>
             <p className="text-gray-600 text-sm md:text-base">Each department head, faculty, and admin has tailored access levels to manage their scope of responsibilities.</p>
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-700 text-3xl md:text-4xl mb-3 md:mb-4">🔔</div>
+            <div className="text-blue-700 mb-3 md:mb-4"><Bell className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Notifications</h3>
             <p className="text-gray-600 text-sm md:text-base">Instant alerts at every approval stage keep all stakeholders informed of pending and completed actions.</p>
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-700 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-blue-700 mb-3 md:mb-4"><BarChart3 className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Analytics Dashboard</h3>
             <p className="text-gray-600 text-sm md:text-base">Comprehensive insights on event activity, approvals, and department engagement for quality reporting.</p>
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-blue-700 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
+            <div className="text-blue-700 mb-3 md:mb-4"><Lock className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Secure & Compliant</h3>
             <p className="text-gray-600 text-sm md:text-base">Built with institutional data security standards, ensuring all records are protected and compliant.</p>
           </div>

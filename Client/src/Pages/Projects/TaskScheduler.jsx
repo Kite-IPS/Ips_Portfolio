@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Calendar, CircleCheck, TrendingUp, Bell, Users, BarChart3, MessageSquare } from 'lucide-react';
 import TASKSCHEDULER from '../../assets/projects/TASK-SCHEDULER.png';
 
 const TaskScheduler = () => {
@@ -33,7 +34,7 @@ const TaskScheduler = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-slate-700">TASK SCHEDULER</span>
-                <span className="inline-block ml-2 animate-pulse">📅</span>
+                <span className="inline-block ml-2 animate-pulse"><Calendar className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Workflow & Task Management System
@@ -73,15 +74,15 @@ const TaskScheduler = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { icon: "✅", title: "Task Creation & Assignment", desc: "Create tasks with deadlines, priorities, and assign them to specific users or departments." },
-            { icon: "📈", title: "Progress Tracking", desc: "Real-time status updates — Pending, In Progress, Completed, Overdue — with visual indicators." },
-            { icon: "🔔", title: "Deadline Alerts", desc: "Automated reminders and notifications ensure tasks are completed on time." },
-            { icon: "👥", title: "Role-Based Access", desc: "Admin, Manager, and User roles with tailored views and permissions for each level." },
-            { icon: "📊", title: "Reporting & Export", desc: "Export task data and generate performance reports for administrative review." },
-            { icon: "💬", title: "Follow-Up Comments", desc: "Built-in comment threads on tasks keep communication contextual and organised." },
+            { icon: <CircleCheck className="w-8 h-8 md:w-10 md:h-10" />, title: "Task Creation & Assignment", desc: "Create tasks with deadlines, priorities, and assign them to specific users or departments." },
+            { icon: <TrendingUp className="w-8 h-8 md:w-10 md:h-10" />, title: "Progress Tracking", desc: "Real-time status updates — Pending, In Progress, Completed, Overdue — with visual indicators." },
+            { icon: <Bell className="w-8 h-8 md:w-10 md:h-10" />, title: "Deadline Alerts", desc: "Automated reminders and notifications ensure tasks are completed on time." },
+            { icon: <Users className="w-8 h-8 md:w-10 md:h-10" />, title: "Role-Based Access", desc: "Admin, Manager, and User roles with tailored views and permissions for each level." },
+            { icon: <BarChart3 className="w-8 h-8 md:w-10 md:h-10" />, title: "Reporting & Export", desc: "Export task data and generate performance reports for administrative review." },
+            { icon: <MessageSquare className="w-8 h-8 md:w-10 md:h-10" />, title: "Follow-Up Comments", desc: "Built-in comment threads on tasks keep communication contextual and organised." },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-              <div className="text-slate-700 text-3xl md:text-4xl mb-3 md:mb-4">{icon}</div>
+              <div className="text-slate-700 mb-3 md:mb-4">{icon}</div>
               <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-600 text-sm md:text-base">{desc}</p>
             </div>

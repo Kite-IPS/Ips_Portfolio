@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Mail, PenLine, Zap, Printer, Building, FolderOpen, Lock } from 'lucide-react';
 import LETTERGENERATOR from '../../assets/projects/LETTER-GENERATOR.png';
 
 const LetterGenerator = () => {
@@ -33,7 +34,7 @@ const LetterGenerator = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-blue-600">LETTER GENERATOR</span>
-                <span className="inline-block ml-2 animate-pulse">✉️</span>
+                <span className="inline-block ml-2 animate-pulse"><Mail className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Automated Official Letter Generation Portal
@@ -73,15 +74,15 @@ const LetterGenerator = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { icon: "📝", title: "Template-Based Generation", desc: "Select from predefined letter templates — Faculty Request, Event Approval, and more — for instant generation." },
-            { icon: "⚡", title: "Dynamic Content Filling", desc: "Input parameters auto-populate into letter templates, eliminating manual editing and formatting." },
-            { icon: "🖨️", title: "Print-Ready Output", desc: "Generated letters are formatted for direct printing or PDF export without any additional editing." },
-            { icon: "🏫", title: "Institutional Branding", desc: "All letters include official KiTE headers, logos, and formatting consistent with institutional standards." },
-            { icon: "📂", title: "Multiple Letter Types", desc: "Supports Faculty Request Letters, Event Approval Letters, and more with type-specific field sets." },
-            { icon: "🔒", title: "Authorised Access", desc: "Access control ensures only authorised staff can generate and issue official letters." },
+            { icon: <PenLine className="w-8 h-8 md:w-10 md:h-10" />, title: "Template-Based Generation", desc: "Select from predefined letter templates — Faculty Request, Event Approval, and more — for instant generation." },
+            { icon: <Zap className="w-8 h-8 md:w-10 md:h-10" />, title: "Dynamic Content Filling", desc: "Input parameters auto-populate into letter templates, eliminating manual editing and formatting." },
+            { icon: <Printer className="w-8 h-8 md:w-10 md:h-10" />, title: "Print-Ready Output", desc: "Generated letters are formatted for direct printing or PDF export without any additional editing." },
+            { icon: <Building className="w-8 h-8 md:w-10 md:h-10" />, title: "Institutional Branding", desc: "All letters include official KiTE headers, logos, and formatting consistent with institutional standards." },
+            { icon: <FolderOpen className="w-8 h-8 md:w-10 md:h-10" />, title: "Multiple Letter Types", desc: "Supports Faculty Request Letters, Event Approval Letters, and more with type-specific field sets." },
+            { icon: <Lock className="w-8 h-8 md:w-10 md:h-10" />, title: "Authorised Access", desc: "Access control ensures only authorised staff can generate and issue official letters." },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-              <div className="text-blue-600 text-3xl md:text-4xl mb-3 md:mb-4">{icon}</div>
+              <div className="text-blue-600 mb-3 md:mb-4">{icon}</div>
               <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-600 text-sm md:text-base">{desc}</p>
             </div>

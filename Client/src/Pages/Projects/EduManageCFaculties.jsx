@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Bot, MessageSquare, BookOpen, CalendarDays, Search, BarChart3, Lock } from 'lucide-react';
 import EDUMANAGECFACULTIES from '../../assets/projects/EDU-MANAGE-C-FACULTIES.png';
 
 const EduManageCFaculties = () => {
@@ -33,7 +34,7 @@ const EduManageCFaculties = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-amber-600">EDU MANAGE FOR C FACULTIES</span>
-                <span className="inline-block ml-2 animate-pulse">🤖</span>
+                <span className="inline-block ml-2 animate-pulse"><Bot className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 AI-Powered Academic Management Chatbot Portal
@@ -73,15 +74,15 @@ const EduManageCFaculties = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { icon: "💬", title: "AI Chatbot Interface", desc: "Conversational chatbot assists faculty with academic queries, resource management, and scheduling guidance." },
-            { icon: "📚", title: "Resource Management", desc: "Organise and access C programming course materials, syllabi, lab records, and reference documents." },
-            { icon: "🗓️", title: "Workflow Automation", desc: "Automate routine academic workflows like timetable queries, lab scheduling, and assignment tracking." },
-            { icon: "🔍", title: "Intelligent Search", desc: "Smart search across department resources helps faculty find relevant content instantly." },
-            { icon: "📊", title: "Academic Insights", desc: "Access aggregated data on course progress, student performance, and departmental metrics." },
-            { icon: "🔒", title: "Faculty-Only Access", desc: "Secured portal exclusively for C programming faculty with authenticated access controls." },
+            { icon: <MessageSquare className="w-8 h-8 md:w-10 md:h-10" />, title: "AI Chatbot Interface", desc: "Conversational chatbot assists faculty with academic queries, resource management, and scheduling guidance." },
+            { icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10" />, title: "Resource Management", desc: "Organise and access C programming course materials, syllabi, lab records, and reference documents." },
+            { icon: <CalendarDays className="w-8 h-8 md:w-10 md:h-10" />, title: "Workflow Automation", desc: "Automate routine academic workflows like timetable queries, lab scheduling, and assignment tracking." },
+            { icon: <Search className="w-8 h-8 md:w-10 md:h-10" />, title: "Intelligent Search", desc: "Smart search across department resources helps faculty find relevant content instantly." },
+            { icon: <BarChart3 className="w-8 h-8 md:w-10 md:h-10" />, title: "Academic Insights", desc: "Access aggregated data on course progress, student performance, and departmental metrics." },
+            { icon: <Lock className="w-8 h-8 md:w-10 md:h-10" />, title: "Faculty-Only Access", desc: "Secured portal exclusively for C programming faculty with authenticated access controls." },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-              <div className="text-amber-600 text-3xl md:text-4xl mb-3 md:mb-4">{icon}</div>
+              <div className="text-amber-600 mb-3 md:mb-4">{icon}</div>
               <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-600 text-sm md:text-base">{desc}</p>
             </div>

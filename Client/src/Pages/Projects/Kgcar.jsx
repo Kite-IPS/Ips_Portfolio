@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ScrollText, BarChart3, Monitor, Lock, RefreshCw, FileText, Zap, Shield, Hourglass } from 'lucide-react';
 import KGCAR from '../../assets/projects/KG-CAR.png';
 import Black from '../../assets/general/black-badge.png';
 import White from '../../assets/general/IPS WHITE batch 1.png';
@@ -125,7 +126,7 @@ const Kgcar = () => {
             <div className="order-2 lg:order-1">
               <h1 className="hero-title text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                 <span className="text-purple-600">KG-CAR</span>
-                <span className="inline-block ml-2 animate-pulse">📜</span>
+                <span className="inline-block ml-2 animate-pulse"><ScrollText className="w-10 h-10 inline" /></span>
               </h1>
               <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-gray-700 mb-4 md:mb-6">
                 Certificate Acknowledgment System
@@ -166,7 +167,7 @@ const Kgcar = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-purple-600 text-3xl md:text-4xl mb-3 md:mb-4">📜</div>
+            <div className="text-purple-600 mb-3 md:mb-4"><ScrollText className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Effortless Certificate Management</h3>
             <p className="text-gray-600 text-sm md:text-base">Automates the entire certificate issuance and acknowledgment process for streamlined operations.</p>
           </div>
@@ -174,25 +175,25 @@ const Kgcar = () => {
           
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-purple-600 text-3xl md:text-4xl mb-3 md:mb-4">📊</div>
+            <div className="text-purple-600 mb-3 md:mb-4"><BarChart3 className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Real-Time Tracking</h3>
             <p className="text-gray-600 text-sm md:text-base">Monitor when and by whom certificates were received, with comprehensive audit trails and analytics.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-purple-600 text-3xl md:text-4xl mb-3 md:mb-4">🖥️</div>
+            <div className="text-purple-600 mb-3 md:mb-4"><Monitor className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">User-Friendly Dashboard</h3>
             <p className="text-gray-600 text-sm md:text-base">Intuitive interface provides administrators with complete visibility and control over certificate distribution.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-purple-600 text-3xl md:text-4xl mb-3 md:mb-4">🔒</div>
+            <div className="text-purple-600 mb-3 md:mb-4"><Lock className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
             <p className="text-gray-600 text-sm md:text-base">Prevents certificate fraud and misplacement with advanced security features and digital verification.</p>
           </div>
           
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
-            <div className="text-purple-600 text-3xl md:text-4xl mb-3 md:mb-4">🔄</div>
+            <div className="text-purple-600 mb-3 md:mb-4"><RefreshCw className="w-8 h-8 md:w-10 md:h-10" /></div>
             <h3 className="feature-title text-lg md:text-xl font-semibold text-gray-900 mb-2">Seamless Integration</h3>
             <p className="text-gray-600 text-sm md:text-base">Easily connects with existing institutional databases and management systems for unified operations.</p>
           </div>
@@ -259,7 +260,7 @@ const Kgcar = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-purple-600 text-2xl mr-3">📄</div>
+              <div className="text-purple-600 mr-3"><FileText className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Eliminates Paperwork</h3>
                 <p className="text-gray-600">Say goodbye to paper-based certificate management and manual record-keeping with complete digitization.</p>
@@ -269,7 +270,7 @@ const Kgcar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-purple-600 text-2xl mr-3">⚡</div>
+              <div className="text-purple-600 mr-3"><Zap className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Verification</h3>
                 <p className="text-gray-600">Get immediate acknowledgment and confirmation when certificates are received with timestamp proof.</p>
@@ -279,7 +280,7 @@ const Kgcar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-purple-600 text-2xl mr-3">🛡️</div>
+              <div className="text-purple-600 mr-3"><Shield className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enhanced Security</h3>
                 <p className="text-gray-600">Protect against certificate forgery and fraud with built-in digital verification measures.</p>
@@ -289,7 +290,7 @@ const Kgcar = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border border-gray-100">
             <div className="flex items-start mb-4">
-              <div className="text-purple-600 text-2xl mr-3">⏳</div>
+              <div className="text-purple-600 mr-3"><Hourglass className="w-6 h-6" /></div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Saves Time & Resources</h3>
                 <p className="text-gray-600">Reduce administrative burden and costs associated with traditional certificate management processes.</p>
