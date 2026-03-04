@@ -28,6 +28,7 @@ import EduManageCFaculties from './Pages/Projects/EduManageCFaculties'
 import IssueAddressPortal from './Pages/Projects/IssueAddressPortal'
 import PythodarPortal from './Pages/Projects/PythodarPortal'
 import Metaview from './Pages/Projects/Metaview'
+import Kgkeylog from './Pages/Projects/Kgkeylog'
 
 const App = () => {
   return (
@@ -57,6 +58,7 @@ const App = () => {
           <Route path="/issueaddressportal" element={<IssueAddressPortal />} />
           <Route path="/pythodarportal" element={<PythodarPortal />} />
           <Route path="/metaview" element={<Metaview />} />
+          <Route path="/kgkeylog" element={<Kgkeylog />} />
         </Routes>
       </Router>
     </>

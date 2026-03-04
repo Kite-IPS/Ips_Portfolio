@@ -18,6 +18,7 @@ import EDUMANAGECFACULTIES from "../assets/projects/EDU-MANAGE-C-FACULTIES.png";
 import GATEEPASSSYSTEM from "../assets/projects/GATE-EPASS-SYSTEM.jpeg";
 import PYTHODARPORTAL from "../assets/projects/PYTHODAR-PORTAL.png";
 import CLASSROOMENGAGEMENTSYSTEM from "../assets/projects/CLASSROOM-ENGAGEMENT-SYSTEM.png";
+import KGKEYLOG from "../assets/projects/KG-KEYLOG.png";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ name, description }) => {
@@ -40,6 +41,7 @@ const ProjectCard = ({ name, description }) => {
     "ISSUE ADDRESS PORTAL": "/issueaddressportal",
     "PYTHODAR PORTAL": "/pythodarportal",
     "CLASSROOM ENGAGEMENT SYSTEM WITH METADATA": "/metaview",
+    "KG-KEYLOG": "/kgkeylog",
   };
 
   // Map for external links (opens in new tab)
@@ -76,6 +78,7 @@ const ProjectCard = ({ name, description }) => {
     "GATE E-PASS SYSTEM": GATEEPASSSYSTEM,
     "PYTHODAR PORTAL": PYTHODARPORTAL,
     "CLASSROOM ENGAGEMENT SYSTEM WITH METADATA": CLASSROOMENGAGEMENTSYSTEM,
+    "KG-KEYLOG": KGKEYLOG,
   };
 
   return (

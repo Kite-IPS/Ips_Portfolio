@@ -99,11 +99,11 @@ const LandingPage = () => {
                         </div>
                     </div>
 
-                    <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0'>
+                    <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0 pl-4 md:pl-8 lg:pl-12'>
                         <img 
                             src={HeroImg} 
                             alt="Community Img" 
-                            className="w-[92%] sm:w-[85%] md:w-full lg:w-[92%] rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                            className="w-full sm:w-full md:w-full lg:w-full rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
                         />
                     </div>
                 </div>
@@ -156,28 +156,26 @@ const LandingPage = () => {
                     <ProjectCard name={'KG-SLAR'} description={"It's a student late attendance report system using RFID technology"} />
                     <ProjectCard name={'KG-CAR'} description={"It's a Certificate Acknowlegement System"} />
                     <ProjectCard name={'KG-APS'} description={"A comprehensive dashboard to track and update academic progress in a college"} />
-                    
-                    
                 </div>
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
                     <ProjectCard name={'KG-BITES'} description={"It's a Canteen Management System"} />
-                    <ProjectCard name={'PYEXPO-WEBSITE'} description={"It is an exclusive hackathon event."} />
                     <ProjectCard name={'IQAC PORTAL'} description={"A digital portal to streamline the event approval process with a structured hierarchical workflow, ensuring transparency and traceability."} />
+                    <ProjectCard name={'FACULTY APPRAISAL SYSTEM'} description={"A web-based system to evaluate faculty performance, collect appraisal data, and streamline academic review workflows."} />
                 </div>
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
-                    <ProjectCard name={'FACULTY APPRAISAL SYSTEM'} description={"A web-based system to evaluate faculty performance, collect appraisal data, and streamline academic review workflows."} />
                     <ProjectCard name={'TASK SCHEDULER'} description={"A task scheduling and workflow management system to create, track, and manage academic or administrative tasks."} />
                     <ProjectCard name={'RECORD GENERATOR'} description={"A web application for generating formatted academic records and documentation automatically."} />
+                    <ProjectCard name={'GATE E-PASS SYSTEM'} description={"A system to digitize visitor/event gate pass creation, approval, and tracking with role-based access, QR/OTP verification, and audit logging."} />
                 </div>
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
-                    <ProjectCard name={'GATE E-PASS SYSTEM'} description={"A system to digitize visitor/event gate pass creation, approval, and tracking with role-based access, QR/OTP verification, and audit logging."} />
                     <ProjectCard name={'LETTER GENERATOR'} description={"An automated portal to generate official letters dynamically based on predefined templates and input parameters."} />
                     <ProjectCard name={'EDU MANAGE FOR C FACULTIES'} description={"An administrative chatbot portal designed for managing C programming faculty academic resources and workflows."} />
+                    <ProjectCard name={'ISSUE ADDRESS PORTAL'} description={"A complaint management system to submit, track, and resolve institutional issues efficiently."} />
                 </div>
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
-                    <ProjectCard name={'ISSUE ADDRESS PORTAL'} description={"A complaint management system to submit, track, and resolve institutional issues efficiently."} />
                     <ProjectCard name={'PYTHODAR PORTAL'} description={"A student portal for the Pythodar event to submit innovative ideas and instantly generate a structured Idea Proposal PDF."} />
                     <ProjectCard name={'CLASSROOM ENGAGEMENT SYSTEM WITH METADATA'} description={"A secure, role-based system for faculty video upload with automated metadata extraction, timetable validation, and compliance monitoring dashboards."} />
+                    <ProjectCard name={'KG-KEYLOG'} description={"An RFID-based lab key management system with triple-tag scanning, automated three-tier email escalation, and a permanent audit log for every key handover."} />
                 </div>
                 
                 <div className='mt-16 md:mt-20 flex items-center justify-center'>
@@ -186,6 +184,7 @@ const LandingPage = () => {
                 <div className='w-full sm:w-[90%] md:w-[80%] mx-auto mt-8 md:mt-20 flex flex-col items-center md:flex-row md:justify-around gap-6 md:gap-4'>
                     <a href = "https://pyexpo2k26.pages.dev/" target='_blank' className='w-full sm:w-auto'><ProjectCard name={'PYEXPO'} description={"The Primary Goal of PyExpo 25 is to Introduce First-year Students to the collaborative, problem-solving nature of hackathons"} /></a>
                     <a href = "https://sih-thiruvizha.netlify.app/" target = "_blank" className='w-full sm:w-auto'><ProjectCard name={'SIH-THIRUVIZHA'} description={"SIH THIRUVIZHA is an exhilarating 30 hours hackathon event where innovation meets collaboration to tackle real-world challenges."} /></a>
+                    <ProjectCard name={'PYEXPO-WEBSITE'} description={"The official PyExpo website — an exclusive hackathon event platform for first-year students to experience collaborative problem-solving."} />
                 </div>
 
 
