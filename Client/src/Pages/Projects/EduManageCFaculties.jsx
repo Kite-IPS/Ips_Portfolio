@@ -145,7 +145,9 @@ const EduManageCFaculties = () => {
                   Back to Home
                 </Link>
                 <a
-                  href="#live-demo"
+                  href="https://c-faculties-chatbot.onrender.com/cprog_portal_m2p8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-amber-600 border border-amber-600 font-medium rounded-md hover:bg-amber-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-opacity-50"
                 >
                   Try Live Demo
@@ -158,38 +160,6 @@ const EduManageCFaculties = () => {
                 <img src={EDUMANAGECFACULTIES} alt="C AcademicScheduler" className="w-full h-auto rounded-lg" />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Live Demo ─────────────────────────────────────────────────────── */}
-      <div id="live-demo" className="w-full bg-gradient-to-r from-amber-600 to-amber-800 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
-            <div className="flex justify-center mb-5">
-              <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/30 text-white">
-                <IconDashboard />
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Try the Application</h2>
-            <p className="text-amber-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
-              Access the live system. Faculty log daily class entries, admins monitor all 14 departments in real time, and students query schedules via the integrated chatbot — all from one platform.
-            </p>
-            {/* ── REPLACE THE href BELOW WITH YOUR DEPLOYED LINK ── */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-amber-700 font-semibold text-base rounded-lg hover:bg-amber-50 transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-              Open C AcademicScheduler
-            </a>
-            <p className="mt-5 text-amber-300 text-sm">
-              Admin dashboard — public access &nbsp;·&nbsp; Faculty &amp; Super Admin via secret URL
-            </p>
           </div>
         </div>
       </div>

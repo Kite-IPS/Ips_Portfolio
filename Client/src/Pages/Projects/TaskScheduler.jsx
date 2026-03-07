@@ -134,7 +134,9 @@ const TaskScheduler = () => {
                   Back to Home
                 </Link>
                 <a
-                  href="#live-demo"
+                  href="http://172.16.32.87/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 border border-slate-700 font-medium rounded-md hover:bg-slate-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-opacity-50"
                 >
                   Try Live Demo
@@ -147,41 +149,6 @@ const TaskScheduler = () => {
                 <img src={TASKSCHEDULER} alt="Task Scheduler Application" className="w-full h-auto rounded-lg" />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Live Demo / Deployed Link ─────────────────────────────────────── */}
-      <div id="live-demo" className="w-full bg-gradient-to-r from-slate-700 to-slate-900 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
-            <div className="flex justify-center mb-5">
-              <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/30 text-white">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-                  <path d="M6 8h.01M6 12h8M6 16h4"/>
-                </svg>
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Try the Application</h2>
-            <p className="text-slate-300 text-base md:text-lg mb-8 max-w-xl mx-auto">
-              Access the live deployment below. Log in with your institutional credentials to explore dashboards, manage tasks, and experience the full workflow.
-            </p>
-            {/* ── REPLACE THE href BELOW WITH YOUR DEPLOYED LINK ── */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-800 font-semibold text-base rounded-lg hover:bg-slate-100 transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-              Open Task Scheduler
-            </a>
-            <p className="mt-5 text-slate-400 text-sm">
-              Requires valid institutional email credentials &nbsp;·&nbsp; Optimised for modern browsers
-            </p>
           </div>
         </div>
       </div>

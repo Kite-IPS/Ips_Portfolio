@@ -145,10 +145,12 @@ const PythodarPortal = () => {
                   Back to Home
                 </Link>
                 <a
-                  href="#live-demo"
+                  href="https://pythodar-idea-submission-portal.pages.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-indigo-700 border border-indigo-700 font-medium rounded-md hover:bg-indigo-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50"
                 >
-                  Try Live Portal
+                  Try Live Demo
                   <IconExternal />
                 </a>
               </div>
@@ -158,40 +160,6 @@ const PythodarPortal = () => {
                 <img src={PYTHODARPORTAL} alt="Pythodar Idea Portal" className="w-full h-auto rounded-lg" />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Live Demo / Deployed Link ─────────────────────────────────────── */}
-      <div id="live-demo" className="w-full bg-gradient-to-r from-indigo-700 to-indigo-900 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
-            <div className="flex justify-center mb-5">
-              <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/30 text-white">
-                <IconOpen />
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Submit Your Idea</h2>
-            <p className="text-indigo-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
-              Open the live portal, enter your idea details, and instantly generate and download your structured Idea Proposal PDF — ready for Pythodar submission.
-            </p>
-            {/* ── REPLACE THE href BELOW WITH YOUR DEPLOYED LINK ── */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-indigo-800 font-semibold text-base rounded-lg hover:bg-indigo-50 transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 8 16 12 12 16"/>
-                <line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-              Open Pythodar Portal
-            </a>
-            <p className="mt-5 text-indigo-300 text-sm">
-              No login required &nbsp;·&nbsp; Works on any device &nbsp;·&nbsp; PDF downloads instantly
-            </p>
           </div>
         </div>
       </div>

@@ -145,7 +145,9 @@ const Metaview = () => {
                   Back to Home
                 </Link>
                 <a
-                  href="#live-demo"
+                  href="https://faculty-class-analyzer.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-violet-600 border border-violet-600 font-medium rounded-md hover:bg-violet-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-opacity-50"
                 >
                   Try Live Demo
@@ -158,38 +160,6 @@ const Metaview = () => {
                 <img src={CLASSROOMENGAGEMENTSYSTEM} alt="Classroom Engagement System" className="w-full h-auto rounded-lg" />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Live Demo ─────────────────────────────────────────────────────── */}
-      <div id="live-demo" className="w-full bg-gradient-to-r from-violet-600 to-violet-800 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
-            <div className="flex justify-center mb-5">
-              <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/30 text-white">
-                <IconDashboard />
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Try the Application</h2>
-            <p className="text-violet-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
-              Access the live Classroom Engagement System. Faculty upload session videos, the system validates metadata automatically, and admins monitor compliance in real time across all class periods.
-            </p>
-            {/* ── REPLACE THE href BELOW WITH YOUR DEPLOYED LINK ── */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-violet-700 font-semibold text-base rounded-lg hover:bg-violet-50 transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-              Open Classroom Engagement System
-            </a>
-            <p className="mt-5 text-violet-300 text-sm">
-              Role-based access &nbsp;·&nbsp; Faculty / Admin / Management credentials required
-            </p>
           </div>
         </div>
       </div>

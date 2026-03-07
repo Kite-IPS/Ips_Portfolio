@@ -140,7 +140,9 @@ const LetterGenerator = () => {
                   Back to Home
                 </Link>
                 <a
-                  href="#live-demo"
+                  href="https://generatorportal.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 border border-blue-600 font-medium rounded-md hover:bg-blue-50 transition shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
                 >
                   Try Live Demo
@@ -153,37 +155,6 @@ const LetterGenerator = () => {
                 <img src={LETTERGENERATOR} alt="Letter Generator Portal" className="w-full h-auto rounded-lg" />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Live Demo ─────────────────────────────────────────────────────── */}
-      <div id="live-demo" className="w-full bg-gradient-to-r from-blue-600 to-blue-800 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
-            <div className="flex justify-center mb-5">
-              <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/30 text-white">
-                <IconTemplate />
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Try the Application</h2>
-            <p className="text-blue-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
-              Access the live portal. No login required — select a document type, enter your details, and download a professionally formatted letter or document in seconds.
-            </p>
-            <a
-              href="http://generatorportal.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-700 font-semibold text-base rounded-lg hover:bg-blue-50 transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-              Open Letter Generator Portal
-            </a>
-            <p className="mt-5 text-blue-300 text-sm">
-              No login required &nbsp;·&nbsp; generatorportal.netlify.app
-            </p>
           </div>
         </div>
       </div>
