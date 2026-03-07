@@ -1,5 +1,5 @@
   import React from 'react'
-  import technical from '../assets/general/technical.png'
+  import technical from '../assets/icons/technical.png'
   import mobile from '../assets/icons/mobile.png'
   import cloud from '../assets/icons/cloud.png'
   import ai from '../assets/icons/ai.png'
