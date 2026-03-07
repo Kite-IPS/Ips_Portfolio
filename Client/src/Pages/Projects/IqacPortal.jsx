@@ -1,4 +1,9 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Sri from '../../assets/members/2nd-yrs/sri.png';
+import Mirdula from '../../assets/members/2nd-yrs/mirdula.png';
+import Jeff from '../../assets/members/2nd-yrs/jeff.png';
+import Black from '../../assets/general/black-badge.png';
 import { Landmark } from 'lucide-react';
 import IQACPORTAL from '../../assets/projects/IQAC-PORTAL.jpeg';
 
@@ -479,6 +484,17 @@ const IqacPortal = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="IQAC Portal"
+        accentColor="blue"
+        members={[
+          { name: "Srishanth", role: "Developer", specialty: "Embedded & IoT", imageUrl: Sri, badges: [Black], github: "https://github.com/Srishanth-023", linkedin: "https://www.linkedin.com/in/sri-shanth-0520a9315/" },
+          { name: "Mirdula R", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Mirdula, badges: [Black], github: "https://github.com/Mirdula18", linkedin: "https://www.linkedin.com/in/mirdula-r-06a771320/" },
+          { name: "Jeremiah Jefry G", role: "Developer", specialty: "Web Developer", imageUrl: Jeff, badges: [Black], github: "https://github.com/Jeremiah-Jefry", linkedin: "https://www.linkedin.com/in/jeremiah-jefry-george" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Mourish from '../../assets/members/2nd-yrs/mourish.png';
+import Mirdula from '../../assets/members/2nd-yrs/mirdula.png';
+import Black from '../../assets/general/black-badge.png';
 import EDUMANAGECFACULTIES from '../../assets/projects/EDU-MANAGE-C-FACULTIES.png';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -450,6 +454,16 @@ const EduManageCFaculties = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="C AcademicScheduler"
+        accentColor="amber"
+        members={[
+          { name: "Mourish Antony C", role: "Developer", specialty: "ML Engineer", imageUrl: Mourish, badges: [Black], github: "https://github.com/mourishantony", linkedin: "https://linkedin.com/in/mourishantonyc" },
+          { name: "Mirdula R", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Mirdula, badges: [Black], github: "https://github.com/Mirdula18", linkedin: "https://www.linkedin.com/in/mirdula-r-06a771320/" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Kayal from '../../assets/members/2nd-yrs/kayal.png';
+import Joshua from '../../assets/members/2nd-yrs/joshua.png';
+import Black from '../../assets/general/black-badge.png';
 import FACULTYAPPRAISALSYSTEM from '../../assets/projects/FACULTY-APPRAISAL-SYSTEM.jpeg';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -421,6 +425,16 @@ const FacultyAppraisalSystem = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Faculty Appraisal System"
+        accentColor="purple"
+        members={[
+          { name: "Joshpin Kayalvizhi A", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Kayal, badges: [Black], github: "https://github.com/JOSHPINKAYALVIZHI", linkedin: "https://www.linkedin.com/in/joshpin-kayalvizhi-b47a2b314/" },
+          { name: "Joshua Melvin K", role: "Developer", specialty: "AI Engineer", imageUrl: Joshua, badges: [Black], github: "https://github.com/JOSHUA-MELVIN-777/", linkedin: "https://www.linkedin.com/in/joshuamelvin7" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

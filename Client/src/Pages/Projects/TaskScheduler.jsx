@@ -1,4 +1,11 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Yogesh from '../../assets/members/3rd-4th-yrs/yogesh.png';
+import Mitun from '../../assets/members/3rd-4th-yrs/mithun.png';
+import Ranjith from '../../assets/members/3rd-4th-yrs/ranjith.png';
+import SK from '../../assets/members/3rd-4th-yrs/sk.png';
+import RajaRajan from '../../assets/members/3rd-4th-yrs/rajarajan.png';
+import Black from '../../assets/general/black-badge.png';
 import TASKSCHEDULER from '../../assets/projects/TASK-SCHEDULER.png';
 
 /* ─── Inline SVG icon components ─────────────────────────────────────────── */
@@ -480,6 +487,19 @@ const TaskScheduler = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Task Scheduler"
+        accentColor="slate"
+        members={[
+          { name: "Yogesh Venugopal R", role: "Developer", specialty: "Frontend Development", imageUrl: Yogesh, badges: [Black], github: "https://github.com/YOGESH-VENUGOPAL", linkedin: "https://www.linkedin.com/in/yogesh-venugopal-r-b76973316/" },
+          { name: "Mitun M", role: "Developer", specialty: "Frontend Development", imageUrl: Mitun, badges: [Black], github: "https://github.com/Mitun-at-work", linkedin: "https://www.linkedin.com/in/mitun-m-16a6aa316/" },
+          { name: "Ranjith M", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Ranjith, badges: [Black], github: "https://github.com/Ranjithmkrishna", linkedin: "https://www.linkedin.com/in/ranjith-m-a1b8b2303/" },
+          { name: "Sivakanesh S K", role: "Developer", specialty: "Backend Development", imageUrl: SK, badges: [Black], github: "https://github.com/sivakaneshsk", linkedin: "https://www.linkedin.com/in/sivakanesh-s-k-b78133316/" },
+          { name: "Raja Rajan K", role: "Developer", specialty: "Full-Stack Development", imageUrl: RajaRajan, badges: [Black], github: "https://github.com/rajarajank", linkedin: "https://linkedin.com" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

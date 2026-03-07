@@ -1,4 +1,9 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import JoeDaniel from '../../assets/members/2nd-yrs/joedaniel.png';
+import Sami from '../../assets/members/2nd-yrs/sami.png';
+import Harini from '../../assets/members/2nd-yrs/harini.png';
+import Black from '../../assets/general/black-badge.png';
 import PYTHODARPORTAL from '../../assets/projects/PYTHODAR-PORTAL.png';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -371,6 +376,17 @@ const PythodarPortal = () => {
           ))}
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Pythodar Portal"
+        accentColor="indigo"
+        members={[
+          { name: "Joe Daniel A", role: "Developer", specialty: "AI/ML Engineer", imageUrl: JoeDaniel, badges: [Black], github: "https://github.com/JoeDaniel-A", linkedin: "https://www.linkedin.com/in/joe-daniel0/" },
+          { name: "Samikssha M U", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Sami, badges: [Black], github: "https://github.com", linkedin: "https://linkedin.com" },
+          { name: "Harini M", role: "Developer", specialty: "Front-end Developer", imageUrl: Harini, badges: [Black], github: "https://github.com/Harini007m", linkedin: "https://www.linkedin.com/in/harini-m-aa6a783157m" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

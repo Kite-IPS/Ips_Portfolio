@@ -1,4 +1,9 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Sri from '../../assets/members/2nd-yrs/sri.png';
+import Sandy from '../../assets/members/2nd-yrs/sandy.png';
+import Boo from '../../assets/members/2nd-yrs/boo.png';
+import Black from '../../assets/general/black-badge.png';
 import LETTERGENERATOR from '../../assets/projects/LETTER-GENERATOR.png';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -432,6 +437,17 @@ const LetterGenerator = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Letter Generator"
+        accentColor="blue"
+        members={[
+          { name: "Srishanth", role: "Developer", specialty: "Embedded & IoT", imageUrl: Sri, badges: [Black], github: "https://github.com/Srishanth-023", linkedin: "https://www.linkedin.com/in/sri-shanth-0520a9315/" },
+          { name: "Santhosh I", role: "Developer", specialty: "Front-end & DM", imageUrl: Sandy, badges: [Black], github: "https://github.com/Santhosh-I", linkedin: "https://www.linkedin.com/in/santhosh2006" },
+          { name: "Boomathi", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Boo, badges: [Black], github: "https://github.com", linkedin: "https://linkedin.com" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

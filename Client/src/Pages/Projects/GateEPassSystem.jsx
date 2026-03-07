@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Arunaw from '../../assets/members/2nd-yrs/arunaw.png';
+import Aki from '../../assets/members/2nd-yrs/aki.png';
+import Black from '../../assets/general/black-badge.png';
 import GATEEPASSSYSTEM from '../../assets/projects/GATE-EPASS-SYSTEM.jpeg';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -457,6 +461,16 @@ const GateEPassSystem = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Gate E-Pass System"
+        accentColor="emerald"
+        members={[
+          { name: "Arunaw Rishe M", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Arunaw, badges: [Black], github: "https://github.com/Arunaw-Rishe", linkedin: "https://www.linkedin.com/in/arunaw-rishe-m-82b989316/" },
+          { name: "Akilan CK", role: "Developer", specialty: "ML Engineer", imageUrl: Aki, badges: [Black], github: "https://github.com/Akilan-CK", linkedin: "https://linkedin.com" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

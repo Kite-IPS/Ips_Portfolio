@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Ranjith from '../../assets/members/3rd-4th-yrs/ranjith.png';
+import Black from '../../assets/general/black-badge.png';
 import ISSUEADDRESSPORTAL from '../../assets/projects/ISSUE-ADDRESS-PORTAL.png';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -408,6 +411,15 @@ const IssueAddressPortal = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Issue Addressal Portal"
+        accentColor="rose"
+        members={[
+          { name: "Ranjith M", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Ranjith, badges: [Black], github: "https://github.com/Ranjithmkrishna", linkedin: "https://www.linkedin.com/in/ranjith-m-a1b8b2303/" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

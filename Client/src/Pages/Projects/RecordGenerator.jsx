@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Ranjith from '../../assets/members/3rd-4th-yrs/ranjith.png';
+import Black from '../../assets/general/black-badge.png';
 import RECORDGENERATOR from '../../assets/projects/RECORD-GENERATOR.png';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -416,6 +419,15 @@ const RecordGenerator = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Record Generator"
+        accentColor="teal"
+        members={[
+          { name: "Ranjith M", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Ranjith, badges: [Black], github: "https://github.com/Ranjithmkrishna", linkedin: "https://www.linkedin.com/in/ranjith-m-a1b8b2303/" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">

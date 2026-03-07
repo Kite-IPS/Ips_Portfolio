@@ -1,4 +1,10 @@
 import { Link } from 'react-router-dom';
+import TeamSection from '../../Components/TeamSection';
+import Harini from '../../assets/members/2nd-yrs/harini.png';
+import Boo from '../../assets/members/2nd-yrs/boo.png';
+import Anish from '../../assets/members/2nd-yrs/anish.png';
+import Nila from '../../assets/members/2nd-yrs/nila.png';
+import Black from '../../assets/general/black-badge.png';
 import CLASSROOMENGAGEMENTSYSTEM from '../../assets/projects/CLASSROOM-ENGAGEMENT-SYSTEM.png';
 
 /* ─── SVG Icon Components ─────────────────────────────────────────────────── */
@@ -447,6 +453,18 @@ const Metaview = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Team Section ──────────────────────────────────────────────── */}
+      <TeamSection
+        projectName="Classroom Engagement System"
+        accentColor="violet"
+        members={[
+          { name: "Harini M", role: "Developer", specialty: "Front-end Developer", imageUrl: Harini, badges: [Black], github: "https://github.com/Harini007m", linkedin: "https://www.linkedin.com/in/harini-m-aa6a783157m" },
+          { name: "Boomathi", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Boo, badges: [Black], github: "https://github.com", linkedin: "https://linkedin.com" },
+          { name: "Anish Karthic VS", role: "Developer", specialty: "Embedded and IoT", imageUrl: Anish, badges: [Black], github: "https://github.com", linkedin: "https://linkedin.com" },
+          { name: "Kavinila L", role: "Developer", specialty: "Full-Stack Developer", imageUrl: Nila, badges: [Black], github: "https://github.com/KavinilaLoganathan-2507", linkedin: "https://www.linkedin.com/in/kavinila-loganathan-1bb49b315" },
+        ]}
+      />
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-white py-8">
