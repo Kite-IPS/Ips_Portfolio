@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Header from '../Components/Header';
 import HeroImg from '../assets/general/community2.png';
 import Button from '../Components/Button';
@@ -14,6 +15,7 @@ import { AlumniSection } from '../Components/Member';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import SathishImg from '../assets/members/sathish.jpeg';
+import IpsBadge from '../assets/general/IPS WHITE batch 1.png';
 import { FaRocket } from "react-icons/fa";
 
 
@@ -23,6 +25,7 @@ const LandingPage = () => {
     const navigate = useNavigate();
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [fade, setFade] = useState(true);
+    const [spocModalOpen, setSpocModalOpen] = useState(false);
     // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -194,43 +197,85 @@ const LandingPage = () => {
                     <p className='font-light text-sm sm:text-base text-gray-500 mt-2 text-center px-4'>The guiding force behind our community</p>
 
                     <div className='mt-10 flex justify-center px-4'>
-                        <div className='relative w-full max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#172040] shadow-2xl border border-slate-700/60'>
-                            {/* Decorative blobs */}
-                            <div className='absolute -top-10 -right-10 w-40 h-40 rounded-full bg-blue-700/10 blur-2xl pointer-events-none'></div>
-                            <div className='absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-indigo-700/10 blur-2xl pointer-events-none'></div>
-
-                            {/* Top accent bar */}
-                            <div className='h-1.5 w-full bg-gradient-to-r from-blue-600/70 via-indigo-500/70 to-blue-500/70'></div>
-
-                            <div className='relative flex flex-col sm:flex-row items-center gap-6 px-8 py-8'>
-                                {/* Photo */}
-                                <div className='relative shrink-0'>
-                                    <div className='absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/40 to-indigo-600/40 blur-lg opacity-40 scale-110'></div>
-                                    <img
-                                        src={SathishImg}
-                                        alt='Sathish'
-                                        className='relative w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover object-top border-[3px] border-slate-500 shadow-xl'
-                                    />
-                                </div>
-
-                                {/* Info */}
-                                <div className='text-center sm:text-left'>
-                                    <span className='inline-block mb-2 px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase bg-slate-700/60 text-slate-300 border border-slate-600/40'>
-                                        SPOC &amp; Mentor
-                                    </span>
-                                    <h2 className='font-bold text-2xl sm:text-3xl mokoto-text text-white tracking-wide'>Sathish</h2>
-                                    <p className='mt-2 text-sm text-blue-200/70 leading-relaxed'>
-                                        Faculty advisor &amp; point of contact guiding the IPS Tech Community toward innovation and excellence.
-                                    </p>
-                                    <div className='mt-4 flex items-center justify-center sm:justify-start gap-2'>
-                                        <span className='w-2 h-2 rounded-full bg-green-400 animate-pulse'></span>
-                                        <span className='text-xs text-green-400 font-medium'>Actively mentoring</span>
+                        <div className='w-56 md:w-72 bg-white rounded-lg shadow-md border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer' onClick={() => setSpocModalOpen(true)}>
+                            <div className="relative">
+                                <img
+                                    src={SathishImg}
+                                    alt='Sathish'
+                                    className='w-full h-50 md:h-70 object-cover object-top'
+                                />
+                                <div className="absolute top-2 right-2 flex flex-col space-y-1">
+                                    <div className="bg-black rounded-full shadow-md cursor-pointer hover:scale-110 transition-transform duration-200">
+                                        <img src={IpsBadge} alt="IPS Badge" className="w-6 h-6 md:w-8 md:h-8" />
                                     </div>
                                 </div>
+                            </div>
+                            <div className="p-3 md:p-4">
+                                <h3 className="font-semibold text-base md:text-lg text-slate-800">Sathish Ramanujam</h3>
+                                <p className="text-xs md:text-sm text-slate-600 mb-1">SPOC &amp; Mentor</p>
+                                <p className="text-xs text-slate-500 italic">Specialty: ML Dev. & CV</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* SPOC Modal */}
+                {spocModalOpen && (
+                    <div
+                        className="fixed inset-0 bg-slate-900 bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4 cursor-pointer"
+                        onClick={() => setSpocModalOpen(false)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            className="bg-white rounded max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-slate-200"
+                            onClick={e => e.stopPropagation()}
+                        >
+                            <img
+                                src={SathishImg}
+                                alt='Sathish'
+                                className="w-36 h-36 md:w-52 md:h-52 object-cover object-top rounded-full mx-auto mb-4 md:mb-6 border-4 border-slate-200"
+                            />
+                            <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-2">Sathish</h2>
+                            <p className="text-slate-600 mb-1">SPOC &amp; Mentor</p>
+                            <p className="text-sm text-slate-500 mb-4">Specialty in ML Dev. & CV</p>
+
+                            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:space-x-4 mb-6">
+                                <button
+                                    className="flex items-center justify-center bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors text-sm sm:text-base"
+                                    onClick={() => window.open('https://github.com/Professor-Sathish', '_blank')}
+                                >
+                                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                    </svg>
+                                    GitHub Profile
+                                </button>
+                                <button
+                                    className="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm sm:text-base"
+                                    onClick={() => window.open('https://www.linkedin.com/in/sathish-ramanujam-96545313a/', '_blank')}
+                                >
+                                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                                    </svg>
+                                    LinkedIn Profile
+                                </button>
+                            </div>
+
+                            <div className="flex justify-center space-x-3 mb-4">
+                                <div className="bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+                                    <img src={IpsBadge} alt="IPS Badge" className="w-6 h-6" />
+                                </div>
+                            </div>
+
+                            <button
+                                className="bg-slate-800 text-white px-6 py-2 rounded-md hover:bg-slate-700 transition-colors"
+                                onClick={() => setSpocModalOpen(false)}
+                            >
+                                Close Profile
+                            </button>
+                        </motion.div>
+                    </div>
+                )}
 
                 <div id="members" className="mt-16 md:mt-20 ">
     <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mokoto-text text-center'>Our Members</h1>
