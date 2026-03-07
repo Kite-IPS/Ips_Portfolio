@@ -32,14 +32,6 @@ const TeamSection = ({ members, projectName, accentColor = 'purple' }) => {
   };
   const roleColor = roleColorMap[accentColor] || roleColorMap.purple;
 
-  // Determine grid columns based on member count
-  const getGridCols = (count) => {
-    if (count <= 2) return 'grid-cols-1 sm:grid-cols-2 max-w-2xl';
-    if (count <= 3) return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl';
-    if (count <= 4) return 'grid-cols-2 sm:grid-cols-2 md:grid-cols-4 max-w-5xl';
-    return 'grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 max-w-6xl';
-  };
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <div className="text-center mb-12 md:mb-16">
@@ -50,9 +42,9 @@ const TeamSection = ({ members, projectName, accentColor = 'purple' }) => {
         </p>
       </div>
 
-      <div className={`grid ${getGridCols(members.length)} gap-4 sm:gap-6 md:gap-8 mx-auto`}>
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
         {members.map((member, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
+          <div key={index} className="w-44 sm:w-52 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden group">
             <div className="relative overflow-hidden h-48 sm:h-52">
               {member.imageUrl ? (
                 <img
