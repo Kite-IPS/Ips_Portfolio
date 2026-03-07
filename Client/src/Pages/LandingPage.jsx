@@ -222,13 +222,13 @@ const LandingPage = () => {
                 {/* SPOC Modal */}
                 {spocModalOpen && (
                     <div
-                        className="fixed inset-0 bg-slate-900 bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4 cursor-pointer"
+                        className="fixed inset-0 bg-blue-950/60 flex items-center justify-center z-50 backdrop-blur-lg p-4 cursor-pointer"
                         onClick={() => setSpocModalOpen(false)}
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
-                            className="bg-white rounded max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-slate-200"
+                            className="bg-white/60 backdrop-blur-xl rounded-2xl max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-blue-100/80"
                             onClick={e => e.stopPropagation()}
                         >
                             <img
@@ -268,7 +268,7 @@ const LandingPage = () => {
                             </div>
 
                             <button
-                                className="bg-slate-800 text-white px-6 py-2 rounded-md hover:bg-slate-700 transition-colors"
+                                className="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-500 transition-colors"
                                 onClick={() => setSpocModalOpen(false)}
                             >
                                 Close Profile

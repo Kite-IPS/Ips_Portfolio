@@ -665,13 +665,13 @@ const ProfessionalMemberMarquee = ({
       {/* Member Details Modal - Now with GitHub and LinkedIn links */}
       {selectedMember && (
         <div 
-          className="fixed inset-0 bg-slate-900 bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4 cursor-pointer"
+          className="fixed inset-0 bg-blue-950/60 flex items-center justify-center z-50 backdrop-blur-lg p-4 cursor-pointer"
           onClick={() => setSelectedMember(null)}
         >
           <motion.div 
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white rounded max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-slate-200"
+            className="bg-white/60 backdrop-blur-xl rounded-2xl max-w-md w-full p-4 md:p-8 text-center shadow-2xl border border-blue-100/80"
             onClick={e => e.stopPropagation()}
           >
             <div className="relative">
