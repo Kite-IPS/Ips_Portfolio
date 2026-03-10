@@ -144,7 +144,7 @@ const LandingPage = () => {
                         <p className='text-base text-gray-500'>Community Members</p>
                     </div>
                     <div className='flex flex-col items-center'>
-                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>13</h1>
+                        <h1 className='font-bold text-3xl md:text-4xl text-blue-500'>15+</h1>
                         <p className='text-base text-gray-500'>Live Projects</p>
                     </div>
                     <div className='flex flex-col items-center'>
