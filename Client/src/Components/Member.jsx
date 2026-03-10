@@ -349,8 +349,8 @@ const communityMembers = [
   },
   {
     name: "Mirdula",
-    role: "AIML Engineer",
-    specialty: "Full-Stack Developer",
+    role: "Developer",
+    specialty: "AI/ML Engineer",
     imageUrl: Mirdula,
     badges: [Black],
     github: "https://github.com/Mirdula18",
@@ -359,7 +359,7 @@ const communityMembers = [
   {
     name: "Kavinila",
     role: "Developer",
-    specialty: "Emotional support",
+    specialty: "IoT Engineer",
     imageUrl: Nila,
     badges: [Black],
     github: "https://github.com/KavinilaLoganathan-2507",
