@@ -310,9 +310,9 @@ const communityMembers = [
     linkedin: "https://www.linkedin.com/in/harini-m-aa6a783157m"
   },
   {
-    name: "Jeremiah Jefey G",
+    name: "Jeremiah Jefry G",
     role: "Developer",
-    specialty: "Web Developer",
+    specialty: "MERN Developer",
     imageUrl: Jeff,
     badges: [Black],
     github: "https://github.com/Jeremiah-Jefry",

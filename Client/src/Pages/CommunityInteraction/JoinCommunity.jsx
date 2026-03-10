@@ -183,7 +183,7 @@ const JoinCommunity = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex -space-x-3">
+              <div className="flex -space-x-3 shrink-0">
                 <AnimatePresence mode="popLayout">
                   {visibleMembers.map((src, i) => (
                     <motion.img
@@ -199,7 +199,7 @@ const JoinCommunity = () => {
                   ))}
                 </AnimatePresence>
               </div>
-              <p className="text-blue-200 text-sm"><span className="text-white font-semibold">30+ members</span> already building together</p>
+              <p className="text-blue-200 text-sm whitespace-nowrap"><span className="text-white font-semibold">30+ members</span> already building together</p>
             </div>
           </motion.div>
         </div>
