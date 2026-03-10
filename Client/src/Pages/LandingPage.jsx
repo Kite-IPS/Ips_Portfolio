@@ -95,7 +95,7 @@ const LandingPage = () => {
                         </p>
 
                         <div className='font-semibold flex flex-row items-center justify-center md:justify-start gap-3 sm:gap-6 w-full'>
-                            <Button onclick={() => navigate('')} type={'filled'} color={'blue-600'}>Join Community</Button>
+                            <Button onclick={() => navigate('/join-community')} type={'filled'} color={'blue-600'}>Join Community</Button>
                             <Link to='projects' smooth={true} duration={1000}>
                                 <Button type={'outlined'} color={'blue-600'}>View projects</Button>
                             </Link>

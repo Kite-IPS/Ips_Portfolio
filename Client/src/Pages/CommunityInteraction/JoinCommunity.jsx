@@ -133,8 +133,8 @@ const JoinCommunity = () => {
   ];
 
   const inputBase = "w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-sm transition-all duration-200";
-  const fieldWrap = "flex items-center gap-3 bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-3 hover:border-slate-400 focus-within:border-white focus-within:ring-2 focus-within:ring-white/20 transition-all duration-200";
-  const selectBase = "w-full bg-[#0d1460] border border-[#2a3490] text-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-white hover:border-slate-400 transition-all duration-200 text-sm";
+  const fieldWrap = "flex items-center gap-3 bg-[#0d1460] border border-[#2a3490] rounded-xl px-4 py-2 hover:border-slate-400 focus-within:border-white focus-within:ring-2 focus-within:ring-white/20 transition-all duration-200";
+  const selectBase = "w-full bg-[#0d1460] border border-[#2a3490] text-slate-200 px-4 py-2 rounded-xl focus:outline-none focus:border-white hover:border-slate-400 transition-all duration-200 text-sm";
 
   return (
     <div className="min-h-screen font-primary flex flex-col" style={{ background: 'linear-gradient(149deg,rgba(3, 12, 105, 1) 66%, rgba(28, 39, 163, 1) 100%)' }}>
@@ -154,7 +154,7 @@ const JoinCommunity = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col lg:flex-row items-stretch max-w-[90vW] mx-auto w-full px-4 sm:px-6 lg:px-12 py-8 gap-10 lg:gap-30">
+      <div className="flex-1 flex flex-col lg:flex-row items-stretch max-w-[90vW] mx-auto w-full px-4 sm:px-6 lg:px-12 py-4 gap-6 lg:gap-12">
 
         {/* Left Panel — Branding */}
         <div className="lg:w-[45%] flex flex-col justify-center text-white lg:mr-10">
@@ -163,26 +163,26 @@ const JoinCommunity = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">
+            <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-4 py-1 rounded-full mb-3 tracking-widest uppercase">
               Open Applications
             </span>
-            <h1 className="text-4xl sm:text-5xl font-bold mokoto-text leading-tight mb-5">
+            <h1 className="text-3xl sm:text-4xl font-bold mokoto-text leading-tight mb-3">
               Join IPS<br />Tech Community
             </h1>
-            <p className="text-blue-100 text-base leading-relaxed mb-8 max-w-md">
+            <p className="text-blue-100 text-sm leading-relaxed mb-4 max-w-md">
               Become part of a passionate community of developers, designers, and innovators. Build real products, grow your skills, and launch your tech career.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-2 gap-3 mb-4">
               {perks.map((perk, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3 backdrop-blur-sm">
+                <div key={i} className="flex items-center gap-2 bg-white/10 rounded-xl px-3 py-2 backdrop-blur-sm">
                   <div className="text-blue-300 shrink-0">{perk.icon}</div>
-                  <span className="text-sm text-blue-100 font-medium">{perk.text}</span>
+                  <span className="text-xs text-blue-100 font-medium">{perk.text}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <div className="flex -space-x-3">
                 <AnimatePresence mode="popLayout">
                   {visibleMembers.map((src, i) => (
@@ -210,7 +210,7 @@ const JoinCommunity = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="w-full bg-[#0d1460] border border-[#2a3490] rounded-3xl p-6 sm:p-8 shadow-2xl"
+            className="w-full bg-[#0d1460] border border-[#2a3490] rounded-3xl p-4 sm:p-6 shadow-2xl"
           >
             <AnimatePresence mode="wait">
               {submitted ? (
@@ -242,10 +242,10 @@ const JoinCommunity = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit}
-                  className="space-y-4"
+                  className="space-y-3"
                 >
-                  <h2 className="text-xl font-bold text-white mb-1">Your Details</h2>
-                  <p className="text-blue-200 text-sm mb-4">Fill in the form below to apply. Fields marked * are required.</p>
+                  <h2 className="text-lg font-bold text-white mb-0.5">Your Details</h2>
+                  <p className="text-blue-200 text-xs mb-2">Fill in the form below to apply. Fields marked * are required.</p>
 
                   {/* Row 1 */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -351,14 +351,14 @@ const JoinCommunity = () => {
                     value={formData.interest}
                     onChange={handleChange}
                     placeholder="Share your technical interests and aspirations... *"
-                    rows="3"
-                    className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
+                    rows="2"
+                    className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-2 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
                   />
 
                   <button
                     type="submit"
                     disabled={isSending}
-                    className={`w-full bg-white text-blue-700 font-bold py-3.5 rounded-xl transition-all duration-300 text-base ${!isSending ? 'hover:bg-blue-50 hover:shadow-xl hover:scale-[1.01]' : 'opacity-70 cursor-not-allowed'}`}
+                    className={`w-full bg-white text-blue-700 font-bold py-2.5 rounded-xl transition-all duration-300 text-base ${!isSending ? 'hover:bg-blue-50 hover:shadow-xl hover:scale-[1.01]' : 'opacity-70 cursor-not-allowed'}`}
                   >
                     {isSending ? 'Submitting...' : 'Join the Community →'}
                   </button>
