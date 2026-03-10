@@ -299,7 +299,7 @@ const LandingPage = () => {
                     <div className='w-full flex justify-center'><ServiceBox>Cloud Solutions</ServiceBox></div>
                     <div className='w-full flex justify-center'><ServiceBox>AI Services</ServiceBox></div>
                     <div className='w-full flex justify-center'><ServiceBox>Web Development</ServiceBox></div>
-                    <div className='w-full flex justify-center'><ServiceBox>Embedded Systems & IoT</ServiceBox></div>
+                    <div className='w-full flex justify-center col-span-2 md:col-span-1'><ServiceBox>Embedded Systems & IoT</ServiceBox></div>
                     </div>
 
                 </div>
