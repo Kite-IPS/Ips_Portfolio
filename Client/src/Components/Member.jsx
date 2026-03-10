@@ -108,7 +108,7 @@ const communityMembers = [
     imageUrl: Mourish,
     badges: [Black],
     github: "https://github.com/mourishantony",
-    linkedin: "linkedin.com/in/mourishantonyc"
+    linkedin: "https://linkedin.com/in/mourishantonyc"
   },
   {
     name: "Akilan",
@@ -125,8 +125,8 @@ const communityMembers = [
     specialty: "Embedded and IoT",
     imageUrl: Anish,
     badges: [Black],
-    github: "https://github.com",
-    linkedin: "https://linkedin.com"
+    github: "https://github.com/ANISHKARTHIC",
+    linkedin: "https://linkedin.com/in/anish-karthic/"
   },
   {
     name: "Arunawrishe",
@@ -134,8 +134,8 @@ const communityMembers = [
     specialty: "Java developer",
     imageUrl: Arunaw,
     badges: [Black],
-    github: "https://github.com",
-    linkedin: "https://linkedin.com"
+    github: "https://github.com/ARUNAWRISHE",
+    linkedin: "https://linkedin.com/in/arunaw-rishe-m"
   },
   {
     name: "Boomathi",
@@ -143,8 +143,8 @@ const communityMembers = [
     specialty: "Full-Stack Developer",
     imageUrl: Boo,
     badges: [Black],
-    github: "https://github.com",
-    linkedin: "https://linkedin.com"
+    github: "https://github.com/Boomathi-7",
+    linkedin: "https://linkedin.com/in/boomathi-palanisamy-75693b314"
   },
   {
     name: "Harini",
@@ -184,7 +184,7 @@ const communityMembers = [
   },
   {
     name: "Mirdula",
-    role: "Developer",
+    role: "AIML Engineer",
     specialty: "Full-Stack Developer",
     imageUrl: Mirdula,
     badges: [Black],

@@ -78,8 +78,8 @@ const LandingPage = () => {
 
             {/* Hero Section */}
             <section id='home' className='w-full min-h-screen pt-24 sm:pt-20 md:mt-10 flex items-center justify-center font-primary px-4 sm:px-6'>
-                <div className='w-full sm:w-[90%] md:w-[80%] flex flex-col md:flex-row gap-8 md:gap-0 -mt-11 md:-mt-22'>
-                    <div className='w-full md:w-1/2 flex flex-col items-center md:items-start justify-center mb-8 md:mb-0'>
+                <div className='w-full sm:w-[95%] md:w-[90%] flex flex-col md:flex-row gap-8 md:gap-6 -mt-11 md:-mt-22'>
+                    <div className='w-full md:w-[46%] flex flex-col items-center md:items-start justify-center mb-8 md:mb-0'>
                         {/* Animated Text with Smooth Transition */}
                         <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mokoto-text leading-tight sm:leading-[55px] md:leading-[65px] lg:leading-[75px] text-center md:text-left'>
                             Welcome to IPS TECH
@@ -90,7 +90,7 @@ const LandingPage = () => {
                             
                         </h1>
 
-                        <p className='font-semibold text-sm sm:text-base my-6 md:my-10 w-full sm:w-[80%] md:w-[60%] text-center md:text-left'>
+                        <p className='font-semibold text-sm sm:text-base my-6 md:my-10 w-full sm:w-[80%] md:w-[70%] text-center md:text-left'>
                             Empowering developers and tech enthusiasts through collaboration, learning, and innovation.
                         </p>
 
@@ -102,11 +102,11 @@ const LandingPage = () => {
                         </div>
                     </div>
 
-                    <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0 pl-4 md:pl-8 lg:pl-12'>
+                    <div className='w-full md:w-[54%] flex justify-center md:justify-end mt-4 md:mt-0'>
                         <img 
                             src={HeroImg} 
                             alt="Community Img" 
-                            className="w-full sm:w-full md:w-full lg:w-full rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                            className="w-full rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
                         />
                     </div>
                 </div>
