@@ -40,6 +40,7 @@ import Nishanthm from '../assets/members/3rd-4th-yrs/nishanthm.png';
 import Nishanth from '../assets/members/3rd-4th-yrs/nishanth.png';
 import Dharun from '../assets/members/3rd-4th-yrs/dharun.png';
 // Alumni members
+import Aishwarya from '../assets/members/alumni/aishwarya.png';
 import Praveenraj from '../assets/members/alumni/praveenraj.png';
 import Jd from '../assets/members/alumni/jd.png';
 import Sivaramana from '../assets/members/alumni/sivaramana.png';
@@ -52,6 +53,15 @@ import GithubIcon from '../assets/general/github-icon.png';
 
 // ── Alumni Members ──────────────────────────────────────────────────────────
 const alumniMembers = [
+    {
+    name: "Aishwarya",
+    role: "Developer",
+    specialty: "AI Developer", 
+    imageUrl: Aishwarya,
+    badges: [White],
+    github: "https://github.com/Aiswariya3a",
+    linkedin: "https://www.linkedin.com/in/aiswariya3a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+  },
   {  
     name: "Siva Ramana H V",
     role: "Developer",
@@ -186,9 +196,10 @@ const communityMembers = [
   {
     name: "Yogalakshmi S",
     role: "Developer",
-    specialty: "Full-Stack Engineer", 
+    specialty: "UI/UX Designer / Developer", 
     imageUrl: Yogalaksmi,
     badges: [White],
+    bgColor: "#cce3f5",
     github: "https://github.com/Yogalakshu",
     linkedin: "https://www.linkedin.com/in/yogalakshmi-sankaranarayanan-060320250/"
   },
@@ -449,6 +460,7 @@ const ProfessionalMemberMarquee = ({
       specialty: member.specialty || 'Diverse Skills',
       imageUrl: member.imageUrl || `/assets/placeholder.png`,
       badges: member.badges || [],
+      bgColor: member.bgColor || null,
       github: member.github || 'https://github.com',
       linkedin: member.linkedin || 'https://linkedin.com'
     }))
@@ -627,7 +639,7 @@ const ProfessionalMemberMarquee = ({
             whileTap={isMobile ? { scale: 0.98 } : {}}
             onClick={() => setSelectedMember(member)}
           >
-            <div className="relative">
+            <div className="relative" style={member.bgColor ? { backgroundColor: member.bgColor } : {}}>
               <img 
                 src={member.imageUrl} 
                 alt={member.name}
