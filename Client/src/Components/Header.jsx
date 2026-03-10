@@ -47,7 +47,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <ul className='hidden md:flex items-center gap-6 lg:gap-10 ml-16 lg:ml-24'>
+            <ul className='hidden md:flex items-center gap-2 lg:gap-6 ml-4 lg:ml-10'>
                 {navSections.map((section) => (
                     <Link
                         key={section.name}
@@ -57,7 +57,7 @@ const Header = () => {
                         offset={-80}
                         className='group'
                     >
-                        <li className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg transition-all duration-300 relative'>
+                        <li className='text-sm lg:text-base xl:text-lg font-medium cursor-pointer px-2 lg:px-4 py-2 rounded-lg transition-all duration-300 relative'>
                             {section.label}
                             <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full'></span>
                         </li>
@@ -65,7 +65,7 @@ const Header = () => {
                 ))}
                 <span
                     onClick={() => navigate('/internship')}
-                    className='text-xl font-medium cursor-pointer px-3 lg:px-7 py-2 rounded-lg hover:text-blue-600 transition-all duration-300'
+                    className='text-sm lg:text-base xl:text-lg font-medium cursor-pointer px-2 lg:px-4 py-2 rounded-lg hover:text-blue-600 transition-all duration-300'
                 >
                     Internship
                 </span>
