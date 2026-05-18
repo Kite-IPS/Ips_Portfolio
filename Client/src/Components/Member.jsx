@@ -45,6 +45,7 @@ import Praveenraj from '../assets/members/alumni/praveenraj.png';
 import Jd from '../assets/members/alumni/jd.png';
 import Sivaramana from '../assets/members/alumni/sivaramana.png';
 import Chandru from '../assets/members/alumni/chandru.png';
+import Rajiv from '../assets/members/alumni/rajiv.jpeg';
 import Black from '../assets/general/black-badge.png';
 import White from '../assets/general/IPS WHITE batch 1.png'; 
 import LinkedinIcon from '../assets/general/linkedin-icon.jpg'; 
@@ -97,6 +98,15 @@ const alumniMembers = [
     badges: [White],
     github: "https://github.com/jaayaraajadhanus",
     linkedin: "https://www.linkedin.com/in/jaayaraajadhanus"
+  },
+  {
+    name: "Rajiv",
+    role: "Entrepreneur",
+    specialty: "Cloud Development", 
+    imageUrl: Rajiv,
+    badges: [White],
+    github: "https://github.com/rajiv2004-cloud",
+    linkedin: "https://www.linkedin.com/in/rajiv-cloud/"
   },
 ];
 
