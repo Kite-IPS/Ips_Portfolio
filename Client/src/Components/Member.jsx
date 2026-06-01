@@ -345,7 +345,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Devops & Backend Development",
     imageUrl: Ranjith,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/rxnjitth",
     linkedin: "https://www.linkedin.com/in/ranjith-m-sundaram-8263b8282/"
   },
@@ -354,7 +354,7 @@ const communityMembers = [
     role: "Developer", 
     specialty: "Backend Development",
     imageUrl: SK,
-    badges: [Black],
+    badges: [White],
     github: "http://github.com/sivakaneshh",
     linkedin: "https://www.linkedin.com/in/sivakanesh-s-k-632008281/"
   },
@@ -363,7 +363,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Frontend Development", 
     imageUrl: Yogesh,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/YogeshVenugopal",
     linkedin: "https://www.linkedin.com/in/yogesh-venugopal/"
   },
@@ -372,7 +372,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Backend Development",
     imageUrl: Rajarajan,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/Raj051105",
     linkedin: "http://www.linkedin.com/in/rrkk"  
   },
@@ -381,7 +381,7 @@ const communityMembers = [
     role: "Developer",
     specialty: "Frontend Development",
     imageUrl: Mitun,
-    badges: [Black],
+    badges: [White],
     github: "https://github.com/zvoidy",
     linkedin: "http://www.linkedin.com/in/mitun-m"
   },
