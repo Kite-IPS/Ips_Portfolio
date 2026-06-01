@@ -13,7 +13,7 @@ const ScrollToTop = () => {
 };
 import LandingPage from './Pages/LandingPage'
 import CustomErrorPage from './Pages/CustomErrorPage'
-import JoinCommunity from './Pages/CommunityInteraction/JoinCommunity'
+import JoinCommunity from './Pages/CommunityInteraction/JoinCommunity.jsx'
 import Project_submission from './Pages/CommunityInteraction/ProjectSubmission'
 import Internship from './Pages/CommunityInteraction/Internship'
 

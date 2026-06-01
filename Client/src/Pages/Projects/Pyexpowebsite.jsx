@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Code, Rocket, Users, Trophy, Briefcase, GraduationCap, Globe } from 'lucide-react';
 import Pyexpowebsite from '../../assets/projects/PYEXPO-WEBSITE.png';
-import Nishanthm from '../../assets/members/3rd-4th-yrs/nishanthm.png';
-import Nishanth from '../../assets/members/3rd-4th-yrs/nishanth.png';
-import Vigneshwar from '../../assets/members/3rd-4th-yrs/vigneshwar.png';
-import Naagaroshan from '../../assets/members/3rd-4th-yrs/nagaroshan.png';
-import Rishwanth from '../../assets/members/3rd-4th-yrs/rishwanth.png';
+import Nishanthm from '../../assets/members/alumni/nishanthm.png';
+import Nishanth from '../../assets/members/alumni/nishanth.png';
+import Vigneshwar from '../../assets/members/alumni/vigneshwar.png';
+import Naagaroshan from '../../assets/members/alumni/nagaroshan.png';
+import Rishwanth from '../../assets/members/alumni/rishwanth.png';
 // import Gopi from '../../assets/gopi.png'; // image missing
 import Mitun from '../../assets/members/3rd-4th-yrs/mithun.png';
 import Black from '../../assets/general/black-badge.png';

@@ -24,21 +24,21 @@ import Sri from '../assets/members/2nd-yrs/sri.png';
 import Ranjith from '../assets/members/3rd-4th-yrs/ranjith.png';
 import Rajarajan from '../assets/members/3rd-4th-yrs/rajarajan.png';
 import Mitun from '../assets/members/3rd-4th-yrs/mithun.png';
-import Marudhu from '../assets/members/3rd-4th-yrs/marudhu.png';
-import Gokulramm from '../assets/members/3rd-4th-yrs/gokulramm.png';
-import Aiswarya from '../assets/members/3rd-4th-yrs/aiswarya.png';
+import Marudhu from '../assets/members/alumni/marudhu.png';
+import Gokulramm from '../assets/members/alumni/gokulramm.png';
+import Aiswarya from '../assets/members/alumni/aiswarya.png';
 import SK from '../assets/members/3rd-4th-yrs/sk.png';
 import Yogesh from '../assets/members/3rd-4th-yrs/yogesh.png';
-import Adithya from '../assets/members/3rd-4th-yrs/adithya.png';
-import Gobi from '../assets/members/3rd-4th-yrs/gobi.png';
-import Naagaroshan from '../assets/members/3rd-4th-yrs/nagaroshan.png';
-import Yogalaksmi from '../assets/members/3rd-4th-yrs/yoga.png';
-import Rishwanth from '../assets/members/3rd-4th-yrs/rishwanth.png';
-import Jaisreenivasan from '../assets/members/3rd-4th-yrs/jai.png';
-import Vigneshwar from '../assets/members/3rd-4th-yrs/vigneshwar.png';
-import Nishanthm from '../assets/members/3rd-4th-yrs/nishanthm.png';
-import Nishanth from '../assets/members/3rd-4th-yrs/nishanth.png';
-import Dharun from '../assets/members/3rd-4th-yrs/dharun.png';
+import Adithya from '../assets/members/alumni/adithya.png';
+import Gobi from '../assets/members/alumni/gobi.png';
+import Naagaroshan from '../assets/members/alumni/nagaroshan.png';
+import Yogalaksmi from '../assets/members/alumni/yoga.png';
+import Rishwanth from '../assets/members/alumni/rishwanth.png';
+import Jaisreenivasan from '../assets/members/alumni/jai.png';
+import Vigneshwar from '../assets/members/alumni/vigneshwar.png';
+import Nishanthm from '../assets/members/alumni/nishanthm.png';
+import Nishanth from '../assets/members/alumni/nishanth.png';
+import Dharun from '../assets/members/alumni/dharun.png';
 // Alumni members
 import Aishwarya from '../assets/members/alumni/aishwarya.png';
 import Praveenraj from '../assets/members/alumni/praveenraj.png';
@@ -107,6 +107,124 @@ const alumniMembers = [
     badges: [White],
     github: "https://github.com/rajiv2004-cloud",
     linkedin: "https://www.linkedin.com/in/rajiv-cloud/"
+  },
+  // Newly moved to alumni
+  {
+    name: "Adithya G",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Adithya,
+    badges: [White],
+    github: "https://github.com/Adithya14255",
+    linkedin: "https://www.linkedin.com/in/adithya-g-a2085b268/"
+  },
+  {
+    name: "Aishwarya B",
+    role: "Developer",
+    specialty: "Full-Stack Engineer",
+    imageUrl: Aiswarya,
+    badges: [White],
+    github: "https://github.com/Aishwaryaboobalan",
+    linkedin: "https://www.linkedin.com/in/aishwarya-boobalan-480368244 "
+  },
+  {
+    name: "Dharun A",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Dharun,
+    badges: [White],
+    github: "https://github.com/Dharun-Ashokkumar",
+    linkedin: "https://www.linkedin.com/in/dharun-ashokkumar/"
+  },
+  {
+    name: "GobiKrishnan K",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Gobi,
+    badges: [White],
+    github: "https://github.com/krishgobi",
+    linkedin: "https://www.linkedin.com/in/gobi-krishnan-998847300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Gokulramm S",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Gokulramm,
+    badges: [White],
+    github: "https://github.com/Gokulramms",
+    linkedin: "https://www.linkedin.com/in/gokulramm-s-984a69257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Jaisrinivasan J",
+    role: "Developer",
+    specialty: "AI Engineer",
+    imageUrl: Jaisreenivasan,
+    badges: [White],
+    github: "https://github.com/jaisrinivasan23",
+    linkedin: "https://in.linkedin.com/in/jaisrinivasan-j-a68398259?trk=public_profile_browsemap"
+  },
+  {
+    name: "Marudhu Paandian K",
+    role: "Entrepreneur",
+    specialty: "Cyber Security",
+    imageUrl: Marudhu,
+    badges: [White],
+    github: "https://github.com/marudhu2004",
+    linkedin: "https://www.linkedin.com/in/marudhu2004/"
+  },
+  {
+    name: "Nagaroshan NS",
+    role: "Developer",
+    specialty: "Backend Development",
+    imageUrl: Naagaroshan,
+    badges: [White],
+    github: "https://github.com/Roshan0909",
+    linkedin: "https://www.linkedin.com/in/nagaroshan-ns-87b207259/"
+  },
+  {
+    name: "Nishanth R",
+    role: "Entrepreneur",
+    specialty: "Full-Stack Development",
+    imageUrl: Nishanth,
+    badges: [White],
+    github: "https://github.com/NishanthSbz",
+    linkedin: "https://www.linkedin.com/in/nishanth-r-86388a259/"
+  },
+  {
+    name: "Nishanth M",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Nishanthm,
+    badges: [White],
+    github: "https://github.com/NISHANTH1107",
+    linkedin: "https://www.linkedin.com/in/nishanth-m-765903293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Rishvanth K K",
+    role: "Developer",
+    specialty: "Full-Stack Development",
+    imageUrl: Rishwanth,
+    badges: [White],
+    github: "https://github.com/Rishvanth28",
+    linkedin: "https://www.linkedin.com/in/rishvanth-k-k-8a6876293/"
+  },
+  {
+    name: "Vigneshwar SU",
+    role: "Developer",
+    specialty: "Frontend Development",
+    imageUrl: Vigneshwar,
+    badges: [White],
+    github: "https://github.com/Vigneshwar-SU",
+    linkedin: "https://www.linkedin.com/in/vigneshwar-s-u-1a8467247/"
+  },
+  {
+    name: "Yogalakshmi S",
+    role: "Developer",
+    specialty: "UI/UX Designer / Developer",
+    imageUrl: Yogalaksmi,
+    badges: [White],
+    github: "https://github.com/Yogalakshu",
+    linkedin: "https://www.linkedin.com/in/yogalakshmi-sankaranarayanan-060320250/"
   },
 ];
 
@@ -760,8 +878,15 @@ const ProfessionalMemberMarquee = ({
   );
 };
 
+// Names moved to alumni; use these to filter active community list
+const movedAlumniNames = [
+  'Adithya G', 'Aishwarya B', 'Dharun A', 'GobiKrishnan K', 'Gokulramm S', 'Jaisrinivasan J',
+  'Marudhu Paandian K', 'Nagaroshan NS', 'Nishanth R', 'Nishanth M', 'Rishvanth K K', 'Vigneshwar SU', 'Yogalakshmi S'
+];
+
 function MembersSection() {
-  return <ProfessionalMemberMarquee members={communityMembers} />;
+  const activeCommunity = communityMembers.filter(m => !movedAlumniNames.includes(m.name));
+  return <ProfessionalMemberMarquee members={activeCommunity} />;
 }
 
 function AlumniSection() {
