@@ -66,18 +66,45 @@ const JoinCommunity = () => {
   };
 
   const validateForm = () => {
-    if (!formData.name || !formData.email || !formData.interest || !formData.phoneNumber) {
-      alert('Please fill in all required fields.');
+    const requiredChecks = [
+      ['Full name', formData.name],
+      ['Email address', formData.email],
+      ['Phone number', formData.phoneNumber],
+      ['Academic year', formData.year],
+      ['Department', formData.department],
+      ['Area of interest', formData.areaOfInterest],
+      ['Technical interests', formData.interest],
+      ['GitHub profile link', formData.githubLink],
+      ['LinkedIn profile link', formData.linkedinLink],
+    ];
+
+    for (const [label, value] of requiredChecks) {
+      if (!value || (Array.isArray(value) && value.length === 0)) {
+        alert(`${label} is required.`);
+        return false;
+      }
+    }
+
+    if (!formData.skills || formData.skills.length === 0) {
+      alert('Please select at least one skill.');
       return false;
     }
+
+    if (!formData.proficientIn || formData.proficientIn.length === 0) {
+      alert('Please select at least one proficient language.');
+      return false;
+    }
+
     if (!/\S+@\S+\.\S+/.test(formData.email)) {
       alert('Enter a valid email address.');
       return false;
     }
+
     if (!/^\d{10}$/.test(formData.phoneNumber)) {
       alert('Enter a valid 10-digit phone number.');
       return false;
     }
+
     return true;
   };
 
@@ -251,11 +278,11 @@ const JoinCommunity = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className={fieldWrap}>
                       <FiUser className="text-blue-300 shrink-0" />
-                      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name *" className={inputBase} />
+                      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name *" className={inputBase} required />
                     </div>
                     <div className={fieldWrap}>
                       <FiMail className="text-blue-300 shrink-0" />
-                      <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address *" className={inputBase} />
+                      <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address *" className={inputBase} required />
                     </div>
                   </div>
 
@@ -263,9 +290,9 @@ const JoinCommunity = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className={fieldWrap}>
                       <FiPhone className="text-blue-300 shrink-0" />
-                      <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number *" className={inputBase} />
+                      <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number *" className={inputBase} required />
                     </div>
-                    <select name="year" value={formData.year} onChange={handleChange} className={selectBase}>
+                    <select name="year" value={formData.year} onChange={handleChange} className={selectBase} required>
                       <option value="">Academic Year</option>
                       {['1st Year', '2nd Year', '3rd Year', '4th Year'].map(y => <option key={y} value={y}>{y}</option>)}
                     </select>
@@ -273,11 +300,11 @@ const JoinCommunity = () => {
 
                   {/* Row 3 */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <select name="department" value={formData.department} onChange={handleChange} className={selectBase}>
+                    <select name="department" value={formData.department} onChange={handleChange} className={selectBase} required>
                       <option value="">Department</option>
                       {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH', 'R&A'].map(d => <option key={d} value={d}>{d}</option>)}
                     </select>
-                    <select name="areaOfInterest" value={formData.areaOfInterest} onChange={handleChange} className={selectBase}>
+                    <select name="areaOfInterest" value={formData.areaOfInterest} onChange={handleChange} className={selectBase} required>
                       <option value="">Area of Interest</option>
                       {['Artificial Intelligence','Web Development','IoT','App Development','UI/UX','3D Designing','Robotics'].map(a => <option key={a} value={a}>{a}</option>)}
                     </select>
@@ -324,11 +351,11 @@ const JoinCommunity = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className={fieldWrap}>
                       <FiGithub className="text-blue-300 shrink-0" />
-                      <input type="text" name="githubLink" value={formData.githubLink} onChange={handleChange} placeholder="GitHub Profile Link" className={inputBase} />
+                      <input type="text" name="githubLink" value={formData.githubLink} onChange={handleChange} placeholder="GitHub Profile Link" className={inputBase} required />
                     </div>
                     <div className={fieldWrap}>
                       <FiLinkedin className="text-blue-300 shrink-0" />
-                      <input type="text" name="linkedinLink" value={formData.linkedinLink} onChange={handleChange} placeholder="LinkedIn Profile Link" className={inputBase} />
+                      <input type="text" name="linkedinLink" value={formData.linkedinLink} onChange={handleChange} placeholder="LinkedIn Profile Link" className={inputBase} required />
                     </div>
                   </div>
 
@@ -353,6 +380,7 @@ const JoinCommunity = () => {
                     placeholder="Share your technical interests and aspirations... *"
                     rows="2"
                     className="w-full bg-[#0d1460] border border-[#2a3490] text-white placeholder-slate-400 px-4 py-2 rounded-xl focus:outline-none focus:border-white resize-none transition-all duration-200 text-sm hover:border-slate-400"
+                    required
                   />
 
                   <button
