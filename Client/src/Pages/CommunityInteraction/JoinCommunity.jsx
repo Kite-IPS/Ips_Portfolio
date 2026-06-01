@@ -275,7 +275,7 @@ const JoinCommunity = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <select name="department" value={formData.department} onChange={handleChange} className={selectBase}>
                       <option value="">Department</option>
-                      {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH'].map(d => <option key={d} value={d}>{d}</option>)}
+                      {['AI & DS','AIML','CSBS','CSE','CYS','ECE','IT','MECH', 'R&A'].map(d => <option key={d} value={d}>{d}</option>)}
                     </select>
                     <select name="areaOfInterest" value={formData.areaOfInterest} onChange={handleChange} className={selectBase}>
                       <option value="">Area of Interest</option>
